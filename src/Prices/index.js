@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-
-const Header = styled.header`
-  background: linear-gradient(#00b0de, #196ebd);
-`;
+import Header from "./Header";
+import CityCards from "./CityCards";
+import Advice from "./Advice";
 
 export default () => (
   <div className="container">
     <div className="row">
-      <div className="col-xs-12" />
+      <div className="col-xs-12">
+        <Header />
+        <CityCards />
+        <Advice />
+      </div>
     </div>
   </div>
 );

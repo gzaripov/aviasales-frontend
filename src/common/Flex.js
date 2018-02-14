@@ -1,11 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./Button";
 
 const Flex = styled.div`
   display: flex;
+  flex-direction: ${props => (props.flexDirection ? props.flexDirection : "")};
+  align-items: ${props => (props.alignItems ? props.alignItems : "")};
 `;
 
-export default ({ className, children }) => (
-  <Flex className={className}>{children}</Flex>
+export default props => (
+  <Flex
+    flexDirection={props.flexDirection}
+    alignItems={props.alignItems}
+    className={props.className}
+  >
+    {props.children}
+  </Flex>
 );

@@ -10,6 +10,8 @@ const Compass = styled.div`
   margin-right: auto;
   margin-bottom: 24px;
   background-image: url(${compass});
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 export default () => (
