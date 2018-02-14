@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import SearchContainer from "./SearchContainer";
+import Title from "./Title";
 import Logo from "./Logo";
+import SearchFlightForm from "./SearchFlightForm";
+import SearchButton from "./SearchButton";
 
 const Header = styled.header`
   background: linear-gradient(#00b0de, #196ebd);
@@ -13,7 +15,13 @@ const Content = styled.div`
   position: relative;
 `;
 
-const SearchBox = styled(SearchContainer)`
+const StyledTitle = styled(Title)`
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const SearchBox = styled.div`
   align-self: center;
   margin-left: auto;
   margin-right: auto;
@@ -26,7 +34,11 @@ export default () => (
         <div className="col-xs-12">
           <Content>
             <Logo />
-            <SearchBox />
+            <SearchBox>
+              <StyledTitle />
+              <SearchFlightForm />
+              <SearchButton />
+            </SearchBox>
           </Content>
         </div>
       </div>

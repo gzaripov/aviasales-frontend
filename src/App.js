@@ -6,7 +6,6 @@ import Offers from "./Offers";
 import Articles from "./Articles";
 import MobileVersions from "./MobileVersions";
 import Footer from "./Footer";
-import "./App.css";
 
 class App extends Component {
   render() {
