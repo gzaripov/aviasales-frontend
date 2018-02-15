@@ -23,8 +23,9 @@ const StyledTitle = styled(Title)`
 
 const SearchBox = styled.div`
   align-self: center;
-  margin-left: auto;
-  margin-right: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default () => (
