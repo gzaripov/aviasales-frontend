@@ -4,8 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-dom": "^16.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -14,6 +13,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "styled-components": "^3.1.6"
+    "styled-components": "^3.1.6",
+    "react-scripts": "1.1.1"
   }
 }

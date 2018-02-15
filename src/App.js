@@ -4,7 +4,7 @@ import Destinations from "./Destinations";
 import Prices from "./Prices";
 import Offers from "./Offers";
 import Articles from "./Articles";
-import MobileVersions from "./MobileVersions";
+import MobileApp from "./MobileApp";
 import Footer from "./Footer";
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
         <Prices />
         <Offers />
         <Articles />
-        <MobileVersions />
+        <MobileApp />
         <Footer />
       </div>
     );

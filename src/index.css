@@ -20,3 +20,12 @@ input {
   border: 0;
   padding: 0;
 }
+
+p {
+  margin: 0;
+}
+
+button {
+  outline: 0;
+  cursor: pointer;
+}
