@@ -13,7 +13,12 @@ const SocialLinks = styled.div`
   margin-top: 16px;
 `;
 
-const SocialLink = styled.span`
+const SocialLink = styled.a`
+  display: flex;
+  align-items: center;
+  flex-basis: 33%;
+  min-width: 33%;
+  margin-bottom: 12px;
   font-size: 12px;
   color: #4a4a4a;
 `;
@@ -25,23 +30,23 @@ const SocialIcon = styled.img`
 export default () => (
   <SocialLinks>
     <SocialLink>
-      <SocialIcon src={vk} alt="vk icon" />
+      <SocialIcon src={vk} alt="Vk icon" />
       Вконтакте
     </SocialLink>
     <SocialLink>
-      <SocialIcon src={facebook} alt="vk icon" />
+      <SocialIcon src={facebook} alt="Facebook icon" />
       Фейсбук
     </SocialLink>
     <SocialLink>
-      <SocialIcon src={instagram} alt="vk icon" />
+      <SocialIcon src={instagram} alt="Instagram icon" />
       Инстаграм
     </SocialLink>
     <SocialLink>
-      <SocialIcon src={twitter} alt="vk icon" />
+      <SocialIcon src={twitter} alt="Twitter icon" />
       Твиттер
     </SocialLink>
     <SocialLink>
-      <SocialIcon src={viber} alt="vk icon" />
+      <SocialIcon src={viber} alt="Viber icon" />
       Вайбер
     </SocialLink>
   </SocialLinks>

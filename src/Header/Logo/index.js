@@ -1,17 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "./logo.svg";
+import media from "../../common/media";
+import icon from "./icon.svg";
+
+const Icon = styled.img``;
+
+const Text = styled.span`
+  display: none;
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 12px;
+  @media screen and (min-width: ${media.sm}) {
+    display: inline;
+  }
+`;
 
 const Logo = styled.div`
   position: absolute;
+  display: flex;
+  align-items: center;
   margin-top: 12px;
-  height: 30px;
-  width: 30px;
-  background-image: url(${logo});
 `;
 
 export default () => (
-  <div>
-    <Logo />
-  </div>
+  <Logo>
+    <img src={icon} alt="Aviasales icon" />
+    <Text>aviasales</Text>
+  </Logo>
 );

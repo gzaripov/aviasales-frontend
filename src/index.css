@@ -15,8 +15,11 @@ body {
   text-align: center;
 }
 
-input {
+:focus {
   outline: 0;
+}
+
+input {
   border: 0;
   padding: 0;
 }
@@ -26,6 +29,5 @@ p {
 }
 
 button {
-  outline: 0;
   cursor: pointer;
 }

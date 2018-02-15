@@ -6,12 +6,14 @@ const SiteLinks = styled.div`
   flex-wrap: wrap;
   align-items: center;
   margin-top: 24px;
+  margin-right: 26px;
 `;
 
 const SiteLink = styled.a`
   font-size: 12px;
   color: #5b5b5c;
   margin-right: 8px;
+  margin-bottom: 8px;
 `;
 
 export default () => (
