@@ -1,30 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Flex from "../common/Flex";
-
-const Flag = styled.div`
-  width: 34px;
-  height: 34px;
-  background-image: ${props => `url(${props.url})`};
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 12px;
-`;
-
-const City = styled.span`
-  font-weight: 500;
-  line-height: 32px;
-  font-size: 22px;
-  color: #5b5b5c;
-`;
-
-const Country = styled.span`
-  line-height: 20px;
-  font-size: 12px;
-  color: #a0b0b9;
-  align-self: flex-start;
-  text-transform: uppercase;
-`;
+import Header from "./Header";
 
 const From = styled.span`
   line-height: 20px;
@@ -39,17 +15,8 @@ const Price = styled.a`
   margin-bottom: 4px;
 `;
 
-const Header = props => (
-  <Flex alignItems="center">
-    <Flag url={props.cardData.flag} />
-    <Flex flexDirection="column">
-      <City>{props.cardData.city}</City>
-      <Country>{props.cardData.country}</Country>
-    </Flex>
-  </Flex>
-);
-
-const CityPriceBox = styled(Flex)`
+const CityPriceBox = styled.div`
+  display: flex;
   margin-bottom: 16px;
 `;
 

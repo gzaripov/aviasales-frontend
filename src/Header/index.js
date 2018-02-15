@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Title from "./Title";
 import Logo from "./Logo";
-import SearchFlightForm from "./SearchFlightForm";
+import SearchForm from "./SearchForm";
 import SearchButton from "./SearchButton";
 
 const Header = styled.header`
@@ -36,7 +36,7 @@ export default () => (
             <Logo />
             <SearchBox>
               <StyledTitle />
-              <SearchFlightForm />
+              <SearchForm />
               <SearchButton />
             </SearchBox>
           </Content>

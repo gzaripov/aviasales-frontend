@@ -1,10 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import FlexDiv from "../common/Flex";
-
-const Flex = styled(FlexDiv)`
-  align-items: center;
-`;
 
 const Image = styled.div`
   width: 100%;
@@ -49,6 +44,14 @@ const Info = styled.div`
   padding: 16px;
 `;
 
+const PrimaryInfo = styled.div`
+  display: flex;
+`;
+
+const SecondaryInfo = styled.div`
+  display: flex;
+`;
+
 const Card = styled.div`
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 75, 93, 0.12);
@@ -60,14 +63,14 @@ export default props => (
   <Card>
     <Image url={props.cardData.imageUrl} />
     <Info>
-      <Flex>
+      <PrimaryInfo>
         <City>{props.cardData.city}</City>
         <SearchPrice>Найти от {props.cardData.price} ₽</SearchPrice>
-      </Flex>
-      <Flex>
+      </PrimaryInfo>
+      <SecondaryInfo>
         <Country>{props.cardData.country}</Country>
         <FlightDate>{props.cardData.date}</FlightDate>
-      </Flex>
+      </SecondaryInfo>
     </Info>
   </Card>
 );
