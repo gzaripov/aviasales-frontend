@@ -17,8 +17,8 @@ const MobileImage = styled.img`
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 162px;
-  height: 213;
+  width: 159px;
+  height: 174px;
 `;
 
 const Header = styled.h2`
@@ -32,7 +32,7 @@ const Header = styled.h2`
 
 const EnlargedPlatforms = styled(Platforms)`
   padding-top: 56px;
-  padding-bottom: 56px;
+  padding-bottom: 44px;
 `;
 
 export default () => (

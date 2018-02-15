@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import androidIcon from "./android.svg";
 import appleIcon from "./apple.svg";
-import wfIcon from "./wf.svg";
+import windows from "./windows.svg";
 
 const Platforms = styled.div`
   display: flex;
@@ -13,6 +13,9 @@ const Platform = styled.div`
   display: flex;
   align-items: center;
   padding-bottom: 20px;
+  :last-child {
+    padding-bottom: 0;
+  }
 `;
 
 const PlatformIcon = styled.img`
@@ -20,9 +23,9 @@ const PlatformIcon = styled.img`
   margin-right: 8px;
 `;
 
-const PlatformText = styled.p`
+const PlatformText = styled.a`
+  display: block;
   font-size: 14px;
-
   color: #ffffff;
 `;
 
@@ -37,7 +40,7 @@ export default props => (
       <PlatformText>Android</PlatformText>
     </Platform>
     <Platform>
-      <PlatformIcon src={wfIcon} alt="Wf Icon" />
+      <PlatformIcon src={windows} alt="Wf Icon" />
       <PlatformText>Windows Phone</PlatformText>
     </Platform>
   </Platforms>

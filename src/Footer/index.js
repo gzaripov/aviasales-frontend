@@ -1,14 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import FlightLinks from "./FlightLinks";
+import SocialLinks from "./CompanyLinks";
 
-const Header = styled.header`
-  background: linear-gradient(#00b0de, #196ebd);
+const Footer = styled.footer`
+  padding-top: 30px;
+  padding-bottom: 24px;
+  @media (--sm-viewport) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 `;
 
 export default () => (
-  <div className="container">
-    <div className="row">
-      <div className="col-xs-12" />
-    </div>
-  </div>
+  <Footer>
+    <FlightLinks />
+    <SocialLinks />
+  </Footer>
 );
