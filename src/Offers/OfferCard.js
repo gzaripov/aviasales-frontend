@@ -72,6 +72,7 @@ const LearnMoreButton = styled.button`
   text-align: center;
   color: #d93533;
   padding: 10px 0;
+  background: #fff;
 `;
 
 const Footer = styled.div`

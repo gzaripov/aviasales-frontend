@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../../common/media";
 import styled from "styled-components";
 import facebook from "./icons/facebook.svg";
 import instagram from "./icons/instagram.svg";
@@ -21,6 +22,13 @@ const SocialLink = styled.a`
   margin-bottom: 12px;
   font-size: 12px;
   color: #4a4a4a;
+  line-height: 1;
+
+  @media screen and (min-width: ${media.sm}) {
+    flex-basis: initial;
+    min-width: initial;
+    margin-right: 28px;
+  }
 `;
 
 const SocialIcon = styled.img`

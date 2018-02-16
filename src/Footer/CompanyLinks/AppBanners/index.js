@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../../common/media";
 import styled from "styled-components";
 import appStore from "./banners/app-store.svg";
 import googlePlay from "./banners/google-play.svg";
@@ -8,6 +9,10 @@ const AppBanners = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+
+  @media screen and (min-width: ${media.sm}) {
+    flex-direction: row;
+  }
 `;
 
 const AppBanner = styled.img`

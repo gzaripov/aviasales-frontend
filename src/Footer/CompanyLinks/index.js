@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../common/media";
 import styled from "styled-components";
 import SiteLinks from "./SiteLinks";
 import SocialLinks from "./SocialLinks";
@@ -7,11 +8,19 @@ import AppBanners from "./AppBanners";
 const SearchHotels = styled.p`
   margin-top: 24px;
   margin-bottom: 16px;
+
+  @media screen and (min-width: ${media.sm}) {
+    text-align: start;
+  }
 `;
 
 const Copyright = styled.p`
   font-size: 12px;
   color: #5b5b5c;
+
+  @media screen and (min-width: ${media.sm}) {
+    text-align: start;
+  }
 `;
 
 export default () => (
