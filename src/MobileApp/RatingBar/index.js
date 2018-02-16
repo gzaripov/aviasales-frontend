@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../common/media";
 import styled from "styled-components";
 import rating from "./rating.svg";
 
@@ -8,9 +9,18 @@ const RatingBarText = styled.span`
   margin-left: 8px;
 `;
 
+const RatingBar = styled.span`
+  @media screen and (min-width: ${media.sm}) {
+    margin-left: 260px;
+  }
+  @media screen and (min-width: ${media.md}) {
+    margin-left: 0;
+  }
+`;
+
 export default () => (
-  <span>
+  <RatingBar>
     <img src={rating} alt="Rating" />
     <RatingBarText>Более 103 000 оценок</RatingBarText>
-  </span>
+  </RatingBar>
 );
