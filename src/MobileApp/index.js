@@ -56,33 +56,12 @@ const EnlargedPlatforms = styled(Platforms)`
   padding-bottom: 44px;
 `;
 
-const ImageGridContainer = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  align-items: flex-end;
-`;
-
 const ImageContainer = styled.div`
   position: relative;
 `;
 
 export default () => (
   <MobileApp>
-    <ImageGridContainer>
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-12">
-            <ImageContainer>
-              <MobileImage src={phone} />
-            </ImageContainer>
-          </div>
-        </div>
-      </div>
-    </ImageGridContainer>
     <div className="container">
       <div className="row">
         <div className="col-xs-12 col-md-7 col-md-offset-4 center-xs start-md">
@@ -92,6 +71,11 @@ export default () => (
       </div>
       <div className="col-xs-6 col-xs-offset-6 col-md-8 col-md-offset-4 between-md">
         <EnlargedPlatforms />
+      </div>
+      <div className="col-xs-12">
+        <ImageContainer>
+          <MobileImage src={phone} />
+        </ImageContainer>
       </div>
     </div>
   </MobileApp>
