@@ -8,6 +8,7 @@ const Flag = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 12px;
+  align-self: center;
 `;
 
 const City = styled.span`

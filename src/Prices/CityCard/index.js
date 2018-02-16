@@ -45,10 +45,24 @@ const CityCard = styled.div`
   margin-top: 24px;
   padding-bottom: 8px;
   border-bottom: 0.5px dashed #afbec6;
+
+  @media screen and (min-width: ${media.lg}) {
+    margin-top: 26px;
+    border-bottom: none;
+    border-right: ${props =>
+      props.id === 0 || props.id % 2 !== 0 ? "0.5px dashed #afbec6;" : "none"};
+    padding-right: ${props =>
+      props.id === 0 || props.id % 2 !== 0 ? "34px" : "0"};
+    padding-left: ${props =>
+      props.id === 0 || props.id % 3 === 0 ? "0" : "18px"};
+
+    padding-bottom: 0;
+    margin-bottom: 8px;
+  }
 `;
 
 export default props => (
-  <CityCard>
+  <CityCard id={props.id}>
     <Header cardData={props.cardData} />
     <Prices prices={props.cardData.prices} />
   </CityCard>
