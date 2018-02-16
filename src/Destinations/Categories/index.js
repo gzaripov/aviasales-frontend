@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Category from "./Category";
-import media from "../common/media";
-import world from "./categories/world.svg";
-import sun from "./categories/sun.svg";
-import shopping from "./categories/shopping.svg";
-import culture from "./categories/culture.svg";
-import nightStyle from "./categories/night_style.svg";
-import rest from "./categories/rest_kids.svg";
+import media from "../../common/media";
+import world from "./icons/world.svg";
+import sun from "./icons/sun.svg";
+import shopping from "./icons/shopping.svg";
+import culture from "./icons/culture.svg";
+import nightStyle from "./icons/night_style.svg";
+import rest from "./icons/rest_kids.svg";
 
 const Categories = styled.div`
   display: flex;

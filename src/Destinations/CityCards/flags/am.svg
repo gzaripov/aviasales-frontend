@@ -1,0 +1,32 @@
+<svg width="45" height="46" viewBox="0 0 45 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>flag am</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-2407 -2797)">
+<g id="flag am" filter="url(#filter0_d)">
+<use xlink:href="#path0_fill" fill="url(#pattern0)" transform="translate(2413 2805)"/>
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(2413 2805)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(2413 2805)" fill="#000000" fill-opacity="0.2"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="2405" y="2797" width="47" height="46" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="0"/>
+<feGaussianBlur stdDeviation="4"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.14902 0 0 0 0 0.14902 0 0 0 0 0.14902 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<pattern id="pattern0" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="matrix(0.0166667 0 0 0.016886 0 -0.00657876)"/>
+</pattern>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 15C 0 6.71573 6.71573 0 15 0L 15.3947 0C 23.679 0 30.3947 6.71573 30.3947 15C 30.3947 23.2843 23.679 30 15.3947 30L 15 30C 6.71573 30 0 23.2843 0 15Z"/>
+<path id="path1_stroke_2x" d="M 15 0.2L 15.3947 0.2L 15.3947 -0.2L 15 -0.2L 15 0.2ZM 15.3947 29.8L 15 29.8L 15 30.2L 15.3947 30.2L 15.3947 29.8ZM 15 29.8C 6.82619 29.8 0.2 23.1738 0.2 15L -0.2 15C -0.2 23.3947 6.60528 30.2 15 30.2L 15 29.8ZM 30.1947 15C 30.1947 23.1738 23.5685 29.8 15.3947 29.8L 15.3947 30.2C 23.7894 30.2 30.5947 23.3947 30.5947 15L 30.1947 15ZM 15.3947 0.2C 23.5685 0.2 30.1947 6.82619 30.1947 15L 30.5947 15C 30.5947 6.60527 23.7894 -0.2 15.3947 -0.2L 15.3947 0.2ZM 15 -0.2C 6.60527 -0.2 -0.2 6.60527 -0.2 15L 0.2 15C 0.2 6.82619 6.82619 0.2 15 0.2L 15 -0.2Z"/>
+<image id="image0" width="60" height="60" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAO9JREFUaAXtmsEKwkAMRLOSP9BjsR/tB2rBv1DRgsdAQ46TfaWn3SnMzAt7WDq+Zvs7z3OaJ+o/KYG7E4cwhJs1wEg3AxriQDhU0mwBws2AhjgQDpU0W4BwM6AhDoRDJc0W/GHru1mmwzhjsW2uwPsdHpd4hzMhvskpLQ4wtQ/htCJxAYTFAab2IZxWJC6AsDjA1D6E04rEBRAWB5jah3BakbjA18v9I56hZH9st+VV+kJc7Nfz08UzlOz7XP/hmXFKl+ZDUAxhQWglyxAu1SUohrAgtJJlCJfqEhRDWBBayTKES3UJiiEsCK1keTrCP0CMDx+CHq8bAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>
