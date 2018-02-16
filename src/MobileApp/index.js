@@ -4,7 +4,7 @@ import phone from "./phone.png";
 import RatingBar from "./RatingBar";
 import Platforms from "./Platforms";
 
-const MobileApp = styled.div`
+const MobileApp = styled.section`
   background: linear-gradient(137.4deg, #00b0de 4.18%, #196ebd 104.18%);
   position: relative;
 `;

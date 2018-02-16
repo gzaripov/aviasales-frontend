@@ -23,7 +23,7 @@ const articles = [
   }
 ];
 
-const Articles = styled.div`
+const Articles = styled.section`
   margin-top: 20px;
   margin-bottom: 8px;
 `;

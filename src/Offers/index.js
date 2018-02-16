@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import media from "../common/media";
 import OfferCard from "./OfferCard";
 import OfferFooter from "./OfferFooter";
 
@@ -10,8 +11,8 @@ const offers = [
     aviaCompanyPic: "/img/avia/pobeda.png",
     price: "499 ₽",
     daysLeft: "45 дней",
-    description:
-      "Билеты от 499 рублей! \nСпециальное предложение от авиакомпании Победа"
+    from: "Специальное предложение от авиакомпании Победа",
+    text: "Билеты от 499 рублей!"
   },
   {
     title: "В Нью-Йорк от 20 680 ₽",
@@ -19,8 +20,8 @@ const offers = [
     aviaCompanyPic: "/img/avia/lufthansa.png",
     price: "20 680 ₽",
     daysLeft: "19 дней",
-    description:
-      "Из Москвы в США от 20680 рублей! Специальное предложение от авиакомпании Lufthansa"
+    from: "Специальное предложение от авиакомпании Lufthansa",
+    text: "Из Москвы в США от 20680 рублей!"
   },
   {
     title: "В Лос-Анджелес от 22360 ₽",
@@ -28,8 +29,8 @@ const offers = [
     aviaCompanyPic: "/img/avia/lufthansa.png",
     price: "20 360 ₽",
     daysLeft: "19 дней",
-    description:
-      "Из Москвы в США от 22360 рублей! Специальное предложение от авиакомпании Lufthansa"
+    from: " Специальное предложение от авиакомпании Lufthansa",
+    text: "Из Москвы в США от 22360 рублей!"
   }
 ];
 
@@ -46,21 +47,29 @@ const Title = styled.h2`
   text-align: left;
 `;
 
+const Cards = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media screen and (min-width: ${media.md}) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
 export default () => (
   <Offers>
     <div className="container">
       <div className="row">
-        <div className="col-xs-12">
+        <div className="col-xs-12 col-lg-10 col-lg-offset-1">
           <Title>Спецпредложения на авиабилеты</Title>
-        </div>
-
-        {offers.map((o, i) => (
-          <div className="col-xs-12 col-md-4">
-            <OfferCard offer={o} key={i} />
-          </div>
-        ))}
-
-        <div className="col-xs-12">
+          <Cards>
+            <OfferCard offer={offers[0]} />
+            <OfferCard offer={offers[1]} />
+            <OfferCard offer={offers[2]} />
+          </Cards>
           <OfferFooter />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../common/media";
 import styled from "styled-components";
 
 const Header = styled.div`
@@ -12,6 +13,10 @@ const Header = styled.div`
 
 const Title = styled.span`
   padding: 22px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 30px;
 `;
 
 const HeaderIcon = styled.img`
@@ -48,13 +53,12 @@ const DaysLeft = styled.span`
   color: #d93633;
 `;
 
-const Description = styled.p`
+const Text = styled.p`
   text-align: left;
   font-size: 12px;
   color: #242424;
   padding-left: 8px;
   padding-right: 8px;
-  margin-bottom: 44px;
 `;
 
 const LearnMoreButton = styled.button`
@@ -62,6 +66,7 @@ const LearnMoreButton = styled.button`
   border: 2px solid #cd1f27;
   border-radius: 3px;
   margin-bottom: 16px;
+  margin-top: 44px;
   line-height: 20px;
   font-size: 16px;
   text-align: center;
@@ -77,6 +82,24 @@ const Footer = styled.div`
 const OfferCard = styled.div`
   background-color: white;
   margin-bottom: 12px;
+
+  max-width: 300px;
+
+  @media screen and (min-width: ${media.sm}) {
+  }
+
+  @media screen and (min-width: ${media.md}) {
+    max-width: 240px;
+  }
+
+  @media screen and (min-width: ${media.xl}) {
+    max-width: 300px;
+  }
+`;
+
+const AviaCompanyLogo = styled.img`
+  width: 100px;
+  height: 25px;
 `;
 
 export default props => (
@@ -87,7 +110,10 @@ export default props => (
     </Header>
     <Information>
       <div>
-        <img src={props.offer.aviaCompanyPic} alt="Avia company pic" />
+        <AviaCompanyLogo
+          src={props.offer.aviaCompanyPic}
+          alt="Avia company pic"
+        />
       </div>
       <PriceAndDaysLeft>
         <Price>
@@ -97,7 +123,8 @@ export default props => (
         <DaysLeft>Осталось {props.offer.daysLeft}</DaysLeft>
       </PriceAndDaysLeft>
     </Information>
-    <Description>{props.offer.description}</Description>
+    <Text>{props.offer.text}</Text>
+    <Text>{props.offer.from}</Text>
     <Footer>
       <LearnMoreButton>Узнать подробности</LearnMoreButton>
     </Footer>
