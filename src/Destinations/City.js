@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import media from "../common/media";
 import edit from "./edit.svg";
 
 const Text = styled.span`
   font-weight: 500;
-  font-size: 18px;
   text-align: center;
 `;
 
 const CitySelector = styled.span`
   color: #00ace2;
-  font-size: 18px;
+  display: inline-block;
 `;
 
 const Edit = styled.div`
@@ -23,8 +23,20 @@ const Edit = styled.div`
 `;
 
 const City = styled.div`
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 0 40px;
+  font-size: 18px;
+
+  @media screen and (min-width: ${media.sm}) {
+    padding: 0 100px;
+  }
+  @media screen and (min-width: ${media.md}) {
+    padding: 0 150px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  @media screen and (min-width: ${media.lg}) {
+    padding: 0 260px;
+  }
 `;
 
 export default () => (

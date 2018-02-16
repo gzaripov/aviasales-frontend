@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../common/media";
 import styled from "styled-components";
 import compass from "./compass.svg";
 
@@ -12,6 +13,11 @@ const Compass = styled.div`
   background-image: url(${compass});
   background-position: center;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: ${media.md}) {
+    margin-top: 56px;
+    margin-bottom: 20px;
+  }
 `;
 
 export default () => (

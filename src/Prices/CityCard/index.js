@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import media from "../../common/media";
 import Header from "./Header";
 
 const From = styled.span`
@@ -29,6 +30,9 @@ const CityPrice = props => (
 
 const PricesBox = styled.div`
   padding-top: 16px;
+  @media screen and (min-width: ${media.md}) {
+    margin-top: 26px;
+  }
 `;
 
 const Prices = props => (

@@ -18,9 +18,11 @@ const SearchButton = styled(Button)`
     margin-top: 24px;
     align-self: center;
   }
+
   @media screen and (min-width: ${media.md}) {
     height: 64px;
   }
+
   @media screen and (min-width: ${media.md}) {
     margin-top: 48px;
   }
@@ -31,6 +33,7 @@ const Text = styled.span`
   font-size: 24px;
   color: #ffffff;
   margin-right: 24px;
+
   @media screen and (min-width: ${media.md}) {
     font-size: 28px;
   }

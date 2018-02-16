@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Category from "./Category";
+import media from "../common/media";
 import world from "./categories/world.svg";
 import sun from "./categories/sun.svg";
 import shopping from "./categories/shopping.svg";
@@ -11,28 +12,25 @@ import rest from "./categories/rest_kids.svg";
 const Categories = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   margin-top: 8px;
-`;
 
-const Section = styled.div`
-  margin-top: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  @media screen and (min-width: ${media.md}) {
+    margin-top: 56px;
+    justify-content: space-around;
+  }
 `;
 
 export default () => (
-  <Categories>
-    <Section>
-      <Category imageUrl={world} text="куда угодно" />
-      <Category imageUrl={sun} text="солнце и море" />
-      <Category imageUrl={shopping} text="шоппинг, город" />
-    </Section>
-    <Section>
-      <Category imageUrl={culture} text="культура и история" />
-      <Category imageUrl={nightStyle} text="ночная жизнь" />
-      <Category imageUrl={rest} text="отдых с детьми" />
-    </Section>
-  </Categories>
+  <div className="row">
+    <div className="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+      <Categories>
+        <Category imageUrl={world} text="куда угодно" />
+        <Category imageUrl={sun} text="солнце и море" />
+        <Category imageUrl={shopping} text="шоппинг, город" />
+        <Category imageUrl={culture} text="культура и история" />
+        <Category imageUrl={nightStyle} text="ночная жизнь" />
+        <Category imageUrl={rest} text="отдых с детьми" />
+      </Categories>
+    </div>
+  </div>
 );

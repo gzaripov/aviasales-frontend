@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./CityCard";
-
+import media from "../common/media";
 import krasnodar from "./cities/krasnodar.png";
 import sochi from "./cities/sochi.jpeg";
 import spb from "./cities/spb.jpeg";
@@ -56,6 +56,9 @@ const cardsData = [
 
 const CityCards = styled.div`
   margin-top: 28px;
+  @media screen and (min-width: ${media.md}) {
+    margin-top: 50px;
+  }
 `;
 
 export default () => (

@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../common/media";
 import styled from "styled-components";
 
 const Icon = styled.div`
@@ -24,6 +25,13 @@ const Category = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 19px 16px;
+  width: 33%;
+
+  @media screen and (min-width: ${media.md}) {
+    padding: 0;
+    width: auto;
+  }
 `;
 
 export default props => (

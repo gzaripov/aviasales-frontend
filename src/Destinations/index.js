@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Compass from "./Compass";
-import CityDestinations from "./City";
+import City from "./City";
 import Categories from "./Categories";
 import CityCards from "./CityCards";
 
-const Destination = styled.div`
+const Destination = styled.section`
   background-color: #f8fcff;
 `;
 
@@ -15,10 +15,10 @@ export default () => (
       <div className="row">
         <div className="col-xs-12">
           <Compass />
-          <CityDestinations />
-          <Categories />
+          <City />
         </div>
       </div>
+      <Categories />
     </div>
     <CityCards />
   </Destination>
