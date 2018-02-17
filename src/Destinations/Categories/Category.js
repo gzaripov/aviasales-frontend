@@ -33,7 +33,7 @@ const Category = styled.div`
 const Underline = styled.div`
   display: ${props => (props.active ? "block" : "none")};
   height: 1px;
-  width: 80%;
+  padding: 0 30px;
   margin-top: 2px;
   background: #00ace2;
 `;
