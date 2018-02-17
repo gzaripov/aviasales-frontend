@@ -21,7 +21,7 @@ const Text = styled.span`
   `};
 `;
 
-const Header = styled.div`
+const Header = styled.header`
   padding-left: 24px;
   padding-right: 24px;
   margin-bottom: 16px;

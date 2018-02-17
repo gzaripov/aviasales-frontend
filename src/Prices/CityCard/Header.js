@@ -28,7 +28,7 @@ const CityAndCountry = styled.div`
   flex-direction: column;
 `;
 
-const Header = styled.div`
+const Header = styled.header`
   display: flex;
 `;
 

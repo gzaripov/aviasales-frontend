@@ -2,7 +2,7 @@ import React from "react";
 import media from "../common/media";
 import styled from "styled-components";
 
-const Header = styled.div`
+const Header = styled.header`
   display: flex;
   align-items: center;
   padding-left: 16px;

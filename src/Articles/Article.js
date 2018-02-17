@@ -7,7 +7,7 @@ const Title = styled.h3`
   margin: 0 0 0 10px;
 `;
 
-const Header = styled.div`
+const Header = styled.header`
   display: flex;
   align-items: center;
 `;
