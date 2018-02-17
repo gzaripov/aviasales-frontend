@@ -5,7 +5,6 @@ const SiteLinks = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 24px;
   margin-right: 26px;
 `;
 

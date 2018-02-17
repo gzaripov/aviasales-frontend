@@ -33,7 +33,7 @@ const Suggestion = styled.p`
 
 const SuggestionTitle = styled.span`
   color: #5c5c5c;
-  font-weight: bold;
+  font-weight: 500;
 `;
 
 const Media = styled.div`
