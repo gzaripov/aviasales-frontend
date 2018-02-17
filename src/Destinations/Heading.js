@@ -18,7 +18,7 @@ const Edit = styled.img`
   margin-bottom: -2px;
 `;
 
-const City = styled.div`
+const Heading = styled.div`
   padding: 0 40px;
   font-size: 18px;
 
@@ -38,10 +38,10 @@ const City = styled.div`
 `;
 
 export default () => (
-  <City>
+  <Heading>
     <Text>Популярные направления перелетов из города</Text>{" "}
     <CitySelector>
       Москва<Edit src={edit} alt="Edit icon" />
     </CitySelector>
-  </City>
+  </Heading>
 );

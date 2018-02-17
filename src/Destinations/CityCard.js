@@ -1,14 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import media from "../../common/media";
+import media from "../common/media";
 
-const Image = styled.div`
+const Image = styled.img`
   width: 100%;
   height: 126px;
-  background-image: ${props => `url(${props.url})`};
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  object-fit: cover;
 
   ${media.md`
     height: 212px;
@@ -103,7 +100,7 @@ const Card = styled.div`
 
 export default props => (
   <Card>
-    <Image url={props.cardData.imageUrl} />
+    <Image src={props.cardData.imageUrl} alt="City picture" />
     <FlagAndInfo>
       <Flag>
         <img src={props.cardData.flag} alt="Flag" />
