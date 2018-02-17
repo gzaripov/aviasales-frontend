@@ -21,6 +21,11 @@ const City = styled.span`
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 4px;
+  text-align: left;
+  max-width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
   @media screen and (min-width: ${media.md}) {
     font-size: 22px;

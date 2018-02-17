@@ -1,12 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Flag = styled.div`
+const Flag = styled.img`
   width: 34px;
   height: 34px;
-  background-image: ${props => `url(${props.url})`};
-  background-repeat: no-repeat;
-  background-position: center;
   margin-right: 12px;
   align-self: center;
 `;
@@ -37,7 +34,7 @@ const Header = styled.div`
 
 export default props => (
   <Header>
-    <Flag url={props.cardData.flag} />
+    <Flag src={props.cardData.flag} alt="Flag icon" />
     <CityAndCountry>
       <City>{props.cardData.city}</City>
       <Country>{props.cardData.country}</Country>

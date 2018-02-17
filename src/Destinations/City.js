@@ -13,13 +13,9 @@ const CitySelector = styled.span`
   display: inline-block;
 `;
 
-const Edit = styled.div`
-  display: inline-block;
-  height: 16px;
-  width: 16px;
+const Edit = styled.img`
   margin-left: 8px;
   margin-bottom: -2px;
-  background-image: url(${edit});
 `;
 
 const City = styled.div`
@@ -43,7 +39,7 @@ export default () => (
   <City>
     <Text>Популярные направления перелетов из города</Text>{" "}
     <CitySelector>
-      Москва<Edit />
+      Москва<Edit src={edit} alt="Edit icon" />
     </CitySelector>
   </City>
 );

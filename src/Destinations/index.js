@@ -1,12 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import Compass from "./Compass";
+import media from "../common/media";
 import City from "./City";
 import Categories from "./Categories";
 import CityCards from "./CityCards";
-
+import compass from "./compass.svg";
 const Destination = styled.section`
   background-color: #f8fcff;
+`;
+
+const Icon = styled.img`
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: ${media.md}) {
+    margin-top: 56px;
+    margin-bottom: 20px;
+  }
 `;
 
 export default () => (
@@ -14,7 +26,7 @@ export default () => (
     <div className="container">
       <div className="row">
         <div className="col-xs-12">
-          <Compass />
+          <Icon src={compass} alt="Destination icon" />
           <City />
         </div>
       </div>
