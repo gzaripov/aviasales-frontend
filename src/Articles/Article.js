@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Title = styled.h3`
   font-size: 13px;
   font-weight: 500;
+  text-transform: uppercase;
   margin: 0 0 0 10px;
 `;
 
