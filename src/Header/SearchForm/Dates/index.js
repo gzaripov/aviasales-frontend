@@ -11,7 +11,9 @@ const Dates = styled.div`
 
   ${media.sm`
     width: calc(50% - 2px);
-  `} ${media.lg`
+  `};
+
+  ${media.lg`
     width: calc(35% - 2px);
   `};
 `;

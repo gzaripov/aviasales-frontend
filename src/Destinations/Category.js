@@ -29,7 +29,6 @@ const Category = styled(Button)`
     padding: 0;
     width: auto;
   `};
-  };
 `;
 
 const Underline = styled.hr`

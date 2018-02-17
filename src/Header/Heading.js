@@ -31,9 +31,15 @@ const Subtitle = styled.h2`
   `};
 `;
 
-export default ({ className }) => (
-  <div className={className}>
+const Heading = styled.div`
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export default () => (
+  <Heading>
     <Title>Поиск дешевых авиабилетов</Title>
     <Subtitle>Лучший способ купить авиабилеты дешево</Subtitle>
-  </div>
+  </Heading>
 );

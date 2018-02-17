@@ -11,11 +11,12 @@ const Heading = styled.div`
   color: white;
 `;
 
-const Title = styled.span`
+const Title = styled.h4`
   padding: 22px 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin: 0;
   margin-right: 30px;
 `;
 
@@ -75,7 +76,7 @@ const LearnMoreButton = styled.button`
   background: #fff;
 `;
 
-const Footer = styled.div`
+const Underside = styled.div`
   margin-left: 8px;
   margin-right: 8px;
 `;
@@ -123,8 +124,8 @@ export default props => (
     </Information>
     <Text>{props.offer.text}</Text>
     <Text>{props.offer.from}</Text>
-    <Footer>
+    <Underside>
       <LearnMoreButton>Узнать подробности</LearnMoreButton>
-    </Footer>
+    </Underside>
   </OfferCard>
 );

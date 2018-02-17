@@ -1,5 +1,5 @@
 import React from "react";
-import media from "../../../common/media";
+import media from "../../common/media";
 import styled from "styled-components";
 import facebook from "./icons/facebook.svg";
 import instagram from "./icons/instagram.svg";

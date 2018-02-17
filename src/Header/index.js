@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Title from "./Title";
+import Heading from "./Heading";
 import Logo from "./Logo";
 import SearchForm from "./SearchForm";
 import SearchButton from "./SearchButton";
@@ -13,12 +13,6 @@ const Content = styled.div`
   height: 100vh;
   display: flex;
   position: relative;
-`;
-
-const StyledTitle = styled(Title)`
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
 `;
 
 const SearchBox = styled.div`
@@ -36,7 +30,7 @@ export default () => (
           <Content>
             <Logo />
             <SearchBox>
-              <StyledTitle />
+              <Heading />
               <SearchForm />
               <SearchButton />
             </SearchBox>

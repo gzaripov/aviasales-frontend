@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CityIndex = styled.span`
+export default styled.span`
   text-transform: uppercase;
   line-height: 20px;
   font-size: 16px;
@@ -8,5 +8,3 @@ const CityIndex = styled.span`
   margin-left: auto;
   margin-right: 12px;
 `;
-
-export default CityIndex;

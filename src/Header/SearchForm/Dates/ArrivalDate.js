@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import calendar from "./icons/calendar.svg";
+import calendar from "./calendar.svg";
 import DateText from "./DateText";
 import Button from "../../../common/Button";
 
