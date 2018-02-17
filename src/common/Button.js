@@ -5,6 +5,7 @@ const Button = styled.button`
   padding: 0;
   border: 0;
   cursor: pointer;
+  background: none;
 `;
 
 export default props => (
