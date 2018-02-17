@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Header from "./Header";
 import Advice from "./Advice";
 import CityCard from "./CityCard";
@@ -91,8 +92,12 @@ const citiesData = [
   }
 ];
 
+const Prices = styled.section`
+  background: linear-gradient(180deg, #f8fcff 0%, #ffffff 100%);
+`;
+
 export default () => (
-  <section id="prices">
+  <Prices id="prices">
     <div className="container">
       <div className="row">
         <div className="col-xs-12">
@@ -112,5 +117,5 @@ export default () => (
         </div>
       </div>
     </div>
-  </section>
+  </Prices>
 );
