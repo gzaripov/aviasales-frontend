@@ -13,6 +13,7 @@ const RoundBox = styled.div`
 const Form = styled.form`
   margin: -2px;
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
 `;
 
