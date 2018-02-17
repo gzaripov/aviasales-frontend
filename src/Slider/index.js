@@ -21,6 +21,7 @@ const Title = styled.h3`
   font-weight: 500;
   line-height: 40px;
   text-align: center;
+  margin-bottom: 0;
 
   ${media.lg`
     margin-left: 0;
@@ -29,8 +30,7 @@ const Title = styled.h3`
 `;
 
 const Vendors = styled.div`
-  padding-left: 130px;
-  padding-right: 130px;
+  padding: 0 64px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -43,7 +43,15 @@ const Vendors = styled.div`
   `};
 `;
 
-const Vendor = styled.img``;
+const Vendor = styled.img`
+  margin-top: 24px;
+  margin-bottom: 8px;
+
+  ${media.lg`
+    margin-left:10px; 
+    margin-right:10px;
+  `};
+`;
 
 const LeftButton = styled(Button)`
   position: absolute;
@@ -51,17 +59,16 @@ const LeftButton = styled(Button)`
   top: 48%;
 
   ${media.lg`
-    top: 10px;
     left: -50px;
   `};
 `;
+
 const RightButton = styled(Button)`
   position: absolute;
   right: 0;
   top: 48%;
 
   ${media.lg`
-    top: 10px;
     right: -50px;
   `};
 `;
@@ -79,14 +86,14 @@ const BottomNav = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 16px;
 `;
 
 export default () => (
   <section if="slider">
     <div className="container">
       <div className="row">
-        <div className="col-md-12 col-lg-10 col-lg-offset-1 hidden-xs hidden-sm">
+        <div className="col-md-12 col-lg-8 col-lg-offset-2 col-xl-10 col-xl-offset-1 hidden-xs hidden-sm">
           <Slider>
             <Title>
               Дешевые авиабилеты от крупнейших авиакомпаний и агентств
