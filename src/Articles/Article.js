@@ -35,12 +35,12 @@ export default props => (
   <Article>
     <Heading>
       <div>
-        <img src={props.article.icon} alt="Article icon" />
+        <img src={props.data.icon} alt="Article icon" />
       </div>
-      <Title>{props.article.title}</Title>
+      <Title>{props.data.title}</Title>
     </Heading>
     <Text>
-      {props.article.text}
+      {props.data.text}
       <Link>Подробнее</Link>
     </Text>
   </Article>

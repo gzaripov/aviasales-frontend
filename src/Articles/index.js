@@ -35,7 +35,7 @@ export default () => (
       <div className="row">
         <div className="col-xs-12">
           {articles.map((article, index) => (
-            <Article article={article} key={index} />
+            <Article data={article} key={index} />
           ))}
         </div>
       </div>
