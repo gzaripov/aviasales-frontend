@@ -28,16 +28,16 @@ const CityAndCountry = styled.div`
   flex-direction: column;
 `;
 
-const Header = styled.header`
+const Heading = styled.div`
   display: flex;
 `;
 
 export default props => (
-  <Header>
+  <Heading>
     <Flag src={props.cardData.flag} alt="Flag icon" />
     <CityAndCountry>
       <City>{props.cardData.city}</City>
       <Country>{props.cardData.country}</Country>
     </CityAndCountry>
-  </Header>
+  </Heading>
 );

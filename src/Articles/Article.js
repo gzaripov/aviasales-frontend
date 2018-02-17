@@ -8,7 +8,7 @@ const Title = styled.h3`
   margin: 0 0 0 10px;
 `;
 
-const Header = styled.header`
+const Heading = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -33,12 +33,12 @@ const Link = styled.a`
 
 export default props => (
   <Article>
-    <Header>
+    <Heading>
       <div>
         <img src={props.article.icon} alt="Article icon" />
       </div>
       <Title>{props.article.title}</Title>
-    </Header>
+    </Heading>
     <Text>
       {props.article.text}
       <Link>Подробнее</Link>

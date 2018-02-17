@@ -21,7 +21,7 @@ const Text = styled.span`
   `};
 `;
 
-const Header = styled.header`
+const Heading = styled.div`
   padding-left: 24px;
   padding-right: 24px;
   margin-bottom: 16px;
@@ -35,8 +35,8 @@ const Header = styled.header`
 `;
 
 export default () => (
-  <Header>
+  <Heading>
     <Calendar src={calendar} alt="Calendar Icon" />
     <Text>Лучшие цены на авиабилеты за последний месяц</Text>
-  </Header>
+  </Heading>
 );

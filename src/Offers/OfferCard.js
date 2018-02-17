@@ -2,7 +2,7 @@ import React from "react";
 import media from "../common/media";
 import styled from "styled-components";
 
-const Header = styled.header`
+const Heading = styled.div`
   display: flex;
   align-items: center;
   padding-left: 16px;
@@ -102,10 +102,10 @@ const AviaCompanyLogo = styled.img`
 
 export default props => (
   <OfferCard>
-    <Header>
+    <Heading>
       <Title>{props.offer.title}</Title>
       <HeaderIcon src={props.offer.icon} />
-    </Header>
+    </Heading>
     <Information>
       <div>
         <AviaCompanyLogo
