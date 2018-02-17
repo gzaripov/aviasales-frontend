@@ -3,9 +3,9 @@ import Header from "./Header";
 import Advice from "./Advice";
 import CityCard from "./CityCard";
 
-import flagRu from "./flags/ru.svg";
-import flagAm from "./flags/am.svg";
-import flagMd from "./flags/md.svg";
+import flagRu from "./flags/ru.png";
+import flagAm from "./flags/am.png";
+import flagMd from "./flags/md.png";
 
 const citiesData = [
   {

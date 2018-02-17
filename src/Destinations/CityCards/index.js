@@ -8,8 +8,8 @@ import spb from "./cities/spb.jpeg";
 import mrv from "./cities/mrv.jpeg";
 import sip from "./cities/sip.jpeg";
 import barsa from "./cities/barsa.jpeg";
-import flagRu from "./flags/ru.svg";
-import flagSp from "./flags/sp.svg";
+import flagRu from "./flags/ru.png";
+import flagSp from "./flags/sp.png";
 
 const cardsData = [
   {
