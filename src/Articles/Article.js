@@ -22,7 +22,7 @@ const Text = styled.p`
   padding-top: 12px;
 `;
 
-const GetMoreInfo = styled.a`
+const Link = styled.a`
   font-size: 14px;
   color: #00ace2;
   text-decoration: none;
@@ -40,7 +40,7 @@ export default props => (
     </Header>
     <Text>
       {props.article.text}
-      <GetMoreInfo>Подробнее</GetMoreInfo>
+      <Link>Подробнее</Link>
     </Text>
   </Article>
 );

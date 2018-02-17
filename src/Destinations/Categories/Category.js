@@ -2,21 +2,17 @@ import React from "react";
 import media from "../../common/media";
 import styled from "styled-components";
 
-const Icon = styled.div`
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  background-image: ${props => `url(${props.url})`};
-  background-repeat: no-repeat;
-  background-position: center;
+const Icon = styled.img`
   box-shadow: 0 4px 4px rgba(74, 74, 74, 0.12);
   border-radius: 50px;
+  padding: 13px;
 `;
 
 const Text = styled.span`
   max-width: 70px;
   margin-top: 12px;
-  color: #00ace2;
+  line-height: 20px;
+  color: ${props => (props.active ? "#5C5C5C" : "#00ace2")};
   text-transform: uppercase;
   font-size: 12px;
 `;
@@ -34,9 +30,18 @@ const Category = styled.div`
   }
 `;
 
+const Underline = styled.div`
+  display: ${props => (props.active ? "block" : "none")};
+  height: 1px;
+  width: 80%;
+  margin-top: 2px;
+  background: #00ace2;
+`;
+
 export default props => (
   <Category>
-    <Icon url={props.imageUrl} />
-    <Text>{props.text}</Text>
+    <Icon src={props.imageUrl} alt="Category icon" />
+    <Text active={props.active}>{props.text}</Text>
+    <Underline active={props.active} />
   </Category>
 );
