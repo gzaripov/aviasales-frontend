@@ -37,7 +37,7 @@ const PricesBox = styled.div`
 
 const Prices = props => (
   <PricesBox>
-    {props.prices.map((o, i) => <CityPrice data={o} key={i} />)}
+    {props.prices.map((price, i) => <CityPrice data={price} key={i} />)}
   </PricesBox>
 );
 

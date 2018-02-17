@@ -73,9 +73,9 @@ export default () => (
   <CityCards>
     <div className="container">
       <div className="row">
-        {cardsData.map((o, i) => (
+        {cardsData.map((cardData, index) => (
           <div className="col-xs-12 col-lg-6">
-            <Card cardData={o} key={i} />
+            <Card cardData={cardData} key={index} />
           </div>
         ))}
       </div>

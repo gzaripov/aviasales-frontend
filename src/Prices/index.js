@@ -100,9 +100,9 @@ export default () => (
         </div>
       </div>
       <div className="row">
-        {citiesData.map((o, i) => (
+        {citiesData.map((cardData, index) => (
           <div className="col-xs-12 col-lg-4">
-            <CityCard cardData={o} key={i} id={i} />
+            <CityCard cardData={cardData} key={index} id={index} />
           </div>
         ))}
       </div>

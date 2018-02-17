@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Article from "./Article";
+import "../index.css";
 
 const articles = [
   {
@@ -33,7 +34,9 @@ export default () => (
     <div className="container">
       <div className="row">
         <div className="col-xs-12">
-          {articles.map((o, i) => <Article article={o} key={i} />)}
+          {articles.map((article, index) => (
+            <Article article={article} key={index} />
+          ))}
         </div>
       </div>
     </div>

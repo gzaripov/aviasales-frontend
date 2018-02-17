@@ -65,7 +65,11 @@ export default () => (
       <div className="row">
         <div className="col-xs-12 col-lg-10 col-lg-offset-1">
           <Title>Спецпредложения на авиабилеты</Title>
-          <Cards>{offers.map((o, i) => <OfferCard offer={o} key={i} />)}</Cards>
+          <Cards>
+            {offers.map((offer, index) => (
+              <OfferCard offer={offer} key={index} />
+            ))}
+          </Cards>
           <OfferFooter />
         </div>
       </div>
