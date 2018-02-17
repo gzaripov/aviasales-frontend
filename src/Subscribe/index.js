@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import media from "../common/media";
 import twitter from "./img/twitter.svg";

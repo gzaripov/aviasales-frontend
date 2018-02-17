@@ -3,8 +3,6 @@ import styled from "styled-components";
 import media from "../../common/media";
 import icon from "./icon.svg";
 
-const Icon = styled.img``;
-
 const Text = styled.span`
   display: none;
   font-size: 20px;

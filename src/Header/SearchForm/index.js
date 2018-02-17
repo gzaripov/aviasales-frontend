@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import media from "../../common/media";
 import DepartureCity from "./DepartureCity";
 import ArrivalCity from "./ArrivalCity";
 import Dates from "./Dates";
