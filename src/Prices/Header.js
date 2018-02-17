@@ -28,6 +28,10 @@ const Header = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  ${media.sm`
+    margin-bottom: 36px;
+  `};
 `;
 
 export default () => (

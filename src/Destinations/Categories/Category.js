@@ -1,5 +1,6 @@
 import React from "react";
 import media from "../../common/media";
+import Button from "../../common/Button";
 import styled from "styled-components";
 
 const Icon = styled.img`
@@ -17,7 +18,7 @@ const Text = styled.span`
   font-size: 12px;
 `;
 
-const Category = styled.div`
+const Category = styled(Button)`
   display: flex;
   flex-direction: column;
   align-items: center;

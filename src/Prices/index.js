@@ -4,7 +4,7 @@ import Advice from "./Advice";
 import CityCard from "./CityCard";
 
 import flagRu from "./flags/ru.png";
-import flagAm from "./flags/am.svg";
+import flagAm from "./flags/am.png";
 import flagMd from "./flags/md.png";
 
 const citiesData = [
