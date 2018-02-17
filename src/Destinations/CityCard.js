@@ -100,19 +100,19 @@ const Card = styled.div`
 
 export default props => (
   <Card>
-    <Image src={props.cardData.imageUrl} alt="City picture" />
+    <Image src={props.data.imageUrl} alt="City picture" />
     <FlagAndInfo>
       <Flag>
-        <img src={props.cardData.flag} alt="Flag" />
+        <img src={props.data.flag} alt="Flag" />
       </Flag>
       <Info>
         <PrimaryInfo>
-          <City>{props.cardData.city}</City>
-          <SearchPrice>Найти от {props.cardData.price} ₽</SearchPrice>
+          <City>{props.data.city}</City>
+          <SearchPrice>Найти от {props.data.price} ₽</SearchPrice>
         </PrimaryInfo>
         <SecondaryInfo>
-          <Country>{props.cardData.country}</Country>
-          <FlightDate>{props.cardData.date}</FlightDate>
+          <Country>{props.data.country}</Country>
+          <FlightDate>{props.data.date}</FlightDate>
         </SecondaryInfo>
       </Info>
     </FlagAndInfo>

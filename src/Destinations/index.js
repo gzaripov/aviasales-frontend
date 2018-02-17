@@ -126,7 +126,7 @@ export default () => (
       <div className="row center-lg">
         {cardsData.map((cardData, index) => (
           <div className="col-xs-12 col-lg-6 col-xl-5">
-            <CityCard cardData={cardData} key={index} />
+            <CityCard data={cardData} key={index} />
           </div>
         ))}
       </div>

@@ -63,7 +63,7 @@ const CityCard = styled.div`
 
 export default props => (
   <CityCard id={props.id}>
-    <Header cardData={props.cardData} />
-    <Prices prices={props.cardData.prices} />
+    <Header data={props.data} />
+    <Prices prices={props.data.prices} />
   </CityCard>
 );

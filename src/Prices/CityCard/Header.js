@@ -34,10 +34,10 @@ const Heading = styled.div`
 
 export default props => (
   <Heading>
-    <Flag src={props.cardData.flag} alt="Flag icon" />
+    <Flag src={props.data.flag} alt="Flag icon" />
     <CityAndCountry>
-      <City>{props.cardData.city}</City>
-      <Country>{props.cardData.country}</Country>
+      <City>{props.data.city}</City>
+      <Country>{props.data.country}</Country>
     </CityAndCountry>
   </Heading>
 );
