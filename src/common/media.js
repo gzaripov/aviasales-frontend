@@ -8,9 +8,10 @@ const sizes = {
 };
 
 export default Object.keys(sizes).reduce((acc, label) => {
-  return (acc[label] = (...args) => css`
+  acc[label] = (...args) => css`
     @media (min-width: ${sizes[label]}) {
       ${css(...args)};
     }
-  `);
+  `;
+  return acc;
 }, {});
