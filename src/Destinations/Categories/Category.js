@@ -32,12 +32,11 @@ const Category = styled(Button)`
   };
 `;
 
-const Underline = styled.div`
+const Underline = styled.hr`
   display: ${props => (props.active ? "block" : "none")};
-  height: 1px;
   padding: 0 30px;
   margin-top: 2px;
-  background: #00ace2;
+  border-top: 1px solid #00ace2;
 `;
 
 export default props => (
