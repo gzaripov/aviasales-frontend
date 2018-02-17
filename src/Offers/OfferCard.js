@@ -86,16 +86,13 @@ const OfferCard = styled.div`
 
   max-width: 300px;
 
-  @media screen and (min-width: ${media.sm}) {
-  }
-
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     max-width: 240px;
-  }
+  `};
 
-  @media screen and (min-width: ${media.xl}) {
+  ${media.xl`
     max-width: 300px;
-  }
+  `};
 `;
 
 const AviaCompanyLogo = styled.img`

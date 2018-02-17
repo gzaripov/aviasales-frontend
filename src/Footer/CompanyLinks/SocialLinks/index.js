@@ -24,11 +24,11 @@ const SocialLink = styled.a`
   color: #4a4a4a;
   line-height: 1;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     flex-basis: initial;
     min-width: initial;
     margin-right: 28px;
-  }
+  `};
 `;
 
 const SocialIcon = styled.img`

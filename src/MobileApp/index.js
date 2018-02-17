@@ -9,9 +9,9 @@ const MobileApp = styled.section`
   background: linear-gradient(137.4deg, #00b0de 4.18%, #196ebd 104.18%);
   position: relative;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     margin-top: 40px;
-  }
+  `};
 `;
 
 const MobileImage = styled.img`
@@ -21,15 +21,15 @@ const MobileImage = styled.img`
   width: 159px;
   height: 174px;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     width: 172px;
     height: 230px;
-  }
+  `};
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     width: 237px;
     height: 312px;
-  }
+  `};
 `;
 
 const Header = styled.h2`
@@ -40,15 +40,14 @@ const Header = styled.h2`
   margin-bottom: 20px;
   color: white;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     line-height: 40px;
     font-size: 32px;
     text-align: left;
-  }
-
-  @media screen and (min-width: ${media.lg}) {
+  `};
+  ${media.lg`
     margin-top: 64px;
-  }
+  `};
 `;
 
 const EnlargedPlatforms = styled(Platforms)`

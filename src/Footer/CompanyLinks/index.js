@@ -10,22 +10,22 @@ const SearchHotels = styled.p`
   margin-top: 24px;
   margin-bottom: 16px;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     text-align: start;
-  }
+  `};
 `;
 
 const Copyright = styled.p`
   font-size: 12px;
   color: #5b5b5c;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     text-align: start;
-  }
+  `};
 
-  @media screen and (min-width: ${media.lg}) {
+  ${media.lg`
     margin-top: 10px;
-  }
+  `};
 `;
 
 const CompanyLinks = styled.div`

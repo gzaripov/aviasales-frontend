@@ -7,10 +7,11 @@ import SocialLinks from "./CompanyLinks";
 const Footer = styled.footer`
   padding-top: 30px;
   padding-bottom: 24px;
-  @media screen and (min-width: ${media.sm}) {
+
+  ${media.sm`
     padding-top: 40px;
     padding-bottom: 40px;
-  }
+  `};
 `;
 
 export default () => (

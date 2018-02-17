@@ -10,9 +10,9 @@ const AppBanners = styled.div`
   flex-direction: column;
   margin-bottom: 16px;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     flex-direction: row;
-  }
+  `};
 `;
 
 const AppBanner = styled.img`

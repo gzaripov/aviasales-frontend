@@ -6,9 +6,9 @@ import calendar from "./calendar.svg";
 const Calendar = styled.img`
   margin: 40px auto 20px;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     margin-top: 48px;
-  }
+  `};
 `;
 
 const Text = styled.span`
@@ -16,9 +16,9 @@ const Text = styled.span`
   font-size: 18px;
   text-align: center;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     font-size: 24px;
-  }
+  `};
 `;
 
 const Header = styled.div`

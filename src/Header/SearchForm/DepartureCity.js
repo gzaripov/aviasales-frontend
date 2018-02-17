@@ -16,12 +16,13 @@ const DepartureCity = styled.div`
   width: 100%;
   padding: 17px 16px;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     width: calc(50% - 2px);
-  }
-  @media screen and (min-width: ${media.lg}) {
+  `};
+
+  ${media.lg`
     width: calc(20% - 2px);
-  }
+  `};
 `;
 
 export default () => (

@@ -24,10 +24,11 @@ const Category = styled.div`
   padding: 19px 16px;
   width: 33%;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     padding: 0;
     width: auto;
-  }
+  `};
+  };
 `;
 
 const Underline = styled.div`

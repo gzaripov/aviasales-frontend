@@ -13,19 +13,19 @@ const SearchButton = styled(Button)`
   background-color: #ff9241;
   height: 56px;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     padding: 0 35px 0 50px;
     margin-top: 24px;
     align-self: center;
-  }
+  `};
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     height: 64px;
-  }
+  `};
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     margin-top: 48px;
-  }
+  `};
 `;
 
 const Text = styled.span`
@@ -34,9 +34,9 @@ const Text = styled.span`
   color: #ffffff;
   margin-right: 24px;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     font-size: 28px;
-  }
+  `};
 `;
 
 export default () => (

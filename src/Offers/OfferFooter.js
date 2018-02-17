@@ -7,11 +7,11 @@ const OfferFooter = styled.div`
   margin-bottom: 24px;
   color: white;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     margin-top: 12px;
     display: flex;
     align-items: center;
-  }
+  `};
 `;
 
 const AllSpecialOffers = styled.a`

@@ -14,10 +14,10 @@ const Categories = styled.div`
   flex-wrap: wrap;
   margin-top: 8px;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     margin-top: 56px;
     justify-content: space-around;
-  }
+  `};
 `;
 
 export default () => (

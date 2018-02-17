@@ -22,10 +22,10 @@ const Title = styled.h3`
   line-height: 40px;
   text-align: center;
 
-  @media screen and (min-width: ${media.lg}) {
+  ${media.lg`
     margin-left: 0;
     margin-right: 0;
-  }
+  `};
 `;
 
 const Vendors = styled.div`
@@ -37,10 +37,10 @@ const Vendors = styled.div`
   justify-content: space-evenly;
   position: relative;
 
-  @media screen and (min-width: ${media.lg}) {
+  ${media.lg`
     padding-left: 0;
     padding-right: 0;
-  }
+  `};
 `;
 
 const Vendor = styled.img``;
@@ -50,20 +50,20 @@ const LeftButton = styled(Button)`
   left: 0;
   top: 48%;
 
-  @media screen and (min-width: ${media.lg}) {
+  ${media.lg`
     top: 10px;
     left: -50px;
-  }
+  `};
 `;
 const RightButton = styled(Button)`
   position: absolute;
   right: 0;
   top: 48%;
 
-  @media screen and (min-width: ${media.lg}) {
+  ${media.lg`
     top: 10px;
     right: -50px;
-  }
+  `};
 `;
 
 const Indicator = styled.div`

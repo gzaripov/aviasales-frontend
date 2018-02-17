@@ -8,12 +8,12 @@ const Dates = styled.div`
   display: flex;
   width: 100%;
   margin: 1px;
-  @media screen and (min-width: ${media.sm}) {
+
+  ${media.sm`
     width: calc(50% - 2px);
-  }
-  @media screen and (min-width: ${media.lg}) {
+  `} ${media.lg`
     width: calc(35% - 2px);
-  }
+  `};
 `;
 
 const DividerDiv = styled.div`

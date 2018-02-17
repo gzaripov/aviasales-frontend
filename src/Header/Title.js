@@ -8,14 +8,14 @@ const Title = styled.h1`
   font-size: 20px;
   margin-bottom: 16px;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     margin-bottom: 0;
     font-size: 32px;
-  }
+  `};
 
-  @media screen and (min-width: ${media.lg}) {
+  ${media.lg`
     font-size: 40px;
-  }
+  `};
 `;
 
 const Subtitle = styled.h2`
@@ -26,9 +26,9 @@ const Subtitle = styled.h2`
   margin-bottom: 40px;
   display: none;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     display: block;
-  }
+  `};
 `;
 
 export default ({ className }) => (

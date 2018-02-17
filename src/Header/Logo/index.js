@@ -10,9 +10,9 @@ const Text = styled.span`
   font-size: 20px;
   color: #ffffff;
   margin-left: 12px;
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     display: inline;
-  }
+  `};
 `;
 
 const Logo = styled.div`

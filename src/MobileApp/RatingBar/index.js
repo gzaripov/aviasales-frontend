@@ -10,12 +10,13 @@ const RatingBarText = styled.span`
 `;
 
 const RatingBar = styled.span`
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     margin-left: 260px;
-  }
-  @media screen and (min-width: ${media.md}) {
+  `};
+
+  ${media.md`
     margin-left: 0;
-  }
+  `};
 `;
 
 export default () => (

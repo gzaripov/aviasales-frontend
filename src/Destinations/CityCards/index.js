@@ -64,9 +64,9 @@ const cardsData = [
 
 const CityCards = styled.div`
   margin-top: 28px;
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     margin-top: 50px;
-  }
+  `};
 `;
 
 export default () => (

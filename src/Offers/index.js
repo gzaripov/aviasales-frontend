@@ -53,10 +53,10 @@ const Cards = styled.div`
   flex-wrap: wrap;
   align-items: center;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     flex-direction: row;
     justify-content: space-between;
-  }
+  `};
 `;
 
 export default () => (

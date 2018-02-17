@@ -15,10 +15,10 @@ const Icon = styled.img`
   margin-right: auto;
   margin-bottom: 24px;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     margin-top: 56px;
     margin-bottom: 20px;
-  }
+  `};
 `;
 
 export default () => (

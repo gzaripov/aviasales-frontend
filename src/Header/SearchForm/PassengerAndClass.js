@@ -17,12 +17,13 @@ const PassengerAndClass = styled.div`
   width: 100%;
   padding: 19px 16px;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     width: calc(50% - 2px);
-  }
-  @media screen and (min-width: ${media.lg}) {
+  `};
+
+  ${media.lg`
     width: calc(25% - 2px);
-  }
+  `};
 `;
 
 const ArrowDown = styled.img`

@@ -9,10 +9,10 @@ const Platforms = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     align-items: center;
     flex-direction: row;
-  }
+  `};
 `;
 
 const Platform = styled.div`
@@ -23,7 +23,7 @@ const Platform = styled.div`
     padding-bottom: 0;
   }
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     padding: 0 20px;
     border-right: 1px solid rgba(255, 255, 255, 0.5);
 
@@ -35,16 +35,16 @@ const Platform = styled.div`
       border-right: none;
       paddin-right: 0;
     }
-  }
+  `};
 `;
 
 const PlatformIcon = styled.img`
   margin-left: 8px;
   margin-right: 8px;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     margin-left: 0;
-  }
+  `};
 `;
 
 const PlatformText = styled.a`
@@ -52,9 +52,9 @@ const PlatformText = styled.a`
   font-size: 14px;
   color: #ffffff;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     line-height: 28px;
-  }
+  `};
 `;
 
 export default props => (

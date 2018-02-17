@@ -30,9 +30,9 @@ const CityPrice = props => (
 
 const PricesBox = styled.div`
   padding-top: 16px;
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     margin-top: 26px;
-  }
+  `};
 `;
 
 const Prices = props => (
@@ -46,7 +46,7 @@ const CityCard = styled.div`
   padding-bottom: 8px;
   border-bottom: 0.5px dashed #afbec6;
 
-  @media screen and (min-width: ${media.lg}) {
+  ${media.lg`
     margin-top: 26px;
     border-bottom: none;
     border-right: ${props =>
@@ -58,7 +58,7 @@ const CityCard = styled.div`
 
     padding-bottom: 0;
     margin-bottom: 8px;
-  }
+  `};
 `;
 
 export default props => (

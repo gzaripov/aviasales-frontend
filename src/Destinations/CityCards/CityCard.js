@@ -10,9 +10,9 @@ const Image = styled.div`
   background-position: center;
   background-size: cover;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     height: 212px;
-  }
+  `};
 `;
 
 const City = styled.span`
@@ -27,10 +27,10 @@ const City = styled.span`
   white-space: nowrap;
   overflow: hidden;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     font-size: 22px;
     line-height: 32px;
-  }
+  `};
 `;
 
 const SearchPrice = styled.a`
@@ -40,9 +40,9 @@ const SearchPrice = styled.a`
   color: #00bae8;
   margin-bottom: 4px;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     font-size: 22px;
-  }
+  `};
 `;
 
 const Country = styled.span`
@@ -66,18 +66,18 @@ const Flag = styled.div`
   align-items: flex-start;
   margin-top: 14px;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     display: flex;
-  }
+  `};
 `;
 
 const Info = styled.div`
   padding: 16px;
   flex-grow: 1;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     padding-left: 8px;
-  }
+  `};
 `;
 
 const FlagAndInfo = styled.div`

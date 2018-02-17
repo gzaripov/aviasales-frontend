@@ -22,17 +22,19 @@ const City = styled.div`
   padding: 0 40px;
   font-size: 18px;
 
-  @media screen and (min-width: ${media.sm}) {
+  ${media.sm`
     padding: 0 100px;
-  }
-  @media screen and (min-width: ${media.md}) {
+  `};
+
+  ${media.md`
     padding: 0 150px;
     font-size: 24px;
     line-height: 36px;
-  }
-  @media screen and (min-width: ${media.lg}) {
+  `};
+
+  ${media.lg`
     padding: 0 260px;
-  }
+  `};
 `;
 
 export default () => (

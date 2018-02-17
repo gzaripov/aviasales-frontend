@@ -13,22 +13,23 @@ const Subscribe = styled.section`
   padding-top: 39px;
   display: none;
 
-  @media screen and (min-width: ${media.md}) {
+  ${media.md`
     display: block;
-  }
-  @media screen and (min-width: ${media.lg}) {
+  `};
+
+  ${media.lg`
     padding-bottom: 24px;
-  }
+  `};
 `;
 
 const Suggestion = styled.p`
   margin-bottom: 20px;
   text-align: center;
 
-  @media screen and (min-width: ${media.xl}) {
+  ${media.xl`
     margin-bottom: 0;
     text-align: left;
-  }
+  `};
 `;
 
 const SuggestionTitle = styled.span`
@@ -40,10 +41,10 @@ const Media = styled.div`
   margin-bottom: 30px;
   text-align: center;
 
-  @media screen and (min-width: ${media.xl}) {
+  ${media.xl`
     margin-bottom: 0;
     text-align: left;
-  }
+  `};
 `;
 
 const SocialMedia = styled.img`
@@ -53,9 +54,9 @@ const SocialMedia = styled.img`
 const Join = styled.form`
   text-align: center;
 
-  @media screen and (min-width: ${media.xl}) {
+  ${media.xl`
     text-align: right;
-  }
+  `};
 `;
 
 const Input = styled.input`
@@ -69,9 +70,9 @@ const Input = styled.input`
   max-width: 191x;
   padding: 7px;
 
-  @media screen and (min-width: ${media.xl}) {
+  ${media.xl`
     margin-left: 16px;
-  }
+  `};
 `;
 
 const Button = styled.button`
@@ -91,9 +92,9 @@ const MeidaAndJoin = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: ${media.xl}) {
+  ${media.xl`
     flex-direction: row;
-  }
+  `};
 `;
 
 export default () => (
