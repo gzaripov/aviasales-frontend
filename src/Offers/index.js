@@ -60,7 +60,7 @@ const Cards = styled.div`
 `;
 
 export default () => (
-  <Offers>
+  <Offers id="offers">
     <div className="container">
       <div className="row">
         <div className="col-xs-12 col-lg-10 col-lg-offset-1">

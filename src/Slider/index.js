@@ -10,7 +10,7 @@ import elevalen from "./img/elevalen.png";
 import arrowLeft from "./img/arrow_left.svg";
 import arrowRight from "./img/arrow_right.svg";
 
-const Slider = styled.section`
+const Slider = styled.div`
   padding: 28px 20px;
   padding-top: 0;
 `;
@@ -83,33 +83,35 @@ const BottomNav = styled.div`
 `;
 
 export default () => (
-  <div className="container">
-    <div className="row">
-      <div className="col-md-12 col-lg-10 col-lg-offset-1 hidden-xs hidden-sm">
-        <Slider>
-          <Title>
-            Дешевые авиабилеты от крупнейших авиакомпаний и агентств
-          </Title>
-          <Vendors>
-            <Vendor src={aeroflot} />
-            <Vendor src={s7airlines} />
-            <Vendor src={one2trip} />
-            <Vendor src={koreanAir} />
-            <Vendor src={elevalen} />
-            <LeftButton>
-              <img src={arrowLeft} alt="left arrow" />
-            </LeftButton>
-            <RightButton>
-              <img src={arrowRight} alt="right arrow" />
-            </RightButton>
-          </Vendors>
-          <BottomNav>
-            <Indicator active />
-            <Indicator />
-            <Indicator />
-          </BottomNav>
-        </Slider>
+  <section if="slider">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12 col-lg-10 col-lg-offset-1 hidden-xs hidden-sm">
+          <Slider>
+            <Title>
+              Дешевые авиабилеты от крупнейших авиакомпаний и агентств
+            </Title>
+            <Vendors>
+              <Vendor src={aeroflot} />
+              <Vendor src={s7airlines} />
+              <Vendor src={one2trip} />
+              <Vendor src={koreanAir} />
+              <Vendor src={elevalen} />
+              <LeftButton>
+                <img src={arrowLeft} alt="left arrow" />
+              </LeftButton>
+              <RightButton>
+                <img src={arrowRight} alt="right arrow" />
+              </RightButton>
+            </Vendors>
+            <BottomNav>
+              <Indicator active />
+              <Indicator />
+              <Indicator />
+            </BottomNav>
+          </Slider>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 );

@@ -60,7 +60,7 @@ const ImageContainer = styled.div`
 `;
 
 export default () => (
-  <MobileApp>
+  <MobileApp id="mobile-app">
     <div className="container">
       <div className="row">
         <div className="col-xs-12 col-md-7 col-md-offset-4 center-xs start-md">

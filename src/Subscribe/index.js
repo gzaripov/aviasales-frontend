@@ -98,7 +98,7 @@ const MeidaAndJoin = styled.div`
 `;
 
 export default () => (
-  <Subscribe>
+  <Subscribe id="subscribe">
     <div className="container">
       <div className="row">
         <div className="col-md-6 col-md-offset-3 col-xl-4 col-xl-offset-1">

@@ -92,7 +92,7 @@ const citiesData = [
 ];
 
 export default () => (
-  <section>
+  <section id="prices">
     <div className="container">
       <div className="row">
         <div className="col-xs-12">

@@ -29,7 +29,7 @@ const Articles = styled.section`
 `;
 
 export default () => (
-  <Articles>
+  <Articles id="articles">
     <div className="container">
       <div className="row">
         <div className="col-xs-12">

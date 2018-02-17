@@ -5,7 +5,8 @@ import City from "./City";
 import Categories from "./Categories";
 import CityCards from "./CityCards";
 import compass from "./compass.svg";
-const Destination = styled.section`
+
+const Destinations = styled.section`
   background-color: #f8fcff;
 `;
 
@@ -22,7 +23,7 @@ const Icon = styled.img`
 `;
 
 export default () => (
-  <Destination>
+  <Destinations id="destinations">
     <div className="container">
       <div className="row">
         <div className="col-xs-12">
@@ -33,5 +34,5 @@ export default () => (
       <Categories />
     </div>
     <CityCards />
-  </Destination>
+  </Destinations>
 );
