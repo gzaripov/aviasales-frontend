@@ -27,7 +27,7 @@ const DepartureCity = styled.div`
 
 export default () => (
   <DepartureCity>
-    <CityInput value="Москва" placeholder="Город вылета" />
+    <CityInput placeholder="Город вылета" defaultValue="Москва" />
     <CityIndex>mow</CityIndex>
     <SwapButton>
       <img src={arrow} alt="Swap cities button" />

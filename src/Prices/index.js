@@ -102,8 +102,8 @@ export default () => (
       </div>
       <div className="row">
         {citiesData.map((cityData, index) => (
-          <div className="col-xs-12 col-lg-4">
-            <CityCard data={cityData} key={index} id={index} />
+          <div className="col-xs-12 col-lg-4" key={index}>
+            <CityCard data={cityData} id={index} />
           </div>
         ))}
       </div>
