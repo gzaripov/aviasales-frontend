@@ -14,13 +14,11 @@ const Title = styled.h4`
   text-align: left;
 `;
 
-const LiLink = props => (
+const Link = styled(props => (
   <li className={props.className}>
     <a href={props.href}>{props.children}</a>
   </li>
-);
-
-const Link = styled(LiLink)`
+))`
   display: block;
   margin-bottom: 12px;
 `;

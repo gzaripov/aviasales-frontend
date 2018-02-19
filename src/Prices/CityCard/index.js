@@ -16,30 +16,26 @@ const Price = styled.a`
   margin-bottom: 4px;
 `;
 
-const CityPriceBox = styled.div`
+const CityPrice = styled(props => (
+  <div className={props.className}>
+    <From>{props.data.from}</From>
+    <Price>от {props.data.price} ₽</Price>
+  </div>
+))`
   display: flex;
   margin-bottom: 16px;
 `;
 
-const CityPrice = props => (
-  <CityPriceBox>
-    <From>{props.data.from}</From>
-    <Price>от {props.data.price} ₽</Price>
-  </CityPriceBox>
-);
-
-const PricesBox = styled.div`
+const Prices = styled(props => (
+  <div className={props.className}>
+    {props.prices.map((price, i) => <CityPrice data={price} key={i} />)}
+  </div>
+))`
   padding-top: 16px;
   ${media.md`
     margin-top: 26px;
   `};
 `;
-
-const Prices = props => (
-  <PricesBox>
-    {props.prices.map((price, i) => <CityPrice data={price} key={i} />)}
-  </PricesBox>
-);
 
 const CityCard = styled.div`
   margin-top: 24px;
