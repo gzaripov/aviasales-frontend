@@ -12,6 +12,7 @@ const City = styled.span`
   font-weight: 500;
   line-height: 32px;
   font-size: 22px;
+  margin-bottom: 2px;
   color: #5b5b5c;
 `;
 

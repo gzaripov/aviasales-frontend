@@ -7,6 +7,10 @@ const Image = styled.img`
   height: 126px;
   object-fit: cover;
 
+  ${media.sm`
+    height: 170px;
+  `};
+
   ${media.md`
     height: 212px;
   `};

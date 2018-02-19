@@ -6,15 +6,6 @@ import CityCard from "./CityCard";
 import Category from "./Category";
 
 import compass from "./compass.svg";
-import krasnodar from "./cities/krasnodar.png";
-import sochi from "./cities/sochi.jpeg";
-import spb from "./cities/spb.jpeg";
-import mrv from "./cities/mrv.jpeg";
-import sip from "./cities/sip.jpeg";
-import barsa from "./cities/barsa.jpeg";
-import flagRu from "./flags/ru.png";
-import flagSp from "./flags/sp.png";
-
 import world from "./icons/world.svg";
 import sun from "./icons/sun.svg";
 import shopping from "./icons/shopping.svg";
@@ -25,51 +16,51 @@ import rest from "./icons/rest_kids.svg";
 const cardsData = [
   {
     country: "Россия",
-    flag: flagRu,
+    flag: "/img/flags/ru.png",
     city: "Краснодар",
     price: "1 212",
     date: "18 марта",
-    imageUrl: krasnodar
+    imageUrl: "/img/cities/krasnodar.jpg"
   },
   {
     country: "Россия",
-    flag: flagRu,
+    flag: "/img/flags/ru.png",
     city: "Сочи (Адлер)",
     price: "1 334",
     date: "17 марта",
-    imageUrl: sochi
+    imageUrl: "/img/cities/sochi.jpg"
   },
   {
     country: "Россия",
-    flag: flagRu,
+    flag: "/img/flags/ru.png",
     city: "Санкт-Петербург",
     price: "1 508",
     date: "19 марта",
-    imageUrl: spb
+    imageUrl: "/img/cities/spb.jpg"
   },
   {
     country: "Россия",
-    flag: flagRu,
+    flag: "/img/flags/ru.png",
     city: "Минеральные Воды",
     price: "2 074",
     date: "13 марта",
-    imageUrl: mrv
+    imageUrl: "/img/cities/mrv.jpg"
   },
   {
     country: "Россия",
-    flag: flagRu,
+    flag: "/img/flags/ru.png",
     city: "Симферополь",
     price: "2 407",
     date: "13 марта",
-    imageUrl: sip
+    imageUrl: "/img/cities/sip.jpg"
   },
   {
     country: "Испания",
-    flag: flagSp,
+    flag: "/img/flags/sp.png",
     city: "Барселона",
     price: "4 247",
     date: "24 марта",
-    imageUrl: barsa
+    imageUrl: "/img/cities/barsa.jpg"
   }
 ];
 
@@ -123,9 +114,9 @@ export default () => (
           </Categories>
         </div>
       </div>
-      <div className="row center-lg">
+      <div className="row center-md">
         {cardsData.map((cardData, index) => (
-          <div className="col-xs-12 col-lg-6 col-xl-5">
+          <div className="col-xs-12 col-md-10 col-lg-6 col-xl-5">
             <CityCard data={cardData} key={index} />
           </div>
         ))}

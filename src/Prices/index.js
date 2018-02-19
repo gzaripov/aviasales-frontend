@@ -4,15 +4,11 @@ import Header from "./Header";
 import Advice from "./Advice";
 import CityCard from "./CityCard";
 
-import flagRu from "./flags/ru.png";
-import flagAm from "./flags/am.png";
-import flagMd from "./flags/md.png";
-
 const citiesData = [
   {
     city: "Симферополь (Крым)",
     country: "Крым",
-    flag: flagRu,
+    flag: "/img/flags/ru.png",
     prices: [
       {
         from: "Из Москвы",
@@ -39,7 +35,7 @@ const citiesData = [
   {
     city: "Ереван",
     country: "Армения",
-    flag: flagAm,
+    flag: "/img/flags/am.png",
     prices: [
       {
         from: "Из Москвы",
@@ -66,7 +62,7 @@ const citiesData = [
   {
     city: "Кишинёв",
     country: "Молдавия",
-    flag: flagMd,
+    flag: "/img/flags/md.png",
     prices: [
       {
         from: "Из Москвы",
