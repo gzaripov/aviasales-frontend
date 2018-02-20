@@ -3,17 +3,35 @@ import styled from "styled-components";
 import media from "../../common/media";
 import Header from "./Header";
 
-const From = styled.span`
+const From = styled.a`
+  padding: 8px 0;
   line-height: 20px;
-  font-size: 16px;
+  flex-grow: 1;
+  text-align: start;
+  transition: color 0.3s;
+  color: #4a4a4a;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  :hover {
+    color: #ff8b00;
+    text-decoration: underline;
+  }
 `;
 
 const Price = styled.a`
   margin-left: auto;
   text-decoration: none;
-  font-size: 14px;
   color: #00bae8;
-  margin-bottom: 4px;
+  transition: color 0.3s;
+  padding-left: 10px;
+  white-space: nowrap;
+
+  :hover {
+    color: #ff8b00;
+  }
 `;
 
 const CityPrice = styled(props => (
@@ -23,7 +41,14 @@ const CityPrice = styled(props => (
   </div>
 ))`
   display: flex;
-  margin-bottom: 16px;
+  align-items: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 0 8px;
+
+  :hover {
+    background-color: #f1fcff;
+  }
 `;
 
 const Prices = styled(props => (

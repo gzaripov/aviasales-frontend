@@ -3,32 +3,48 @@ import media from "../common/media";
 import Button from "../common/Button";
 import styled from "styled-components";
 
-const Icon = styled.img`
-  box-shadow: 0 4px 4px rgba(74, 74, 74, 0.12);
-  border-radius: 50px;
-  padding: 13px;
+const Category = styled.div`
+  display: flex;
+  width: 33%;
+  justify-content: center;
+  padding: 19px 16px;
+
+  ${media.md`
+    width: auto;  
+    padding: 0;
+  `};
+`;
+
+const CategoryButton = styled(Button)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${props => (props.active ? "#5C5C5C" : "#00ace2")};
+  transition: color 0.3s ease;
+
+  :hover {
+    color: ${props => (props.active ? "#5C5C5C" : "#ff8b00;")};
+  }
 `;
 
 const Text = styled.span`
   max-width: 70px;
   margin-top: 12px;
   line-height: 20px;
-  color: ${props => (props.active ? "#5C5C5C" : "#00ace2")};
   text-transform: uppercase;
   font-size: 12px;
 `;
 
-const Category = styled(Button)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 19px 16px;
-  width: 33%;
+const Icon = styled.img`
+  box-shadow: 0 1px 4px rgba(74, 74, 74, 0.12);
+  border-radius: 50px;
+  padding: 13px;
+  transition: all 0.5s ease;
 
-  ${media.md`
-    padding: 0;
-    width: auto;
-  `};
+  ${CategoryButton}:hover & {
+    transform: ${props => (CategoryButton.active ? "" : "translateY(-5px);")};
+    box-shadow: 0 4px 4px rgba(74, 74, 74, 0.12);
+  }
 `;
 
 const Underline = styled.hr`
@@ -39,9 +55,11 @@ const Underline = styled.hr`
 `;
 
 export default props => (
-  <Category>
-    <Icon src={props.imageUrl} alt="Category icon" />
-    <Text active={props.active}>{props.text}</Text>
-    <Underline active={props.active} />
+  <Category className={props.className}>
+    <CategoryButton active={props.active}>
+      <Icon src={props.imageUrl} alt="Category icon" />
+      <Text>{props.text}</Text>
+      <Underline active={props.active} />
+    </CategoryButton>
   </Category>
 );

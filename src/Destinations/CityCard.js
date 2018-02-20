@@ -2,10 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import media from "../common/media";
 
+const Card = styled.div`
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 75, 93, 0.12);
+  margin-top: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  :hover {
+    box-shadow: 0 10px 20px 0 rgba(91, 137, 163, 0.2);
+    cursor: pointer;
+  }
+`;
+
 const Image = styled.img`
   width: 100%;
   height: 126px;
   object-fit: cover;
+  transition: transform 6s ease;
+
+  ${Card}:hover & {
+    transform: scale(1.1);
+  }
 
   ${media.sm`
     height: 170px;
@@ -40,6 +58,11 @@ const SearchPrice = styled.a`
   font-size: 14px;
   color: #00bae8;
   margin-bottom: 4px;
+  transition: color 0.3s ease;
+
+  ${Card}:hover & {
+    color: #ff8c00;
+  }
 
   ${media.md`
     font-size: 22px;
@@ -93,13 +116,6 @@ const PrimaryInfo = styled.div`
 const SecondaryInfo = styled.div`
   display: flex;
   align-items: center;
-`;
-
-const Card = styled.div`
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 75, 93, 0.12);
-  margin-top: 12px;
-  overflow: hidden;
 `;
 
 export default props => (
