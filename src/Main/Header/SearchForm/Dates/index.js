@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import media from "../../../../common/media";
-import DepartureDate from "./DepartureDate";
-import ArrivalDate from "./ArrivalDate";
+import { DepartureDate, ArrivalDate } from "./FlightDate";
 
 const Dates = styled.div`
   display: flex;
