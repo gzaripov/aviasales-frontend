@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import media from "../common/media";
-import Button from "../common/Button";
+import media from "../../common/media";
+import Button from "../../common/Button";
 import aero from "./icons/aero.svg";
 
 const SearchButton = styled(Button)`

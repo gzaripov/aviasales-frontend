@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Advice from "./Advice";
-import CityCard from "./CityCard";
+import CityCard from "./CityCard/index";
 
 import flagRu from "./flags/ru.png";
 import flagAm from "./flags/am.png";

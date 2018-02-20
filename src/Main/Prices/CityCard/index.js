@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import media from "../../common/media";
+import media from "../../../common/media";
 import Header from "./Header";
 
 const From = styled.span`

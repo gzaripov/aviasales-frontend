@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import media from "../common/media";
+import media from "../../common/media";
 import twitter from "./img/twitter.svg";
 import facebook from "./img/facebook.svg";
 import vk from "./img/vk.svg";
