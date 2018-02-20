@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import DepartureCity from "./DepartureCity";
-import ArrivalCity from "./ArrivalCity";
+import { DepartureCity, ArrivalCity } from "./City";
 import Dates from "./Dates";
 import PassengerAndClass from "./PassengerAndClass";
 
