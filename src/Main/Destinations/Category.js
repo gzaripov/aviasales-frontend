@@ -1,6 +1,6 @@
 import React from "react";
-import media from "../common/media";
-import Button from "../common/Button";
+import media from "../../common/media";
+import Button from "../../common/Button";
 import styled from "styled-components";
 
 const Icon = styled.img`

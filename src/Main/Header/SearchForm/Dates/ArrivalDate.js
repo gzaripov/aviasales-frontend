@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import calendar from "./calendar.svg";
 import DateText from "./DateText";
-import Button from "../../../common/Button";
+import Button from "../../../../common/Button";
 
 const ArrivalDate = styled.div`
   display: flex;

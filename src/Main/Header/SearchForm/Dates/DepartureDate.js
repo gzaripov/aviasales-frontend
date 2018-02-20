@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import calendar from "./calendar.svg";
-import Button from "../../../common/Button";
+import Button from "../../../../common/Button";
 import DateText from "./DateText";
 
 const DepartureDate = styled.div`

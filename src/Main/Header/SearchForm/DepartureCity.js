@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import media from "../../common/media";
+import media from "../../../common/media";
 import CityInput from "./CityInput";
 import CityIndex from "./CityIndex";
-import Button from "../../common/Button";
+import Button from "../../../common/Button";
 import arrow from "./icons/arrow.svg";
 
 const SwapButton = styled(Button)``;

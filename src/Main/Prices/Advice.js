@@ -1,5 +1,5 @@
 import React from "react";
-import media from "../common/media";
+import media from "../../common/media";
 import styled from "styled-components";
 
 const Advice = styled.div`

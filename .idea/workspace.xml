@@ -1,9 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bb0fb3a-4c27-44a3-9317-f52f807d4883" name="Default" comment="feat: added promotion component" />
+    <list default="true" id="e3b6f695-9236-4597-ba87-bf9e4574094b" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main/MobileApp/Platforms/android.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main/MobileApp/Platforms/apple.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main/MobileApp/Platforms/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main/MobileApp/Platforms/windows.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main/MobileApp/RatingBar/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main/MobileApp/RatingBar/rating.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main/MobileApp/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main/MobileApp/phone.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main/index.js" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change beforePath="$PROJECT_DIR$/src/Articles/Article.js" afterPath="$PROJECT_DIR$/src/Main/Articles/Article.js" />
+      <change beforePath="$PROJECT_DIR$/src/Articles/index.js" afterPath="$PROJECT_DIR$/src/Main/Articles/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/Category.js" afterPath="$PROJECT_DIR$/src/Main/Destinations/Category.js" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/CityCard.js" afterPath="$PROJECT_DIR$/src/Main/Destinations/CityCard.js" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/Heading.js" afterPath="$PROJECT_DIR$/src/Main/Destinations/Heading.js" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/cities/barsa.jpeg" afterPath="$PROJECT_DIR$/src/Main/Destinations/cities/barsa.jpeg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/cities/krasnodar.png" afterPath="$PROJECT_DIR$/src/Main/Destinations/cities/krasnodar.png" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/cities/mrv.jpeg" afterPath="$PROJECT_DIR$/src/Main/Destinations/cities/mrv.jpeg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/cities/sip.jpeg" afterPath="$PROJECT_DIR$/src/Main/Destinations/cities/sip.jpeg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/cities/sochi.jpeg" afterPath="$PROJECT_DIR$/src/Main/Destinations/cities/sochi.jpeg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/cities/spb.jpeg" afterPath="$PROJECT_DIR$/src/Main/Destinations/cities/spb.jpeg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/compass.svg" afterPath="$PROJECT_DIR$/src/Main/Destinations/compass.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/edit.svg" afterPath="$PROJECT_DIR$/src/Main/Destinations/edit.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/flags/ru.png" afterPath="$PROJECT_DIR$/src/Main/Destinations/flags/ru.png" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/flags/sp.png" afterPath="$PROJECT_DIR$/src/Main/Destinations/flags/sp.png" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/icons/culture.svg" afterPath="$PROJECT_DIR$/src/Main/Destinations/icons/culture.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/icons/night_style.svg" afterPath="$PROJECT_DIR$/src/Main/Destinations/icons/night_style.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/icons/rest_kids.svg" afterPath="$PROJECT_DIR$/src/Main/Destinations/icons/rest_kids.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/icons/shopping.svg" afterPath="$PROJECT_DIR$/src/Main/Destinations/icons/shopping.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/icons/sun.svg" afterPath="$PROJECT_DIR$/src/Main/Destinations/icons/sun.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/icons/world.svg" afterPath="$PROJECT_DIR$/src/Main/Destinations/icons/world.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Destinations/index.js" afterPath="$PROJECT_DIR$/src/Main/Destinations/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/Heading.js" afterPath="$PROJECT_DIR$/src/Main/Header/Heading.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/Logo.js" afterPath="$PROJECT_DIR$/src/Main/Header/Logo.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchButton.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchButton.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/ArrivalCity.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/ArrivalCity.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/CityIndex.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/CityIndex.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/CityInput.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/CityInput.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/Dates/ArrivalDate.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/ArrivalDate.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/Dates/DateText.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/DateText.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/Dates/DepartureDate.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/DepartureDate.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/Dates/calendar.svg" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/calendar.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/Dates/index.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/DepartureCity.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/DepartureCity.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/PassengerAndClass.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/PassengerAndClass.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/icons/arrow.svg" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/icons/arrow.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/icons/arrow_down.svg" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/icons/arrow_down.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SearchForm/index.js" afterPath="$PROJECT_DIR$/src/Main/Header/SearchForm/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Header/icons/aero.svg" afterPath="$PROJECT_DIR$/src/Main/Header/icons/aero.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Header/icons/logo.svg" afterPath="$PROJECT_DIR$/src/Main/Header/icons/logo.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Header/index.js" afterPath="$PROJECT_DIR$/src/Main/Header/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/AppBanners.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/SiteLinks.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/SocialLinks.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/banners/app-store.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/banners/google-play.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/banners/windows-phone.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/icons/facebook.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/icons/instagram.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/icons/twitter.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/icons/viber.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/icons/vk.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/CompanyLinks/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/FlightLinks.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Footer/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/MobileApp/Platforms/android.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/MobileApp/Platforms/apple.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/MobileApp/Platforms/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/MobileApp/Platforms/windows.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/MobileApp/RatingBar/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/MobileApp/RatingBar/rating.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/MobileApp/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/MobileApp/phone.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Offers/OfferCard.js" afterPath="$PROJECT_DIR$/src/Main/Offers/OfferCard.js" />
+      <change beforePath="$PROJECT_DIR$/src/Offers/OfferFooter.js" afterPath="$PROJECT_DIR$/src/Main/Offers/OfferFooter.js" />
+      <change beforePath="$PROJECT_DIR$/src/Offers/index.js" afterPath="$PROJECT_DIR$/src/Main/Offers/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Prices/Advice.js" afterPath="$PROJECT_DIR$/src/Main/Prices/Advice.js" />
+      <change beforePath="$PROJECT_DIR$/src/Prices/CityCard/Header.js" afterPath="$PROJECT_DIR$/src/Main/Prices/CityCard/Header.js" />
+      <change beforePath="$PROJECT_DIR$/src/Prices/CityCard/index.js" afterPath="$PROJECT_DIR$/src/Main/Prices/CityCard/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Prices/Header.js" afterPath="$PROJECT_DIR$/src/Main/Prices/Header.js" />
+      <change beforePath="$PROJECT_DIR$/src/Prices/calendar.svg" afterPath="$PROJECT_DIR$/src/Main/Prices/calendar.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Prices/flags/am.png" afterPath="$PROJECT_DIR$/src/Main/Prices/flags/am.png" />
+      <change beforePath="$PROJECT_DIR$/src/Prices/flags/md.png" afterPath="$PROJECT_DIR$/src/Main/Prices/flags/md.png" />
+      <change beforePath="$PROJECT_DIR$/src/Prices/flags/ru.png" afterPath="$PROJECT_DIR$/src/Main/Prices/flags/ru.png" />
+      <change beforePath="$PROJECT_DIR$/src/Prices/index.js" afterPath="$PROJECT_DIR$/src/Main/Prices/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Slider/img/aeroflot.png" afterPath="$PROJECT_DIR$/src/Main/Slider/img/aeroflot.png" />
+      <change beforePath="$PROJECT_DIR$/src/Slider/img/arrow_left.svg" afterPath="$PROJECT_DIR$/src/Main/Slider/img/arrow_left.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Slider/img/arrow_right.svg" afterPath="$PROJECT_DIR$/src/Main/Slider/img/arrow_right.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Slider/img/elevalen.png" afterPath="$PROJECT_DIR$/src/Main/Slider/img/elevalen.png" />
+      <change beforePath="$PROJECT_DIR$/src/Slider/img/korean-air.png" afterPath="$PROJECT_DIR$/src/Main/Slider/img/korean-air.png" />
+      <change beforePath="$PROJECT_DIR$/src/Slider/img/one2trip.png" afterPath="$PROJECT_DIR$/src/Main/Slider/img/one2trip.png" />
+      <change beforePath="$PROJECT_DIR$/src/Slider/img/s7airlines.png" afterPath="$PROJECT_DIR$/src/Main/Slider/img/s7airlines.png" />
+      <change beforePath="$PROJECT_DIR$/src/Slider/index.js" afterPath="$PROJECT_DIR$/src/Main/Slider/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Subscribe/img/border-top.png" afterPath="$PROJECT_DIR$/src/Main/Subscribe/img/border-top.png" />
+      <change beforePath="$PROJECT_DIR$/src/Subscribe/img/facebook.svg" afterPath="$PROJECT_DIR$/src/Main/Subscribe/img/facebook.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Subscribe/img/rss.svg" afterPath="$PROJECT_DIR$/src/Main/Subscribe/img/rss.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Subscribe/img/twitter.svg" afterPath="$PROJECT_DIR$/src/Main/Subscribe/img/twitter.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Subscribe/img/vk.svg" afterPath="$PROJECT_DIR$/src/Main/Subscribe/img/vk.svg" />
+      <change beforePath="$PROJECT_DIR$/src/Subscribe/index.js" afterPath="$PROJECT_DIR$/src/Main/Subscribe/index.js" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/src/Destinations/categories/index.js" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,17 +115,159 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/MobileApp/Platforms/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Article.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/Articles/Article.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/Articles/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrivalDate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/ArrivalDate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateText.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/DateText.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DepartureDate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/DepartureDate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/Offers/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/Main</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,7 +280,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/MobileApp/Platforms/index.js" />
+        <option value="$PROJECT_DIR$/src/Main/MobileApp/Platforms/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/Main/index.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/ArrivalDate.js" />
+        <option value="$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/DepartureDate.js" />
+        <option value="$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/index.js" />
       </list>
     </option>
   </component>
@@ -55,9 +307,12 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -74,6 +329,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -82,17 +340,54 @@
               <item name="aviasales-frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="aviasales-frontend" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="aviasales-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aviasales-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aviasales-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aviasales-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aviasales-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aviasales-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aviasales-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aviasales-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aviasales-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aviasales-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchForm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aviasales-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aviasales-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchForm" type="462c0819:PsiDirectoryNode" />
+              <item name="Dates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -100,6 +395,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="add_unversioned_files" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Main" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -203,133 +504,21 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6bb0fb3a-4c27-44a3-9317-f52f807d4883" name="Default" comment="" />
-      <created>1518819754944</created>
+      <changelist id="e3b6f695-9236-4597-ba87-bf9e4574094b" name="Default" comment="" />
+      <created>1519150480564</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1518819754944</updated>
-      <workItem from="1518819756729" duration="1389000" />
+      <updated>1519150480564</updated>
+      <workItem from="1519150482150" duration="1968000" />
     </task>
-    <task id="LOCAL-00001" summary="feat: added components hierarchy">
-      <created>1518819971930</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1518819971930</updated>
-    </task>
-    <task id="LOCAL-00002" summary="feat: implemented Prices component">
-      <created>1518820003678</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820003678</updated>
-    </task>
-    <task id="LOCAL-00003" summary="feat: implemented Header">
-      <created>1518820029566</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820029566</updated>
-    </task>
-    <task id="LOCAL-00004" summary="feat: added MobileApp markup">
-      <created>1518820068958</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820068958</updated>
-    </task>
-    <task id="LOCAL-00005" summary="feat: added footer markup">
-      <created>1518820120054</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820120054</updated>
-    </task>
-    <task id="LOCAL-00006" summary="style: swap icons in footer, added text to logo on tablet screens">
-      <created>1518820144645</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820144645</updated>
-    </task>
-    <task id="LOCAL-00007" summary="refactor: removed 'Flex' component from project.">
-      <created>1518820183266</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820183266</updated>
-    </task>
-    <task id="LOCAL-00008" summary="feat: added support of tablet and desktop to Header">
-      <created>1518820197817</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820197817</updated>
-    </task>
-    <task id="LOCAL-00009" summary="feat: made Destinations section adaptive">
-      <created>1518820213546</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820213546</updated>
-    </task>
-    <task id="LOCAL-00010" summary="feat: made Destinations City Cards Adaptive">
-      <created>1518820233235</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820233235</updated>
-    </task>
-    <task id="LOCAL-00011" summary="feat: made prices component adaptive.">
-      <created>1518820247173</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820247173</updated>
-    </task>
-    <task id="LOCAL-00012" summary="feat: made Offer section adaptive">
-      <created>1518820478264</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820478264</updated>
-    </task>
-    <task id="LOCAL-00013" summary="feat: made MobileApp component adaptive">
-      <created>1518820505484</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820505484</updated>
-    </task>
-    <task id="LOCAL-00014" summary="feat: made footer adaptive">
-      <created>1518820517136</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820517136</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fix: fixed image overlapping on small screens in MobileApp component">
-      <created>1518820527855</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820527855</updated>
-    </task>
-    <task id="LOCAL-00016" summary="feat: added promotion component">
-      <created>1518820549203</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1518820549203</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1389000" />
+    <option name="totallyTimeSpent" value="1968000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="819" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -337,14 +526,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872927" sideWeight="0.5028612" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872927" sideWeight="0.49713877" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -363,66 +552,127 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="feat: added components hierarchy" />
-    <MESSAGE value="feat: implemented Prices component" />
-    <MESSAGE value="feat: implemented Header" />
-    <MESSAGE value="feat: added MobileApp markup" />
-    <MESSAGE value="feat: added footer markup" />
-    <MESSAGE value="style: swap icons in footer, added text to logo on tablet screens" />
-    <MESSAGE value="refactor: removed 'Flex' component from project." />
-    <MESSAGE value="feat: added support of tablet and desktop to Header" />
-    <MESSAGE value="feat: made Destinations section adaptive" />
-    <MESSAGE value="feat: made Destinations City Cards Adaptive" />
-    <MESSAGE value="feat: made prices component adaptive." />
-    <MESSAGE value="feat: made Offer section adaptive" />
-    <MESSAGE value="feat: made MobileApp component adaptive" />
-    <MESSAGE value="feat: made footer adaptive" />
-    <MESSAGE value="fix: fixed image overlapping on small screens in MobileApp component" />
-    <MESSAGE value="feat: added promotion component" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added promotion component" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main/MobileApp/Platforms/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Offers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Articles/Article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Articles/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/ArrivalDate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/DateText.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/DepartureDate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Header/SearchForm/Dates/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
