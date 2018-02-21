@@ -1,0 +1,44 @@
+<svg width="18" height="18" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Combined Shape</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-6327 -1035)">
+<rect x="6327" y="1035" width="18" height="18" fill="#FFFFFF"/>
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 5737 0L 6505 0L 6505 3192L 5737 3192L 5737 0Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="Search / Tablet" clip-path="url(#clip-0)">
+<path d="M 5737 0L 6505 0L 6505 3192L 5737 3192L 5737 0Z" fill="#FFFFFF"/>
+<g id="bg">
+<use xlink:href="#path0_fill" transform="translate(5737 207)" fill="#EAEAEA"/>
+</g>
+<g id="main">
+<g id="3">
+<g id="Group">
+<g id="ticketOpener + ticketBuyCol Mask">
+<g id="ticket productListTicket openable">
+<use xlink:href="#path1_fill" transform="translate(5745 860)" fill="#FFFFFF"/>
+</g>
+<mask id="mask0_outline" mask-type="alpha">
+<g id="ticket productListTicket openable">
+<use xlink:href="#path1_fill" transform="translate(5745 860)" fill="#FFFFFF"/>
+</g>
+</mask>
+</g>
+<g id="Group 5">
+<g id="plane-taking-off">
+<g id="Combined Shape">
+<use xlink:href="#path2_fill" transform="matrix(0.707107 0.707107 -0.707107 0.707107 6333.17 1035.51)" fill="#A0B0B9"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 0L 768 0L 768 2177L 0 2177L 0 0Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 0 6.39999C 0 4.15979 0 3.03969 0.435974 2.18404C 0.819467 1.43139 1.43139 0.819467 2.18404 0.435974C 3.03969 0 4.15979 0 6.4 0L 745.6 0C 747.84 0 748.96 0 749.816 0.435974C 750.569 0.819467 751.181 1.43139 751.564 2.18404C 752 3.03969 752 4.15979 752 6.4L 752 262.6C 752 264.84 752 265.96 751.564 266.816C 751.181 267.569 750.569 268.181 749.816 268.564C 748.96 269 747.84 269 745.6 269L 6.40001 269C 4.15979 269 3.03969 269 2.18404 268.564C 1.43139 268.181 0.819467 267.569 0.435974 266.816C 0 265.96 0 264.84 0 262.6L 0 6.39999Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 4.07412 1.08699C 4.13489 1.08699 8.58953 2.62895 8.58953 2.62895L 8.48957 2.68367C 10.5723 1.64727 12.7062 0.608878 13.4978 0.302454C 13.528 0.289852 14.2423 0.000172633 14.8988 0C 15.2967 8.63167e-05 15.5536 0.108586 15.7208 0.247384C 15.8157 0.32645 15.8817 0.41527 15.9281 0.499601C 16.2909 1.25807 15.2216 2.1202 14.1 2.67383L 11.7016 3.89107L 6.92543 6.31511L 3.64651 7.97834C 3.60171 8.00122 3.55104 8.00579 3.50435 7.99362C 3.47586 7.98654 3.4491 7.97291 3.42614 7.9534L 0.0684227 5.13153C 0.0187042 5.0901 -0.00606869 5.02735 0.00126823 4.96425C 0.00903674 4.90089 0.0482245 4.84548 0.106057 4.8163L 0.3701 4.67776C 0.427846 4.6485 0.497244 4.64885 0.55499 4.67897L 3.61656 5.14206C 3.61656 5.14206 4.62336 4.62692 6.0046 3.92966C 5.8929 3.82901 5.7043 3.65284 5.69835 3.65724C 5.69835 3.65724 3.48026 1.60765 3.26275 1.41085C 3.34311 1.38694 3.51911 1.31158 3.68725 1.23942C 3.86947 1.16131 4.04245 1.08707 4.07412 1.08699Z"/>
+</defs>
+</svg>
