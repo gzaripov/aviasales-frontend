@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import arrow from "./arrow.svg";
+import Toolbar from "./Toolbar";
 
 const Currency = styled.p`
   border: 1px solid #ffffff;
@@ -10,12 +10,10 @@ const Currency = styled.p`
   text-align: center;
   padding: 6px 12px;
   color: white;
+  margin-left: auto;
 `;
 
-const BackArrow = styled.img``;
-
 const Header = styled.header`
-  display: flex;
   background: linear-gradient(
     100deg,
     #00b0de -46.32%,
@@ -27,9 +25,22 @@ const Header = styled.header`
   );
 `;
 
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export default () => (
   <Header>
-    <Currency>RUB</Currency>
-    <BackArrow src={arrow} alt="Back arrow" />
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12">
+          <Content>
+            <Toolbar />
+            <Currency>RUB</Currency>
+          </Content>
+        </div>
+      </div>
+    </div>
   </Header>
 );
