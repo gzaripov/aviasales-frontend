@@ -98,7 +98,6 @@ const FlightStatus = props => {
       </Best>
     );
   }
-  console.log("null");
   return null;
 };
 

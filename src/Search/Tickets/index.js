@@ -407,8 +407,8 @@ const ticketsData = [
 
 const Tickets = styled.section`
   background-color: #eaeaea;
-  padding-top: 52px;
-  padding-bottom: 68px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 `;
 
 export default () => (

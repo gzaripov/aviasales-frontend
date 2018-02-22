@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
+import media from "../common/media";
 import Header from "./Header";
 import Tickets from "./Tickets";
 import Button from "../common/Button";
@@ -22,25 +23,51 @@ const FilterButton = styled(Button)`
 
 const ScrollToTopButton = styled(Button)`
   position: fixed;
-  top: 64px;
+  top: 16px;
   left: 50%;
   padding: 6px 16px;
-  transform: translateX(-50%);
-  transition-duration: 600ms;
-  transition-property: transform;
+  transform: ${props =>
+    props.shown ? "translateX(-50%);" : "translate(-50%, -50px);"};
+  opacity: ${props => (props.shown ? "0.5;" : "0")};
+  transition: all 200ms ease-in-out;
   font-weight: 900;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   background: #00ace2;
-  opacity: 0.5;
   mix-blend-mode: normal;
   border-radius: 100px;
+
+  ${media.sm`
+      display: none;
+  `};
 `;
 
-class ScrollToTop extends React.Component {
-  //TODO: show/hide depending on scrollHeight
+class ScrollToTop extends Component {
+  state = {
+    isShown: false
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const top = window.pageYOffset || document.documentElement.scrollTop;
+    const triggerHeight = window.innerWidth / 2;
+    const isShown = this.state.isShown;
+    if (isShown && top < triggerHeight) {
+      this.setState({ isShown: false });
+    } else if (!isShown && top > triggerHeight) {
+      this.setState({ isShown: true });
+    }
+  };
+
   scrollTop() {
     window.scroll({
       top: 0,
@@ -50,8 +77,11 @@ class ScrollToTop extends React.Component {
   }
 
   render() {
+    const isShown = this.state.isShown;
     return (
-      <ScrollToTopButton onClick={this.scrollTop}>наверх</ScrollToTopButton>
+      <ScrollToTopButton shown={isShown} onClick={this.scrollTop}>
+        наверх
+      </ScrollToTopButton>
     );
   }
 }
