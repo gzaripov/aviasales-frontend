@@ -5,7 +5,9 @@ import Header from "./Header";
 import Tickets from "./Tickets";
 import Button from "../common/Button";
 
-const Search = styled.section``;
+const Search = styled.section`
+  background-color: #eaeaea;
+`;
 
 const FilterButton = styled(Button)`
   position: fixed;
@@ -94,7 +96,13 @@ export default () => (
   <Search>
     <ScrollToTop />
     <Header />
-    <Tickets />
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12">
+          <Tickets />
+        </div>
+      </div>
+    </div>
     <FilterButton>Фильтровать</FilterButton>
   </Search>
 );

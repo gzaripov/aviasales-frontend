@@ -10,7 +10,7 @@ const ticketsData = [
     suggestions: [],
     logos: ["/img/avia/russia.png"],
     isCharter: true,
-    ticketsLeft: 6,
+    ticketsLeft: 0,
     shareLink: "/",
     baggage: {
       primary: {
@@ -177,7 +177,7 @@ const ticketsData = [
     suggestions: [],
     logos: ["/img/avia/nordwind-airlines.png"],
     isCharter: true,
-    ticketsLeft: 4,
+    ticketsLeft: 0,
     shareLink: "/",
     baggage: {
       primary: {
@@ -406,7 +406,6 @@ const ticketsData = [
 ];
 
 const Tickets = styled.section`
-  background-color: #eaeaea;
   padding-top: 16px;
   padding-bottom: 16px;
 `;
