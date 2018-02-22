@@ -9,5 +9,7 @@ const Button = styled.button`
 `;
 
 export default props => (
-  <Button className={props.className}>{props.children}</Button>
+  <Button onClick={props.onClick} className={props.className}>
+    {props.children}
+  </Button>
 );

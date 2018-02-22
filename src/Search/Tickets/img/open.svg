@@ -1,0 +1,44 @@
+<svg width="10" height="5" viewBox="0 0 10 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Shape</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-6482 -992)">
+<rect x="6482" y="992" width="10" height="5" fill="#FFFFFF"/>
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 5737 0L 6505 0L 6505 3192L 5737 3192L 5737 0Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="Search / Tablet" clip-path="url(#clip-0)">
+<path d="M 5737 0L 6505 0L 6505 3192L 5737 3192L 5737 0Z" fill="#FFFFFF"/>
+<g id="bg">
+<use xlink:href="#path0_fill" transform="translate(5737 207)" fill="#EAEAEA"/>
+</g>
+<g id="main">
+<g id="3">
+<g id="Group">
+<g id="ticketOpener + ticketBuyCol Mask">
+<g id="ticket productListTicket openable">
+<use xlink:href="#path1_fill" transform="translate(5745 860)" fill="#FFFFFF"/>
+</g>
+<mask id="mask0_outline" mask-type="alpha">
+<g id="ticket productListTicket openable">
+<use xlink:href="#path1_fill" transform="translate(5745 860)" fill="#FFFFFF"/>
+</g>
+</mask>
+<g id="ticketOpener" mask="url(#mask0_outline)">
+<use xlink:href="#path2_fill" transform="translate(6477 860)" fill="#EDF5F7"/>
+</g>
+<g id="Shape" mask="url(#mask0_outline)">
+<use xlink:href="#path3_fill" transform="translate(6482 992)" fill="#A0B0B9"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 0L 768 0L 768 2177L 0 2177L 0 0Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 0 6.39999C 0 4.15979 0 3.03969 0.435974 2.18404C 0.819467 1.43139 1.43139 0.819467 2.18404 0.435974C 3.03969 0 4.15979 0 6.4 0L 745.6 0C 747.84 0 748.96 0 749.816 0.435974C 750.569 0.819467 751.181 1.43139 751.564 2.18404C 752 3.03969 752 4.15979 752 6.4L 752 262.6C 752 264.84 752 265.96 751.564 266.816C 751.181 267.569 750.569 268.181 749.816 268.564C 748.96 269 747.84 269 745.6 269L 6.40001 269C 4.15979 269 3.03969 269 2.18404 268.564C 1.43139 268.181 0.819467 267.569 0.435974 266.816C 0 265.96 0 264.84 0 262.6L 0 6.39999Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 0 0L 20 0L 20 269L 0 269L 0 0Z"/>
+<path id="path3_fill" d="M 0 0L 5.00001 5L 10 0L 0 0Z"/>
+</defs>
+</svg>
