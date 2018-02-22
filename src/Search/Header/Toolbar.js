@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../common/media";
 import styled from "styled-components";
 import arrow from "./arrow.svg";
 
@@ -9,6 +10,10 @@ const BackArrow = styled.img`
 const Toolbar = styled.div`
   display: flex;
   padding: 10px 0;
+
+  ${media.sm`
+      display: none;
+  `};
 `;
 
 const Title = styled.h2`

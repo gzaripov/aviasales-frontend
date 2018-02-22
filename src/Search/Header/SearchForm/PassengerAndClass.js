@@ -3,10 +3,16 @@ import media from "../../../common/media";
 import styled from "styled-components";
 import arrowDown from "./icons/arrow_down.svg";
 
-const Text = styled.span``;
+const Passenger = styled.span`
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`;
 
-const SecondaryText = styled.span`
+const Class = styled.span`
   color: #a0b0b9;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 `;
 
 const PassengerAndClass = styled.div`
@@ -18,11 +24,13 @@ const PassengerAndClass = styled.div`
   padding: 19px 16px;
 
   ${media.sm`
-    width: calc(50% - 2px);
+    width: calc(25% - 2px);
   `};
 
-  ${media.lg`
-    width: calc(25% - 2px);
+  ${media.xl`
+    width: calc(18% - 2px);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   `};
 `;
 
@@ -32,8 +40,8 @@ const ArrowDown = styled.img`
 
 export default () => (
   <PassengerAndClass>
-    <Text>1 пассажир,&nbsp;</Text>
-    <SecondaryText>эконом</SecondaryText>
+    <Passenger>1 пассажир,&nbsp;</Passenger>
+    <Class>эконом</Class>
     <ArrowDown src={arrowDown} alt="Arrow" />
   </PassengerAndClass>
 );

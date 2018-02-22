@@ -31,8 +31,8 @@ const City = styled.div`
     width: calc(50% - 2px);
   `};
 
-  ${media.lg`
-    width: calc(20% - 2px);
+  ${media.xl`
+    width: calc(18% - 2px);
   `};
 `;
 
@@ -45,7 +45,7 @@ export const ArrivalCity = () => (
 
 export const DepartureCity = () => (
   <City>
-    <Input value="Москва" placeholder="Город вылета" />
+    <Input defaultValue="Москва" placeholder="Город вылета" />
     <Index>mow</Index>
     <SwapButton>
       <img src={arrow} alt="Swap cities button" />

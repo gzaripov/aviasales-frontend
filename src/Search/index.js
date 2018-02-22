@@ -19,6 +19,10 @@ const FilterButton = styled(Button)`
   font-size: 16px;
   color: #ffffff;
   text-transform: uppercase;
+
+  ${media.sm`
+      display: none;
+  `};
 `;
 
 const ScrollToTopButton = styled(Button)`
