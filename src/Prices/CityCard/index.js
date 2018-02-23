@@ -3,7 +3,7 @@ import styled from "styled-components";
 import media from "../../common/media";
 import Header from "./Header";
 
-const From = styled.a`
+const City = styled.a`
   padding: 8px 0;
   line-height: 20px;
   flex-grow: 1;
@@ -34,12 +34,7 @@ const Price = styled.a`
   }
 `;
 
-const CityPrice = styled(props => (
-  <div className={props.className}>
-    <From>{props.data.from}</From>
-    <Price>от {props.data.price} ₽</Price>
-  </div>
-))`
+const CityPrice = styled.div`
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -51,12 +46,9 @@ const CityPrice = styled(props => (
   }
 `;
 
-const Prices = styled(props => (
-  <div className={props.className}>
-    {props.prices.map((price, i) => <CityPrice data={price} key={i} />)}
-  </div>
-))`
+const Prices = styled.div`
   padding-top: 16px;
+
   ${media.md`
     margin-top: 26px;
   `};
@@ -85,6 +77,13 @@ const CityCard = styled.div`
 export default props => (
   <CityCard id={props.id}>
     <Header data={props.data} />
-    <Prices prices={props.data.prices} />
+    <Prices>
+      {props.data.prices.map((price, i) => (
+        <CityPrice key={i}>
+          <City>{price.from}</City>
+          <Price>от {price.price} ₽</Price>
+        </CityPrice>
+      ))}
+    </Prices>
   </CityCard>
 );
