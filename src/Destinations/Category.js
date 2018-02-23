@@ -19,11 +19,11 @@ const CategoryButton = styled(Button)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: ${props => (props.active ? "#5C5C5C" : "#00ace2")};
+  color: ${props => (props.selected ? "#5C5C5C" : "#00ace2")};
   transition: color 0.3s ease;
 
   :hover {
-    color: ${props => (props.active ? "#5C5C5C" : "#ff8b00;")};
+    color: ${props => (props.selected ? "#5C5C5C" : "#ff8b00;")};
   }
 `;
 
@@ -42,13 +42,13 @@ const Icon = styled.img`
   transition: all 0.5s ease;
 
   ${CategoryButton}:hover & {
-    transform: ${props => (CategoryButton.active ? "" : "translateY(-5px);")};
+    transform: ${props => (CategoryButton.selected ? "" : "translateY(-5px);")};
     box-shadow: 0 4px 4px rgba(74, 74, 74, 0.12);
   }
 `;
 
 const Underline = styled.hr`
-  display: ${props => (props.active ? "block" : "none")};
+  display: ${props => (props.selected ? "block" : "none")};
   padding: 0 30px;
   margin-top: 2px;
   border-top: 1px solid #00ace2;
@@ -56,10 +56,10 @@ const Underline = styled.hr`
 
 export default props => (
   <Category className={props.className}>
-    <CategoryButton active={props.active}>
+    <CategoryButton selected={props.selected}>
       <Icon src={props.imageUrl} alt="Category icon" />
       <Text>{props.text}</Text>
-      <Underline active={props.active} />
+      <Underline selected={props.selected} />
     </CategoryButton>
   </Category>
 );

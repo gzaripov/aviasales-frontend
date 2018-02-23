@@ -105,7 +105,7 @@ export default () => (
       <div className="row">
         <div className="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
           <Categories>
-            <Category imageUrl={world} text="куда угодно" active />
+            <Category imageUrl={world} text="куда угодно" selected />
             <Category imageUrl={sun} text="солнце и море" />
             <Category imageUrl={shopping} text="шоппинг, город" />
             <Category imageUrl={culture} text="культура и история" />
