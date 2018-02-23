@@ -20,7 +20,7 @@ const Agency = styled.p`
   color: #a0b0b9;
 `;
 
-const SuggestionText = styled.p`
+const SuggestionText = styled.span`
   line-height: 18px;
   font-size: 12px;
   color: #59bce5;
