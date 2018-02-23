@@ -15,7 +15,7 @@ const ticketsData = [
     baggage: {
       primary: {
         hand: 5,
-        bag: 15
+        suitcase: 15
       }
     },
     flight: {
@@ -82,7 +82,7 @@ const ticketsData = [
     baggage: {
       primary: {
         hand: "",
-        bag: 20
+        suitcase: 20
       }
     },
     flight: {
@@ -132,7 +132,7 @@ const ticketsData = [
     baggage: {
       primary: {
         hand: 5,
-        bag: false
+        suitcase: false
       }
     },
     flight: {
@@ -182,12 +182,12 @@ const ticketsData = [
     baggage: {
       primary: {
         hand: 5,
-        bag: 0,
+        suitcase: false,
         verdict: "Нет багажа"
       },
       alternative: {
         hand: 5,
-        bag: 12,
+        suitcase: 12,
         verdict: "- 136 ₽"
       }
     },
@@ -259,12 +259,12 @@ const ticketsData = [
     baggage: {
       primary: {
         hand: 10,
-        bag: "",
+        suitcase: "",
         verdict: "Нет багажа"
       },
       alternative: {
         hand: 10,
-        bag: 20,
+        suitcase: 20,
         verdict: "- 267 ₽"
       }
     },
@@ -315,7 +315,7 @@ const ticketsData = [
     baggage: {
       primary: {
         hand: 10,
-        bag: 15
+        suitcase: 15
       }
     },
     flight: {
@@ -365,7 +365,7 @@ const ticketsData = [
     baggage: {
       primary: {
         hand: "",
-        bag: 15
+        suitcase: 15
       }
     },
     flight: {
