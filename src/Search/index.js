@@ -4,12 +4,14 @@ import media from "../common/media";
 import Header from "./Header";
 import Tickets from "./Tickets";
 import Button from "../common/Button";
+import Filters from "./Filters";
+import filter from "./filter.svg";
 
 const Search = styled.section`
   background-color: #eaeaea;
 `;
 
-const FilterButton = styled(Button)`
+const MobileFilterButton = styled(Button)`
   position: fixed;
   background: #00ace2;
   border-radius: 100px;
@@ -23,6 +25,26 @@ const FilterButton = styled(Button)`
   text-transform: uppercase;
 
   ${media.sm`
+      display: none;
+  `};
+`;
+
+const TabletFilterButton = styled(Button)`
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 24px;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #23a9f6;
+  border-radius: 10px;
+
+  ${media.sm`
+    display: flex;
+  `};
+
+  ${media.lg`
       display: none;
   `};
 `;
@@ -99,10 +121,20 @@ export default () => (
     <div className="container">
       <div className="row">
         <div className="col-xs-12">
+          <TabletFilterButton>
+            <img src={filter} alt="Filter icon" />
+          </TabletFilterButton>
+        </div>
+      </div>
+      <div className="row">
+        <div className="xs-hidden col-lg-4 col-xl-3">
+          <Filters />
+        </div>
+        <div className="col-xs-12 col-lg-8 col-xl-7">
           <Tickets />
         </div>
       </div>
     </div>
-    <FilterButton>Фильтровать</FilterButton>
+    <MobileFilterButton>Фильтровать</MobileFilterButton>
   </Search>
 );

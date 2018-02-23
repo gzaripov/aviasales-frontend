@@ -12,8 +12,10 @@ const Ticket = styled.div`
 
   ${media.sm`
     border-radius: 4px;
+    overflow: hidden;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 20px;
   `};
 `;
 

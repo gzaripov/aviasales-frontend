@@ -50,7 +50,7 @@ export default () => (
   <Header>
     <div className="container">
       <div className="row center-lg">
-        <div className="col-xs-12 col-lg-10 col-xl-12">
+        <div className="col-xs-12">
           <Content>
             <Toolbar />
             <SearchForm />
