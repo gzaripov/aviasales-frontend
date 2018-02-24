@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../common/media";
 import styled from "styled-components";
 import planeTakeoff from "./img/plane-takeoff.svg";
 import planeLanfing from "./img/plane-landing.svg";
@@ -17,6 +18,7 @@ const Destination = styled.div`
   flex-direction: column;
   text-align: right;
   align-items: flex-end;
+  margin-left: auto;
 `;
 
 const Time = styled.p`
@@ -44,10 +46,14 @@ const FlightDate = styled.p`
 `;
 
 const Route = styled.div`
-  display: flex;
+  display: none;
   flex: 1;
   padding: 0 12px;
   flex-direction: column;
+
+  ${media.md`
+    display: flex;
+  `};
 `;
 
 const RouteRow = styled.div`

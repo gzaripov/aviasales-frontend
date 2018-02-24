@@ -8,8 +8,6 @@ import SearchButton from "./SearchButton";
 
 const Form = styled.form`
   display: none;
-
-  display: flex;
   flex: 1;
   justify-content: flex-end;
   flex-wrap: wrap;

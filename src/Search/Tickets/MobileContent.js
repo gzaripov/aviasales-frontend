@@ -28,36 +28,36 @@ const Best = Status.extend`
   background: #c279d1;
 `;
 
+const flightStatuses = {
+  cheapest: (
+    <Cheapest>
+      Самый дешевый&nbsp;&nbsp;
+      <span role="img" aria-label="emoji">
+        ️🤑
+      </span>
+    </Cheapest>
+  ),
+  fastest: (
+    <Fastest>
+      Самый быстрый&nbsp;&nbsp;
+      <span role="img" aria-label="emoji">
+        ️⚡
+      </span>
+    </Fastest>
+  ),
+  best: (
+    <Best>
+      Лучший билет&nbsp;&nbsp;
+      <span role="img" aria-label="emoji">
+        ️😍
+      </span>
+    </Best>
+  )
+};
+
 const FlightStatus = props => {
-  if (props.status === "cheapest") {
-    return (
-      <Cheapest className={props.className}>
-        Самый дешевый&nbsp;&nbsp;
-        <span role="img" aria-label="emoji">
-          ️🤑
-        </span>
-      </Cheapest>
-    );
-  }
-  if (props.status === "fastest") {
-    return (
-      <Fastest>
-        Самый быстрый&nbsp;&nbsp;
-        <span role="img" aria-label="emoji">
-          ️⚡
-        </span>
-      </Fastest>
-    );
-  }
-  if (props.status === "best") {
-    return (
-      <Best>
-        Лучший билет&nbsp;&nbsp;
-        <span role="img" aria-label="emoji">
-          ️😍
-        </span>
-      </Best>
-    );
+  if (flightStatuses[props.status]) {
+    return flightStatuses[props.status];
   }
   return null;
 };
