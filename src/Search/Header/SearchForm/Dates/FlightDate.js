@@ -2,6 +2,7 @@ import React from "react";
 import media from "../../../../common/media";
 import styled from "styled-components";
 import calendar from "./calendar.svg";
+import DatePickerInput from "./DatePickerInput";
 import Button from "../../../../common/Button";
 
 const CalendarButton = styled(Button)`
@@ -10,15 +11,12 @@ const CalendarButton = styled(Button)`
 
 const FlightDate = styled.div`
   display: flex;
+  position: relative;
   flex: 1;
   align-items: center;
   background-color: white;
   padding: 16px;
-`;
-
-const DateText = styled.p`
-  margin: 0;
-  color: ${props => (props.disabled ? "#A0B0B9;" : "#4A4A4A")};
+  cursor: pointer;
 `;
 
 const Departure = FlightDate.extend`
@@ -29,20 +27,44 @@ const Departure = FlightDate.extend`
   `};
 `;
 
-export const DepartureDate = () => (
-  <Departure>
-    <DateText disabled>Туда</DateText>
-    <CalendarButton>
-      <img src={calendar} alt="Calendar Icon" />
-    </CalendarButton>
-  </Departure>
-);
+export class DepartureDate extends React.Component {
+  state = {
+    isShown: false
+  };
 
-export const ArrivalDate = () => (
-  <FlightDate>
-    <DateText disabled>Обратно</DateText>
-    <CalendarButton>
-      <img src={calendar} alt="Calendar icon" />
-    </CalendarButton>
-  </FlightDate>
-);
+  onClick = () => {
+    this.setState({ isShown: true });
+  };
+
+  render() {
+    return (
+      <Departure onClick={this.onClick}>
+        <DatePickerInput placeholder="Туда" isShown={this.state.isShown} />
+        <CalendarButton>
+          <img src={calendar} alt="Calendar Icon" />
+        </CalendarButton>
+      </Departure>
+    );
+  }
+}
+
+export class ArrivalDate extends React.Component {
+  state = {
+    isShown: false
+  };
+
+  onClick = () => {
+    this.setState({ isShown: true });
+  };
+
+  render() {
+    return (
+      <FlightDate onClick={this.onClick}>
+        <DatePickerInput placeholder="Обратно" isShown={this.state.isShown} />
+        <CalendarButton>
+          <img src={calendar} alt="Calendar icon" />
+        </CalendarButton>
+      </FlightDate>
+    );
+  }
+}

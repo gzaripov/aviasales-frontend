@@ -7,7 +7,6 @@ import Subscribe from "./Subscribe";
 import Offers from "./Offers";
 import Articles from "./Articles";
 import MobileApp from "./MobileApp";
-import Footer from "../Footer";
 
 export default () => (
   <div>
@@ -21,6 +20,5 @@ export default () => (
       <Articles />
       <MobileApp />
     </main>
-    <Footer />
   </div>
 );
