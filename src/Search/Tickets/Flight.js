@@ -21,7 +21,7 @@ const Destination = styled.div`
   margin-left: auto;
 `;
 
-const Time = styled.p`
+const Time = styled.time`
   display: flex;
   line-height: 40px;
   font-size: 28px;

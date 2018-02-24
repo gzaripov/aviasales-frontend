@@ -68,11 +68,13 @@ const PriceAndLogos = styled.div`
   padding: 0 8px;
 `;
 
-const FlightTime = styled.p`
+const FlightTime = styled.time`
+  display: flex;
   margin-top: 10px;
   line-height: 18px;
   font-size: 14px;
   text-align: left;
+  margin-right: 16px;
 `;
 
 const FlightType = styled.p`
@@ -128,10 +130,15 @@ const Logo = styled.img`
   }
 `;
 
-var Container = styled.div`
+const Container = styled.div`
   ${media.sm`
     display: none;
   `};
+`;
+
+const Flight = styled.div`
+  display: flex;
+  padding: 0 8px;
 `;
 
 export const MobileContent = props => (
@@ -142,44 +149,30 @@ export const MobileContent = props => (
         <Price>{props.data.price}</Price>
         <Logos logos={props.data.logos} />
       </PriceAndLogos>
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-5">
-            <FlightTime>
-              <Icon src={aircraftLeft} alt="Aircraft" />
-              {props.data.flight.depart.origin.time} —{" "}
-              {props.data.flight.depart.dest.time}
-            </FlightTime>
-          </div>
-          <div className="col-xs-4">
-            <FlightTime>
-              <Icon src={clock} alt="Clock" />
-              {props.data.flight.depart.duration}
-            </FlightTime>
-          </div>
-          <div className="col-xs-3">
-            <FlightType>{props.data.flight.depart.type}</FlightType>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xs-5">
-            <FlightTime>
-              <Icon src={aircraftRight} alt="Aircraft" />
-              {props.data.flight.return.origin.time} —{" "}
-              {props.data.flight.return.dest.time}
-            </FlightTime>
-          </div>
-          <div className="col-xs-4">
-            <FlightTime>
-              <Icon src={clock} alt="Clock" />
-              {props.data.flight.return.duration}
-            </FlightTime>
-          </div>
-          <div className="col-xs-3">
-            <FlightType>{props.data.flight.return.type}</FlightType>
-          </div>
-        </div>
-      </div>
+      <Flight>
+        <FlightTime>
+          <Icon src={aircraftLeft} alt="Aircraft" />
+          {props.data.flight.depart.origin.time} —{" "}
+          {props.data.flight.depart.dest.time}
+        </FlightTime>
+        <FlightTime>
+          <Icon src={clock} alt="Clock" />
+          {props.data.flight.depart.duration}
+        </FlightTime>
+        <FlightType>{props.data.flight.depart.type}</FlightType>
+      </Flight>
+      <Flight>
+        <FlightTime>
+          <Icon src={aircraftRight} alt="Aircraft" />
+          {props.data.flight.return.origin.time} —{" "}
+          {props.data.flight.return.dest.time}
+        </FlightTime>
+        <FlightTime>
+          <Icon src={clock} alt="Clock" />
+          {props.data.flight.return.duration}
+        </FlightTime>
+        <FlightType>{props.data.flight.return.type}</FlightType>
+      </Flight>
     </TripInfo>
   </Container>
 );
