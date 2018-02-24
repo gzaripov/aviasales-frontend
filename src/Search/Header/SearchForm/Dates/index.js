@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import media from "../../../../common/media";
+//import DayPicker from "react-day-picker";
+import "react-day-picker/lib/style.css";
 import { DepartureDate, ArrivalDate } from "./FlightDate";
 
 const Dates = styled.div`
   display: flex;
+  position: relative;
+  overflow: visible;
   width: 100%;
   margin: 1px;
 

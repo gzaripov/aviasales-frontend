@@ -1,6 +1,6 @@
 import React from "react";
+import media from "../../common/media";
 import styled from "styled-components";
-import Button from "../../common/Button";
 import Ticket from "./Ticket";
 
 const ticketsData = [
@@ -409,25 +409,14 @@ const ticketsData = [
 const Tickets = styled.section`
   padding-top: 16px;
   padding-bottom: 16px;
-`;
 
-const LoadMoreTickets = styled(Button)`
-  width: 100%;
-  text-align: center;
-  background: #00acde;
-  border-radius: 4px;
-  font-weight: 500;
-  line-height: 18px;
-  font-size: 14px;
-  text-align: center;
-  color: #ffffff;
-  padding: 18px 0;
-  text-transform: uppercase;
+  ${media.sm`
+    padding-bottom: 0;
+  `};
 `;
 
 export default () => (
   <Tickets>
     {ticketsData.map((ticket, index) => <Ticket data={ticket} key={index} />)}
-    <LoadMoreTickets>показать еще 10 билетов!</LoadMoreTickets>
   </Tickets>
 );

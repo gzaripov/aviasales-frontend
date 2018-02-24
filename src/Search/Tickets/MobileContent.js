@@ -83,7 +83,7 @@ const FlightType = styled.p`
   text-align: right;
 `;
 
-const FlightInfoIcon = styled.img`
+const Icon = styled.img`
   margin-right: 8px;
 `;
 
@@ -98,16 +98,18 @@ const Price = styled.p`
   color: #ff9241;
 `;
 
-export const Logos = styled(props => (
-  <div className={props.className}>
-    {props.logos.map((logo, index) => (
-      <Logo src={logo} key={index} alt="Aircompany Logo" />
-    ))}
-  </div>
-))`
+const LogosContainer = styled.div`
   display: flex;
   margin-left: auto;
 `;
+
+export const Logos = props => (
+  <LogosContainer className={props.className}>
+    {props.logos.map((logo, index) => (
+      <Logo src={logo} key={index} alt="Aircompany Logo" />
+    ))}
+  </LogosContainer>
+);
 
 const Logo = styled.img`
   padding: 4px;
@@ -126,8 +128,14 @@ const Logo = styled.img`
   }
 `;
 
-export const MobileContent = styled(props => (
-  <div className={props.className}>
+var Container = styled.div`
+  ${media.sm`
+    display: none;
+  `};
+`;
+
+export const MobileContent = props => (
+  <Container className={props.className}>
     <FlightStatus status={props.data.status} />
     <TripInfo>
       <PriceAndLogos>
@@ -138,14 +146,14 @@ export const MobileContent = styled(props => (
         <div className="row">
           <div className="col-xs-5">
             <FlightTime>
-              <FlightInfoIcon src={aircraftLeft} alt="Aircraft" />
+              <Icon src={aircraftLeft} alt="Aircraft" />
               {props.data.flight.depart.origin.time} —{" "}
               {props.data.flight.depart.dest.time}
             </FlightTime>
           </div>
           <div className="col-xs-4">
             <FlightTime>
-              <FlightInfoIcon src={clock} alt="Clock" />
+              <Icon src={clock} alt="Clock" />
               {props.data.flight.depart.duration}
             </FlightTime>
           </div>
@@ -156,14 +164,14 @@ export const MobileContent = styled(props => (
         <div className="row">
           <div className="col-xs-5">
             <FlightTime>
-              <FlightInfoIcon src={aircraftRight} alt="Aircraft" />
+              <Icon src={aircraftRight} alt="Aircraft" />
               {props.data.flight.return.origin.time} —{" "}
               {props.data.flight.return.dest.time}
             </FlightTime>
           </div>
           <div className="col-xs-4">
             <FlightTime>
-              <FlightInfoIcon src={clock} alt="Clock" />
+              <Icon src={clock} alt="Clock" />
               {props.data.flight.return.duration}
             </FlightTime>
           </div>
@@ -173,9 +181,5 @@ export const MobileContent = styled(props => (
         </div>
       </div>
     </TripInfo>
-  </div>
-))`
-  ${media.sm`
-    display: none;
-  `};
-`;
+  </Container>
+);

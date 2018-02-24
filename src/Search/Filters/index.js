@@ -14,19 +14,17 @@ const Filters = styled.section`
   overflow: hidden;
 `;
 
-export default function() {
-  return (
-    <Filters>
-      <Transfers />
-      <Flight />
-      <Filter title="Багаж" opened={false} />
-      <Filter title="Длительность пересадки" opened={false} />
-      <TravelTime />
-      <Airlines />
-      <Filter title="Аэропорты" opened={false} />
-      <Filter title="Аэропорт пересадки" opened={false} />
-      <Filter title="Агенства" opened={false} />
-      <ResetFilters />
-    </Filters>
-  );
-}
+export default () => (
+  <Filters>
+    <Transfers />
+    <Flight />
+    <Filter title="Багаж" opened={false} />
+    <Filter title="Длительность пересадки" opened={false} />
+    <TravelTime />
+    <Airlines />
+    <Filter title="Аэропорты" opened={false} />
+    <Filter title="Аэропорт пересадки" opened={false} />
+    <Filter title="Агенства" opened={false} />
+    <ResetFilters />
+  </Filters>
+);

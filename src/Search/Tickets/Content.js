@@ -85,7 +85,7 @@ const JetInfo = styled.div`
   align-items: center;
 `;
 
-const JetLogos = Logos.extend`
+const JetLogos = styled(Logos)`
   margin: 0 auto 0 6px;
 `;
 
