@@ -6,11 +6,14 @@ import Dates from "./Dates";
 import PassengerAndClass from "./PassengerAndClass";
 import SearchButton from "./SearchButton";
 
-const RoundBox = styled.div`
-  border-radius: 4px;
-  overflow: hidden;
+const Form = styled.form`
   display: none;
+
+  display: flex;
   flex: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  position: relative;
 
   ${media.sm`
     display: flex;
@@ -18,23 +21,12 @@ const RoundBox = styled.div`
   `};
 `;
 
-const Form = styled.form`
-  margin: -2px;
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  position: relative;
-`;
-
 export default () => (
-  <RoundBox>
-    <Form>
-      <DepartureCity />
-      <ArrivalCity />
-      <Dates />
-      <PassengerAndClass />
-      <SearchButton />
-    </Form>
-  </RoundBox>
+  <Form>
+    <DepartureCity />
+    <ArrivalCity />
+    <Dates />
+    <PassengerAndClass />
+    <SearchButton />
+  </Form>
 );

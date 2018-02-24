@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../../../common/media";
 import styled from "styled-components";
 import calendar from "./calendar.svg";
 import Button from "../../../../common/Button";
@@ -20,13 +21,21 @@ const DateText = styled.p`
   color: ${props => (props.disabled ? "#A0B0B9;" : "#4A4A4A")};
 `;
 
+const Departure = FlightDate.extend`
+  border-radius: 0 0 0 4px;
+
+  ${media.xl`
+    border-radius: 0;
+  `};
+`;
+
 export const DepartureDate = () => (
-  <FlightDate>
+  <Departure>
     <DateText disabled>Туда</DateText>
     <CalendarButton>
       <img src={calendar} alt="Calendar Icon" />
     </CalendarButton>
-  </FlightDate>
+  </Departure>
 );
 
 export const ArrivalDate = () => (

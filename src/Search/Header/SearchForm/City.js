@@ -36,19 +36,35 @@ const City = styled.div`
   `};
 `;
 
-export const ArrivalCity = () => (
-  <City>
-    <Input placeholder="Город прибытия" />
-    <Index />
-  </City>
-);
+const Departure = City.extend`
+  border-radius: 4px 0 0;
+
+  ${media.xl`
+    border-radius: 4px 0 0 4px;
+  `};
+`;
+
+const Arrival = City.extend`
+  border-radius: 0 4px 0 0;
+
+  ${media.xl`
+    border-radius: 0;
+  `};
+`;
 
 export const DepartureCity = () => (
-  <City>
+  <Departure>
     <Input defaultValue="Москва" placeholder="Город вылета" />
     <Index>mow</Index>
     <SwapButton>
       <img src={arrow} alt="Swap cities button" />
     </SwapButton>
-  </City>
+  </Departure>
+);
+
+export const ArrivalCity = () => (
+  <Arrival>
+    <Input placeholder="Город прибытия" />
+    <Index />
+  </Arrival>
 );

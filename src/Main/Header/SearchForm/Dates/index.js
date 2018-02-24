@@ -17,14 +17,14 @@ const Dates = styled.div`
   `};
 `;
 
-const DividerDiv = styled.div`
+const VerticalDivider = styled.div`
   width: 2px;
 `;
 
 export default () => (
   <Dates>
     <DepartureDate />
-    <DividerDiv />
+    <VerticalDivider />
     <ArrivalDate />
   </Dates>
 );

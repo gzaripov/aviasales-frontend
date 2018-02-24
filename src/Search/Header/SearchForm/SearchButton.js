@@ -8,6 +8,7 @@ const SearchButton = styled(Button)`
   font-weight: 900;
   font-size: 16px;
   color: #ffffff;
+  border-radius: 0 0 4px 0;
   flex: 1;
 
   ${media.md`
@@ -15,8 +16,7 @@ const SearchButton = styled(Button)`
   `};
 
   ${media.xl`
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-radius: 4px;
     padding-top: 1px;
     padding-bottom: 1px;
   `};
@@ -32,7 +32,7 @@ const Container = styled.div`
 
   ${media.xl`
     padding-left:16px;
-    width: calc(16% - 2px);
+    width: calc(16.8% - 2px);
   `};
 `;
 

@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../common/media";
 import styled from "styled-components";
 import Transfers from "./Transfers";
 import Flight from "./FlightTime";
@@ -8,10 +9,15 @@ import ResetFilters from "./ResetFilters";
 import Filter from "./Filter";
 
 const Filters = styled.section`
+  display: none;
   background-color: white;
   margin-top: 16px;
   border-radius: 4px;
   overflow: hidden;
+
+  ${media.lg`
+    display: block;
+  `};
 `;
 
 export default () => (
