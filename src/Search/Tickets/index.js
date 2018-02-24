@@ -1,9 +1,10 @@
 import React from "react";
 import media from "../../common/media";
 import styled from "styled-components";
-import Ticket from "./Ticket";
+import MobileTicket from "./MobileTicket";
+import TabletTicket from "./TabletTicket";
 
-const ticketsData = [
+const data = [
   {
     status: "cheapest",
     price: "7 712 ₽",
@@ -415,8 +416,28 @@ const Tickets = styled.section`
   `};
 `;
 
+const Ticket = styled.div`
+  margin-bottom: 8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  background-color: #fff;
+
+  ${media.sm`
+    border-radius: 4px;
+    overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  `};
+`;
+
 export default () => (
   <Tickets>
-    {ticketsData.map((ticket, index) => <Ticket data={ticket} key={index} />)}
+    {data.map((ticket, index) => (
+      <Ticket key={index}>
+        <MobileTicket data={ticket} />
+        <TabletTicket data={ticket} />
+      </Ticket>
+    ))}
   </Tickets>
 );

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import media from "../../common/media";
-import Button from "../../common/Button";
-import { Logos } from "./MobileContent";
-import open from "./img/open.svg";
+import media from "../../../common/media";
+import Button from "../../../common/Button";
+import Logos from "../Logos";
+import arrowDown from "./img/arrowDown.svg";
 import share from "./img/share.svg";
 import handbag from "./img/handbag.svg";
 import noHandbag from "./img/no-handbag.svg";
@@ -297,7 +297,7 @@ export default props => (
       <Flight data={props.data.flight.return} />
     </TicketInfo>
     <TicketOpener>
-      <img src={open} alt="Arrow" />
+      <img src={arrowDown} alt="Arrow" />
     </TicketOpener>
   </Content>
 );
