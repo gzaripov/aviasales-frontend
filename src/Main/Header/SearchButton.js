@@ -2,15 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import media from "../../common/media";
 import Button from "../../common/Button";
+import { Link } from "react-router-dom";
 import aero from "./icons/aero.svg";
 
-const SearchButton = styled(Button)`
+const SearchButton = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 16px;
   border-radius: 4px;
   background-color: #ff9241;
+  text-decoration: none;
   height: 56px;
 
   ${media.sm`
@@ -40,7 +42,7 @@ const Text = styled.span`
 `;
 
 export default () => (
-  <SearchButton>
+  <SearchButton to="/search">
     <Text>Найти билеты</Text>
     <img src={aero} alt="Airplane icon" />
   </SearchButton>
