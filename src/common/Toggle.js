@@ -41,21 +41,18 @@ const Container = styled.div`
 `;
 
 export default class extends React.Component {
-  state = {
+  static defaultProps = {
     checked: false
   };
 
-  onClick = () => {
-    this.setState({ checked: !this.state.checked });
-  };
-
   render() {
+    const checked = this.props.checked;
     return (
       <Container>
-        <ToggleBox checked={this.state.checked} onClick={this.onClick}>
-          <Toggle checked={this.state.checked} />
+        <ToggleBox checked={checked} onClick={this.props.onToggleClicked}>
+          <Toggle checked={checked} />
         </ToggleBox>
-        <Label onClick={this.onClick}>{this.props.label}</Label>
+        <Label onClick={this.props.onToggleClicked}>{this.props.label}</Label>
       </Container>
     );
   }

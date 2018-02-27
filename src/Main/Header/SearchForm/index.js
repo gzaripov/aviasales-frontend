@@ -1,13 +1,9 @@
 import React from "react";
+import media from "../../../common/media";
 import styled from "styled-components";
 import { DepartureCity, ArrivalCity } from "./City";
-import Dates from "./Dates";
+import Dates from "../../../common/Dates";
 import PassengerAndClass from "./PassengerAndClass";
-
-const RoundBox = styled.div`
-  border-radius: 4px;
-  overflow: hidden;
-`;
 
 const Form = styled.form`
   margin: -2px;
@@ -16,13 +12,25 @@ const Form = styled.form`
   flex-wrap: wrap;
 `;
 
+const FlightDates = styled(Dates)`
+  ${media.sm`
+    width: calc(50% - 2px);
+  `};
+
+  ${media.lg`
+    width: calc(35% - 2px);
+  `};
+
+  ${media.xl`
+    width: calc(35% - 2px);
+  `};
+`;
+
 export default () => (
-  <RoundBox>
-    <Form>
-      <DepartureCity />
-      <ArrivalCity />
-      <Dates />
-      <PassengerAndClass />
-    </Form>
-  </RoundBox>
+  <Form>
+    <DepartureCity />
+    <ArrivalCity />
+    <FlightDates />
+    <PassengerAndClass />
+  </Form>
 );

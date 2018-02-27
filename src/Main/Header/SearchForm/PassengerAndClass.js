@@ -16,13 +16,16 @@ const PassengerAndClass = styled.div`
   margin: 1px;
   width: 100%;
   padding: 19px 16px;
+  border-radius: 0 0 4px 4px;
 
   ${media.sm`
     width: calc(50% - 2px);
+    border-radius: 0 0 4px 0;
   `};
 
   ${media.lg`
     width: calc(25% - 2px);
+    border-radius: 0 4px 4px 0;
   `};
 `;
 
