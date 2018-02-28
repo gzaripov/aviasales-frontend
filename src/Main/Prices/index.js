@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import media from "../../common/media";
 import Header from "./Header";
 import Advice from "./Advice";
 import CityCard from "./CityCard/index";
@@ -93,8 +94,21 @@ const citiesData = [
 ];
 
 const Prices = styled.section`
+  padding: 72px 0 0;
   background: linear-gradient(180deg, #f8fcff 0%, #ffffff 100%);
+
+  ${media.md`
+    padding-top: 80px;
+  `};
 `;
+
+const getCardTypes = (id, length) => {
+  return {
+    lastInRow: id === 0 || id % 2 !== 0,
+    threeMultiple: id % 3 === 0,
+    last: id === length - 1
+  };
+};
 
 export default () => (
   <Prices id="prices">
@@ -105,14 +119,18 @@ export default () => (
         </div>
       </div>
       <div className="row">
-        {citiesData.map((cityData, index) => (
-          <div className="col-xs-12 col-lg-4">
-            <CityCard data={cityData} key={index} id={index} />
+        {citiesData.map((cityData, index, arr) => (
+          <div className="col-xs-12 col-md-10 col-md-offset-1 col-lg-4 col-lg-offset-0">
+            <CityCard
+              data={cityData}
+              key={index}
+              types={getCardTypes(index, arr.length)}
+            />
           </div>
         ))}
       </div>
-      <div className="row">
-        <div className="col-xs-12 col-lg-8 col-lg-offset-2">
+      <div className="row center-md">
+        <div className="col-xs-12 col-md-11 col-lg-8 col-xl-7">
           <Advice />
         </div>
       </div>

@@ -96,6 +96,10 @@ const Card = styled.div`
   box-shadow: 0 2px 12px rgba(0, 75, 93, 0.12);
   margin-top: 12px;
   overflow: hidden;
+
+  ${media.lg`
+    margin-top: 32px;
+  `};
 `;
 
 export default props => (

@@ -21,6 +21,7 @@ const Edit = styled.img`
 const Heading = styled.div`
   padding: 0 40px;
   font-size: 18px;
+  line-height: 24px;
 
   ${media.sm`
     padding: 0 100px;

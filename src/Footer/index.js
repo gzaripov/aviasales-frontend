@@ -5,11 +5,10 @@ import FlightLinks from "./FlightLinks";
 import SocialLinks from "./CompanyLinks";
 
 const Footer = styled.footer`
-  padding-top: 30px;
   padding-bottom: 24px;
 
   ${media.sm`
-    padding-top: 40px;
+    padding-top: 8px;
     padding-bottom: 40px;
   `};
 `;

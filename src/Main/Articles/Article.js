@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../common/media";
 import styled from "styled-components";
 
 const Title = styled.h3`
@@ -20,7 +21,11 @@ const Article = styled.div`
 
 const Text = styled.p`
   font-size: 14px;
-  padding-top: 12px;
+  padding-top: 22px;
+
+  ${media.md`
+    padding-top: 16px;
+  `};
 `;
 
 const Link = styled.a`

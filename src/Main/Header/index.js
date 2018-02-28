@@ -1,4 +1,5 @@
 import React from "react";
+import media from "../../common/media";
 import styled from "styled-components";
 import Heading from "./Heading";
 import Logo from "./Logo";
@@ -20,6 +21,14 @@ const SearchBox = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+
+  ${media.md`
+    padding: 0 54px;
+  `};
+
+  ${media.lg`
+    padding: 0;
+  `};
 `;
 
 export default () => (

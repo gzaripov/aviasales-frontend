@@ -4,11 +4,7 @@ import styled from "styled-components";
 import calendar from "./calendar.svg";
 
 const Calendar = styled.img`
-  margin: 40px auto 20px;
-
-  ${media.md`
-    margin-top: 48px;
-  `};
+  margin-bottom: 20px;
 `;
 
 const Text = styled.span`
@@ -18,6 +14,7 @@ const Text = styled.span`
 
   ${media.md`
     font-size: 24px;
+    line-height: 36px;
   `};
 `;
 

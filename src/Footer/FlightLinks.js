@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FlightLinks = styled.div`
+  padding-bottom: 12px;
   border-bottom: 1px solid #e0e6e8;
 `;
 
@@ -33,12 +34,14 @@ const BoldLink = Link.extend`
 
 const LinkList = styled.ul`
   padding: 0;
+  margin-top: 16px;
+  margin-bottom: 0;
   text-align: left;
   font-size: 12px;
 `;
 
 const LinkColumn = styled.nav`
-  margin-bottom: 24px;
+  margin-top: 32px;
 `;
 
 export default () => (

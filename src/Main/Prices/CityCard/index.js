@@ -16,23 +16,20 @@ const Price = styled.a`
   margin-bottom: 4px;
 `;
 
-const CityPriceBox = styled.div`
+const CityPriceContainer = styled.div`
   display: flex;
   margin-bottom: 16px;
 `;
 
 const CityPrice = props => (
-  <CityPriceBox>
+  <CityPriceContainer>
     <From>{props.data.from}</From>
     <Price>от {props.data.price} ₽</Price>
-  </CityPriceBox>
+  </CityPriceContainer>
 );
 
 const PricesBox = styled.div`
-  padding-top: 16px;
-  ${media.md`
-    margin-top: 26px;
-  `};
+  padding-top: 24px;
 `;
 
 const Prices = props => (
@@ -44,17 +41,15 @@ const Prices = props => (
 const CityCard = styled.div`
   margin-top: 24px;
   padding-bottom: 8px;
-  border-bottom: 0.5px dashed #afbec6;
+  border-bottom: ${p => (p.types.last ? "none" : "0.5px dashed #afbec6")};
 
   ${media.lg`
     margin-top: 26px;
     border-bottom: none;
     border-right: ${props =>
-      props.id === 0 || props.id % 2 !== 0 ? "0.5px dashed #afbec6;" : "none"};
-    padding-right: ${props =>
-      props.id === 0 || props.id % 2 !== 0 ? "34px" : "0"};
-    padding-left: ${props =>
-      props.id === 0 || props.id % 3 === 0 ? "0" : "18px"};
+      props.types.lastInRow ? "0.5px dashed #afbec6;" : "none"};
+    padding-right: ${props => (props.types.lastInRow ? "34px" : "0")};
+    padding-left: ${props => (props.types.threeMultiple ? "0" : "18px")};
 
     padding-bottom: 0;
     margin-bottom: 8px;
@@ -62,7 +57,7 @@ const CityCard = styled.div`
 `;
 
 export default props => (
-  <CityCard id={props.id}>
+  <CityCard types={props.types}>
     <Header data={props.data} />
     <Prices prices={props.data.prices} />
   </CityCard>

@@ -77,7 +77,7 @@ const Categories = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 8px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 
   ${media.md`
     margin-top: 56px;
@@ -123,9 +123,9 @@ export default () => (
           </Categories>
         </div>
       </div>
-      <div className="row center-lg">
+      <div className="row center-md">
         {cardsData.map((cardData, index) => (
-          <div className="col-xs-12 col-lg-6 col-xl-5">
+          <div className="col-xs-12 col-md-10 col-lg-6 col-xl-5">
             <CityCard data={cardData} key={index} />
           </div>
         ))}
