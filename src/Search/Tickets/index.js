@@ -4,6 +4,8 @@ import styled from "styled-components";
 import MobileTicket from "./MobileTicket";
 import TabletTicket from "./TabletTicket";
 
+const MINUTES_IN_HOUR = 60;
+
 const data = [
   {
     status: "cheapest",
@@ -16,7 +18,7 @@ const data = [
     shareLink: "/",
     baggage: {
       primary: {
-        hand: 5,
+        handbag: 5,
         suitcase: 15
       }
     },
@@ -34,7 +36,7 @@ const data = [
           time: "03:05",
           date: "24 фев 2018, Сб"
         },
-        duration: "5 ч",
+        duration: 5 * MINUTES_IN_HOUR,
         type: "Прямой"
       },
       return: {
@@ -50,7 +52,7 @@ const data = [
           time: "17:10",
           date: "3 мар 2018, Сб"
         },
-        duration: "4 ч 35 м",
+        duration: 4 * MINUTES_IN_HOUR + 35,
         type: "Прямой"
       }
     }
@@ -83,7 +85,7 @@ const data = [
     shareLink: "/",
     baggage: {
       primary: {
-        hand: "",
+        handbag: "",
         suitcase: 20
       }
     },
@@ -101,7 +103,7 @@ const data = [
           time: "09:50",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 20 м",
+        duration: 4 * MINUTES_IN_HOUR + 20,
         type: "Прямой"
       },
       return: {
@@ -117,7 +119,7 @@ const data = [
           time: "17:35",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 15 м",
+        duration: 4 * MINUTES_IN_HOUR + 15,
         type: "CDG"
       }
     }
@@ -133,7 +135,7 @@ const data = [
     shareLink: "/",
     baggage: {
       primary: {
-        hand: 5,
+        handbag: 5,
         suitcase: false
       }
     },
@@ -151,7 +153,7 @@ const data = [
           time: "03:10",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 55 м",
+        duration: 4 * MINUTES_IN_HOUR + 55,
         type: "Прямой"
       },
       return: {
@@ -167,7 +169,7 @@ const data = [
           time: "17:15",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 30 м",
+        duration: 4 * MINUTES_IN_HOUR + 30,
         type: "Прямой"
       }
     }
@@ -183,12 +185,12 @@ const data = [
     shareLink: "/",
     baggage: {
       primary: {
-        hand: 5,
+        handbag: 5,
         suitcase: false,
         verdict: "Нет багажа"
       },
       alternative: {
-        hand: 5,
+        handbag: 5,
         suitcase: 12,
         verdict: "- 136 ₽"
       }
@@ -207,7 +209,7 @@ const data = [
           time: "03:10",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 55 м",
+        duration: 4 * MINUTES_IN_HOUR + 55,
         type: "Прямой"
       },
       return: {
@@ -223,7 +225,7 @@ const data = [
           time: "17:15",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 30 м",
+        duration: 4 * MINUTES_IN_HOUR + 30,
         type: "Прямой"
       }
     }
@@ -260,12 +262,12 @@ const data = [
     shareLink: "/",
     baggage: {
       primary: {
-        hand: 10,
+        handbag: 10,
         suitcase: "",
         verdict: "Нет багажа"
       },
       alternative: {
-        hand: 10,
+        handbag: 10,
         suitcase: 20,
         verdict: "- 267 ₽"
       }
@@ -284,7 +286,7 @@ const data = [
           time: "09:30",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 30 м",
+        duration: 4 * MINUTES_IN_HOUR + 30,
         type: "Прямой"
       },
       return: {
@@ -300,7 +302,7 @@ const data = [
           time: "17:10",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 10 м",
+        duration: 4 * MINUTES_IN_HOUR + 10,
         type: "Прямой"
       }
     }
@@ -316,7 +318,7 @@ const data = [
     shareLink: "/",
     baggage: {
       primary: {
-        hand: 10,
+        handbag: 10,
         suitcase: 15
       }
     },
@@ -334,7 +336,7 @@ const data = [
           time: "03:05",
           date: "24 фев 2018, Сб"
         },
-        duration: "5 ч",
+        duration: 5 * MINUTES_IN_HOUR,
         type: "Прямой"
       },
       return: {
@@ -350,7 +352,7 @@ const data = [
           time: "17:10",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 10 м",
+        duration: 4 * MINUTES_IN_HOUR + 10,
         type: "Прямой"
       }
     }
@@ -366,7 +368,7 @@ const data = [
     shareLink: "/",
     baggage: {
       primary: {
-        hand: "",
+        handbag: "",
         suitcase: 15
       }
     },
@@ -384,7 +386,7 @@ const data = [
           time: "03:05",
           date: "24 фев 2018, Сб"
         },
-        duration: "5 ч",
+        duration: 5 * MINUTES_IN_HOUR,
         type: "Прямой"
       },
       return: {
@@ -400,7 +402,7 @@ const data = [
           time: "17:35",
           date: "24 фев 2018, Сб"
         },
-        duration: "4 ч 15 м",
+        duration: 4 * MINUTES_IN_HOUR + 15,
         type: "Прямой"
       }
     }

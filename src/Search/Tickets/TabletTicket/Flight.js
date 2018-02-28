@@ -3,6 +3,7 @@ import media from "../../../common/media";
 import styled from "styled-components";
 import planeTakeoff from "./img/plane-takeoff.svg";
 import planeLanfing from "./img/plane-landing.svg";
+import Duration from "../../../common/Duration";
 import pin from "./img/pin.svg";
 
 const Origin = styled.div`
@@ -74,7 +75,7 @@ const RouteIatas = styled(RouteRow)`
   margin-top: auto;
 `;
 
-const Duration = styled.span`
+const FlightDuration = styled(Duration)`
   line-height: 18px;
   font-size: 12px;
   text-align: center;
@@ -121,7 +122,7 @@ export default props => (
     <Route>
       <RouteDuration>
         <img src={planeTakeoff} alt="Plane icon" />
-        <Duration>{props.data.duration}</Duration>
+        <FlightDuration duration={props.data.duration} />
         <img src={planeLanfing} alt="Plane icon" />
       </RouteDuration>
       <RoutePath>

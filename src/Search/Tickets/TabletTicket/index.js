@@ -5,7 +5,7 @@ import Button from "../../../common/Button";
 import Logos from "../Logos";
 import arrowDown from "./img/arrowDown.svg";
 import share from "./img/share.svg";
-import handbag from "./img/handbag.svg";
+import handbagIcon from "./img/handbag.svg";
 import noHandbag from "./img/no-handbag.svg";
 import unknownHandbag from "./img/unknown-handbag.svg";
 import suitcaseIcon from "./img/suitcase.svg";
@@ -136,7 +136,7 @@ const Bag = styled.span`
 const BagText = styled.span`
   position: absolute;
   top: 7px;
-  left: 50%;
+  left: 48%;
   transform: translateX(-50%);
   font-weight: 500;
   font-size: 10px;
@@ -193,23 +193,23 @@ const Verdict = styled.p`
   padding: 6px 0;
 `;
 
-function generateBaggage({ hand, suitcase, verdict }) {
+function generateBaggage({ handbag, suitcase, verdict }) {
   return (
     <Baggage>
       <BaggageIcons>
-        {typeof hand === "number" && (
+        {typeof handbag === "number" && (
           <Bag>
-            <img src={handbag} alt="Handbag icon" />
-            <BagText>{hand}</BagText>
+            <img src={handbagIcon} alt="Handbag icon" />
+            <BagText>{handbag}</BagText>
           </Bag>
         )}
-        {hand === false && (
+        {handbag === false && (
           <Bag>
             <img src={noHandbag} alt="No handbag icon" />
           </Bag>
         )}
-        {hand !== false &&
-          !hand && (
+        {handbag !== false &&
+          !handbag && (
             <Bag>
               <img src={unknownHandbag} alt="Unknown handbag icon" />
               <UnknownBagText>?</UnknownBagText>
@@ -271,8 +271,8 @@ export default props => (
           за{" "}
           <FormattedNumber
             value={props.data.price}
-            // eslint-disable-next-line
-            style="decimal"
+            style={`currency`}
+            currency="RUB"
             minimumFractionDigits={0}
             maximumFractionDigits={0}
           />{" "}

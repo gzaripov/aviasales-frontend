@@ -3,6 +3,7 @@ import styled from "styled-components";
 import aircraftLeft from "./img/aircraft-left.svg";
 import aircraftRight from "./img/aircraft-right.svg";
 import clock from "./img/clock.svg";
+import Duration from "../../../common/Duration";
 
 const Flight = styled.div`
   display: flex;
@@ -41,7 +42,7 @@ export default props => (
     </FlightTime>
     <FlightTime>
       <Icon src={clock} alt="Clock" />
-      {props.data.duration}
+      <Duration duration={props.data.duration} />
     </FlightTime>
     <FlightType>{props.data.type}</FlightType>
   </Flight>

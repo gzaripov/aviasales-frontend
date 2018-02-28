@@ -122,12 +122,11 @@ export default () => (
           <Price>
             <FormattedNumber
               value={alliance.price}
-              // eslint-disable-next-line
-              style="decimal"
+              style={`currency`}
+              currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}
-            />{" "}
-            ₽
+            />
           </Price>
         )}
       </Check>
@@ -140,12 +139,11 @@ export default () => (
           <Price>
             <FormattedNumber
               value={airline.price}
-              // eslint-disable-next-line
-              style="decimal"
+              style={`currency`}
+              currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}
-            />{" "}
-            ₽
+            />
           </Price>
         )}
       </Check>

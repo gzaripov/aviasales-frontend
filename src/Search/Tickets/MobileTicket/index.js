@@ -93,12 +93,11 @@ export default props => (
         <Price>
           <FormattedNumber
             value={props.data.price}
-            // eslint-disable-next-line
-            style="decimal"
+            style={`currency`}
+            currency="RUB"
             minimumFractionDigits={0}
             maximumFractionDigits={0}
-          />{" "}
-          ₽
+          />
         </Price>
         <Logos logos={props.data.logos} />
       </PriceAndLogos>

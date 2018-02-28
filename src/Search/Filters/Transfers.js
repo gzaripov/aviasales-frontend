@@ -55,12 +55,11 @@ export default () => (
           <Price>
             <FormattedNumber
               value={transfer.price}
-              // eslint-disable-next-line
-              style="decimal"
+              style={`currency`}
+              currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}
-            />{" "}
-            ₽
+            />
           </Price>
         )}
       </Checkline>
