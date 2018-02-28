@@ -19,10 +19,8 @@ const MobileFilterButton = styled(Button)`
   left: 50%;
   padding: 10px 24px;
   transform: translateX(-50%);
-  font-weight: 900;
   font-size: 16px;
   color: #ffffff;
-  text-transform: uppercase;
 
   ${media.sm`
       display: none;
