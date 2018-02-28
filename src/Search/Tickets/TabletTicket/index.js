@@ -11,6 +11,7 @@ import unknownHandbag from "./img/unknown-handbag.svg";
 import suitcaseIcon from "./img/suitcase.svg";
 import noSuitcaseIcon from "./img/no-suitcase.svg";
 import unknownSuitcaseIcon from "./img/unknown-suitcase.svg";
+import { FormattedNumber } from "react-intl";
 import Flight from "./Flight";
 
 const Agency = styled.p`
@@ -266,7 +267,17 @@ export default props => (
       )}
       <BuyButton>
         <BuyButtonText>Купить</BuyButtonText>
-        <BuyButtonPrice>за {props.data.price}</BuyButtonPrice>
+        <BuyButtonPrice>
+          за{" "}
+          <FormattedNumber
+            value={props.data.price}
+            // eslint-disable-next-line
+            style="decimal"
+            minimumFractionDigits={0}
+            maximumFractionDigits={0}
+          />{" "}
+          ₽
+        </BuyButtonPrice>
       </BuyButton>
       <Agency>{props.data.agency}</Agency>
       {props.data.suggestions &&

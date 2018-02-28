@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Filter from "./Filter";
 import Checkbox from "./Checkbox";
+import { FormattedNumber } from "react-intl";
 
 const alliances = [
   {
@@ -10,15 +11,15 @@ const alliances = [
   },
   {
     label: "Star Alliance",
-    price: "11 150 ₽"
+    price: 11150
   },
   {
     label: "OneWorld",
-    price: "12 370 ₽"
+    price: 12370
   },
   {
     label: "SkyTeam",
-    price: "16 290 ₽"
+    price: 16290
   }
 ];
 
@@ -29,43 +30,43 @@ const airlines = [
   },
   {
     label: "Aegean Airlines",
-    price: "7 712 ₽"
+    price: 7712
   },
   {
     label: "Air Algerie",
-    price: "29 105 ₽"
+    price: 29105
   },
   {
     label: "Air France",
-    price: "17 050 ₽"
+    price: 17050
   },
   {
     label: "Air Moldova",
-    price: "22 613 ₽"
+    price: 22613
   },
   {
     label: "Alitalia",
-    price: "23 712 ₽"
+    price: 23712
   },
   {
     label: "Alitalia CityLiner",
-    price: "20 271 ₽"
+    price: 20271
   },
   {
     label: "Belle Air",
-    price: "18 371 ₽"
+    price: 18371
   },
   {
     label: "British Airways",
-    price: "23 839 ₽"
+    price: 23839
   },
   {
     label: "Brussels Airlines",
-    price: "11 150 ₽"
+    price: 11150
   },
   {
     label: "Bulgaria Air",
-    price: "20 114 ₽"
+    price: 20114
   }
 ];
 
@@ -117,14 +118,36 @@ export default () => (
     {alliances.map((alliance, index) => (
       <Check key={index}>
         <Checkbox checked={true} text={alliance.label} />
-        <Price>{alliance.price}</Price>
+        {alliance.price && (
+          <Price>
+            <FormattedNumber
+              value={alliance.price}
+              // eslint-disable-next-line
+              style="decimal"
+              minimumFractionDigits={0}
+              maximumFractionDigits={0}
+            />{" "}
+            ₽
+          </Price>
+        )}
       </Check>
     ))}
     <Title>Авиакомпании</Title>
     {airlines.map((airline, index) => (
       <Check key={index}>
         <Checkbox checked={true} text={airline.label} />
-        <Price>{airline.price}</Price>
+        {airline.price && (
+          <Price>
+            <FormattedNumber
+              value={airline.price}
+              // eslint-disable-next-line
+              style="decimal"
+              minimumFractionDigits={0}
+              maximumFractionDigits={0}
+            />{" "}
+            ₽
+          </Price>
+        )}
       </Check>
     ))}
   </Airlines>

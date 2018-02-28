@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Filter from "./Filter";
 import Checkbox from "./Checkbox";
+import { FormattedNumber } from "react-intl";
 
 const Transfers = styled(Filter)`
   padding-bottom: 16px;
@@ -29,19 +30,19 @@ const data = [
   },
   {
     label: "Без пересадок",
-    price: "7 712 ₽"
+    price: 7712
   },
   {
     label: "1 пересадка",
-    price: "11 712 ₽"
+    price: 11712
   },
   {
     label: "2 пересадки",
-    price: "23 712 ₽"
+    price: 23712
   },
   {
     label: "3 пересадки",
-    price: "47 712 ₽"
+    price: 47712
   }
 ];
 
@@ -50,7 +51,18 @@ export default () => (
     {data.map((transfer, i) => (
       <Checkline key={i}>
         <Checkbox checked={true} text={transfer.label} />
-        <Price> {transfer.price}</Price>
+        {transfer.price && (
+          <Price>
+            <FormattedNumber
+              value={transfer.price}
+              // eslint-disable-next-line
+              style="decimal"
+              minimumFractionDigits={0}
+              maximumFractionDigits={0}
+            />{" "}
+            ₽
+          </Price>
+        )}
       </Checkline>
     ))}
   </Transfers>

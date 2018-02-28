@@ -7,7 +7,7 @@ import TabletTicket from "./TabletTicket";
 const data = [
   {
     status: "cheapest",
-    price: "7 712 ₽",
+    price: 7712,
     agency: "Clickavia",
     suggestions: [],
     logos: ["/img/avia/russia.png"],
@@ -57,7 +57,7 @@ const data = [
   },
   {
     status: "fastest",
-    price: "9 269 ₽",
+    price: 9269,
     agency: "Biletix",
     suggestions: [
       {
@@ -124,7 +124,7 @@ const data = [
   },
   {
     status: "best",
-    price: "8 029 ₽",
+    price: 8029,
     agency: "на Билетик Аэро",
     suggestions: [],
     logos: ["/img/avia/nordwind.png"],
@@ -174,7 +174,7 @@ const data = [
   },
   {
     status: "",
-    price: "8 164 ₽",
+    price: 8164,
     agency: "Aviakassa",
     suggestions: [],
     logos: ["/img/avia/nordwind-airlines.png"],
@@ -230,7 +230,7 @@ const data = [
   },
   {
     status: "",
-    price: "8 240 ₽",
+    price: 8240,
     agency: "Билетик Аэро",
     suggestions: [
       {
@@ -307,7 +307,7 @@ const data = [
   },
   {
     status: "",
-    price: "9 180 ₽",
+    price: 9180,
     agency: "Clickavia",
     suggestions: [],
     logos: ["/img/avia/redwings-logo.png", "/img/avia/russia-logo.png"],
@@ -357,7 +357,7 @@ const data = [
   },
   {
     status: "",
-    price: "9 485 ₽",
+    price: 9485,
     agency: "Clickavia",
     suggestions: [],
     logos: ["/img/avia/russia-logo.png", "/img/avia/blueairlines-logo.png"],

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FormattedNumber } from "react-intl";
 import media from "../../../common/media";
 import Logos from "../Logos";
 import Flight from "./Flight";
@@ -89,7 +90,16 @@ export default props => (
     <FlightStatus status={props.data.status} />
     <TripInfo>
       <PriceAndLogos>
-        <Price>{props.data.price}</Price>
+        <Price>
+          <FormattedNumber
+            value={props.data.price}
+            // eslint-disable-next-line
+            style="decimal"
+            minimumFractionDigits={0}
+            maximumFractionDigits={0}
+          />{" "}
+          ₽
+        </Price>
         <Logos logos={props.data.logos} />
       </PriceAndLogos>
       <Flight data={props.data.flight.depart} direction="depart" />
