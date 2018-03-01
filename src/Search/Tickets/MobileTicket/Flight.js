@@ -3,6 +3,8 @@ import styled from "styled-components";
 import aircraftLeft from "./img/aircraft-left.svg";
 import aircraftRight from "./img/aircraft-right.svg";
 import clock from "./img/clock.svg";
+import { format } from "date-fns";
+import ru from "date-fns/locale/ru";
 import Duration from "../../../common/Duration";
 
 const Flight = styled.div`
@@ -31,6 +33,12 @@ const Icon = styled.img`
   margin-right: 8px;
 `;
 
+function formatTime(timestamp) {
+  return format(timestamp * 1000, "HH:mm", {
+    locale: ru
+  });
+}
+
 export default props => (
   <Flight>
     <FlightTime>
@@ -38,7 +46,9 @@ export default props => (
         src={props.direction === "return" ? aircraftLeft : aircraftRight}
         alt="Aircraft"
       />
-      {props.data.origin.time} — {props.data.dest.time}
+      {formatTime(props.data.origin.timestamp)}
+      {" — "}
+      {formatTime(props.data.dest.timestamp)}
     </FlightTime>
     <FlightTime>
       <Icon src={clock} alt="Clock" />

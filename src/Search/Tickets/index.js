@@ -27,14 +27,12 @@ const data = [
         origin: {
           city: "Москва",
           iata: "VKO",
-          time: "00:05",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519430700
         },
         dest: {
           city: "Барселона",
           iata: "BCN",
-          time: "03:05",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519441500
         },
         duration: 5 * MINUTES_IN_HOUR,
         type: "Прямой"
@@ -43,14 +41,12 @@ const data = [
         origin: {
           city: "Барселона",
           iata: "BCN",
-          time: "10:35",
-          date: "3 мар 2018, Сб"
+          timestamp: 1520073300
         },
         dest: {
           city: "Москва",
           iata: "SVO",
-          time: "17:10",
-          date: "3 мар 2018, Сб"
+          timestamp: 1520097000
         },
         duration: 4 * MINUTES_IN_HOUR + 35,
         type: "Прямой"
@@ -94,14 +90,12 @@ const data = [
         origin: {
           city: "Москва",
           iata: "VKO",
-          time: "07:30",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519457400
         },
         dest: {
           city: "Барселона",
           iata: "BCN",
-          time: "09:50",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519465800
         },
         duration: 4 * MINUTES_IN_HOUR + 20,
         type: "Прямой"
@@ -110,14 +104,12 @@ const data = [
         origin: {
           city: "Барселона",
           iata: "BCN",
-          time: "11:20",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520076000
         },
         dest: {
           city: "Москва",
           iata: "SVO",
-          time: "17:35",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520098500
         },
         duration: 4 * MINUTES_IN_HOUR + 15,
         type: "CDG"
@@ -144,14 +136,12 @@ const data = [
         origin: {
           city: "Москва",
           iata: "VKO",
-          time: "00:15",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519431300
         },
         dest: {
           city: "Барселона",
           iata: "BCN",
-          time: "03:10",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519441800
         },
         duration: 4 * MINUTES_IN_HOUR + 55,
         type: "Прямой"
@@ -160,14 +150,12 @@ const data = [
         origin: {
           city: "Барселона",
           iata: "BCN",
-          time: "10:45",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520073900
         },
         dest: {
           city: "Москва",
           iata: "SVO",
-          time: "17:15",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520097300
         },
         duration: 4 * MINUTES_IN_HOUR + 30,
         type: "Прямой"
@@ -200,14 +188,12 @@ const data = [
         origin: {
           city: "Москва",
           iata: "VKO",
-          time: "00:15",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519431300
         },
         dest: {
           city: "Барселона",
           iata: "BCN",
-          time: "03:10",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519441800
         },
         duration: 4 * MINUTES_IN_HOUR + 55,
         type: "Прямой"
@@ -216,14 +202,12 @@ const data = [
         origin: {
           city: "Барселона",
           iata: "BCN",
-          time: "10:45",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520073900
         },
         dest: {
           city: "Москва",
           iata: "SVO",
-          time: "17:15",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520097300
         },
         duration: 4 * MINUTES_IN_HOUR + 30,
         type: "Прямой"
@@ -277,14 +261,12 @@ const data = [
         origin: {
           city: "Москва",
           iata: "VKO",
-          time: "07:00",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519455600
         },
         dest: {
           city: "Барселона",
           iata: "BCN",
-          time: "09:30",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519464600
         },
         duration: 4 * MINUTES_IN_HOUR + 30,
         type: "Прямой"
@@ -293,14 +275,12 @@ const data = [
         origin: {
           city: "Барселона",
           iata: "BCN",
-          time: "11:00",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520074800
         },
         dest: {
           city: "Москва",
           iata: "SVO",
-          time: "17:10",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520097000
         },
         duration: 4 * MINUTES_IN_HOUR + 10,
         type: "Прямой"
@@ -327,14 +307,12 @@ const data = [
         origin: {
           city: "Москва",
           iata: "VKO",
-          time: "00:05",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519430700
         },
         dest: {
           city: "Барселона",
           iata: "BCN",
-          time: "03:05",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519441500
         },
         duration: 5 * MINUTES_IN_HOUR,
         type: "Прямой"
@@ -343,14 +321,12 @@ const data = [
         origin: {
           city: "Барселона",
           iata: "BCN",
-          time: "11:00",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520074800
         },
         dest: {
           city: "Москва",
           iata: "SVO",
-          time: "17:10",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520097000
         },
         duration: 4 * MINUTES_IN_HOUR + 10,
         type: "Прямой"
@@ -377,14 +353,12 @@ const data = [
         origin: {
           city: "Москва",
           iata: "VKO",
-          time: "00:05",
-          date: "24 фев 2018, Сб"
+          timestamp: 1519430700
         },
         dest: {
           city: "Барселона",
           iata: "BCN",
-          time: "03:05",
-          date: "24 фев 2018, Сб"
+          timestamp: 15194415002
         },
         duration: 5 * MINUTES_IN_HOUR,
         type: "Прямой"
@@ -393,14 +367,12 @@ const data = [
         origin: {
           city: "Барселона",
           iata: "BCN",
-          time: "11:20",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520097080
         },
         dest: {
           city: "Москва",
           iata: "SVO",
-          time: "17:35",
-          date: "24 фев 2018, Сб"
+          timestamp: 1520097455
         },
         duration: 4 * MINUTES_IN_HOUR + 15,
         type: "Прямой"

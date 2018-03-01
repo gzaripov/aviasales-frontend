@@ -5,6 +5,8 @@ import planeTakeoff from "./img/plane-takeoff.svg";
 import planeLanfing from "./img/plane-landing.svg";
 import Duration from "../../../common/Duration";
 import pin from "./img/pin.svg";
+import { format } from "date-fns";
+import ru from "date-fns/locale/ru";
 
 const Origin = styled.div`
   display: flex;
@@ -109,15 +111,32 @@ const Flight = styled.div`
   padding: 12px 0;
 `;
 
+function formatTime(timestamp) {
+  return format(timestamp * 1000, "HH:mm", {
+    locale: ru
+  });
+}
+
+function formatDate(timestamp) {
+  const dateParts = format(timestamp * 1000, "D MMM YYYY, dd", {
+    locale: ru
+  }).split(" ");
+
+  dateParts[1] = dateParts[1].substring(0, 3);
+  dateParts[3] = dateParts[3].charAt(0).toUpperCase() + dateParts[3].slice(1);
+
+  return dateParts.join(" ");
+}
+
 export default props => (
   <Flight>
     <Origin>
       <Time>
         <TimeIcon src={pin} alt="Pin icon" />
-        <span>{props.data.origin.time}</span>
+        <span>{formatTime(props.data.origin.timestamp)}</span>
       </Time>
       <City>{props.data.origin.city}</City>
-      <FlightDate>{props.data.origin.date}</FlightDate>
+      <FlightDate>{formatDate(props.data.origin.timestamp)}</FlightDate>
     </Origin>
     <Route>
       <RouteDuration>
@@ -137,10 +156,10 @@ export default props => (
     </Route>
     <Destination>
       <Time>
-        <span>{props.data.dest.time}</span>
+        <span>{formatTime(props.data.dest.timestamp)}</span>
       </Time>
       <City>{props.data.dest.city}</City>
-      <FlightDate>{props.data.dest.date}</FlightDate>
+      <FlightDate>{formatDate(props.data.dest.timestamp)}</FlightDate>
     </Destination>
   </Flight>
 );
