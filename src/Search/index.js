@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import * as Scroll from "react-scroll";
 import styled from "styled-components";
 import media from "../common/media";
 import Header from "./Header";
@@ -6,6 +7,8 @@ import Tickets from "./Tickets";
 import Button from "../common/Button";
 import Filters from "./Filters";
 import filter from "./filter.svg";
+
+const scroll = Scroll.animateScroll;
 
 const Search = styled.section`
   background-color: #eaeaea;
@@ -94,13 +97,9 @@ class ScrollToTop extends Component {
     }
   };
 
-  scrollTop() {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
-  }
+  scrollTop = () => {
+    scroll.scrollToTop({ duration: 400 });
+  };
 
   render() {
     const isShown = this.state.isShown;

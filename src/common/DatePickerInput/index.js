@@ -5,10 +5,15 @@ import ruLocale from "date-fns/locale/ru";
 import Button from "../Button";
 import Cell from "./Cell";
 import calendar from "./img/calendar.svg";
-import { format, lastDayOfMonth, addDays, isSameDay } from "date-fns";
+import { format, lastDayOfMonth, addDays } from "date-fns";
 import { withClickOutside } from "react-clickoutside";
 import "react-day-picker/lib/style.css";
-import { StyledDatePickerInput } from "./styled";
+import "./styled.css";
+
+const DataPickerInput = styled.div`
+  display: flex;
+  flex: 1;
+`;
 
 const DateSelect = styled.div`
   display: flex;
@@ -128,13 +133,8 @@ export default class DatePicker extends Component {
   };
 
   renderDay(day) {
-    const { from, to } = this.props.period;
     const date = day.getDate();
-    const isStart = isSameDay(from, day);
-    const isEnd = isSameDay(to, day);
-    return (
-      <Cell isStart={isStart} isEnd={isEnd} date={date} price={prices[date]} />
-    );
+    return <Cell date={date} price={prices[date]} />;
   }
 
   getDisabledDays() {
@@ -168,7 +168,7 @@ export default class DatePicker extends Component {
     const formattedDate = formatDate(date);
 
     return (
-      <StyledDatePickerInput>
+      <DataPickerInput>
         <DateSelect onClick={this.props.show} disabled={this.props.disabled}>
           <Input
             date
@@ -204,7 +204,7 @@ export default class DatePicker extends Component {
             {this.props.children}
           </PickerWithOutside>
         )}
-      </StyledDatePickerInput>
+      </DataPickerInput>
     );
   }
 }

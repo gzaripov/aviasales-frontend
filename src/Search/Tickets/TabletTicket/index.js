@@ -193,7 +193,7 @@ const Verdict = styled.p`
   padding: 6px 0;
 `;
 
-function generateBaggage({ handbag, suitcase, verdict }) {
+function renderBaggage({ handbag, suitcase, verdict }) {
   return (
     <Baggage>
       <BaggageIcons>
@@ -253,12 +253,12 @@ export default props => (
       <Baggages>
         {props.data.baggage.primary && (
           <PrimaryBaggageTab active>
-            {generateBaggage(props.data.baggage.primary)}
+            {renderBaggage(props.data.baggage.primary)}
           </PrimaryBaggageTab>
         )}
         {props.data.baggage.alternative && (
           <AlternativeBaggageTab>
-            {generateBaggage(props.data.baggage.alternative)}
+            {renderBaggage(props.data.baggage.alternative)}
           </AlternativeBaggageTab>
         )}
       </Baggages>

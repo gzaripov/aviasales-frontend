@@ -18,15 +18,11 @@ const Price = styled.div`
   font-weight: 500;
   text-align: center;
   color: #00c455;
-  margin-right: ${p => (p.isStart ? "5px" : "")};
-  margin-left: ${p => (p.isEnd ? "5px" : "")};
 `;
 
 export default props => (
   <Cell>
     <DayOfMonth>{props.date}</DayOfMonth>
-    <Price isStart={props.isStart} isEnd={props.isEnd}>
-      {props.price}
-    </Price>
+    <Price className="Price">{props.price}</Price>
   </Cell>
 );
