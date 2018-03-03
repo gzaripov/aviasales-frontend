@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const Flag = styled.img`
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   margin-right: 12px;
   align-self: center;
+  box-shadow: 0px 0px 8px rgba(38, 38, 38, 0.1);
+  border-radius: 100px;
 `;
 
 const City = styled.span`

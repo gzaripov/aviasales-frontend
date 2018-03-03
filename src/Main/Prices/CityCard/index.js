@@ -39,25 +39,13 @@ const Prices = props => (
 );
 
 const CityCard = styled.div`
-  margin-top: 24px;
-  padding-bottom: 8px;
-  border-bottom: ${p => (p.types.last ? "none" : "0.5px dashed #afbec6")};
-
   ${media.lg`
-    margin-top: 26px;
-    border-bottom: none;
-    border-right: ${props =>
-      props.types.lastInRow ? "0.5px dashed #afbec6;" : "none"};
-    padding-right: ${props => (props.types.lastInRow ? "34px" : "0")};
-    padding-left: ${props => (props.types.threeMultiple ? "0" : "18px")};
-
-    padding-bottom: 0;
-    margin-bottom: 8px;
+    flex: 1;
   `};
 `;
 
 export default props => (
-  <CityCard types={props.types}>
+  <CityCard className={props.className} types={props.types}>
     <Header data={props.data} />
     <Prices prices={props.data.prices} />
   </CityCard>

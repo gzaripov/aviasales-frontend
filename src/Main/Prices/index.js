@@ -102,13 +102,26 @@ const Prices = styled.section`
   `};
 `;
 
-const getCardTypes = (id, length) => {
-  return {
-    lastInRow: id === 0 || id % 2 !== 0,
-    threeMultiple: id % 3 === 0,
-    last: id === length - 1
-  };
-};
+const Divider = styled.div`
+  height: 1px;
+  margin: 24px 0;
+  border: none;
+  border-bottom: 1px dashed #afbec6;
+
+  ${media.lg`
+    width: 1px;
+    height: auto;
+    margin: 0 34px;
+    border-bottom: none;
+    border-right: 1px dashed #afbec6;
+  `};
+`;
+
+const CityCardContainer = styled.div`
+  ${media.lg`
+    display: flex;
+  `};
+`;
 
 export default () => (
   <Prices id="prices">
@@ -119,15 +132,15 @@ export default () => (
         </div>
       </div>
       <div className="row">
-        {citiesData.map((cityData, index, arr) => (
-          <div className="col-xs-12 col-md-10 col-md-offset-1 col-lg-4 col-lg-offset-0">
-            <CityCard
-              data={cityData}
-              key={index}
-              types={getCardTypes(index, arr.length)}
-            />
-          </div>
-        ))}
+        <div className="col-xs-12 col-md-10 col-md-offset-1 col-lg-12 col-lg-offset-0 col-xl-10 col-xl-offset-1">
+          <CityCardContainer>
+            <CityCard data={citiesData[0]} />
+            <Divider />
+            <CityCard data={citiesData[1]} drawBorders={true} />
+            <Divider />
+            <CityCard data={citiesData[2]} />
+          </CityCardContainer>
+        </div>
       </div>
       <div className="row center-md">
         <div className="col-xs-12 col-md-11 col-lg-8 col-xl-7">

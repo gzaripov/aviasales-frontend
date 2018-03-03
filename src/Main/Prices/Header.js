@@ -21,13 +21,13 @@ const Text = styled.span`
 const Heading = styled.div`
   padding-left: 24px;
   padding-right: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   ${media.sm`
-    margin-bottom: 36px;
+    margin-bottom: 62px;
   `};
 `;
 
