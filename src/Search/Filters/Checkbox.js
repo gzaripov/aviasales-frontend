@@ -20,8 +20,7 @@ const Container = styled.div`
 
 export default class Checkbox extends React.Component {
   state = {
-    checked: this.props.checked,
-    text: this.props.text
+    checked: true
   };
 
   onCheckedChange = event => {
@@ -44,7 +43,7 @@ export default class Checkbox extends React.Component {
           checked={this.state.checked}
           onChange={this.onCheckedChange}
         />
-        <Text onClick={this.onTextClick}>{this.state.text}</Text>
+        <Text onClick={this.onTextClick}>{this.props.text}</Text>
       </Container>
     );
   }

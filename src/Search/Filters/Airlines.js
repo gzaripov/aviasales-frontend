@@ -107,7 +107,7 @@ const Airlines = styled(Filter)`
 
 export default () => (
   <Airlines title="Авиакомпании" opened={true}>
-    <Checkbox text="Несколько авиакомпаний" checked={false} />
+    <Checkbox text="Несколько авиакомпаний" />
     <Text>
       Показывать билеты с перелетами, выполняемыми несколькими авиакомпаниями,
       включая выбранную
@@ -115,7 +115,7 @@ export default () => (
     <Title>Альянсы</Title>
     {alliances.map((alliance, index) => (
       <Check key={index}>
-        <Checkbox checked={true} text={alliance.label} />
+        <Checkbox text={alliance.label} />
         {alliance.price && (
           <Price>
             <FormattedNumber
@@ -132,7 +132,7 @@ export default () => (
     <Title>Авиакомпании</Title>
     {airlines.map((airline, index) => (
       <Check key={index}>
-        <Checkbox checked={true} text={airline.label} />
+        <Checkbox text={airline.label} />
         {airline.price && (
           <Price>
             <FormattedNumber

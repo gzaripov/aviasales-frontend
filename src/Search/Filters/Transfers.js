@@ -49,7 +49,7 @@ export default () => (
   <Transfers title="Пересадки" opened={true}>
     {data.map((transfer, i) => (
       <Checkline key={i}>
-        <Checkbox checked={true} text={transfer.label} />
+        <Checkbox text={transfer.label} />
         {transfer.price && (
           <Price>
             <FormattedNumber
