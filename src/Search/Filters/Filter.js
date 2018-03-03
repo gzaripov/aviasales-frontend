@@ -9,6 +9,7 @@ const Title = styled.p`
   position: relative;
   display: flex;
   padding: 16px 0;
+  line-height: 18px;
   font-weight: 500;
   font-size: 12px;
   color: #5b5b5c;
