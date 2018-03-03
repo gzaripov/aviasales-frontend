@@ -27,8 +27,10 @@ const Input = styled.input`
   color: #4a4a4a;
   font-size: 16px;
   line-height: 20px;
-  width: 100%;
+  width: 65%;
   cursor: inherit;
+  text-overflow: clip;
+  white-space: nowrap;
 
   ::placeholder {
     color: #a0b0b9;
