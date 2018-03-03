@@ -6,8 +6,7 @@ import { FormattedNumber } from "react-intl";
 
 const alliances = [
   {
-    label: "Все",
-    price: ""
+    label: "Все"
   },
   {
     label: "Star Alliance",
@@ -25,8 +24,7 @@ const alliances = [
 
 const airlines = [
   {
-    label: "Все",
-    price: ""
+    label: "Все"
   },
   {
     label: "Aegean Airlines",

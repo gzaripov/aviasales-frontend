@@ -81,7 +81,6 @@ const data = [
     shareLink: "/",
     baggage: {
       primary: {
-        handbag: "",
         suitcase: 20
       }
     },
@@ -123,7 +122,6 @@ const data = [
     suggestions: [],
     logos: ["/img/avia/nordwind.png"],
     isCharter: false,
-    ticketsLeft: "",
     shareLink: "/",
     baggage: {
       primary: {
@@ -163,7 +161,6 @@ const data = [
     }
   },
   {
-    status: "",
     price: 8164,
     agency: "Aviakassa",
     suggestions: [],
@@ -215,7 +212,6 @@ const data = [
     }
   },
   {
-    status: "",
     price: 8240,
     agency: "Билетик Аэро",
     suggestions: [
@@ -247,7 +243,6 @@ const data = [
     baggage: {
       primary: {
         handbag: 10,
-        suitcase: "",
         verdict: "Нет багажа"
       },
       alternative: {
@@ -288,7 +283,6 @@ const data = [
     }
   },
   {
-    status: "",
     price: 9180,
     agency: "Clickavia",
     suggestions: [],
@@ -334,7 +328,6 @@ const data = [
     }
   },
   {
-    status: "",
     price: 9485,
     agency: "Clickavia",
     suggestions: [],
@@ -344,7 +337,6 @@ const data = [
     shareLink: "/",
     baggage: {
       primary: {
-        handbag: "",
         suitcase: 15
       }
     },

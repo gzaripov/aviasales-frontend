@@ -25,8 +25,7 @@ const Checkline = styled.div`
 
 const data = [
   {
-    label: "Все",
-    price: ""
+    label: "Все"
   },
   {
     label: "Без пересадок",

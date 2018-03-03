@@ -7,7 +7,6 @@ import OfferFooter from "./OfferFooter";
 const offers = [
   {
     title: "Билеты от 499 рублей!",
-    icon: "",
     aviaCompanyPic: "/img/avia/pobeda.png",
     price: "499 ₽",
     daysLeft: "45 дней",
