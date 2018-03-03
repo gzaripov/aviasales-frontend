@@ -39,7 +39,7 @@ export default () => (
       <Direction from="Москва" to="Барселона" />
       <Info>
         <Time>
-          <From>от 04ч 20м</From>
+          <From>от 4ч 20м</From>
           <To>до 24ч 11м</To>
         </Time>
         <Range />
@@ -49,7 +49,7 @@ export default () => (
       <Direction from="Барселона" to="Москва" />
       <Info>
         <Time>
-          <From>от 04ч 10м</From>
+          <From>от 4ч 10м</From>
           <To>до 14ч 11м</To>
         </Time>
         <Range />

@@ -126,7 +126,7 @@ const data = [
     baggage: {
       primary: {
         handbag: 5,
-        suitcase: false
+        suitcase: -1
       }
     },
     flight: {
@@ -171,7 +171,7 @@ const data = [
     baggage: {
       primary: {
         handbag: 5,
-        suitcase: false,
+        suitcase: -1,
         verdict: "Нет багажа"
       },
       alternative: {

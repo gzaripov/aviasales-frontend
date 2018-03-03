@@ -197,43 +197,43 @@ function generateBaggage({ handbag, suitcase, verdict }) {
   return (
     <Baggage>
       <BaggageIcons>
-        {typeof handbag === "number" && (
+        {handbag >= 0 && (
           <Bag>
             <img src={handbagIcon} alt="Handbag icon" />
             <BagText>{handbag}</BagText>
           </Bag>
         )}
-        {handbag === false && (
+        {handbag === -1 ? (
           <Bag>
             <img src={noHandbag} alt="No handbag icon" />
           </Bag>
-        )}
-        {handbag !== false &&
+        ) : (
           !handbag && (
             <Bag>
               <img src={unknownHandbag} alt="Unknown handbag icon" />
               <UnknownBagText>?</UnknownBagText>
             </Bag>
-          )}
+          )
+        )}
 
-        {typeof suitcase === "number" && (
+        {suitcase >= 0 && (
           <Bag>
             <img src={suitcaseIcon} alt="Suitcase icon" />
             <BagText>{suitcase}</BagText>
           </Bag>
         )}
-        {suitcase === false && (
+        {suitcase === -1 ? (
           <Bag>
             <img src={noSuitcaseIcon} alt="Suitcase icon" />
           </Bag>
-        )}
-        {suitcase !== false &&
+        ) : (
           !suitcase && (
             <Bag>
               <img src={unknownSuitcaseIcon} alt="Suitcase icon" />
               <UnknownBagText>?</UnknownBagText>
             </Bag>
-          )}
+          )
+        )}
       </BaggageIcons>
       {verdict && <Verdict>{verdict}</Verdict>}
     </Baggage>

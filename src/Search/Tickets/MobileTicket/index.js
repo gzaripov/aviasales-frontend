@@ -56,10 +56,7 @@ const flightStatuses = {
 };
 
 const FlightStatus = props => {
-  if (flightStatuses[props.status]) {
-    return flightStatuses[props.status];
-  }
-  return null;
+  return flightStatuses[props.status] || null;
 };
 
 const PriceAndLogos = styled.div`
