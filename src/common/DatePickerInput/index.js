@@ -92,8 +92,9 @@ const prices = {
 };
 
 function formatDate(date) {
-  if (!date) return "";
-  return format(new Date(date), "D MMMM, dd", { locale: ruLocale });
+  if (date) {
+    return format(new Date(date), "D MMMM, dd", { locale: ruLocale });
+  }
 }
 
 const DatePickerContainer = styled.div`
@@ -116,13 +117,7 @@ export default class DatePicker extends Component {
   };
 
   setDate = (date, { selected }) => {
-    const period = this.props.period;
-    if (this.state.edge === "left") {
-      period.from = date;
-    } else {
-      period.to = date;
-    }
-    this.props.onDateChanged(period);
+    this.props.onDateSelected(date, this.state.edge);
     this.props.hide();
   };
 
@@ -165,7 +160,7 @@ export default class DatePicker extends Component {
     const { edge } = this.state;
     const modifiers = { start: from, end: to };
     const date = edge === "left" ? from : to;
-    const formattedDate = formatDate(date);
+    const formattedDate = formatDate(date) || "";
 
     return (
       <DataPickerInput>

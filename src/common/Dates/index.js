@@ -69,7 +69,12 @@ class DatesComponent extends React.Component {
     isOneWay: false
   };
 
-  onDateChanged = period => {
+  onDateSelected = (date, edge) => {
+    const { from, to } = this.state.period;
+    const period = {
+      from: edge === "left" ? date : from,
+      to: edge === "right" ? date : to
+    };
     this.setState({
       period: period,
       isRightShown: !this.state.isOneWay && !period.to
@@ -105,7 +110,7 @@ class DatesComponent extends React.Component {
           <DatePickerInput
             placeholder="Туда"
             edge="left"
-            onDateChanged={this.onDateChanged}
+            onDateSelected={this.onDateSelected}
             period={this.state.period}
             isShown={this.state.isLeftShown}
             show={() => this.setInputVisibility("left", true)}
@@ -124,7 +129,7 @@ class DatesComponent extends React.Component {
           <DatePickerInput
             placeholder="Обратно"
             edge="right"
-            onDateChanged={this.onDateChanged}
+            onDateSelected={this.onDateSelected}
             period={this.state.period}
             isShown={this.state.isRightShown}
             disabled={this.state.isOneWay}
