@@ -4,8 +4,6 @@ import styled from "styled-components";
 import MobileTicket from "./MobileTicket";
 import TabletTicket from "./TabletTicket";
 
-const MINUTES_IN_HOUR = 60;
-
 const data = [
   {
     status: "cheapest",
@@ -34,7 +32,7 @@ const data = [
           iata: "BCN",
           timestamp: 1519441500
         },
-        duration: 5 * MINUTES_IN_HOUR,
+        duration: 5 * 60,
         type: "Прямой"
       },
       return: {
@@ -48,7 +46,7 @@ const data = [
           iata: "SVO",
           timestamp: 1520097000
         },
-        duration: 4 * MINUTES_IN_HOUR + 35,
+        duration: 4 * 60 + 35,
         type: "Прямой"
       }
     }
@@ -96,7 +94,7 @@ const data = [
           iata: "BCN",
           timestamp: 1519465800
         },
-        duration: 4 * MINUTES_IN_HOUR + 20,
+        duration: 4 * 60 + 20,
         type: "Прямой"
       },
       return: {
@@ -110,7 +108,7 @@ const data = [
           iata: "SVO",
           timestamp: 1520098500
         },
-        duration: 4 * MINUTES_IN_HOUR + 15,
+        duration: 4 * 60 + 15,
         type: "CDG"
       }
     }
@@ -141,7 +139,7 @@ const data = [
           iata: "BCN",
           timestamp: 1519441800
         },
-        duration: 4 * MINUTES_IN_HOUR + 55,
+        duration: 4 * 60 + 55,
         type: "Прямой"
       },
       return: {
@@ -155,7 +153,7 @@ const data = [
           iata: "SVO",
           timestamp: 1520097300
         },
-        duration: 4 * MINUTES_IN_HOUR + 30,
+        duration: 4 * 60 + 30,
         type: "Прямой"
       }
     }
@@ -192,7 +190,7 @@ const data = [
           iata: "BCN",
           timestamp: 1519441800
         },
-        duration: 4 * MINUTES_IN_HOUR + 55,
+        duration: 4 * 60 + 55,
         type: "Прямой"
       },
       return: {
@@ -206,7 +204,7 @@ const data = [
           iata: "SVO",
           timestamp: 1520097300
         },
-        duration: 4 * MINUTES_IN_HOUR + 30,
+        duration: 4 * 60 + 30,
         type: "Прямой"
       }
     }
@@ -263,7 +261,7 @@ const data = [
           iata: "BCN",
           timestamp: 1519464600
         },
-        duration: 4 * MINUTES_IN_HOUR + 30,
+        duration: 4 * 60 + 30,
         type: "Прямой"
       },
       return: {
@@ -277,7 +275,7 @@ const data = [
           iata: "SVO",
           timestamp: 1520097000
         },
-        duration: 4 * MINUTES_IN_HOUR + 10,
+        duration: 4 * 60 + 10,
         type: "Прямой"
       }
     }
@@ -308,7 +306,7 @@ const data = [
           iata: "BCN",
           timestamp: 1519441500
         },
-        duration: 5 * MINUTES_IN_HOUR,
+        duration: 5 * 60,
         type: "Прямой"
       },
       return: {
@@ -322,7 +320,7 @@ const data = [
           iata: "SVO",
           timestamp: 1520097000
         },
-        duration: 4 * MINUTES_IN_HOUR + 10,
+        duration: 4 * 60 + 10,
         type: "Прямой"
       }
     }
@@ -352,7 +350,7 @@ const data = [
           iata: "BCN",
           timestamp: 15194415002
         },
-        duration: 5 * MINUTES_IN_HOUR,
+        duration: 5 * 60,
         type: "Прямой"
       },
       return: {
@@ -366,7 +364,7 @@ const data = [
           iata: "SVO",
           timestamp: 1520097455
         },
-        duration: 4 * MINUTES_IN_HOUR + 15,
+        duration: 4 * 60 + 15,
         type: "Прямой"
       }
     }
