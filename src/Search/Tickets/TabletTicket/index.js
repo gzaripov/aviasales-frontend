@@ -6,7 +6,6 @@ import Logos from "../Logos";
 import arrowDown from "./img/arrowDown.svg";
 import share from "./img/share.svg";
 import handbagIcon from "./img/handbag.svg";
-import noHandbag from "./img/no-handbag.svg";
 import unknownHandbag from "./img/unknown-handbag.svg";
 import suitcaseIcon from "./img/suitcase.svg";
 import noSuitcaseIcon from "./img/no-suitcase.svg";
@@ -193,36 +192,28 @@ const Verdict = styled.p`
   padding: 6px 0;
 `;
 
-function renderBaggage({ handbag, suitcase, verdict }) {
+function renderBaggage({ handbag, suitcase, verdict, noBaggage }) {
   return (
     <Baggage>
       <BaggageIcons>
-        {handbag >= 0 && (
+        {handbag >= 0 ? (
           <Bag>
             <img src={handbagIcon} alt="Handbag icon" />
             <BagText>{handbag}</BagText>
           </Bag>
-        )}
-        {handbag === -1 ? (
-          <Bag>
-            <img src={noHandbag} alt="No handbag icon" />
-          </Bag>
         ) : (
-          !handbag && (
-            <Bag>
-              <img src={unknownHandbag} alt="Unknown handbag icon" />
-              <UnknownBagText>?</UnknownBagText>
-            </Bag>
-          )
+          <Bag>
+            <img src={unknownHandbag} alt="Unknown handbag icon" />
+            <UnknownBagText>?</UnknownBagText>
+          </Bag>
         )}
-
         {suitcase >= 0 && (
           <Bag>
             <img src={suitcaseIcon} alt="Suitcase icon" />
             <BagText>{suitcase}</BagText>
           </Bag>
         )}
-        {suitcase === -1 ? (
+        {noBaggage ? (
           <Bag>
             <img src={noSuitcaseIcon} alt="Suitcase icon" />
           </Bag>

@@ -7,6 +7,7 @@ import Duration from "../../../common/Duration";
 import pin from "./img/pin.svg";
 import { format } from "date-fns";
 import ru from "date-fns/locale/ru";
+import capitalizeFirstLetter from "ucfirst";
 
 const Origin = styled.div`
   display: flex;
@@ -122,10 +123,13 @@ function formatDate(timestamp) {
     locale: ru
   }).split(" ");
 
-  dateParts[1] = dateParts[1].substring(0, 3);
-  dateParts[3] = dateParts[3].charAt(0).toUpperCase() + dateParts[3].slice(1);
+  const dayOfMonth = dateParts[0];
+  // take first 3 symbols ex. фев. => фев, март => мар
+  const month = dateParts[1].substring(0, 3);
+  const year = dateParts[2];
+  const dayOfWeek = capitalizeFirstLetter(dateParts[3]);
 
-  return dateParts.join(" ");
+  return [dayOfMonth, month, year, dayOfWeek].join(" ");
 }
 
 export default props => (
