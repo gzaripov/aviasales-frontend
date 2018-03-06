@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../../common/media";
-import Button from "../../../common/Button";
-import arrow from "./icons/arrow.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../../common/media';
+import Button from '../../../common/Button';
+import arrow from './icons/arrow.svg';
 
 const SwapButton = styled(Button)``;
 
@@ -60,17 +60,17 @@ const Arrival = styled(City)`
 
 export const ArrivalCity = () => (
   <Arrival>
-    <Input placeholder="Город прибытия" />
+    <Input placeholder='Город прибытия' />
     <Index />
   </Arrival>
 );
 
 export const DepartureCity = () => (
   <Departure>
-    <Input value="Москва" placeholder="Город вылета" />
+    <Input value='Москва' placeholder='Город вылета' />
     <Index>mow</Index>
     <SwapButton>
-      <img src={arrow} alt="Swap cities button" />
+      <img src={arrow} alt='Swap cities button' />
     </SwapButton>
   </Departure>
 );

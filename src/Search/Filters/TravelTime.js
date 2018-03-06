@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Range from "./Range";
-import Direction from "./Direction";
-import Filter from "./Filter";
+import React from 'react';
+import styled from 'styled-components';
+import Range from './Range';
+import Direction from './Direction';
+import Filter from './Filter';
 
 const Info = styled.div`
   padding-top: 16px;
@@ -34,9 +34,9 @@ const Travel = styled.div`
 `;
 
 export default () => (
-  <Filter title="Время в пути" opened={true}>
+  <Filter title='Время в пути'>
     <Travel>
-      <Direction from="Москва" to="Барселона" />
+      <Direction from='Москва' to='Барселона' />
       <Info>
         <Time>
           <From>от 4ч 20м</From>
@@ -46,7 +46,7 @@ export default () => (
       </Info>
     </Travel>
     <Travel>
-      <Direction from="Барселона" to="Москва" />
+      <Direction from='Барселона' to='Москва' />
       <Info>
         <Time>
           <From>от 4ч 10м</From>

@@ -1,12 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import airplane from "./img/airplane.svg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import airplane from './img/airplane.svg';
 
 const Divider = styled.img`
   margin: 0 8px;
 `;
 
-const Direction = styled.h3`
+const DirectionStyled = styled.h3`
   display: flex;
   font-weight: 500;
   font-size: 14px;
@@ -14,10 +15,17 @@ const Direction = styled.h3`
   margin: 0;
 `;
 
-export default props => (
-  <Direction>
+const Direction = props => (
+  <DirectionStyled>
     {props.from}
-    <Divider src={airplane} alt="Airplane icon" />
+    <Divider src={airplane} alt='Airplane icon' />
     {props.to}
-  </Direction>
+  </DirectionStyled>
 );
+
+Direction.propTypes = {
+  from: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+};
+
+export default Direction;

@@ -1,7 +1,7 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import arrow from "./arrow.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import arrow from './arrow.svg';
 
 const BackArrow = styled.img`
   cursor: pointer;
@@ -42,7 +42,7 @@ const TitleAndSubtitle = styled.div`
 
 export default () => (
   <Toolbar>
-    <BackArrow src={arrow} alt="Back arrow" />
+    <BackArrow src={arrow} alt='Back arrow' />
     <TitleAndSubtitle>
       <Title>Москва — Барселона</Title>
       <Subtitle>24 фев — 3 март, 1 пассажир</Subtitle>

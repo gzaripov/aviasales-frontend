@@ -1,7 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const Cell = styled.div`
+const CellStyled = styled.div`
   z-index: 2;
 `;
 
@@ -20,9 +21,20 @@ const Price = styled.div`
   color: #00c455;
 `;
 
-export default props => (
-  <Cell>
+const Cell = props => (
+  <CellStyled>
     <DayOfMonth>{props.date}</DayOfMonth>
-    <Price className="Price">{props.price}</Price>
-  </Cell>
+    <Price className='Price'>{props.price}</Price>
+  </CellStyled>
 );
+
+Cell.defaultProps = {
+  price: '',
+};
+
+Cell.propTypes = {
+  date: PropTypes.string.isRequired,
+  price: PropTypes.string,
+};
+
+export default Cell;

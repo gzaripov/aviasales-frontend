@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Range from "./Range";
-import Direction from "./Direction";
-import Filter from "./Filter";
+import React from 'react';
+import styled from 'styled-components';
+import Range from './Range';
+import Direction from './Direction';
+import Filter from './Filter';
 
 const Flight = styled.div`
   margin-top: 10px;
@@ -42,9 +42,9 @@ const ArrivalTime = styled.p`
 `;
 
 export default () => (
-  <Filter title="Время вылета и прибытия" opened={true}>
+  <Filter title='Время вылета и прибытия' opened>
     <Flight>
-      <Direction from="Москва" to="Барселона" />
+      <Direction from='Москва' to='Барселона' />
       <Info>
         <Text>Вылет из Москвы:</Text>
         <Time>
@@ -63,7 +63,7 @@ export default () => (
       </Info>
     </Flight>
     <Flight>
-      <Direction from="Барселона" to="Москва" />
+      <Direction from='Барселона' to='Москва' />
       <Info>
         <Text>Вылет из Барселоны:</Text>
         <Time>

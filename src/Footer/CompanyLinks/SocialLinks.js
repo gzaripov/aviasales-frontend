@@ -1,11 +1,11 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import facebook from "./icons/facebook.svg";
-import instagram from "./icons/instagram.svg";
-import twitter from "./icons/twitter.svg";
-import viber from "./icons/viber.svg";
-import vk from "./icons/vk.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import facebook from './icons/facebook.svg';
+import instagram from './icons/instagram.svg';
+import twitter from './icons/twitter.svg';
+import viber from './icons/viber.svg';
+import vk from './icons/vk.svg';
 
 const SocialLinks = styled.div`
   display: flex;
@@ -38,23 +38,23 @@ const SocialIcon = styled.img`
 export default () => (
   <SocialLinks>
     <SocialLink>
-      <SocialIcon src={vk} alt="Vk icon" />
+      <SocialIcon src={vk} alt='Vk icon' />
       Вконтакте
     </SocialLink>
     <SocialLink>
-      <SocialIcon src={facebook} alt="Facebook icon" />
+      <SocialIcon src={facebook} alt='Facebook icon' />
       Фейсбук
     </SocialLink>
     <SocialLink>
-      <SocialIcon src={instagram} alt="Instagram icon" />
+      <SocialIcon src={instagram} alt='Instagram icon' />
       Инстаграм
     </SocialLink>
     <SocialLink>
-      <SocialIcon src={twitter} alt="Twitter icon" />
+      <SocialIcon src={twitter} alt='Twitter icon' />
       Твиттер
     </SocialLink>
     <SocialLink>
-      <SocialIcon src={viber} alt="Viber icon" />
+      <SocialIcon src={viber} alt='Viber icon' />
       Вайбер
     </SocialLink>
   </SocialLinks>

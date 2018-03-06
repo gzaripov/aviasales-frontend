@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "../../common/Button";
-import clear from "./img/clear.svg";
+import React from 'react';
+import styled from 'styled-components';
+import Button from '../../common/Button';
+import clear from './img/clear.svg';
 
 const ResetFilters = styled.div`
   display: flex;
@@ -24,7 +24,7 @@ export default () => (
   <ResetFilters>
     <Text>Сбросить все фильтры</Text>
     <ResetButton>
-      <img src={clear} alt="Сбросить фильтр" />
+      <img src={clear} alt='Сбросить фильтр' />
     </ResetButton>
   </ResetFilters>
 );

@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { FormattedNumber } from "react-intl";
-import media from "../../../common/media";
-import Logos from "../Logos";
-import Flight from "./Flight";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
+import media from '../../../common/media';
+import Logos from '../Logos';
+import Flight from './Flight';
 
 const Status = styled.h4`
   margin: 0;
@@ -32,7 +33,7 @@ const flightStatuses = {
   cheapest: (
     <Cheapest>
       Самый дешевый&nbsp;&nbsp;
-      <span role="img" aria-label="emoji">
+      <span role='img' aria-label='emoji'>
         ️🤑
       </span>
     </Cheapest>
@@ -40,7 +41,7 @@ const flightStatuses = {
   fastest: (
     <Fastest>
       Самый быстрый&nbsp;&nbsp;
-      <span role="img" aria-label="emoji">
+      <span role='img' aria-label='emoji'>
         ️⚡
       </span>
     </Fastest>
@@ -48,16 +49,14 @@ const flightStatuses = {
   best: (
     <Best>
       Лучший билет&nbsp;&nbsp;
-      <span role="img" aria-label="emoji">
+      <span role='img' aria-label='emoji'>
         ️😍
       </span>
     </Best>
-  )
+  ),
 };
 
-const FlightStatus = props => {
-  return flightStatuses[props.status] || null;
-};
+const FlightStatus = props => flightStatuses[props.status] || null;
 
 const PriceAndLogos = styled.div`
   display: flex;
@@ -82,7 +81,7 @@ const Container = styled.div`
   `};
 `;
 
-export default props => (
+const MobileTicket = props => (
   <Container className={props.className}>
     <FlightStatus status={props.data.status} />
     <TripInfo>
@@ -90,16 +89,35 @@ export default props => (
         <Price>
           <FormattedNumber
             value={props.data.price}
-            style={`currency`}
-            currency="RUB"
+            style={['currency']}
+            currency='RUB'
             minimumFractionDigits={0}
             maximumFractionDigits={0}
           />
         </Price>
         <Logos logos={props.data.logos} />
       </PriceAndLogos>
-      <Flight data={props.data.flight.depart} direction="depart" />
-      <Flight data={props.data.flight.return} direction="return" />
+      <Flight data={props.data.flight.depart} direction='depart' />
+      <Flight data={props.data.flight.return} direction='return' />
     </TripInfo>
   </Container>
 );
+
+MobileTicket.defaultProps = {
+  className: '',
+};
+
+MobileTicket.propTypes = {
+  data: PropTypes.shape({
+    price: PropTypes.string,
+    logos: PropTypes.arrayOf(PropTypes.shape({})),
+    status: PropTypes.string,
+    flight: PropTypes.shape({
+      depart: PropTypes.number,
+      return: PropTypes.number,
+    }),
+  }).isRequired,
+  className: PropTypes.string,
+};
+
+export default MobileTicket;

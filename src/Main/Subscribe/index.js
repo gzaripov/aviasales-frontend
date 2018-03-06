@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
-import twitter from "./img/twitter.svg";
-import facebook from "./img/facebook.svg";
-import vk from "./img/vk.svg";
-import rss from "./img/rss.svg";
-import imgTopBorder from "./img/border-top.png";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import twitter from './img/twitter.svg';
+import facebook from './img/facebook.svg';
+import vk from './img/vk.svg';
+import rss from './img/rss.svg';
+import imgTopBorder from './img/border-top.png';
 
 const Subscribe = styled.section`
   background: url(${imgTopBorder}) no-repeat top center;
@@ -98,10 +98,10 @@ const MeidaAndJoin = styled.div`
 `;
 
 export default () => (
-  <Subscribe id="subscribe">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6 col-md-offset-3 col-xl-4 col-xl-offset-1">
+  <Subscribe id='subscribe'>
+    <div className='container'>
+      <div className='row'>
+        <div className='col-md-6 col-md-offset-3 col-xl-4 col-xl-offset-1'>
           <Suggestion>
             <SuggestionTitle>
               Хотите знать всё о скидках на авиабилеты?
@@ -111,7 +111,7 @@ export default () => (
             электронной почте.
           </Suggestion>
         </div>
-        <div className="col-md-6 col-md-offset-3 col-xl-6 col-xl-offset-1">
+        <div className='col-md-6 col-md-offset-3 col-xl-6 col-xl-offset-1'>
           <MeidaAndJoin>
             <Media>
               <SocialMedia src={twitter} />
@@ -121,7 +121,7 @@ export default () => (
             </Media>
 
             <Join>
-              <Input type="text" placeholder="Ваш email" />
+              <Input type='text' placeholder='Ваш email' />
               <Button>Подписаться</Button>
             </Join>
           </MeidaAndJoin>

@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
-import { Link } from "react-router-dom";
-import aero from "./icons/aero.svg";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import media from '../../common/media';
+import aero from './icons/aero.svg';
 
 const SearchButton = styled(Link)`
   display: flex;
@@ -41,8 +41,8 @@ const Text = styled.span`
 `;
 
 export default () => (
-  <SearchButton to="/search">
+  <SearchButton to='/search'>
     <Text>Найти билеты</Text>
-    <img src={aero} alt="Airplane icon" />
+    <img src={aero} alt='Airplane icon' />
   </SearchButton>
 );

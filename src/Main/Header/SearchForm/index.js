@@ -1,9 +1,9 @@
-import React from "react";
-import media from "../../../common/media";
-import styled from "styled-components";
-import { DepartureCity, ArrivalCity } from "./City";
-import Dates from "../../../common/Dates";
-import PassengerAndClass from "./PassengerAndClass";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../../common/media';
+import { DepartureCity, ArrivalCity } from './City';
+import Dates from '../../../common/Dates';
+import PassengerAndClass from './PassengerAndClass';
 
 const Form = styled.form`
   margin: -2px;

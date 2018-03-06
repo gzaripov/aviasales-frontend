@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
-import edit from "./edit.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import edit from './edit.svg';
 
 const Text = styled.span`
   font-weight: 500;
@@ -40,9 +40,9 @@ const Heading = styled.div`
 
 export default () => (
   <Heading>
-    <Text>Популярные направления перелетов из города</Text>{" "}
+    <Text>Популярные направления перелетов из города</Text>{' '}
     <CitySelector>
-      Москва<Edit src={edit} alt="Edit icon" />
+      Москва<Edit src={edit} alt='Edit icon' />
     </CitySelector>
   </Heading>
 );

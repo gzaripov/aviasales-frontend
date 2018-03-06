@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import * as Scroll from "react-scroll";
-import styled from "styled-components";
-import media from "../common/media";
-import Header from "./Header";
-import Tickets from "./Tickets";
-import Button from "../common/Button";
-import Filters from "./Filters";
-import filter from "./filter.svg";
+import React, { Component } from 'react';
+import * as Scroll from 'react-scroll';
+import styled from 'styled-components';
+import media from '../common/media';
+import Header from './Header';
+import Tickets from './Tickets';
+import Button from '../common/Button';
+import Filters from './Filters';
+import filter from './filter.svg';
 
 const scroll = Scroll.animateScroll;
 
@@ -55,9 +55,8 @@ const ScrollToTopButton = styled(Button)`
   top: 16px;
   left: 50%;
   padding: 6px 16px;
-  transform: ${props =>
-    props.shown ? "translateX(-50%);" : "translate(-50%, -50px);"};
-  opacity: ${props => (props.shown ? "0.5;" : "0")};
+  transform: ${props => (props.shown ? 'translateX(-50%);' : 'translate(-50%, -50px);')};
+  opacity: ${props => (props.shown ? '0.5;' : '0')};
   transition: all 200ms ease-in-out;
   font-weight: 900;
   font-size: 14px;
@@ -75,21 +74,21 @@ const ScrollToTopButton = styled(Button)`
 
 class ScrollToTop extends Component {
   state = {
-    isShown: false
+    isShown: false,
   };
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll = () => {
     const top = window.pageYOffset || document.documentElement.scrollTop;
     const triggerHeight = window.innerWidth / 2;
-    const isShown = this.state.isShown;
+    const { isShown } = this.state.isShown;
     if (isShown && top < triggerHeight) {
       this.setState({ isShown: false });
     } else if (!isShown && top > triggerHeight) {
@@ -102,7 +101,7 @@ class ScrollToTop extends Component {
   };
 
   render() {
-    const isShown = this.state.isShown;
+    const { isShown } = this.state.isShown;
     return (
       <ScrollToTopButton shown={isShown} onClick={this.scrollTop}>
         наверх
@@ -135,19 +134,19 @@ export default () => (
   <Search>
     <ScrollToTop />
     <Header />
-    <div className="container">
-      <div className="row">
-        <div className="col-xs-12">
+    <div className='container'>
+      <div className='row'>
+        <div className='col-xs-12'>
           <TabletFilterButton>
-            <img src={filter} alt="Filter icon" />
+            <img src={filter} alt='Filter icon' />
           </TabletFilterButton>
         </div>
       </div>
-      <div className="row">
-        <div className="col-lg-4 col-xl-3">
+      <div className='row'>
+        <div className='col-lg-4 col-xl-3'>
           <Filters />
         </div>
-        <div className="col-xs-12 col-lg-8 col-xl-7">
+        <div className='col-xs-12 col-lg-8 col-xl-7'>
           <Tickets />
           <LoadMoreTickets>показать еще 10 билетов!</LoadMoreTickets>
         </div>

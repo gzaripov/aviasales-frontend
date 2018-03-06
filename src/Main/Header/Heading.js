@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
 
 const Title = styled.h1`
   color: #fff;

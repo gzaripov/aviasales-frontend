@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../common/media";
-import FlightLinks from "./FlightLinks";
-import SocialLinks from "./CompanyLinks";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../common/media';
+import FlightLinks from './FlightLinks';
+import SocialLinks from './CompanyLinks';
 
 const Footer = styled.footer`
   padding-bottom: 24px;

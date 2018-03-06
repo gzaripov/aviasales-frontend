@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../../common/media";
-import Button from "../../../common/Button";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../../common/media';
+import Button from '../../../common/Button';
 
 const SearchButton = styled(Button)`
   background-color: #ff9241;

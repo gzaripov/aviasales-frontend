@@ -1,9 +1,9 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import SiteLinks from "./SiteLinks";
-import SocialLinks from "./SocialLinks";
-import AppBanners from "./AppBanners";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import SiteLinks from './SiteLinks';
+import SocialLinks from './SocialLinks';
+import AppBanners from './AppBanners';
 
 const SearchHotels = styled.p`
   font-size: 12px;
@@ -34,14 +34,14 @@ const CompanyLinks = styled.div`
 
 export default () => (
   <CompanyLinks>
-    <div className="container">
-      <div className="row">
-        <div className="col-xs-12 col-lg-7">
+    <div className='container'>
+      <div className='row'>
+        <div className='col-xs-12 col-lg-7'>
           <SiteLinks />
           <SocialLinks />
           <SearchHotels>Поиск и бронирование отелей</SearchHotels>
         </div>
-        <div className="col-xs-12 col-lg-5 end-lg">
+        <div className='col-xs-12 col-lg-5 end-lg'>
           <AppBanners />
           <Copyright>© 2007–2018, Aviasales — дешевые авиабилеты</Copyright>
         </div>

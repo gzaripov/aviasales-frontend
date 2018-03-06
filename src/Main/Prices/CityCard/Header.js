@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const Flag = styled.img`
   width: 30px;
@@ -30,16 +31,26 @@ const CityAndCountry = styled.div`
   flex-direction: column;
 `;
 
-const Heading = styled.div`
+const HeadingStyled = styled.div`
   display: flex;
 `;
 
-export default props => (
-  <Heading>
-    <Flag src={props.data.flag} alt="Flag icon" />
+const Heading = props => (
+  <HeadingStyled>
+    <Flag src={props.data.flag} alt='Flag icon' />
     <CityAndCountry>
       <City>{props.data.city}</City>
       <Country>{props.data.country}</Country>
     </CityAndCountry>
-  </Heading>
+  </HeadingStyled>
 );
+
+Heading.propTypes = {
+  data: PropTypes.shape({
+    flag: PropTypes.string,
+    city: PropTypes.string,
+    country: PropTypes.string,
+  }).isRequired,
+};
+
+export default Heading;

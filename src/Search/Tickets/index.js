@@ -1,374 +1,396 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import MobileTicket from "./MobileTicket";
-import TabletTicket from "./TabletTicket";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import MobileTicket from './MobileTicket';
+import TabletTicket from './TabletTicket';
 
 const data = [
   {
-    status: "cheapest",
+    id: 0,
+    status: 'cheapest',
     price: 7712,
-    agency: "Clickavia",
+    agency: 'Clickavia',
     suggestions: [],
-    logos: ["/img/avia/russia.png"],
+    logos: [{ id: 0, img: '/img/avia/russia.png' }],
     isCharter: true,
     ticketsLeft: 0,
-    shareLink: "/",
+    shareLink: '/',
     baggage: {
       primary: {
         handbag: 5,
-        suitcase: 15
-      }
+        suitcase: 15,
+      },
     },
     flight: {
       depart: {
         origin: {
-          city: "Москва",
-          iata: "VKO",
-          timestamp: 1519430700
+          city: 'Москва',
+          iata: 'VKO',
+          timestamp: 1519430700,
         },
         dest: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1519441500
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1519441500,
         },
         duration: 5 * 60,
-        type: "Прямой"
+        type: 'Прямой',
       },
       return: {
         origin: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1520073300
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1520073300,
         },
         dest: {
-          city: "Москва",
-          iata: "SVO",
-          timestamp: 1520097000
+          city: 'Москва',
+          iata: 'SVO',
+          timestamp: 1520097000,
         },
-        duration: 4 * 60 + 35,
-        type: "Прямой"
-      }
-    }
+        duration: 275,
+        type: 'Прямой',
+      },
+    },
   },
   {
-    status: "fastest",
+    id: 1,
+    status: 'fastest',
     price: 9269,
-    agency: "Biletix",
+    agency: 'Biletix',
     suggestions: [
       {
-        agency: "Svyaznoy Travel",
-        price: "9 275 ₽"
+        id: 0,
+        agency: 'Svyaznoy Travel',
+        price: '9 275 ₽',
       },
       {
-        agency: "Билетик Аэро",
-        price: "9 587 ₽"
+        id: 1,
+        agency: 'Билетик Аэро',
+        price: '9 587 ₽',
       },
       {
-        agency: "Svyaznoy Travel",
-        price: "9 275 ₽"
+        id: 2,
+        agency: 'Svyaznoy Travel',
+        price: '9 275 ₽',
       },
       {
-        agency: "Svyaznoy Travel",
-        price: "9 275 ₽"
-      }
+        id: 3,
+        agency: 'Svyaznoy Travel',
+        price: '9 275 ₽',
+      },
     ],
-    logos: ["/img/avia/fly.png"],
+    logos: [{ id: 1, img: '/img/avia/fly.png' }],
     isCharter: true,
     ticketsLeft: 4,
-    shareLink: "/",
+    shareLink: '/',
     baggage: {
       primary: {
-        suitcase: 20
-      }
+        suitcase: 20,
+      },
     },
     flight: {
       depart: {
         origin: {
-          city: "Москва",
-          iata: "VKO",
-          timestamp: 1519457400
+          city: 'Москва',
+          iata: 'VKO',
+          timestamp: 1519457400,
         },
         dest: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1519465800
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1519465800,
         },
-        duration: 4 * 60 + 20,
-        type: "Прямой"
+        duration: 260,
+        type: 'Прямой',
       },
       return: {
         origin: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1520076000
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1520076000,
         },
         dest: {
-          city: "Москва",
-          iata: "SVO",
-          timestamp: 1520098500
+          city: 'Москва',
+          iata: 'SVO',
+          timestamp: 1520098500,
         },
-        duration: 4 * 60 + 15,
-        type: "CDG"
-      }
-    }
+        duration: 255,
+        type: 'CDG',
+      },
+    },
   },
   {
-    status: "best",
+    id: 2,
+    status: 'best',
     price: 8029,
-    agency: "на Билетик Аэро",
+    agency: 'на Билетик Аэро',
     suggestions: [],
-    logos: ["/img/avia/nordwind.png"],
+    logos: [{ id: 2, img: '/img/avia/nordwind.png' }],
     isCharter: false,
-    shareLink: "/",
-    baggage: {
-      primary: {
-        handbag: 5,
-        noBaggage: true
-      }
-    },
-    flight: {
-      depart: {
-        origin: {
-          city: "Москва",
-          iata: "VKO",
-          timestamp: 1519431300
-        },
-        dest: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1519441800
-        },
-        duration: 4 * 60 + 55,
-        type: "Прямой"
-      },
-      return: {
-        origin: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1520073900
-        },
-        dest: {
-          city: "Москва",
-          iata: "SVO",
-          timestamp: 1520097300
-        },
-        duration: 4 * 60 + 30,
-        type: "Прямой"
-      }
-    }
-  },
-  {
-    price: 8164,
-    agency: "Aviakassa",
-    suggestions: [],
-    logos: ["/img/avia/nordwind-airlines.png"],
-    isCharter: true,
-    ticketsLeft: 0,
-    shareLink: "/",
+    shareLink: '/',
     baggage: {
       primary: {
         handbag: 5,
         noBaggage: true,
-        verdict: "Нет багажа"
+      },
+    },
+    flight: {
+      depart: {
+        origin: {
+          city: 'Москва',
+          iata: 'VKO',
+          timestamp: 1519431300,
+        },
+        dest: {
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1519441800,
+        },
+        duration: 295,
+        type: 'Прямой',
+      },
+      return: {
+        origin: {
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1520073900,
+        },
+        dest: {
+          city: 'Москва',
+          iata: 'SVO',
+          timestamp: 1520097300,
+        },
+        duration: 270,
+        type: 'Прямой',
+      },
+    },
+  },
+  {
+    id: 3,
+    price: 8164,
+    agency: 'Aviakassa',
+    suggestions: [],
+    logos: [{ id: 4, img: '/img/avia/nordwind-airlines.png' }],
+    isCharter: true,
+    ticketsLeft: 0,
+    shareLink: '/',
+    baggage: {
+      primary: {
+        handbag: 5,
+        noBaggage: true,
+        verdict: 'Нет багажа',
       },
       alternative: {
         handbag: 5,
         suitcase: 12,
-        verdict: "- 136 ₽"
-      }
+        verdict: '- 136 ₽',
+      },
     },
     flight: {
       depart: {
         origin: {
-          city: "Москва",
-          iata: "VKO",
-          timestamp: 1519431300
+          city: 'Москва',
+          iata: 'VKO',
+          timestamp: 1519431300,
         },
         dest: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1519441800
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1519441800,
         },
-        duration: 4 * 60 + 55,
-        type: "Прямой"
+        duration: 295,
+        type: 'Прямой',
       },
       return: {
         origin: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1520073900
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1520073900,
         },
         dest: {
-          city: "Москва",
-          iata: "SVO",
-          timestamp: 1520097300
+          city: 'Москва',
+          iata: 'SVO',
+          timestamp: 1520097300,
         },
-        duration: 4 * 60 + 30,
-        type: "Прямой"
-      }
-    }
+        duration: 270,
+        type: 'Прямой',
+      },
+    },
   },
   {
+    id: 4,
     price: 8240,
-    agency: "Билетик Аэро",
+    agency: 'Билетик Аэро',
     suggestions: [
       {
-        agency: "Clickavia",
-        price: "8 302 ₽"
+        id: 4,
+        agency: 'Clickavia',
+        price: '8 302 ₽',
       },
       {
-        agency: "Aviakassa",
-        price: "8 376 ₽"
+        id: 5,
+        agency: 'Aviakassa',
+        price: '8 376 ₽',
       },
       {
-        agency: "Aviakassa",
-        price: "8 376 ₽"
+        id: 6,
+        agency: 'Aviakassa',
+        price: '8 376 ₽',
       },
       {
-        agency: "Svyaznoy Travel",
-        price: "9 275 ₽"
+        id: 7,
+        agency: 'Svyaznoy Travel',
+        price: '9 275 ₽',
       },
       {
-        agency: "Aviakassa",
-        price: "8 376 ₽"
-      }
+        id: 8,
+        agency: 'Aviakassa',
+        price: '8 376 ₽',
+      },
     ],
-    logos: ["/img/avia/redwings.png"],
+    logos: [{ id: 5, img: '/img/avia/redwings.png' }],
     isCharter: true,
     ticketsLeft: null,
-    shareLink: "/",
+    shareLink: '/',
     baggage: {
       primary: {
         handbag: 10,
-        verdict: "Нет багажа"
+        verdict: 'Нет багажа',
       },
       alternative: {
         handbag: 10,
         suitcase: 20,
-        verdict: "- 267 ₽"
-      }
+        verdict: '- 267 ₽',
+      },
     },
     flight: {
       depart: {
         origin: {
-          city: "Москва",
-          iata: "VKO",
-          timestamp: 1519455600
+          city: 'Москва',
+          iata: 'VKO',
+          timestamp: 1519455600,
         },
         dest: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1519464600
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1519464600,
         },
-        duration: 4 * 60 + 30,
-        type: "Прямой"
+        duration: 270,
+        type: 'Прямой',
       },
       return: {
         origin: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1520074800
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1520074800,
         },
         dest: {
-          city: "Москва",
-          iata: "SVO",
-          timestamp: 1520097000
+          city: 'Москва',
+          iata: 'SVO',
+          timestamp: 1520097000,
         },
-        duration: 4 * 60 + 10,
-        type: "Прямой"
-      }
-    }
+        duration: 250,
+        type: 'Прямой',
+      },
+    },
   },
   {
+    id: 5,
     price: 9180,
-    agency: "Clickavia",
+    agency: 'Clickavia',
     suggestions: [],
-    logos: ["/img/avia/redwings-logo.png", "/img/avia/russia-logo.png"],
+    logos: [
+      { id: 6, img: '/img/avia/redwings-logo.png' },
+      { id: 7, img: '/img/avia/russia-logo.png' },
+    ],
     isCharter: true,
     ticketsLeft: null,
-    shareLink: "/",
+    shareLink: '/',
     baggage: {
       primary: {
         handbag: 10,
-        suitcase: 15
-      }
+        suitcase: 15,
+      },
     },
     flight: {
       depart: {
         origin: {
-          city: "Москва",
-          iata: "VKO",
-          timestamp: 1519430700
+          city: 'Москва',
+          iata: 'VKO',
+          timestamp: 1519430700,
         },
         dest: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1519441500
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1519441500,
         },
-        duration: 5 * 60,
-        type: "Прямой"
+        duration: 300,
+        type: 'Прямой',
       },
       return: {
         origin: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1520074800
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1520074800,
         },
         dest: {
-          city: "Москва",
-          iata: "SVO",
-          timestamp: 1520097000
+          city: 'Москва',
+          iata: 'SVO',
+          timestamp: 1520097000,
         },
-        duration: 4 * 60 + 10,
-        type: "Прямой"
-      }
-    }
+        duration: 250,
+        type: 'Прямой',
+      },
+    },
   },
   {
+    id: 6,
     price: 9485,
-    agency: "Clickavia",
+    agency: 'Clickavia',
     suggestions: [],
-    logos: ["/img/avia/russia-logo.png", "/img/avia/blueairlines-logo.png"],
+    logos: [
+      { id: 0, img: '/img/avia/russia-logo.png' },
+      { id: 0, img: '/img/avia/blueairlines-logo.png' },
+    ],
     isCharter: true,
     ticketsLeft: null,
-    shareLink: "/",
+    shareLink: '/',
     baggage: {
       primary: {
-        suitcase: 15
-      }
+        suitcase: 15,
+      },
     },
     flight: {
       depart: {
         origin: {
-          city: "Москва",
-          iata: "VKO",
-          timestamp: 1519430700
+          city: 'Москва',
+          iata: 'VKO',
+          timestamp: 1519430700,
         },
         dest: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 15194415002
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 15194415002,
         },
-        duration: 5 * 60,
-        type: "Прямой"
+        duration: 300,
+        type: 'Прямой',
       },
       return: {
         origin: {
-          city: "Барселона",
-          iata: "BCN",
-          timestamp: 1520097080
+          city: 'Барселона',
+          iata: 'BCN',
+          timestamp: 1520097080,
         },
         dest: {
-          city: "Москва",
-          iata: "SVO",
-          timestamp: 1520097455
+          city: 'Москва',
+          iata: 'SVO',
+          timestamp: 1520097455,
         },
-        duration: 4 * 60 + 15,
-        type: "Прямой"
-      }
-    }
-  }
+        duration: 255,
+        type: 'Прямой',
+      },
+    },
+  },
 ];
 
 const Tickets = styled.section`
@@ -397,8 +419,8 @@ const Ticket = styled.div`
 
 export default () => (
   <Tickets>
-    {data.map((ticket, index) => (
-      <Ticket key={index}>
+    {data.map(ticket => (
+      <Ticket key={ticket.id}>
         <MobileTicket data={ticket} />
         <TabletTicket data={ticket} />
       </Ticket>

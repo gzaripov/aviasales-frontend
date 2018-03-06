@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const Check = styled.input`
   height: 18px;
@@ -19,30 +20,30 @@ const Container = styled.div`
 `;
 
 export default class Checkbox extends React.Component {
-  state = {
-    checked: true
+  propTypes = {
+    text: PropTypes.string,
   };
 
-  onCheckedChange = event => {
+  state = {
+    checked: true,
+  };
+
+  onCheckedChange = (event) => {
     this.setState({
-      checked: event.target.checked
+      checked: event.target.checked,
     });
   };
 
-  onTextClick = event => {
+  onTextClick = () => {
     this.setState({
-      checked: !this.state.checked
+      checked: !this.state.checked,
     });
   };
 
   render() {
     return (
       <Container>
-        <Check
-          type="checkbox"
-          checked={this.state.checked}
-          onChange={this.onCheckedChange}
-        />
+        <Check type='checkbox' checked={this.state.checked} onChange={this.onCheckedChange} />
         <Text onClick={this.onTextClick}>{this.props.text}</Text>
       </Container>
     );

@@ -1,7 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../../common/media";
-import Header from "./Header";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import media from '../../../common/media';
+import Header from './Header';
 
 const From = styled.span`
   line-height: 20px;
@@ -28,25 +29,44 @@ const CityPrice = props => (
   </CityPriceContainer>
 );
 
+CityPrice.propTypes = {
+  data: PropTypes.shape({
+    from: PropTypes.string,
+    price: PropTypes.string,
+  }).isRequired,
+};
+
 const PricesBox = styled.div`
   padding-top: 24px;
 `;
 
-const Prices = props => (
-  <PricesBox>
-    {props.prices.map((price, i) => <CityPrice data={price} key={i} />)}
-  </PricesBox>
-);
-
-const CityCard = styled.div`
+const CityCardStyled = styled.div`
   ${media.lg`
     flex: 1;
   `};
 `;
 
-export default props => (
-  <CityCard className={props.className} types={props.types}>
+const CityCard = props => (
+  <CityCardStyled className={props.className}>
     <Header data={props.data} />
-    <Prices prices={props.data.prices} />
-  </CityCard>
+    <PricesBox>
+      {props.data.prices.map(price => <CityPrice data={price} key={price.id} />)}
+    </PricesBox>
+  </CityCardStyled>
 );
+
+CityCard.defaultProps = {
+  className: '',
+};
+
+CityCard.propTypes = {
+  className: PropTypes.string,
+  data: PropTypes.shape({
+    prices: PropTypes.arrayOf(PropTypes.shape({
+      from: PropTypes.string,
+      price: PropTypes.string,
+    })),
+  }).isRequired,
+};
+
+export default CityCard;

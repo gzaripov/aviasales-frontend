@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../media";
-import Toggle from "../Toggle";
-import PropTypes from "prop-types";
-import { withRouter } from "react-router";
-import DatePickerInput from "../DatePickerInput";
-import "react-day-picker/lib/style.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import styled from 'styled-components';
+import 'react-day-picker/lib/style.css';
+import media from '../media';
+import Toggle from '../Toggle';
+import DatePickerInput from '../DatePickerInput';
 
 const FlightDate = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ const Departure = FlightDate.extend`
   `};
 
   ${media.lg`
-    border-radius: ${p => (p.type === "main" ? "0" : "")};
+    border-radius: ${p => (p.type === 'main' ? '0' : '')};
   `};
 
   ${media.xl`
@@ -55,39 +55,37 @@ const Dates = styled.div`
 `;
 
 class DatesComponent extends React.Component {
+  static defaultProps = {
+    className: '',
+    location: {},
+  };
+
   static propTypes = {
-    location: PropTypes.object.isRequired
+    className: PropTypes.string,
+    location: PropTypes.shape({ pathname: PropTypes.string }),
   };
 
   state = {
     period: {
-      from: "",
-      to: ""
+      from: '',
+      to: '',
     },
     isLeftShown: false,
     isRightShown: false,
-    isOneWay: false
+    isOneWay: false,
   };
 
   onDateSelected = (date, edge) => {
     const { from, to } = this.state.period;
     const period = {
-      from: edge === "left" ? date : from,
-      to: edge === "right" ? date : to
+      from: edge === 'left' ? date : from,
+      to: edge === 'right' ? date : to,
     };
     this.setState({
-      period: period,
-      isRightShown: !this.state.isOneWay && !period.to
+      period,
+      isRightShown: !this.state.isOneWay && !period.to,
     });
   };
-
-  setInputVisibility(edge, visibility) {
-    if (edge === "left") {
-      this.setState({ isLeftShown: visibility });
-    } else if (!this.state.isOneWay) {
-      this.setState({ isRightShown: visibility });
-    }
-  }
 
   onToggleClicked = () => {
     const { from, to } = this.state.period;
@@ -95,46 +93,52 @@ class DatesComponent extends React.Component {
     this.setState({
       isOneWay: checked,
       period: {
-        from: from,
-        to: checked ? "" : to
-      }
+        from,
+        to: checked ? '' : to,
+      },
     });
   };
+
+  setInputVisibility(edge, visibility) {
+    if (edge === 'left') {
+      this.setState({ isLeftShown: visibility });
+    } else if (!this.state.isOneWay) {
+      this.setState({ isRightShown: visibility });
+    }
+  }
 
   render() {
     return (
       <Dates className={this.props.className}>
-        <Departure
-          type={this.props.location.pathname === "/" ? "main" : "search"}
-        >
+        <Departure type={this.props.location.pathname === '/' ? 'main' : 'search'}>
           <DatePickerInput
-            placeholder="Туда"
-            edge="left"
+            placeholder='Туда'
+            edge='left'
             onDateSelected={this.onDateSelected}
             period={this.state.period}
             isShown={this.state.isLeftShown}
-            show={() => this.setInputVisibility("left", true)}
-            hide={() => this.setInputVisibility("left", false)}
+            show={() => this.setInputVisibility('left', true)}
+            hide={() => this.setInputVisibility('left', false)}
           >
             <ToggleContainer>
               <Toggle
                 onToggleClicked={this.onToggleClicked}
                 checked={this.state.isOneWay}
-                label="Показать цены в одну сторону"
+                label='Показать цены в одну сторону'
               />
             </ToggleContainer>
           </DatePickerInput>
         </Departure>
         <FlightDate>
           <DatePickerInput
-            placeholder="Обратно"
-            edge="right"
+            placeholder='Обратно'
+            edge='right'
             onDateSelected={this.onDateSelected}
             period={this.state.period}
             isShown={this.state.isRightShown}
             disabled={this.state.isOneWay}
-            show={() => this.setInputVisibility("right", true)}
-            hide={() => this.setInputVisibility("right", false)}
+            show={() => this.setInputVisibility('right', true)}
+            hide={() => this.setInputVisibility('right', false)}
           />
         </FlightDate>
       </Dates>

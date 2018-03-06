@@ -1,13 +1,14 @@
-import React from "react";
-import media from "../../../common/media";
-import styled from "styled-components";
-import planeTakeoff from "./img/plane-takeoff.svg";
-import planeLanfing from "./img/plane-landing.svg";
-import Duration from "../../../common/Duration";
-import pin from "./img/pin.svg";
-import { format } from "date-fns";
-import ru from "date-fns/locale/ru";
-import capitalizeFirstLetter from "ucfirst";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { format } from 'date-fns';
+import ru from 'date-fns/locale/ru';
+import capitalizeFirstLetter from 'ucfirst';
+import media from '../../../common/media';
+import planeTakeoff from './img/plane-takeoff.svg';
+import planeLanfing from './img/plane-landing.svg';
+import Duration from '../../../common/Duration';
+import pin from './img/pin.svg';
 
 const Origin = styled.div`
   display: flex;
@@ -107,21 +108,21 @@ const Iata = styled.span`
   text-transform: uppercase;
 `;
 
-const Flight = styled.div`
+const FlightStyled = styled.div`
   display: flex;
   padding: 12px 0;
 `;
 
 function formatTime(timestamp) {
-  return format(timestamp * 1000, "HH:mm", {
-    locale: ru
+  return format(timestamp * 1000, 'HH:mm', {
+    locale: ru,
   });
 }
 
 function formatDate(timestamp) {
-  const dateParts = format(timestamp * 1000, "D MMM YYYY, dd", {
-    locale: ru
-  }).split(" ");
+  const dateParts = format(timestamp * 1000, 'D MMM YYYY, dd', {
+    locale: ru,
+  }).split(' ');
 
   const dayOfMonth = dateParts[0];
   // take first 3 symbols ex. фев. => фев, март => мар
@@ -129,14 +130,14 @@ function formatDate(timestamp) {
   const year = dateParts[2];
   const dayOfWeek = capitalizeFirstLetter(dateParts[3]);
 
-  return [dayOfMonth, month, year, dayOfWeek].join(" ");
+  return [dayOfMonth, month, year, dayOfWeek].join(' ');
 }
 
-export default props => (
-  <Flight>
+const Flight = props => (
+  <FlightStyled>
     <Origin>
       <Time>
-        <TimeIcon src={pin} alt="Pin icon" />
+        <TimeIcon src={pin} alt='Pin icon' />
         <span>{formatTime(props.data.origin.timestamp)}</span>
       </Time>
       <City>{props.data.origin.city}</City>
@@ -144,9 +145,9 @@ export default props => (
     </Origin>
     <Route>
       <RouteDuration>
-        <img src={planeTakeoff} alt="Plane icon" />
+        <img src={planeTakeoff} alt='Plane icon' />
         <FlightDuration duration={props.data.duration} />
-        <img src={planeLanfing} alt="Plane icon" />
+        <img src={planeLanfing} alt='Plane icon' />
       </RouteDuration>
       <RoutePath>
         <RoutePoint />
@@ -165,5 +166,23 @@ export default props => (
       <City>{props.data.dest.city}</City>
       <FlightDate>{formatDate(props.data.dest.timestamp)}</FlightDate>
     </Destination>
-  </Flight>
+  </FlightStyled>
 );
+
+Flight.propTypes = {
+  data: PropTypes.shape({
+    origin: PropTypes.shape({
+      timestamp: PropTypes.number,
+      city: PropTypes.string,
+      iata: PropTypes.string,
+    }),
+    dest: PropTypes.shape({
+      timestamp: PropTypes.number,
+      city: PropTypes.string,
+      iata: PropTypes.string,
+    }),
+    duration: PropTypes.number,
+  }).isRequired,
+};
+
+export default Flight;
