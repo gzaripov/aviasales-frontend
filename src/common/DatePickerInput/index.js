@@ -125,6 +125,7 @@ export default class DatePicker extends Component {
   static defaultProps = {
     placeholder: '',
     children: '',
+    period: { from: '', to: '' },
   };
 
   static propTypes = {
@@ -133,7 +134,10 @@ export default class DatePicker extends Component {
     show: PropTypes.func,
     onDateSelected: PropTypes.func,
     isShown: PropTypes.bool,
-    period: PropTypes.isRequired,
+    period: PropTypes.shape({
+      from: PropTypes.instanceOf(Date).isRequired,
+      to: PropTypes.instanceOf(Date).isRequired,
+    }),
     disabled: PropTypes.isRequired,
     placeholder: PropTypes.string,
     children: PropTypes.element,
@@ -178,7 +182,7 @@ export default class DatePicker extends Component {
 
   render() {
     const { from, to } = this.props.period;
-    const { isShown } = this.props.isShown;
+    const { isShown } = this.props;
     const { edge } = this.state;
     const modifiers = { start: from, end: to };
     const date = edge === 'left' ? from : to;
