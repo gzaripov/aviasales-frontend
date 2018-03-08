@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function formatDuration(duration) {
   const hours = Math.floor(duration / 60);
-  const minutes = duration % 60;
+  const minutes = Math.floor(duration % 60);
   const formattedHours = hours ? `${hours} ч ` : '';
   const formattedMins = minutes ? `${minutes} мин` : '';
   return formattedHours + formattedMins;

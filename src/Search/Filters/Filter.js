@@ -48,7 +48,7 @@ const Filter = props => (
     <Title>
       <Arrow src={props.opened ? arrowOpen : arrowDown} />
       {props.title}
-      {props.amount && <Amount>{props.amount}</Amount>}
+      {props.amount !== 0 && <Amount>{props.amount}</Amount>}
     </Title>
     {props.children}
   </FilterStyled>
