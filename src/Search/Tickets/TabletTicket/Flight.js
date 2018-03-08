@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
-import media from "../../../common/media";
-import planeTakeoff from "./img/plane-takeoff.svg";
-import planeLanfing from "./img/plane-landing.svg";
-import Duration from "../../../common/Duration";
-import pin from "./img/pin.svg";
-import ru from "date-fns/locale/ru";
+import ru from 'date-fns/locale/ru';
+import media from '../../../common/media';
+import Duration from '../../../common/Duration';
+import planeTakeoff from './img/plane-takeoff.svg';
+import planeLanfing from './img/plane-landing.svg';
+import pin from './img/pin.svg';
 
 const Origin = styled.div`
   display: flex;
@@ -119,8 +119,8 @@ function formatTime(timestamp) {
 }
 
 function formatDate(timestamp) {
-  return format(timestamp * 1000, "D MMM YYYY, dd", {
-    locale: ru
+  return format(timestamp * 1000, 'D MMM YYYY, dd', {
+    locale: ru,
   });
 }
 
