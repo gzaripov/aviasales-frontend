@@ -2,13 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
-import ru from 'date-fns/locale/ru';
-import capitalizeFirstLetter from 'ucfirst';
-import media from '../../../common/media';
-import planeTakeoff from './img/plane-takeoff.svg';
-import planeLanfing from './img/plane-landing.svg';
-import Duration from '../../../common/Duration';
-import pin from './img/pin.svg';
+import media from "../../../common/media";
+import planeTakeoff from "./img/plane-takeoff.svg";
+import planeLanfing from "./img/plane-landing.svg";
+import Duration from "../../../common/Duration";
+import pin from "./img/pin.svg";
+import ru from "date-fns/locale/ru";
 
 const Origin = styled.div`
   display: flex;
@@ -120,17 +119,9 @@ function formatTime(timestamp) {
 }
 
 function formatDate(timestamp) {
-  const dateParts = format(timestamp * 1000, 'D MMM YYYY, dd', {
-    locale: ru,
-  }).split(' ');
-
-  const dayOfMonth = dateParts[0];
-  // take first 3 symbols ex. фев. => фев, март => мар
-  const month = dateParts[1].substring(0, 3);
-  const year = dateParts[2];
-  const dayOfWeek = capitalizeFirstLetter(dateParts[3]);
-
-  return [dayOfMonth, month, year, dayOfWeek].join(' ');
+  return format(timestamp * 1000, "D MMM YYYY, dd", {
+    locale: ru
+  });
 }
 
 const Flight = props => (
