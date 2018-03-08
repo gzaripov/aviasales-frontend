@@ -42,9 +42,9 @@ const ArrivalTime = styled.p`
 `;
 
 export default () => (
-  <Filter title='Время вылета и прибытия' opened>
+  <Filter title="Время вылета и прибытия" opened>
     <Flight>
-      <Direction from='Москва' to='Барселона' />
+      <Direction from="Москва" to="Барселона" />
       <Info>
         <Text>Вылет из Москвы:</Text>
         <Time>
@@ -63,7 +63,7 @@ export default () => (
       </Info>
     </Flight>
     <Flight>
-      <Direction from='Барселона' to='Москва' />
+      <Direction from="Барселона" to="Москва" />
       <Info>
         <Text>Вылет из Барселоны:</Text>
         <Time>

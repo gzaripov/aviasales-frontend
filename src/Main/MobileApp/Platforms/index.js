@@ -61,15 +61,15 @@ const PlatformText = styled.a`
 const Platforms = props => (
   <PlatformsStyled className={props.className}>
     <Platform>
-      <PlatformIcon src={appleIcon} alt='Apple Icon' />
+      <PlatformIcon src={appleIcon} alt="Apple Icon" />
       <PlatformText>iPhone или iPad</PlatformText>
     </Platform>
     <Platform>
-      <PlatformIcon src={androidIcon} alt='Android Icon' />
+      <PlatformIcon src={androidIcon} alt="Android Icon" />
       <PlatformText>Android</PlatformText>
     </Platform>
     <Platform>
-      <PlatformIcon src={windows} alt='Wf Icon' />
+      <PlatformIcon src={windows} alt="Wf Icon" />
       <PlatformText>Windows Phone</PlatformText>
     </Platform>
   </PlatformsStyled>

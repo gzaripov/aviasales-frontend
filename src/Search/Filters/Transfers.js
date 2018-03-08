@@ -51,7 +51,7 @@ const data = [
 ];
 
 export default () => (
-  <Transfers title='Пересадки' opened>
+  <Transfers title="Пересадки" opened>
     {data.map(transfer => (
       <Checkline key={transfer.id}>
         <Checkbox text={transfer.label} />
@@ -60,7 +60,7 @@ export default () => (
             <FormattedNumber
               value={transfer.price}
               style={['currency']}
-              currency='RUB'
+              currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}
             />

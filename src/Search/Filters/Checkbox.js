@@ -43,7 +43,7 @@ export default class Checkbox extends React.Component {
   render() {
     return (
       <Container>
-        <Check type='checkbox' checked={this.state.checked} onChange={this.onCheckedChange} />
+        <Check type="checkbox" checked={this.state.checked} onChange={this.onCheckedChange} />
         <Text onClick={this.onTextClick}>{this.props.text}</Text>
       </Container>
     );

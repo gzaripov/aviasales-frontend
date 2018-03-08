@@ -18,7 +18,7 @@ const DirectionStyled = styled.h3`
 const Direction = props => (
   <DirectionStyled>
     {props.from}
-    <Divider src={airplane} alt='Airplane icon' />
+    <Divider src={airplane} alt="Airplane icon" />
     {props.to}
   </DirectionStyled>
 );

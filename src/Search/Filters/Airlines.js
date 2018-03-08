@@ -121,8 +121,8 @@ const Airlines = styled(Filter)`
 `;
 
 export default () => (
-  <Airlines title='Авиакомпании' opened>
-    <Checkbox text='Несколько авиакомпаний' />
+  <Airlines title="Авиакомпании" opened>
+    <Checkbox text="Несколько авиакомпаний" />
     <Text>
       Показывать билеты с перелетами, выполняемыми несколькими авиакомпаниями, включая выбранную
     </Text>
@@ -135,7 +135,7 @@ export default () => (
             <FormattedNumber
               value={alliance.price}
               style={['currency']}
-              currency='RUB'
+              currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}
             />
@@ -152,7 +152,7 @@ export default () => (
             <FormattedNumber
               value={airline.price}
               style={['currency']}
-              currency='RUB'
+              currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}
             />

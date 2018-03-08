@@ -41,7 +41,7 @@ const Underline = styled.hr`
 
 const Category = props => (
   <CategoryStyled>
-    <Icon src={props.imageUrl} alt='Category icon' />
+    <Icon src={props.imageUrl} alt="Category icon" />
     <Text active={props.active}>{props.text}</Text>
     <Underline active={props.active} />
   </CategoryStyled>

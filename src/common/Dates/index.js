@@ -112,8 +112,8 @@ class DatesComponent extends React.Component {
       <Dates className={this.props.className}>
         <Departure type={this.props.location.pathname === '/' ? 'main' : 'search'}>
           <DatePickerInput
-            placeholder='Туда'
-            edge='left'
+            placeholder="Туда"
+            edge="left"
             onDateSelected={this.onDateSelected}
             period={this.state.period}
             isShown={this.state.isLeftShown}
@@ -124,15 +124,15 @@ class DatesComponent extends React.Component {
               <Toggle
                 onToggleClicked={this.onToggleClicked}
                 checked={this.state.isOneWay}
-                label='Показать цены в одну сторону'
+                label="Показать цены в одну сторону"
               />
             </ToggleContainer>
           </DatePickerInput>
         </Departure>
         <FlightDate>
           <DatePickerInput
-            placeholder='Обратно'
-            edge='right'
+            placeholder="Обратно"
+            edge="right"
             onDateSelected={this.onDateSelected}
             period={this.state.period}
             isShown={this.state.isRightShown}

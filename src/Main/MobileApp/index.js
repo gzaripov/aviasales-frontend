@@ -60,18 +60,18 @@ const ImageContainer = styled.div`
 `;
 
 export default () => (
-  <MobileApp id='mobile-app'>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-xs-12 col-md-7 col-md-offset-4 center-xs start-md'>
+  <MobileApp id="mobile-app">
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12 col-md-7 col-md-offset-4 center-xs start-md">
           <Header>Скачай мобильное приложение Aviasales.ru</Header>
           <RatingBar />
         </div>
       </div>
-      <div className='col-xs-6 col-xs-offset-6 col-md-8 col-md-offset-4 between-md'>
+      <div className="col-xs-6 col-xs-offset-6 col-md-8 col-md-offset-4 between-md">
         <EnlargedPlatforms />
       </div>
-      <div className='col-xs-12'>
+      <div className="col-xs-12">
         <ImageContainer>
           <MobileImage src={phone} />
         </ImageContainer>

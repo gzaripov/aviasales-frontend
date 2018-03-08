@@ -26,7 +26,7 @@ const LogosStyled = styled.div`
 
 const Logos = props => (
   <LogosStyled className={props.className}>
-    {props.logos.map(logo => <Logo src={logo.img} key={logo.id} alt='Aircompany Logo' />)}
+    {props.logos.map(logo => <Logo src={logo.img} key={logo.id} alt="Aircompany Logo" />)}
   </LogosStyled>
 );
 

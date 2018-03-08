@@ -110,7 +110,7 @@ const OfferCard = props => (
     </Heading>
     <Information>
       <div>
-        <AviaCompanyLogo src={props.offer.aviaCompanyPic} alt='Avia company pic' />
+        <AviaCompanyLogo src={props.offer.aviaCompanyPic} alt="Avia company pic" />
       </div>
       <PriceAndDaysLeft>
         <Price>

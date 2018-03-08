@@ -21,7 +21,7 @@ const RatingBar = styled.span`
 
 export default () => (
   <RatingBar>
-    <img src={rating} alt='Rating' />
+    <img src={rating} alt="Rating" />
     <RatingBarText>Более 103 000 оценок</RatingBarText>
   </RatingBar>
 );

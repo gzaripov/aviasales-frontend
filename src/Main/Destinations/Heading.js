@@ -42,7 +42,7 @@ export default () => (
   <Heading>
     <Text>Популярные направления перелетов из города</Text>{' '}
     <CitySelector>
-      Москва<Edit src={edit} alt='Edit icon' />
+      Москва<Edit src={edit} alt="Edit icon" />
     </CitySelector>
   </Heading>
 );

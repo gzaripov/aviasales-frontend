@@ -34,9 +34,9 @@ const Travel = styled.div`
 `;
 
 export default () => (
-  <Filter title='Время в пути'>
+  <Filter title="Время в пути">
     <Travel>
-      <Direction from='Москва' to='Барселона' />
+      <Direction from="Москва" to="Барселона" />
       <Info>
         <Time>
           <From>от 4ч 20м</From>
@@ -46,7 +46,7 @@ export default () => (
       </Info>
     </Travel>
     <Travel>
-      <Direction from='Барселона' to='Москва' />
+      <Direction from="Барселона" to="Москва" />
       <Info>
         <Time>
           <From>от 4ч 10м</From>

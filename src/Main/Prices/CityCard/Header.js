@@ -37,7 +37,7 @@ const HeadingStyled = styled.div`
 
 const Heading = props => (
   <HeadingStyled>
-    <Flag src={props.data.flag} alt='Flag icon' />
+    <Flag src={props.data.flag} alt="Flag icon" />
     <CityAndCountry>
       <City>{props.data.city}</City>
       <Country>{props.data.country}</Country>

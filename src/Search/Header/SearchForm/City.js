@@ -54,17 +54,17 @@ const Arrival = City.extend`
 
 export const DepartureCity = () => (
   <Departure>
-    <Input defaultValue='Москва' placeholder='Город вылета' />
+    <Input defaultValue="Москва" placeholder="Город вылета" />
     <Index>mow</Index>
     <SwapButton>
-      <img src={arrow} alt='Swap cities button' />
+      <img src={arrow} alt="Swap cities button" />
     </SwapButton>
   </Departure>
 );
 
 export const ArrivalCity = () => (
   <Arrival>
-    <Input placeholder='Город прибытия' />
+    <Input placeholder="Город прибытия" />
     <Index />
   </Arrival>
 );

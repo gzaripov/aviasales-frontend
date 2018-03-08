@@ -24,7 +24,7 @@ export default () => (
   <ResetFilters>
     <Text>Сбросить все фильтры</Text>
     <ResetButton>
-      <img src={clear} alt='Сбросить фильтр' />
+      <img src={clear} alt="Сбросить фильтр" />
     </ResetButton>
   </ResetFilters>
 );

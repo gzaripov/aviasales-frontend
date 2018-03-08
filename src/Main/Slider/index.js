@@ -90,10 +90,10 @@ const BottomNav = styled.div`
 `;
 
 export default () => (
-  <section if='slider'>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-md-12 col-lg-8 col-lg-offset-2 col-xl-10 col-xl-offset-1 hidden-xs hidden-sm'>
+  <section if="slider">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12 col-lg-8 col-lg-offset-2 col-xl-10 col-xl-offset-1 hidden-xs hidden-sm">
           <Slider>
             <Title>Дешевые авиабилеты от крупнейших авиакомпаний и агентств</Title>
             <Vendors>
@@ -103,10 +103,10 @@ export default () => (
               <Vendor src={koreanAir} />
               <Vendor src={elevalen} />
               <LeftButton>
-                <img src={arrowLeft} alt='left arrow' />
+                <img src={arrowLeft} alt="left arrow" />
               </LeftButton>
               <RightButton>
-                <img src={arrowRight} alt='right arrow' />
+                <img src={arrowRight} alt="right arrow" />
               </RightButton>
             </Vendors>
             <BottomNav>

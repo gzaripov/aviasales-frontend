@@ -201,29 +201,29 @@ function renderBaggage({
       <BaggageIcons>
         {handbag >= 0 ? (
           <Bag>
-            <img src={handbagIcon} alt='Handbag icon' />
+            <img src={handbagIcon} alt="Handbag icon" />
             <BagText>{handbag}</BagText>
           </Bag>
         ) : (
           <Bag>
-            <img src={unknownHandbag} alt='Unknown handbag icon' />
+            <img src={unknownHandbag} alt="Unknown handbag icon" />
             <UnknownBagText>?</UnknownBagText>
           </Bag>
         )}
         {suitcase >= 0 && (
           <Bag>
-            <img src={suitcaseIcon} alt='Suitcase icon' />
+            <img src={suitcaseIcon} alt="Suitcase icon" />
             <BagText>{suitcase}</BagText>
           </Bag>
         )}
         {noBaggage ? (
           <Bag>
-            <img src={noSuitcaseIcon} alt='Suitcase icon' />
+            <img src={noSuitcaseIcon} alt="Suitcase icon" />
           </Bag>
         ) : (
           !suitcase && (
             <Bag>
-              <img src={unknownSuitcaseIcon} alt='Suitcase icon' />
+              <img src={unknownSuitcaseIcon} alt="Suitcase icon" />
               <UnknownBagText>?</UnknownBagText>
             </Bag>
           )
@@ -278,7 +278,7 @@ const TabletTicket = props => (
           <FormattedNumber
             value={props.data.price}
             style={['currency']}
-            currency='RUB'
+            currency="RUB"
             minimumFractionDigits={0}
             maximumFractionDigits={0}
           />{' '}
@@ -307,14 +307,14 @@ const TabletTicket = props => (
       <JetInfo>
         <JetLogos logos={props.data.logos} />
         {props.data.isCharter && <Charter>чартер</Charter>}
-        <Share src={share} alt='Share icon' />
+        <Share src={share} alt="Share icon" />
       </JetInfo>
       <Flight data={props.data.flight.depart} />
       <FlightInfoDivider />
       <Flight data={props.data.flight.return} />
     </TicketInfo>
     <TicketOpener>
-      <img src={arrowDown} alt='Arrow' />
+      <img src={arrowDown} alt="Arrow" />
     </TicketOpener>
   </Content>
 );

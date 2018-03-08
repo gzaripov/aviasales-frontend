@@ -62,10 +62,10 @@ const Cards = styled.div`
 `;
 
 export default () => (
-  <Offers id='offers'>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-xs-12 col-lg-10 col-lg-offset-1'>
+  <Offers id="offers">
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12 col-lg-10 col-lg-offset-1">
           <Title>Спецпредложения на авиабилеты</Title>
           <Cards>{offers.map(offer => <OfferCard offer={offer} key={offer.id} />)}</Cards>
           <OfferFooter />

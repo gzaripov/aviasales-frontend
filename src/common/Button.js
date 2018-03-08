@@ -10,7 +10,7 @@ const ButtonStyled = styled.button`
 `;
 
 const Button = props => (
-  <ButtonStyled type='button' onClick={props.onClick} className={props.className}>
+  <ButtonStyled type="button" onClick={props.onClick} className={props.className}>
     {props.children}
   </ButtonStyled>
 );

@@ -48,9 +48,9 @@ const Content = styled.div`
 
 export default () => (
   <Header>
-    <div className='container'>
-      <div className='row center-lg'>
-        <div className='col-xs-12'>
+    <div className="container">
+      <div className="row center-lg">
+        <div className="col-xs-12">
           <Content>
             <Toolbar />
             <SearchForm />

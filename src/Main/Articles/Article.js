@@ -41,13 +41,13 @@ const Article = props => (
   <ArticleStyled>
     <Heading>
       <div>
-        <img src={props.data.icon} alt='Article icon' />
+        <img src={props.data.icon} alt="Article icon" />
       </div>
       <Title>{props.data.title}</Title>
     </Heading>
     <Text>
       {props.data.text}
-      <Link href='/'>Подробнее</Link>
+      <Link href="/">Подробнее</Link>
     </Text>
   </ArticleStyled>
 );

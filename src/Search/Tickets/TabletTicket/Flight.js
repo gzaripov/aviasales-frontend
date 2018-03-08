@@ -137,7 +137,7 @@ const Flight = props => (
   <FlightStyled>
     <Origin>
       <Time>
-        <TimeIcon src={pin} alt='Pin icon' />
+        <TimeIcon src={pin} alt="Pin icon" />
         <span>{formatTime(props.data.origin.timestamp)}</span>
       </Time>
       <City>{props.data.origin.city}</City>
@@ -145,9 +145,9 @@ const Flight = props => (
     </Origin>
     <Route>
       <RouteDuration>
-        <img src={planeTakeoff} alt='Plane icon' />
+        <img src={planeTakeoff} alt="Plane icon" />
         <FlightDuration duration={props.data.duration} />
-        <img src={planeLanfing} alt='Plane icon' />
+        <img src={planeLanfing} alt="Plane icon" />
       </RouteDuration>
       <RoutePath>
         <RoutePoint />

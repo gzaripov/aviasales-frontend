@@ -42,7 +42,7 @@ const TitleAndSubtitle = styled.div`
 
 export default () => (
   <Toolbar>
-    <BackArrow src={arrow} alt='Back arrow' />
+    <BackArrow src={arrow} alt="Back arrow" />
     <TitleAndSubtitle>
       <Title>Москва — Барселона</Title>
       <Subtitle>24 фев — 3 март, 1 пассажир</Subtitle>

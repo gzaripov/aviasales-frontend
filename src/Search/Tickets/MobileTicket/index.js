@@ -33,7 +33,7 @@ const flightStatuses = {
   cheapest: (
     <Cheapest>
       Самый дешевый&nbsp;&nbsp;
-      <span role='img' aria-label='emoji'>
+      <span role="img" aria-label="emoji">
         ️🤑
       </span>
     </Cheapest>
@@ -41,7 +41,7 @@ const flightStatuses = {
   fastest: (
     <Fastest>
       Самый быстрый&nbsp;&nbsp;
-      <span role='img' aria-label='emoji'>
+      <span role="img" aria-label="emoji">
         ️⚡
       </span>
     </Fastest>
@@ -49,7 +49,7 @@ const flightStatuses = {
   best: (
     <Best>
       Лучший билет&nbsp;&nbsp;
-      <span role='img' aria-label='emoji'>
+      <span role="img" aria-label="emoji">
         ️😍
       </span>
     </Best>
@@ -90,15 +90,15 @@ const MobileTicket = props => (
           <FormattedNumber
             value={props.data.price}
             style={['currency']}
-            currency='RUB'
+            currency="RUB"
             minimumFractionDigits={0}
             maximumFractionDigits={0}
           />
         </Price>
         <Logos logos={props.data.logos} />
       </PriceAndLogos>
-      <Flight data={props.data.flight.depart} direction='depart' />
-      <Flight data={props.data.flight.return} direction='return' />
+      <Flight data={props.data.flight.depart} direction="depart" />
+      <Flight data={props.data.flight.return} direction="return" />
     </TripInfo>
   </Container>
 );

@@ -27,7 +27,7 @@ const Logo = styled.div`
 
 export default () => (
   <Logo>
-    <img src={icon} alt='Aviasales icon' />
+    <img src={icon} alt="Aviasales icon" />
     <Text>aviasales</Text>
   </Logo>
 );

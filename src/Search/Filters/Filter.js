@@ -43,7 +43,7 @@ const ClearFilter = styled(Button)`
 const Filter = props => (
   <FilterStyled className={props.className}>
     <ClearFilter>
-      <img src={clear} alt='Clear filter' />
+      <img src={clear} alt="Clear filter" />
     </ClearFilter>
     <Title>
       <Arrow src={props.opened ? arrowOpen : arrowDown} />

@@ -105,10 +105,10 @@ const CardStyled = styled.div`
 
 const Card = props => (
   <CardStyled>
-    <Image src={props.data.imageUrl} alt='City picture' />
+    <Image src={props.data.imageUrl} alt="City picture" />
     <FlagAndInfo>
       <Flag>
-        <img src={props.data.flag} alt='Flag' />
+        <img src={props.data.flag} alt="Flag" />
       </Flag>
       <Info>
         <PrimaryInfo>

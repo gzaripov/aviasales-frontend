@@ -34,14 +34,14 @@ const CompanyLinks = styled.div`
 
 export default () => (
   <CompanyLinks>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-xs-12 col-lg-7'>
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12 col-lg-7">
           <SiteLinks />
           <SocialLinks />
           <SearchHotels>Поиск и бронирование отелей</SearchHotels>
         </div>
-        <div className='col-xs-12 col-lg-5 end-lg'>
+        <div className="col-xs-12 col-lg-5 end-lg">
           <AppBanners />
           <Copyright>© 2007–2018, Aviasales — дешевые авиабилеты</Copyright>
         </div>

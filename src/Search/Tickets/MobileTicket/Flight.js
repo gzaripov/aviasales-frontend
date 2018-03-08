@@ -43,13 +43,13 @@ function formatTime(timestamp) {
 const Flight = props => (
   <FlightStyled>
     <FlightTime>
-      <Icon src={props.direction === 'return' ? aircraftLeft : aircraftRight} alt='Aircraft' />
+      <Icon src={props.direction === 'return' ? aircraftLeft : aircraftRight} alt="Aircraft" />
       {formatTime(props.data.origin.timestamp)}
       {' — '}
       {formatTime(props.data.dest.timestamp)}
     </FlightTime>
     <FlightTime>
-      <Icon src={clock} alt='Clock' />
+      <Icon src={clock} alt="Clock" />
       <Duration duration={props.data.duration} />
     </FlightTime>
     <FlightType>{props.data.type}</FlightType>

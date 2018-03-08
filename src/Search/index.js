@@ -134,19 +134,19 @@ export default () => (
   <Search>
     <ScrollToTop />
     <Header />
-    <div className='container'>
-      <div className='row'>
-        <div className='col-xs-12'>
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12">
           <TabletFilterButton>
-            <img src={filter} alt='Filter icon' />
+            <img src={filter} alt="Filter icon" />
           </TabletFilterButton>
         </div>
       </div>
-      <div className='row'>
-        <div className='col-lg-4 col-xl-3'>
+      <div className="row">
+        <div className="col-lg-4 col-xl-3">
           <Filters />
         </div>
-        <div className='col-xs-12 col-lg-8 col-xl-7'>
+        <div className="col-xs-12 col-lg-8 col-xl-7">
           <Tickets />
           <LoadMoreTickets>показать еще 10 билетов!</LoadMoreTickets>
         </div>

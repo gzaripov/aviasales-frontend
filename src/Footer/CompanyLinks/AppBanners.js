@@ -22,8 +22,8 @@ const Banner = styled.img`
 
 export default () => (
   <AppBanners>
-    <Banner src={appStore} alt='App Store logo' />
-    <Banner src={googlePlay} alt='Google Play logo' />
-    <Banner src={windowsPhone} alt='Windows Phone logo' />
+    <Banner src={appStore} alt="App Store logo" />
+    <Banner src={googlePlay} alt="Google Play logo" />
+    <Banner src={windowsPhone} alt="Windows Phone logo" />
   </AppBanners>
 );

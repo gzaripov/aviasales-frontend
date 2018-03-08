@@ -33,9 +33,9 @@ const SearchBox = styled.div`
 
 export default () => (
   <Header>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-xs-12'>
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12">
           <Content>
             <Logo />
             <SearchBox>

@@ -109,29 +109,29 @@ const Icon = styled.img`
 `;
 
 export default () => (
-  <Destinations id='destinations'>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-xs-12'>
-          <Icon src={compass} alt='Destination icon' />
+  <Destinations id="destinations">
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12">
+          <Icon src={compass} alt="Destination icon" />
           <Heading />
         </div>
       </div>
-      <div className='row'>
-        <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2'>
+      <div className="row">
+        <div className="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
           <Categories>
-            <Category imageUrl={world} text='куда угодно' active />
-            <Category imageUrl={sun} text='солнце и море' />
-            <Category imageUrl={shopping} text='шоппинг, город' />
-            <Category imageUrl={culture} text='культура и история' />
-            <Category imageUrl={nightStyle} text='ночная жизнь' />
-            <Category imageUrl={rest} text='отдых с детьми' />
+            <Category imageUrl={world} text="куда угодно" active />
+            <Category imageUrl={sun} text="солнце и море" />
+            <Category imageUrl={shopping} text="шоппинг, город" />
+            <Category imageUrl={culture} text="культура и история" />
+            <Category imageUrl={nightStyle} text="ночная жизнь" />
+            <Category imageUrl={rest} text="отдых с детьми" />
           </Categories>
         </div>
       </div>
-      <div className='row center-md'>
+      <div className="row center-md">
         {cardsData.map(cardData => (
-          <div className='col-xs-12 col-md-10 col-lg-6 col-xl-5'>
+          <div className="col-xs-12 col-md-10 col-lg-6 col-xl-5">
             <CityCard data={cardData} key={cardData.id} />
           </div>
         ))}

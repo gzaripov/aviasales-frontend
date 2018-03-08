@@ -24,13 +24,13 @@ export default () => (
   <Filters>
     <Transfers />
     <Flight />
-    <Filter title='Багаж' opened={false} />
-    <Filter title='Длительность пересадки' opened={false} />
+    <Filter title="Багаж" opened={false} />
+    <Filter title="Длительность пересадки" opened={false} />
     <TravelTime />
     <Airlines />
-    <Filter title='Аэропорты' opened={false} />
-    <Filter title='Аэропорт пересадки' opened={false} />
-    <Filter title='Агенства' opened={false} />
+    <Filter title="Аэропорты" opened={false} />
+    <Filter title="Аэропорт пересадки" opened={false} />
+    <Filter title="Агенства" opened={false} />
     <ResetFilters />
   </Filters>
 );

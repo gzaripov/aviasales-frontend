@@ -41,6 +41,6 @@ export default () => (
   <PassengerAndClass>
     <Passenger>1 пассажир,&nbsp;</Passenger>
     <Class>эконом</Class>
-    <ArrowDown src={arrowDown} alt='Arrow' />
+    <ArrowDown src={arrowDown} alt="Arrow" />
   </PassengerAndClass>
 );

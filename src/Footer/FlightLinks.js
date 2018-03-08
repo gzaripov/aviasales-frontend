@@ -64,9 +64,9 @@ const LinkColumn = styled.nav`
 
 export default () => (
   <FlightLinks>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-xs-6 col-sm-3 col-lg-2'>
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-6 col-sm-3 col-lg-2">
           <LinkColumn>
             <Title>Страны</Title>
             <LinkList>
@@ -80,7 +80,7 @@ export default () => (
             </LinkList>
           </LinkColumn>
         </div>
-        <div className='col-xs-6 col-sm-3 col-lg-2'>
+        <div className="col-xs-6 col-sm-3 col-lg-2">
           <LinkColumn>
             <Title>Города</Title>
             <LinkList>
@@ -94,7 +94,7 @@ export default () => (
             </LinkList>
           </LinkColumn>
         </div>
-        <div className='col-xs-6 col-sm-3 col-lg-2'>
+        <div className="col-xs-6 col-sm-3 col-lg-2">
           <LinkColumn>
             <Title>Авиакомпании</Title>
             <LinkList>
@@ -108,7 +108,7 @@ export default () => (
             </LinkList>
           </LinkColumn>
         </div>
-        <div className='col-xs-6 col-sm-3 col-lg-2'>
+        <div className="col-xs-6 col-sm-3 col-lg-2">
           <LinkColumn>
             <Title>Аэропорты</Title>
             <LinkList>
@@ -122,7 +122,7 @@ export default () => (
             </LinkList>
           </LinkColumn>
         </div>
-        <div className='col-xs-6 col-sm-3 col-lg-2'>
+        <div className="col-xs-6 col-sm-3 col-lg-2">
           <LinkColumn>
             <Title>Направления</Title>
             <LinkList>
@@ -135,7 +135,7 @@ export default () => (
             </LinkList>
           </LinkColumn>
         </div>
-        <div className='col-xs-6 col-sm-3 col-lg-2'>
+        <div className="col-xs-6 col-sm-3 col-lg-2">
           <LinkColumn>
             <Title>Сервисы</Title>
             <LinkList>

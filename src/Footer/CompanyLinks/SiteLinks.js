@@ -18,12 +18,12 @@ const Link = styled.a`
 
 export default () => (
   <SiteLinks>
-    <Link href='/'>О компании</Link>
-    <Link href='/'>Партнёрская программа</Link>
-    <Link href='/'>Реклама</Link>
-    <Link href='/'>Вакансии</Link>
-    <Link href='/'>Помощь</Link>
-    <Link href='/'>Правила</Link>
-    <Link href='/'>White Label авиабилеты</Link>
+    <Link href="/">О компании</Link>
+    <Link href="/">Партнёрская программа</Link>
+    <Link href="/">Реклама</Link>
+    <Link href="/">Вакансии</Link>
+    <Link href="/">Помощь</Link>
+    <Link href="/">Правила</Link>
+    <Link href="/">White Label авиабилеты</Link>
   </SiteLinks>
 );

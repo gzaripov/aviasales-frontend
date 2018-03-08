@@ -193,7 +193,7 @@ export default class DatePicker extends Component {
         <DateSelect onClick={this.props.show} disabled={this.props.disabled}>
           <Input
             date
-            type='text'
+            type="text"
             onFocus={this.props.show}
             onKeyDown={this.handleKeyDown}
             value={formattedDate}
@@ -201,7 +201,7 @@ export default class DatePicker extends Component {
             readOnly
           />
           <CalendarButton>
-            <img src={calendar} alt='Calendar Icon' />
+            <img src={calendar} alt="Calendar Icon" />
           </CalendarButton>
         </DateSelect>
         {isShown && (
@@ -211,7 +211,7 @@ export default class DatePicker extends Component {
                 selectedDays={[from, { from, to }]}
                 disabledDays={this.getDisabledDays()}
                 onDayClick={(day, params) => this.setDate(day, params)}
-                locale='ru'
+                locale="ru"
                 modifiers={modifiers}
                 months={MONTHS}
                 weekdaysLong={WEEKDAYS_LONG}

@@ -139,15 +139,15 @@ const CityCardContainer = styled.div`
 `;
 
 export default () => (
-  <Prices id='prices'>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-xs-12'>
+  <Prices id="prices">
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12">
           <Header />
         </div>
       </div>
-      <div className='row'>
-        <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-12 col-lg-offset-0 col-xl-10 col-xl-offset-1'>
+      <div className="row">
+        <div className="col-xs-12 col-md-10 col-md-offset-1 col-lg-12 col-lg-offset-0 col-xl-10 col-xl-offset-1">
           <CityCardContainer>
             <CityCard data={citiesData[0]} />
             <Divider />
@@ -157,8 +157,8 @@ export default () => (
           </CityCardContainer>
         </div>
       </div>
-      <div className='row center-md'>
-        <div className='col-xs-12 col-md-11 col-lg-8 col-xl-7'>
+      <div className="row center-md">
+        <div className="col-xs-12 col-md-11 col-lg-8 col-xl-7">
           <Advice />
         </div>
       </div>

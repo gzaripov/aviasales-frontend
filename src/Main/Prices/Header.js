@@ -33,7 +33,7 @@ const Heading = styled.div`
 
 export default () => (
   <Heading>
-    <Calendar src={calendar} alt='Calendar Icon' />
+    <Calendar src={calendar} alt="Calendar Icon" />
     <Text>Лучшие цены на авиабилеты за последний месяц</Text>
   </Heading>
 );

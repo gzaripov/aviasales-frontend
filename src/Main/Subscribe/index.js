@@ -98,20 +98,17 @@ const MeidaAndJoin = styled.div`
 `;
 
 export default () => (
-  <Subscribe id='subscribe'>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-md-6 col-md-offset-3 col-xl-4 col-xl-offset-1'>
+  <Subscribe id="subscribe">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-6 col-md-offset-3 col-xl-4 col-xl-offset-1">
           <Suggestion>
-            <SuggestionTitle>
-              Хотите знать всё о скидках на авиабилеты?
-            </SuggestionTitle>
+            <SuggestionTitle>Хотите знать всё о скидках на авиабилеты?</SuggestionTitle>
             <br />
-            Вы можете подписаться на нашу рассылку через соцсети или по
-            электронной почте.
+            Вы можете подписаться на нашу рассылку через соцсети или по электронной почте.
           </Suggestion>
         </div>
-        <div className='col-md-6 col-md-offset-3 col-xl-6 col-xl-offset-1'>
+        <div className="col-md-6 col-md-offset-3 col-xl-6 col-xl-offset-1">
           <MeidaAndJoin>
             <Media>
               <SocialMedia src={twitter} />
@@ -121,7 +118,7 @@ export default () => (
             </Media>
 
             <Join>
-              <Input type='text' placeholder='Ваш email' />
+              <Input type="text" placeholder="Ваш email" />
               <Button>Подписаться</Button>
             </Join>
           </MeidaAndJoin>

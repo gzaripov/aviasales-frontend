@@ -41,8 +41,8 @@ const Text = styled.span`
 `;
 
 export default () => (
-  <SearchButton to='/search'>
+  <SearchButton to="/search">
     <Text>Найти билеты</Text>
-    <img src={aero} alt='Airplane icon' />
+    <img src={aero} alt="Airplane icon" />
   </SearchButton>
 );

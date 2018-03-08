@@ -24,7 +24,7 @@ const Price = styled.div`
 const Cell = props => (
   <CellStyled>
     <DayOfMonth>{props.date}</DayOfMonth>
-    <Price className='Price'>{props.price}</Price>
+    <Price className="Price">{props.price}</Price>
   </CellStyled>
 );
 
