@@ -22,6 +22,29 @@ const FiltersStyled = styled.section`
 `;
 
 const data = {
+  transfers: [
+    {
+      id: 1,
+      label: 'Без пересадок',
+      price: 7712,
+      checked: true,
+    },
+    {
+      id: 2,
+      label: '1 пересадка',
+      price: 11712,
+    },
+    {
+      id: 3,
+      label: '2 пересадки',
+      price: 23712,
+    },
+    {
+      id: 4,
+      label: '3 пересадки',
+      price: 47712,
+    },
+  ],
   flightTime: {
     origin: {
       takeoff: {
@@ -59,21 +82,17 @@ const data = {
 };
 
 class Filters extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = data;
-    this.onDataChange = this.onDataChange.bind(this);
-  }
+  state = data;
 
   onDataChange = (path, value) => {
     this.setState(set(path, value, this.state));
   };
 
   render() {
-    const { flightTime, travelTime } = this.state;
+    const { transfers, flightTime, travelTime } = this.state;
     return (
       <FiltersStyled>
-        <Transfers />
+        <Transfers data={transfers} onChange={this.onDataChange} />
         <FlightTime {...flightTime} onChange={this.onDataChange} />
         <Filter title="Багаж" />
         <Filter title="Длительность пересадки" />

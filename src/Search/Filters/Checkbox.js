@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
 
 const Check = styled.input`
   height: 18px;
@@ -11,41 +12,70 @@ const Text = styled.span`
   line-height: 24px;
   font-size: 12px;
   margin-left: 6px;
+  marign-right: auto;
   user-select: none;
 `;
 
-const Container = styled.div`
+const Checkbox = styled.div`
   display: flex;
+  flex-flow: row;
   align-items: center;
+  padding: 4px 16px;
+  font-size: 12px;
+  color: #4a4a4a;
+  cursor: pointer;
+
+  &:hover {
+    background: #f1fcff;
+  }
 `;
 
-export default class Checkbox extends React.Component {
-  propTypes = {
-    text: PropTypes.string,
+const Price = styled.p`
+  font-size: 12px;
+  color: #a0b0b9;
+  user-select: none;
+  margin-left: auto;
+`;
+
+export default class extends React.Component {
+  static defaultProps = {
+    price: '',
+    checked: false,
+    onChange: () => {},
   };
 
-  state = {
-    checked: true,
+  static propTypes = {
+    id: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+    checked: PropTypes.bool,
+    price: PropTypes.number,
+    onChange: PropTypes.func,
   };
 
   onCheckedChange = (event) => {
-    this.setState({
-      checked: event.target.checked,
-    });
-  };
-
-  onTextClick = () => {
-    this.setState({
-      checked: !this.state.checked,
-    });
+    this.props.onChange(event.target.checked);
   };
 
   render() {
+    const {
+      id, label, checked, price, onChange,
+    } = this.props;
     return (
-      <Container>
-        <Check type="checkbox" checked={this.state.checked} onChange={this.onCheckedChange} />
-        <Text onClick={this.onTextClick}>{this.props.text}</Text>
-      </Container>
+      <Checkbox key={id} onClick={onChange}>
+        <Check type="checkbox" checked={checked} />
+        <Text>{label}</Text>
+        {price && (
+          <Price>
+            <FormattedNumber
+              value={price}
+              style={['currency']}
+              currency="RUB"
+              minimumFractionDigits={0}
+              maximumFractionDigits={0}
+            />
+          </Price>
+        )}
+      </Checkbox>
     );
   }
 }
