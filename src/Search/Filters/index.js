@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import set from 'lodash/fp/set';
 import media from '../../common/media';
 import Transfers from './Transfers';
+import Baggage from './Baggage';
 import FlightTime from './FlightTime';
 import TravelTime from './TravelTime';
 import Airlines from './Airlines';
@@ -43,6 +44,20 @@ const data = {
       id: 4,
       label: '3 пересадки',
       price: 47712,
+    },
+  ],
+  baggage: [
+    {
+      id: 1,
+      label: 'Багаж и ручная кладь',
+      price: 7712,
+      checked: true,
+    },
+    {
+      id: 2,
+      label: 'Без багажа',
+      price: 11712,
+      checked: true,
     },
   ],
   flightTime: {
@@ -89,12 +104,14 @@ class Filters extends React.Component {
   };
 
   render() {
-    const { transfers, flightTime, travelTime } = this.state;
+    const {
+      transfers, baggage, flightTime, travelTime,
+    } = this.state;
     return (
       <FiltersStyled>
         <Transfers data={transfers} onChange={this.onDataChange} />
         <FlightTime {...flightTime} onChange={this.onDataChange} />
-        <Filter title="Багаж" />
+        <Baggage data={baggage} onChange={this.onDataChange} />
         <Filter title="Длительность пересадки" />
         <TravelTime {...travelTime} onChange={this.onDataChange} />
         <Airlines />
