@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Direction from './Direction';
 import Filter from './Filter';
 import RangeDataPicker from './RangeDatePicker';
@@ -22,46 +23,28 @@ const Text = styled.p`
 `;
 
 export default class extends React.Component {
-  state = {
-    originTakeoff: {
-      min: 1519419900,
-      max: 1519505100,
-      range: [1519419900, 1519505100],
-    },
-    originLanding: {
-      min: 1519430700,
-      max: 1519642200,
-      range: [1519430700, 1519642200],
-    },
-    destTakeoff: {
-      min: 1520046000,
-      max: 1519505100,
-      range: [1520046000, 1519505100],
-    },
-    destLanding: {
-      min: 1520078400,
-      max: 1520232900,
-      range: [1520078400, 1520232900],
-    },
+  static defaultProps = {
+    onChange: () => {},
   };
 
-  onChange = (type, range) => {
-    this.setState((prevState) => {
-      const { min, max } = prevState[type];
-      const newState = prevState;
-      newState[type] = {
-        min,
-        max,
-        range,
-      };
-      return newState;
-    });
+  static propTypes = {
+    origin: PropTypes.shape({
+      takeoff: PropTypes.arrayOf(PropTypes.number),
+      landing: PropTypes.arrayOf(PropTypes.number),
+    }).isRequired,
+    dest: PropTypes.shape({
+      takeoff: PropTypes.arrayOf(PropTypes.number),
+      landing: PropTypes.arrayOf(PropTypes.number),
+    }).isRequired,
+    onChange: PropTypes.func,
+  };
+
+  onChange = (path, range) => {
+    this.props.onChange(`flightTime.${path}.range`, range);
   };
 
   render() {
-    const {
-      originTakeoff, originLanding, destTakeoff, destLanding,
-    } = this.state;
+    const { origin, dest } = this.props;
     return (
       <Filter title="Время вылета и прибытия" initialOpened>
         <Flight>
@@ -69,15 +52,17 @@ export default class extends React.Component {
           <Info>
             <Text>Вылет из Москвы:</Text>
             <RangeDataPicker
-              {...originTakeoff}
-              onChange={value => this.onChange('originTakeoff', value)}
+              range={origin.takeoff.range}
+              boundaries={origin.takeoff.boundaries}
+              onChange={range => this.onChange('origin.takeoff', range)}
             />
           </Info>
           <Info>
             <Text>Прибытие в Барселону:</Text>
             <RangeDataPicker
-              {...originLanding}
-              onChange={value => this.onChange('originLanding', value)}
+              range={origin.landing.range}
+              boundaries={origin.landing.boundaries}
+              onChange={range => this.onChange('origin.landing', range)}
             />
           </Info>
         </Flight>
@@ -86,15 +71,17 @@ export default class extends React.Component {
           <Info>
             <Text>Вылет из Барселоны:</Text>
             <RangeDataPicker
-              {...destTakeoff}
-              onChange={value => this.onChange('destTakeoff', value)}
+              range={dest.takeoff.range}
+              boundaries={dest.takeoff.boundaries}
+              onChange={range => this.onChange('dest.takeoff', range)}
             />
           </Info>
           <Info>
             <Text>Прибытие в Москву:</Text>
             <RangeDataPicker
-              {...destLanding}
-              onChange={value => this.onChange('destLanding', value)}
+              range={dest.landing.range}
+              boundaries={dest.landing.boundaries}
+              onChange={range => this.onChange('dest.landing', range)}
             />
           </Info>
         </Flight>

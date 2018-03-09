@@ -5,21 +5,28 @@ import 'rc-slider/assets/index.css';
 import './index.css';
 
 function countStep(min, max) {
-  return (max - min) / 1000;
+  return (max - min) / 100;
 }
 
-const RangePicker = props => (
-  <Range {...props} step={countStep(props.min, props.max)} allowCross={false} />
+const RangePicker = ({ range, boundaries, ...props }) => (
+  <Range
+    value={range}
+    min={boundaries[0]}
+    max={boundaries[1]}
+    step={countStep(...boundaries)}
+    allowCross={false}
+    {...props}
+  />
 );
 
 RangePicker.defaultProps = {
-  min: 0,
-  max: 100,
+  boundaries: [0, 100],
+  range: [0, 100],
 };
 
 RangePicker.propTypes = {
-  min: PropTypes.number,
-  max: PropTypes.number,
+  boundaries: PropTypes.arrayOf(PropTypes.number),
+  range: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default RangePicker;

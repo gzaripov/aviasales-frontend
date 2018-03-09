@@ -24,29 +24,23 @@ function formatDate(timestamp) {
   });
 }
 
-const RangeDataPicker = ({
-  min, max, range, onChange,
-}) => (
+const RangeDataPicker = ({ boundaries, range, onChange }) => (
   <div>
     <Period>
       <Time>с {formatDate(range[0])}</Time>
       <Time>до {formatDate(range[1])}</Time>
     </Period>
-    <RangePicker onChange={onChange} value={range} min={min} max={max} />
+    <RangePicker onChange={onChange} value={range} boundaries={boundaries} />
   </div>
 );
 
 RangeDataPicker.defaultProps = {
-  min: 1519430700,
-  max: 1519515900,
-  range: [1519430700, 1519515900],
   onChange: () => {},
 };
 
 RangeDataPicker.propTypes = {
-  min: PropTypes.number,
-  max: PropTypes.number,
-  range: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
+  boundaries: PropTypes.arrayOf(PropTypes.number).isRequired,
+  range: PropTypes.arrayOf(PropTypes.number).isRequired,
   onChange: PropTypes.func,
 };
 

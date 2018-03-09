@@ -16,10 +16,12 @@ const Title = styled.p`
   font-size: 12px;
   color: #5b5b5c;
   text-transform: uppercase;
+  user-select: none;
 `;
 
 const Arrow = styled.img`
   margin-right: 8.5px;
+  user-select: none;
   transition: transform 0.2s ease, -o-transform 0.2s ease;
   transform: ${props => (props.opened ? 'rotate(0deg)' : 'rotate(-90deg)')};
 `;
