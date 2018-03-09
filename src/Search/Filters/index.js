@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import media from '../../common/media';
-import Transfers from './Transfers';
-import Flight from './FlightTime';
-import TravelTime from './TravelTime';
-import Airlines from './Airlines';
-import ResetFilters from './ResetFilters';
-import Filter from './Filter';
+import React from "react";
+import styled from "styled-components";
+import media from "../../common/media";
+import Transfers from "./Transfers";
+import Flight from "./FlightTime";
+import TravelTime from "./TravelTime";
+import Airlines from "./Airlines";
+import ResetFilters from "./ResetFilters";
+import Filter from "./Filter";
 
 const Filters = styled.section`
   display: none;
@@ -24,13 +24,13 @@ export default () => (
   <Filters>
     <Transfers />
     <Flight />
-    <Filter title="Багаж" opened={false} />
-    <Filter title="Длительность пересадки" opened={false} />
+    <Filter title="Багаж" />
+    <Filter title="Длительность пересадки" />
     <TravelTime />
     <Airlines />
-    <Filter title="Аэропорты" opened={false} />
-    <Filter title="Аэропорт пересадки" opened={false} />
-    <Filter title="Агенства" opened={false} />
+    <Filter title="Аэропорты" />
+    <Filter title="Аэропорт пересадки" />
+    <Filter title="Агенства" />
     <ResetFilters />
   </Filters>
 );

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FormattedNumber } from 'react-intl';
-import Filter from './Filter';
-import Checkbox from './Checkbox';
+import React from "react";
+import styled from "styled-components";
+import { FormattedNumber } from "react-intl";
+import Filter from "./Filter";
+import Checkbox from "./Checkbox";
 
 const Transfers = styled(Filter)`
   padding-bottom: 16px;
@@ -26,32 +26,32 @@ const Checkline = styled.div`
 const data = [
   {
     id: 0,
-    label: 'Все',
+    label: "Все"
   },
   {
     id: 1,
-    label: 'Без пересадок',
-    price: 7712,
+    label: "Без пересадок",
+    price: 7712
   },
   {
     id: 2,
-    label: '1 пересадка',
-    price: 11712,
+    label: "1 пересадка",
+    price: 11712
   },
   {
     id: 3,
-    label: '2 пересадки',
-    price: 23712,
+    label: "2 пересадки",
+    price: 23712
   },
   {
     id: 4,
-    label: '3 пересадки',
-    price: 47712,
-  },
+    label: "3 пересадки",
+    price: 47712
+  }
 ];
 
-export default () => (
-  <Transfers title="Пересадки" opened>
+export default props => (
+  <Transfers title="Пересадки" initialOpened={true}>
     {data.map(transfer => (
       <Checkline key={transfer.id}>
         <Checkbox text={transfer.label} />
@@ -59,7 +59,7 @@ export default () => (
           <Price>
             <FormattedNumber
               value={transfer.price}
-              style={['currency']}
+              style={["currency"]}
               currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}

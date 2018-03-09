@@ -7,6 +7,7 @@
     "flexboxgrid2": "^7.1.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
+    "rc-collapse": "^1.8.0",
     "rc-slider": "^8.6.1",
     "react": "^16.2.0",
     "react-clickoutside": "^2.0.0",
@@ -27,6 +28,7 @@
     "babel-eslint": "^8.2.2",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "react-scripts": "1.1.1"
   }
 }
