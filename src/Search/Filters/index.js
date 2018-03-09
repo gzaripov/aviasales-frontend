@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
-import Transfers from "./Transfers";
-import Flight from "./FlightTime";
-import TravelTime from "./TravelTime";
-import Airlines from "./Airlines";
-import ResetFilters from "./ResetFilters";
-import Filter from "./Filter";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import Transfers from './Transfers';
+import Flight from './FlightTime';
+import TravelTime from './TravelTime';
+import Airlines from './Airlines';
+import ResetFilters from './ResetFilters';
+import Filter from './Filter';
 
 const Filters = styled.section`
   display: none;

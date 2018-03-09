@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import Collapse, { Panel } from "rc-collapse";
-import Button from "../../../common/Button";
-import clear from "./img/clear.svg";
-import arrow from "./img/arrow.svg";
-import "./index.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Collapse, { Panel } from 'rc-collapse';
+import Button from '../../../common/Button';
+import clear from './img/clear.svg';
+import arrow from './img/arrow.svg';
+import './index.css';
 
 const Title = styled.p`
   position: relative;
@@ -21,7 +21,7 @@ const Title = styled.p`
 const Arrow = styled.img`
   margin-right: 8.5px;
   transition: transform 0.2s ease, -o-transform 0.2s ease;
-  transform: ${props => (props.opened ? "rotate(0deg)" : "rotate(-90deg)")};
+  transform: ${props => (props.opened ? 'rotate(0deg)' : 'rotate(-90deg)')};
 `;
 
 const Amount = styled.span``;
@@ -59,16 +59,23 @@ const Header = ({ opened, title, amount }) => (
   </HeaderStyled>
 );
 
-class Filter extends React.Component {
-  state = {
-    opened: this.props.initialOpened
-  };
+Header.defaultProps = {
+  opened: false,
+  amount: 0,
+};
 
+Header.propTypes = {
+  opened: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  amount: PropTypes.number,
+};
+
+class Filter extends React.Component {
   static defaultProps = {
-    className: "",
+    className: '',
     amount: 0,
     children: null,
-    initialOpened: false
+    initialOpened: false,
   };
 
   static propTypes = {
@@ -76,28 +83,27 @@ class Filter extends React.Component {
     title: PropTypes.string.isRequired,
     amount: PropTypes.number,
     children: PropTypes.element,
-    initialOpened: PropTypes.false
+    initialOpened: PropTypes.false,
+  };
+
+  state = {
+    opened: this.props.initialOpened,
   };
 
   toggle = () => {
     this.setState({
-      opened: !this.state.opened
+      opened: !this.state.opened,
     });
   };
 
   render() {
-    const { className, title, amount, children } = this.props;
+    const {
+      className, title, amount, children,
+    } = this.props;
     const { opened } = this.state;
     return (
-      <StyledCollapse
-        onChange={this.toggle}
-        defaultActiveKey={opened ? "1" : ""}
-      >
-        <Panel
-          header={Header({ opened, title, amount })}
-          showArrow={false}
-          key={"1"}
-        >
+      <StyledCollapse onChange={this.toggle} defaultActiveKey={opened ? '1' : ''}>
+        <Panel header={Header({ opened, title, amount })} showArrow={false} key="1">
           <FilterStyled className={className}>{children}</FilterStyled>
         </Panel>
       </StyledCollapse>

@@ -1,86 +1,86 @@
-import React from "react";
-import styled from "styled-components";
-import { FormattedNumber } from "react-intl";
-import Filter from "./Filter";
-import Checkbox from "./Checkbox";
+import React from 'react';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
+import Filter from './Filter';
+import Checkbox from './Checkbox';
 
 const alliances = [
   {
     id: 0,
-    label: "Все"
+    label: 'Все',
   },
   {
     id: 1,
-    label: "Star Alliance",
-    price: 11150
+    label: 'Star Alliance',
+    price: 11150,
   },
   {
     id: 2,
-    label: "OneWorld",
-    price: 12370
+    label: 'OneWorld',
+    price: 12370,
   },
   {
     id: 3,
-    label: "SkyTeam",
-    price: 16290
-  }
+    label: 'SkyTeam',
+    price: 16290,
+  },
 ];
 
 const airlines = [
   {
     id: 4,
-    label: "Все"
+    label: 'Все',
   },
   {
     id: 5,
-    label: "Aegean Airlines",
-    price: 7712
+    label: 'Aegean Airlines',
+    price: 7712,
   },
   {
     id: 6,
-    label: "Air Algerie",
-    price: 29105
+    label: 'Air Algerie',
+    price: 29105,
   },
   {
     id: 7,
-    label: "Air France",
-    price: 17050
+    label: 'Air France',
+    price: 17050,
   },
   {
     id: 8,
-    label: "Air Moldova",
-    price: 22613
+    label: 'Air Moldova',
+    price: 22613,
   },
   {
     id: 9,
-    label: "Alitalia",
-    price: 23712
+    label: 'Alitalia',
+    price: 23712,
   },
   {
     id: 10,
-    label: "Alitalia CityLiner",
-    price: 20271
+    label: 'Alitalia CityLiner',
+    price: 20271,
   },
   {
     id: 11,
-    label: "Belle Air",
-    price: 18371
+    label: 'Belle Air',
+    price: 18371,
   },
   {
     id: 12,
-    label: "British Airways",
-    price: 23839
+    label: 'British Airways',
+    price: 23839,
   },
   {
     id: 13,
-    label: "Brussels Airlines",
-    price: 11150
+    label: 'Brussels Airlines',
+    price: 11150,
   },
   {
     id: 14,
-    label: "Bulgaria Air",
-    price: 20114
-  }
+    label: 'Bulgaria Air',
+    price: 20114,
+  },
 ];
 
 const Check = styled.div`
@@ -120,12 +120,11 @@ const Airlines = styled(Filter)`
   padding-bottom: 16px;
 `;
 
-export default props => (
-  <Airlines title="Авиакомпании" initialOpened={true}>
+export default () => (
+  <Airlines title="Авиакомпании" initialOpened>
     <Checkbox text="Несколько авиакомпаний" />
     <Text>
-      Показывать билеты с перелетами, выполняемыми несколькими авиакомпаниями,
-      включая выбранную
+      Показывать билеты с перелетами, выполняемыми несколькими авиакомпаниями, включая выбранную
     </Text>
     <Title>Альянсы</Title>
     {alliances.map(alliance => (
@@ -135,7 +134,7 @@ export default props => (
           <Price>
             <FormattedNumber
               value={alliance.price}
-              style={["currency"]}
+              style={['currency']}
               currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}
@@ -152,7 +151,7 @@ export default props => (
           <Price>
             <FormattedNumber
               value={airline.price}
-              style={["currency"]}
+              style={['currency']}
               currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}
