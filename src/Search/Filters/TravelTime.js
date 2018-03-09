@@ -5,7 +5,7 @@ import Direction from './Direction';
 import Filter from './Filter';
 import RangeTimePicker from './RangeTimePicker';
 
-const Info = styled.div`
+const RangePicker = styled(RangeTimePicker)`
   padding-top: 16px;
 `;
 
@@ -43,23 +43,19 @@ export default class extends React.Component {
       <Filter title="Время в пути" initialOpened>
         <Travel>
           <Direction from={origin.city} to={dest.city} />
-          <Info>
-            <RangeTimePicker
-              range={origin.range}
-              boundaries={origin.boundaries}
-              onChange={value => this.onChange('origin', value)}
-            />
-          </Info>
+          <RangePicker
+            range={origin.range}
+            boundaries={origin.boundaries}
+            onChange={range => this.onChange('origin', range)}
+          />
         </Travel>
         <Travel>
           <Direction from={dest.city} to={origin.city} />
-          <Info>
-            <RangeTimePicker
-              range={dest.range}
-              boundaries={dest.boundaries}
-              onChange={value => this.onChange('dest', value)}
-            />
-          </Info>
+          <RangePicker
+            range={dest.range}
+            boundaries={dest.boundaries}
+            onChange={range => this.onChange('dest', range)}
+          />
         </Travel>
       </Filter>
     );

@@ -17,8 +17,10 @@ const Time = styled.p`
   color: #323333;
 `;
 
-const RangeDataPicker = ({ range, boundaries, onChange }) => (
-  <div>
+const RangeDataPicker = ({
+  range, boundaries, onChange, className,
+}) => (
+  <div className={className}>
     <Period>
       <Time>
         от <Duration duration={range[0]} />
@@ -35,12 +37,14 @@ RangeDataPicker.defaultProps = {
   range: [20, 100],
   boundaries: [20, 1000],
   onChange: () => {},
+  className: '',
 };
 
 RangeDataPicker.propTypes = {
   range: PropTypes.arrayOf(PropTypes.number),
   boundaries: PropTypes.arrayOf(PropTypes.number),
   onChange: PropTypes.func,
+  className: PropTypes.string,
 };
 
 export default RangeDataPicker;

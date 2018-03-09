@@ -5,6 +5,7 @@ import media from '../../common/media';
 import Transfers from './Transfers';
 import Baggage from './Baggage';
 import FlightTime from './FlightTime';
+import TranferDuration from './TransferDuration';
 import TravelTime from './TravelTime';
 import Airlines from './Airlines';
 import ResetFilters from './ResetFilters';
@@ -82,6 +83,10 @@ const data = {
       },
     },
   },
+  transferDuration: {
+    range: [260, 1440],
+    boundaries: [260, 1440],
+  },
   travelTime: {
     origin: {
       city: 'Москва',
@@ -105,14 +110,14 @@ class Filters extends React.Component {
 
   render() {
     const {
-      transfers, baggage, flightTime, travelTime,
+      transfers, baggage, transferDuration, flightTime, travelTime,
     } = this.state;
     return (
       <FiltersStyled>
         <Transfers data={transfers} onChange={this.onDataChange} />
         <FlightTime {...flightTime} onChange={this.onDataChange} />
         <Baggage data={baggage} onChange={this.onDataChange} />
-        <Filter title="Длительность пересадки" />
+        <TranferDuration {...transferDuration} onChange={this.onDataChange} />
         <TravelTime {...travelTime} onChange={this.onDataChange} />
         <Airlines />
         <Filter title="Аэропорты" />
