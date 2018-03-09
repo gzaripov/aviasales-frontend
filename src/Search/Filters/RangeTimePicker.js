@@ -17,9 +17,7 @@ const Time = styled.p`
   color: #323333;
 `;
 
-const RangeDataPicker = ({
-  min, max, range, onChange,
-}) => (
+const RangeDataPicker = ({ range, boundaries, onChange }) => (
   <div>
     <Period>
       <Time>
@@ -29,21 +27,19 @@ const RangeDataPicker = ({
         до <Duration duration={range[1]} />
       </Time>
     </Period>
-    <RangePicker onChange={onChange} value={range} min={min} max={max} />
+    <RangePicker onChange={onChange} range={range} boundaries={boundaries} />
   </div>
 );
 
 RangeDataPicker.defaultProps = {
-  min: 20,
-  max: 1000,
   range: [20, 100],
+  boundaries: [20, 1000],
   onChange: () => {},
 };
 
 RangeDataPicker.propTypes = {
-  min: PropTypes.number,
-  max: PropTypes.number,
-  range: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
+  range: PropTypes.arrayOf(PropTypes.number),
+  boundaries: PropTypes.arrayOf(PropTypes.number),
   onChange: PropTypes.func,
 };
 

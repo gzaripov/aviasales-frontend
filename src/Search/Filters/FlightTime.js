@@ -29,12 +29,24 @@ export default class extends React.Component {
 
   static propTypes = {
     origin: PropTypes.shape({
-      takeoff: PropTypes.arrayOf(PropTypes.number),
-      landing: PropTypes.arrayOf(PropTypes.number),
+      takeoff: {
+        range: PropTypes.arrayOf(PropTypes.number),
+        boundaries: PropTypes.arrayOf(PropTypes.number),
+      },
+      landing: {
+        range: PropTypes.arrayOf(PropTypes.number),
+        boundaries: PropTypes.arrayOf(PropTypes.number),
+      },
     }).isRequired,
     dest: PropTypes.shape({
-      takeoff: PropTypes.arrayOf(PropTypes.number),
-      landing: PropTypes.arrayOf(PropTypes.number),
+      takeoff: {
+        range: PropTypes.arrayOf(PropTypes.number),
+        boundaries: PropTypes.arrayOf(PropTypes.number),
+      },
+      landing: {
+        range: PropTypes.arrayOf(PropTypes.number),
+        boundaries: PropTypes.arrayOf(PropTypes.number),
+      },
     }).isRequired,
     onChange: PropTypes.func,
   };

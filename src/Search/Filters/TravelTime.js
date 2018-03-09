@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Direction from './Direction';
 import Filter from './Filter';
 import RangeTimePicker from './RangeTimePicker';
@@ -14,47 +15,50 @@ const Travel = styled.div`
 `;
 
 export default class extends React.Component {
-  state = {
-    origin: {
-      city: 'Москва',
-      min: 260,
-      max: 1451,
-      range: [260, 1451],
-    },
-    dest: {
-      city: 'Барселона',
-      min: 250,
-      max: 1400,
-      range: [250, 1400],
-    },
+  static defaultProps = {
+    onChange: () => {},
   };
-  onChange = (type, range) => {
-    this.setState((prevState) => {
-      const { city, min, max } = prevState[type];
-      const newState = prevState;
-      newState[type] = {
-        city,
-        min,
-        max,
-        range,
-      };
-      return newState;
-    });
+
+  static propTypes = {
+    origin: PropTypes.shape({
+      city: PropTypes.string,
+      range: PropTypes.arrayOf(PropTypes.number),
+      boundaries: PropTypes.arrayOf(PropTypes.number),
+    }).isRequired,
+    dest: PropTypes.shape({
+      city: PropTypes.string,
+      range: PropTypes.arrayOf(PropTypes.number),
+      boundaries: PropTypes.arrayOf(PropTypes.number),
+    }).isRequired,
+    onChange: PropTypes.func,
   };
+
+  onChange = (path, range) => {
+    this.props.onChange(`travelTime.${path}.range`, range);
+  };
+
   render() {
-    const { origin, dest } = this.state;
+    const { origin, dest } = this.props;
     return (
       <Filter title="Время в пути" initialOpened>
         <Travel>
           <Direction from={origin.city} to={dest.city} />
           <Info>
-            <RangeTimePicker {...origin} onChange={value => this.onChange('origin', value)} />
+            <RangeTimePicker
+              range={origin.range}
+              boundaries={origin.boundaries}
+              onChange={value => this.onChange('origin', value)}
+            />
           </Info>
         </Travel>
         <Travel>
           <Direction from={dest.city} to={origin.city} />
           <Info>
-            <RangeTimePicker {...dest} onChange={value => this.onChange('dest', value)} />
+            <RangeTimePicker
+              range={dest.range}
+              boundaries={dest.boundaries}
+              onChange={value => this.onChange('dest', value)}
+            />
           </Info>
         </Travel>
       </Filter>

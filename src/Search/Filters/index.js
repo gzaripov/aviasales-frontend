@@ -44,6 +44,18 @@ const data = {
       },
     },
   },
+  travelTime: {
+    origin: {
+      city: 'Москва',
+      range: [260, 1451],
+      boundaries: [260, 1451],
+    },
+    dest: {
+      city: 'Барселона',
+      range: [250, 1400],
+      boundaries: [250, 1400],
+    },
+  },
 };
 
 class Filters extends React.Component {
@@ -58,14 +70,14 @@ class Filters extends React.Component {
   };
 
   render() {
-    const { flightTime } = this.state;
+    const { flightTime, travelTime } = this.state;
     return (
       <FiltersStyled>
         <Transfers />
         <FlightTime {...flightTime} onChange={this.onDataChange} />
         <Filter title="Багаж" />
         <Filter title="Длительность пересадки" />
-        <TravelTime />
+        <TravelTime {...travelTime} onChange={this.onDataChange} />
         <Airlines />
         <Filter title="Аэропорты" />
         <Filter title="Аэропорт пересадки" />
