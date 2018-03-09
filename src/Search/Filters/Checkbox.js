@@ -12,7 +12,6 @@ const Text = styled.span`
   line-height: 24px;
   font-size: 12px;
   margin-left: 6px;
-  marign-right: auto;
   user-select: none;
 `;
 
@@ -52,16 +51,17 @@ export default class extends React.Component {
     onChange: PropTypes.func,
   };
 
-  onCheckedChange = (event) => {
-    this.props.onChange(event.target.checked);
+  onCheckedChange = () => {
+    const { checked, onChange } = this.props;
+    onChange(!checked);
   };
 
   render() {
     const {
-      id, label, checked, price, onChange,
+      id, label, checked, price,
     } = this.props;
     return (
-      <Checkbox key={id} onClick={onChange}>
+      <Checkbox key={id} onClick={this.onCheckedChange}>
         <Check type="checkbox" checked={checked} />
         <Text>{label}</Text>
         {price && (

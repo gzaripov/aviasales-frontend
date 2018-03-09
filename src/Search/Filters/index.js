@@ -99,6 +99,91 @@ const data = {
       boundaries: [250, 1400],
     },
   },
+  airlines: {
+    severalAirlines: false,
+    alliances: [
+      {
+        id: 1,
+        label: 'Star Alliance',
+        price: 11150,
+        checked: true,
+      },
+      {
+        id: 2,
+        label: 'OneWorld',
+        price: 12370,
+        checked: true,
+      },
+      {
+        id: 3,
+        label: 'SkyTeam',
+        price: 16290,
+        checked: true,
+      },
+    ],
+    airlines: [
+      {
+        id: 5,
+        label: 'Aegean Airlines',
+        price: 7712,
+        checked: true,
+      },
+      {
+        id: 6,
+        label: 'Air Algerie',
+        price: 29105,
+        checked: true,
+      },
+      {
+        id: 7,
+        label: 'Air France',
+        price: 17050,
+        checked: true,
+      },
+      {
+        id: 8,
+        label: 'Air Moldova',
+        price: 22613,
+        checked: true,
+      },
+      {
+        id: 9,
+        label: 'Alitalia',
+        price: 23712,
+        checked: true,
+      },
+      {
+        id: 10,
+        label: 'Alitalia CityLiner',
+        price: 20271,
+        checked: true,
+      },
+      {
+        id: 11,
+        label: 'Belle Air',
+        price: 18371,
+        checked: true,
+      },
+      {
+        id: 12,
+        label: 'British Airways',
+        price: 23839,
+        checked: true,
+      },
+      {
+        id: 13,
+        label: 'Brussels Airlines',
+        price: 11150,
+        checked: true,
+      },
+      {
+        id: 14,
+        label: 'Bulgaria Air',
+        price: 20114,
+        checked: true,
+      },
+    ],
+  },
 };
 
 class Filters extends React.Component {
@@ -110,7 +195,7 @@ class Filters extends React.Component {
 
   render() {
     const {
-      transfers, baggage, transferDuration, flightTime, travelTime,
+      transfers, baggage, transferDuration, flightTime, travelTime, airlines,
     } = this.state;
     return (
       <FiltersStyled>
@@ -119,7 +204,7 @@ class Filters extends React.Component {
         <Baggage data={baggage} onChange={this.onDataChange} />
         <TranferDuration {...transferDuration} onChange={this.onDataChange} />
         <TravelTime {...travelTime} onChange={this.onDataChange} />
-        <Airlines />
+        <Airlines {...airlines} onChange={this.onDataChange} />
         <Filter title="Аэропорты" />
         <Filter title="Аэропорт пересадки" />
         <Filter title="Агенства" />
