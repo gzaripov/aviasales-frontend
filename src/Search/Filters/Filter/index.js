@@ -42,6 +42,10 @@ const ClearFilter = styled(Button)`
 
 const HeaderStyled = styled.h2`
   margin: 0;
+
+  &:hover {
+    background: #f1fcff;
+  }
 `;
 
 const StyledCollapse = styled(Collapse)`
