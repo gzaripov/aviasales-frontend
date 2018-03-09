@@ -22,6 +22,7 @@ class CheckGroup extends React.Component {
   static defaultProps = {
     checklist: [],
     onChange: () => {},
+    className: '',
   };
 
   static propTypes = {
@@ -31,6 +32,7 @@ class CheckGroup extends React.Component {
       price: PropTypes.number,
     })),
     onChange: PropTypes.func,
+    className: PropTypes.string,
   };
 
   onCheckAll = () => {
@@ -45,10 +47,16 @@ class CheckGroup extends React.Component {
   };
 
   render() {
-    const { checklist } = this.props;
+    const { checklist, className } = this.props;
     return (
-      <div>
-        <Checkbox label="Все" onChange={this.onCheckAll} checked={areAllChecksChecked(checklist)} />
+      <div className={className}>
+        {checklist.length > 1 && (
+          <Checkbox
+            label="Все"
+            onChange={this.onCheckAll}
+            checked={areAllChecksChecked(checklist)}
+          />
+        )}
         {checklist.map(check => (
           <Checkbox {...check} onChange={() => this.onCheckChanged(check.id)} />
         ))}

@@ -8,6 +8,7 @@ import FlightTime from './FlightTime';
 import TranferDuration from './TransferDuration';
 import TravelTime from './TravelTime';
 import Airlines from './Airlines';
+import Airports from './Airports';
 import ResetFilters from './ResetFilters';
 import Filter from './Filter';
 
@@ -184,6 +185,80 @@ const data = {
       },
     ],
   },
+  airports: {
+    origin: {
+      takeoff: [
+        {
+          id: 1,
+          label: 'Домодедово',
+          price: 10567,
+          checked: true,
+        },
+        {
+          id: 2,
+          label: 'Шереметьево',
+          price: 10940,
+          checked: true,
+        },
+        {
+          id: 3,
+          label: 'Внуково',
+          price: 12594,
+          checked: true,
+        },
+        {
+          id: 4,
+          label: 'Жуковский',
+          price: 17650,
+          checked: true,
+        },
+      ],
+      landing: [
+        {
+          id: 5,
+          label: 'Домодедово',
+          price: 10567,
+          checked: true,
+        },
+        {
+          id: 7,
+          label: 'Шереметьево',
+          price: 10940,
+          checked: true,
+        },
+        {
+          id: 9,
+          label: 'Внуково',
+          price: 12594,
+          checked: true,
+        },
+        {
+          id: 11,
+          label: 'Жуковский',
+          price: 17650,
+          checked: true,
+        },
+      ],
+    },
+    dest: {
+      takeoff: [
+        {
+          id: 1,
+          label: 'Эль-Прат',
+          price: 10567,
+          checked: true,
+        },
+      ],
+      landing: [
+        {
+          id: 2,
+          label: 'Эль-Прат',
+          price: 10567,
+          checked: true,
+        },
+      ],
+    },
+  },
 };
 
 class Filters extends React.Component {
@@ -195,7 +270,13 @@ class Filters extends React.Component {
 
   render() {
     const {
-      transfers, baggage, transferDuration, flightTime, travelTime, airlines,
+      transfers,
+      baggage,
+      transferDuration,
+      flightTime,
+      travelTime,
+      airlines,
+      airports,
     } = this.state;
     return (
       <FiltersStyled>
@@ -205,7 +286,7 @@ class Filters extends React.Component {
         <TranferDuration {...transferDuration} onChange={this.onDataChange} />
         <TravelTime {...travelTime} onChange={this.onDataChange} />
         <Airlines {...airlines} onChange={this.onDataChange} />
-        <Filter title="Аэропорты" />
+        <Airports {...airports} onChange={this.onDataChange} />
         <Filter title="Аэропорт пересадки" />
         <Filter title="Агенства" />
         <ResetFilters />
