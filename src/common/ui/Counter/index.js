@@ -22,8 +22,7 @@ const Increment = styled.button`
   border: none;
   cursor: pointer;
   border: 1px solid #dbdbdb;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-radius: 0 4px 4px 0;
   transition: border-color 0.3s, color 0.3s;
   &:hover {
     color: #00b8e9;
@@ -40,7 +39,7 @@ const Increment = styled.button`
 `;
 
 const Decrement = Increment.extend`
-  border: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
 `;
 
 const IncrementIcon = styled.img`
