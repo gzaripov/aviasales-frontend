@@ -10,8 +10,8 @@ import TravelTime from './TravelTime';
 import Airlines from './Airlines';
 import Airports from './Airports';
 import TransferAirport from './TransferAirport';
+import Agencies from './Agencies';
 import ResetFilters from './ResetFilters';
-import Filter from './Filter';
 
 const FiltersStyled = styled.section`
   display: none;
@@ -390,6 +390,56 @@ const data = {
       ],
     },
   },
+  agencies: [
+    {
+      id: 1,
+      label: 'Aerobilet',
+      price: 12175,
+      checked: true,
+    },
+    {
+      id: 2,
+      label: 'Aeroflot',
+      price: 20235,
+      checked: true,
+    },
+    {
+      id: 3,
+      label: 'Aerotur.aero',
+      price: 16571,
+      checked: true,
+    },
+    {
+      id: 4,
+      label: 'Air Europa',
+      price: 28209,
+      checked: true,
+    },
+    {
+      id: 5,
+      label: 'Aviakassa',
+      price: 11175,
+      checked: true,
+    },
+    {
+      id: 6,
+      label: 'Belavia',
+      price: 20875,
+      checked: true,
+    },
+    {
+      id: 7,
+      label: 'Biletix',
+      price: 11120,
+      checked: true,
+    },
+    {
+      id: 8,
+      label: 'Clickavia',
+      price: 11845,
+      checked: true,
+    },
+  ],
 };
 
 class Filters extends React.Component {
@@ -409,6 +459,7 @@ class Filters extends React.Component {
       airlines,
       airports,
       transferAirport,
+      agencies,
     } = this.state;
     return (
       <FiltersStyled>
@@ -420,7 +471,7 @@ class Filters extends React.Component {
         <Airlines {...airlines} onChange={this.onDataChange} />
         <Airports {...airports} onChange={this.onDataChange} />
         <TransferAirport {...transferAirport} onChange={this.onDataChange} />
-        <Filter title="Агенства" />
+        <Agencies data={agencies} onChange={this.onDataChange} />
         <ResetFilters />
       </FiltersStyled>
     );

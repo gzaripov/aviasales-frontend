@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Filter from './Filter';
 import CheckGroup from './CheckGroup';
 
-const Baggage = styled(Filter)`
+const Agencies = styled(Filter)`
   padding: 0 0 16px 0;
 `;
 
@@ -31,9 +31,9 @@ export default class extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <Baggage title="Агенства">
+      <Agencies title="Агенства">
         <CheckGroup checklist={data} onChange={this.onChange} />
-      </Baggage>
+      </Agencies>
     );
   }
 }
