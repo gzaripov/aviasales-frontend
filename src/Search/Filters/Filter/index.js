@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Collapse, { Panel } from 'rc-collapse';
-import Button from '../../../common/Button';
+import Button from '../../../common/ui/Button';
 import clear from './img/clear.svg';
 import arrow from './img/arrow.svg';
 import './index.css';

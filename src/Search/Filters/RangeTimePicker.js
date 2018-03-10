@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import RangePicker from './RangePicker';
-import Duration from '../../common/Duration';
+import Duration from '../../common/ui/Duration';
 
 const Period = styled.div`
   display: flex;

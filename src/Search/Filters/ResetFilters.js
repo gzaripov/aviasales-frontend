@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../../common/Button';
+import Button from '../../common/ui/Button';
 import clear from './img/clear.svg';
 
 const ResetFilters = styled.div`

@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import 'react-day-picker/lib/style.css';
 import media from '../media';
-import Toggle from '../Toggle';
+import Toggle from '../ui/Toggle';
 import DatePickerInput from '../DatePickerInput';
 
 const FlightDate = styled.div`

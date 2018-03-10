@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import media from '../../common/media';
-import Button from '../../common/Button';
+import Button from '../../common/ui/Button';
 
 const Icon = styled.img`
   box-shadow: 0 4px 4px rgba(74, 74, 74, 0.12);

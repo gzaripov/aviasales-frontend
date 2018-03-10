@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PropTypes } from 'react-day-picker';
+import PropTypes from 'prop-types';
 
 const Toggle = styled.div`
   position: absolute;
@@ -36,35 +36,30 @@ const Label = styled.label`
   cursor: pointer;
 `;
 
-const Container = styled.div`
+const ToggleStyled = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export default class extends React.Component {
-  static defaultProps = {
-    checked: false,
-    onToggleClicked: () => {},
-    label: '',
-  };
+const Container = ({ checked, onToggleClicked, label }) => (
+  <ToggleStyled>
+    <ToggleBox checked={checked} onClick={onToggleClicked}>
+      <Toggle checked={checked} />
+    </ToggleBox>
+    <Label onClick={onToggleClicked}>{label}</Label>
+  </ToggleStyled>
+);
 
-  static get propTypes() {
-    return {
-      checked: PropTypes.bool,
-      onToggleClicked: PropTypes.func,
-      label: PropTypes.string,
-    };
-  }
+Container.defaultProps = {
+  checked: false,
+  onToggleClicked: () => {},
+  label: '',
+};
 
-  render() {
-    const { checked } = this.props.checked;
-    return (
-      <Container>
-        <ToggleBox checked={checked} onClick={this.props.onToggleClicked}>
-          <Toggle checked={checked} />
-        </ToggleBox>
-        <Label onClick={this.props.onToggleClicked}>{this.props.label}</Label>
-      </Container>
-    );
-  }
-}
+Container.propTypes = {
+  checked: PropTypes.bool,
+  onToggleClicked: PropTypes.func,
+  label: PropTypes.string,
+};
+
+export default Container;

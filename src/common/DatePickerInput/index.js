@@ -6,7 +6,7 @@ import ruLocale from 'date-fns/locale/ru';
 import { format, lastDayOfMonth, addDays } from 'date-fns';
 import { withClickOutside } from 'react-clickoutside';
 import 'react-day-picker/lib/style.css';
-import Button from '../Button';
+import Button from '../ui/Button';
 import Cell from './Cell';
 import calendar from './img/calendar.svg';
 import './styled.css';

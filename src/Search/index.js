@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import media from '../common/media';
 import Header from './Header';
 import Tickets from './Tickets';
-import Button from '../common/Button';
+import Button from '../common/ui/Button';
 import Filters from './Filters';
 import filter from './filter.svg';
 

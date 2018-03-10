@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import media from '../../../common/media';
-import Button from '../../../common/Button';
+import Button from '../../../common/ui/Button';
 import arrow from './icons/arrow.svg';
 
 const SwapButton = styled(Button)``;
