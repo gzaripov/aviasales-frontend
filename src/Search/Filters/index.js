@@ -9,6 +9,7 @@ import TranferDuration from './TransferDuration';
 import TravelTime from './TravelTime';
 import Airlines from './Airlines';
 import Airports from './Airports';
+import TransferAirport from './TransferAirport';
 import ResetFilters from './ResetFilters';
 import Filter from './Filter';
 
@@ -16,6 +17,7 @@ const FiltersStyled = styled.section`
   display: none;
   background-color: white;
   margin-top: 16px;
+  margin-bottom: 40px;
   border-radius: 4px;
   overflow: hidden;
 
@@ -259,6 +261,135 @@ const data = {
       ],
     },
   },
+  transferAirport: {
+    withoutAirportChange: false,
+    origin: {
+      city: 'Москва',
+      transfers: [
+        [
+          {
+            id: 0,
+            label: 'Амстердам',
+            iata: 'ams',
+            checked: true,
+          },
+          {
+            id: 1,
+            label: 'Афины',
+            iata: 'ath',
+            checked: true,
+          },
+          {
+            id: 2,
+            label: 'Берлин',
+            iata: 'txl',
+            checked: true,
+          },
+          {
+            id: 3,
+            label: 'Будапешт',
+            iata: 'bud',
+            checked: true,
+          },
+          {
+            id: 4,
+            label: 'Варшава',
+            iata: 'waw',
+            checked: true,
+          },
+        ],
+        [
+          {
+            id: 0,
+            label: 'Пальма-де-Мальйорка',
+            iata: 'pmi',
+            checked: true,
+          },
+          {
+            id: 1,
+            label: 'Прага',
+            iata: 'prg',
+            checked: true,
+          },
+          {
+            id: 2,
+            label: 'Франкфурт-на-Майне',
+            iata: 'fra',
+            checked: true,
+          },
+          {
+            id: 3,
+            label: 'Цюрих',
+            iata: 'zrh',
+            checked: true,
+          },
+        ],
+      ],
+    },
+    dest: {
+      city: 'Барселона',
+      transfers: [
+        [
+          {
+            id: 0,
+            label: 'Амстердам',
+            iata: 'ams',
+            checked: true,
+          },
+          {
+            id: 1,
+            label: 'Афины',
+            iata: 'ath',
+            checked: true,
+          },
+          {
+            id: 2,
+            label: 'Берлин',
+            iata: 'txl',
+            checked: true,
+          },
+          {
+            id: 3,
+            label: 'Брюссель',
+            iata: 'bru',
+            checked: true,
+          },
+          {
+            id: 4,
+            label: 'Варшава',
+            iata: 'waw',
+            checked: true,
+          },
+        ],
+        [
+          {
+            id: 0,
+            label: 'Екатеринбург',
+            iata: 'svx',
+            checked: true,
+          },
+          {
+            id: 1,
+            label: 'Женева',
+            iata: 'gva',
+            checked: true,
+          },
+          {
+            id: 2,
+            label: 'Мюнхен',
+            iata: 'muc',
+            checked: true,
+          },
+          {
+            id: 3,
+            label: 'Санкт-Петербург',
+            iata: 'led',
+            checked: true,
+          },
+        ],
+      ],
+    },
+  },
 };
 
 class Filters extends React.Component {
@@ -277,6 +408,7 @@ class Filters extends React.Component {
       travelTime,
       airlines,
       airports,
+      transferAirport,
     } = this.state;
     return (
       <FiltersStyled>
@@ -287,7 +419,7 @@ class Filters extends React.Component {
         <TravelTime {...travelTime} onChange={this.onDataChange} />
         <Airlines {...airlines} onChange={this.onDataChange} />
         <Airports {...airports} onChange={this.onDataChange} />
-        <Filter title="Аэропорт пересадки" />
+        <TransferAirport {...transferAirport} onChange={this.onDataChange} />
         <Filter title="Агенства" />
         <ResetFilters />
       </FiltersStyled>

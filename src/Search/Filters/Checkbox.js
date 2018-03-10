@@ -6,6 +6,7 @@ import { FormattedNumber } from 'react-intl';
 const Check = styled.input`
   height: 18px;
   width: 18px;
+  margin-left: 0.5px;
 `;
 
 const Text = styled.span`

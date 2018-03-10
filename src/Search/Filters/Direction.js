@@ -13,19 +13,25 @@ const DirectionStyled = styled.h3`
   font-size: 14px;
   color: #323333;
   margin: 0;
+  user-select: none;
 `;
 
-const Direction = props => (
-  <DirectionStyled>
-    {props.from}
+const Direction = ({ from, to, className }) => (
+  <DirectionStyled className={className}>
+    {from}
     <Divider src={airplane} alt="Airplane icon" />
-    {props.to}
+    {to}
   </DirectionStyled>
 );
 
 Direction.propTypes = {
   from: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+
+Direction.defaultProps = {
+  className: '',
 };
 
 export default Direction;
