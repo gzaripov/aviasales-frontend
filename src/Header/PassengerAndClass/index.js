@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import sum from 'lodash/sum';
 import { withClickOutside } from 'react-clickoutside';
-import media from '../common/media';
-import PassengerAndClassPicker from './PassengerAndClassPicker';
-import arrowDown from '../Search/Header/SearchForm/icons/arrow_down.svg';
+import media from '../../common/media';
+import PassengerAndClassPicker from './Picker';
+import arrowDown from '../../Search/Header/SearchForm/icons/arrow_down.svg';
 
 const Passenger = styled.span`
   text-overflow: ellipsis;

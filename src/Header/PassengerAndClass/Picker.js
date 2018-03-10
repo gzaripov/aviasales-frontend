@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Counter from '../common/ui/Counter/index';
-import Checkbox from '../common/ui/Checkbox';
+import Counter from '../../common/ui/Counter/index';
+import Checkbox from '../../common/ui/Checkbox';
 
 const PickerStyled = styled.div`
   padding: 16px;

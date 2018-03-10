@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "date-fns": "^1.29.0",
+    "downshift": "^1.30.0",
     "flexboxgrid2": "^7.1.0",
     "lodash": "^4.17.5",
     "lodash.set": "^4.3.2",
@@ -15,6 +16,7 @@
     "react-clickoutside": "^2.0.0",
     "react-day-picker": "^7.0.7",
     "react-dom": "^16.2.0",
+    "react-highlight-words": "^0.11.0",
     "react-intl": "^2.4.0",
     "react-router-dom": "^4.2.2",
     "react-scroll": "^1.7.7",

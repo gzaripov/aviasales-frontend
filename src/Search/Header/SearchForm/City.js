@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import media from '../../../common/media';
 import Button from '../../../common/ui/Button';
 import arrow from './icons/arrow.svg';
+import Field from '../../../Header/AutocompleteField';
 
 const SwapButton = styled(Button)``;
 
@@ -37,6 +38,7 @@ const City = styled.div`
 `;
 
 const Departure = City.extend`
+  padding: 0;
   border-radius: 4px 0 0;
 
   ${media.xl`
@@ -52,15 +54,47 @@ const Arrival = City.extend`
   `};
 `;
 
-export const DepartureCity = () => (
-  <Departure>
-    <Input defaultValue="Москва" placeholder="Город вылета" />
-    <Index>mow</Index>
-    <SwapButton>
-      <img src={arrow} alt="Swap cities button" />
-    </SwapButton>
-  </Departure>
-);
+class DepartureCity extends React.Component {
+  state = {
+    airport: {
+      city: '',
+      country: '',
+      iata: '',
+    },
+  };
+
+  onChange = (city) => {
+    this.setState({
+      ...this.state,
+      city,
+    });
+  };
+
+  handleSelection = (airport) => {
+    this.setState(airport);
+  };
+
+  render() {
+    const { city, iata } = this.state;
+    return (
+      <Departure>
+        <Field
+          value={city}
+          onChange={this.onChange}
+          handleSelection={this.handleSelection}
+          placeholder="Город вылета"
+        >
+          <Index>{iata}</Index>
+          {/* <SwapButton>
+            <img src={arrow} alt="Swap cities button" />
+          </SwapButton> */}
+        </Field>
+      </Departure>
+    );
+  }
+}
+
+export { DepartureCity };
 
 export const ArrivalCity = () => (
   <Arrival>
