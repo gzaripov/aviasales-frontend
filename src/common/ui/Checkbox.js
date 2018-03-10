@@ -21,7 +21,8 @@ const Checkbox = styled.div`
 
 export default class extends React.Component {
   propTypes = {
-    text: PropTypes.string,
+    label: PropTypes.string,
+    className: PropTypes.string,
   };
 
   state = {
@@ -41,10 +42,11 @@ export default class extends React.Component {
   };
 
   render() {
+    const { className, label } = this.props;
     return (
-      <Checkbox>
+      <Checkbox className={className}>
         <Check type="checkbox" checked={this.state.checked} onChange={this.onCheckedChange} />
-        <Text onClick={this.onTextClick}>{this.props.text}</Text>
+        <Text onClick={this.onTextClick}>{label}</Text>
       </Checkbox>
     );
   }

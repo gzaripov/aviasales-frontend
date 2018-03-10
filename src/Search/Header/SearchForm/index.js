@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import media from '../../../common/media';
 import { DepartureCity, ArrivalCity } from './City';
-import Dates from '../../../common/Dates';
-import PassengerAndClass from './PassengerAndClass';
+import Dates from '../../../Header/Dates';
+import PassengerAndClass from '../../../Header/PassengerAndClass';
 import SearchButton from './SearchButton';
 
 const Form = styled.form`

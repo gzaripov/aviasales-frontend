@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import 'react-day-picker/lib/style.css';
-import media from '../media';
-import Toggle from '../ui/Toggle';
-import DatePickerInput from '../DatePickerInput';
+import media from '../../common/media';
+import Toggle from '../../common/ui/Toggle';
+import DatePickerInput from '../DatePickerInput/index';
 
 const FlightDate = styled.div`
   display: flex;
