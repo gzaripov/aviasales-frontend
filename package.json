@@ -7,7 +7,6 @@
     "downshift": "^1.30.0",
     "flexboxgrid2": "^7.1.0",
     "lodash": "^4.17.5",
-    "lodash.set": "^4.3.2",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "rc-collapse": "^1.8.0",

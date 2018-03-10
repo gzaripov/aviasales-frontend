@@ -4,14 +4,14 @@ import sum from 'lodash/sum';
 import { withClickOutside } from 'react-clickoutside';
 import media from '../../common/media';
 import PassengerAndClassPicker from './Picker';
-import arrowDown from '../../Search/Header/SearchForm/icons/arrow_down.svg';
+import arrowDown from './arrowDown.svg';
 
 const Passenger = styled.span`
   text-overflow: ellipsis;
   white-space: nowrap;
 `;
 
-const Class = styled.span`
+const FlightClass = styled.span`
   color: #a0b0b9;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -67,15 +67,15 @@ export default class extends React.Component {
   state = { ...data, isPickerShown: false };
 
   onChange = ({ passengerCount, isBusinessClass }) => {
-    this.setState({ ...this.state, passengerCount, isBusinessClass });
+    this.setState({ passengerCount, isBusinessClass });
   };
 
   showPicker = () => {
-    this.setState({ ...this.state, isPickerShown: true });
+    this.setState({ isPickerShown: true });
   };
 
   hidePicker = () => {
-    this.setState({ ...this.state, isPickerShown: false });
+    this.setState({ isPickerShown: false });
   };
 
   render() {
@@ -83,7 +83,7 @@ export default class extends React.Component {
     return (
       <PassengerAndClass onClick={this.showPicker}>
         <Passenger>{countPassengers(passengerCount)} пассажир,&nbsp;</Passenger>
-        <Class>{isBusinessClass ? 'бизнес' : 'эконом'}</Class>
+        <FlightClass>{isBusinessClass ? 'бизнес' : 'эконом'}</FlightClass>
         <ArrowDown src={arrowDown} alt="Arrow" />
         {isPickerShown && (
           <PickerWithOutside

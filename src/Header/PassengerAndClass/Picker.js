@@ -86,5 +86,4 @@ const Picker = ({
     <BusinessClassCheck label="Бизнес-класс" />
   </PickerStyled>
 );
-// onChange={onChangeCheckbox}
 export default Picker;

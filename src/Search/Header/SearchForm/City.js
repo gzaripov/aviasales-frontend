@@ -85,7 +85,7 @@ class DepartureCity extends React.Component {
           placeholder="Город вылета"
         >
           <Index>{iata}</Index>
-          {/* <SwapButton>
+          {/* <SwaButton>
             <img src={arrow} alt="Swap cities button" />
           </SwapButton> */}
         </Field>

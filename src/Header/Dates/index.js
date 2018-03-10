@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import 'react-day-picker/lib/style.css';
 import media from '../../common/media';
 import Toggle from '../../common/ui/Toggle';
-import DatePickerInput from '../DatePickerInput/index';
+import DatePickerInput from '../DatePickerInput';
 
 const FlightDate = styled.div`
   display: flex;

@@ -29,7 +29,6 @@ const FlightDates = styled(Dates)`
 
 export default () => (
   <Form>
-    <Field />
     <DepartureCity />
     <ArrivalCity />
     <FlightDates />
