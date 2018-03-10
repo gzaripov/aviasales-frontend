@@ -11,7 +11,7 @@ import Airlines from './Airlines';
 import Airports from './Airports';
 import TransferAirport from './TransferAirport';
 import Agencies from './Agencies';
-import ResetFilters from './ResetFilters';
+// import ResetFilters from './ResetFilters';
 
 const FiltersStyled = styled.section`
   display: none;
@@ -472,7 +472,7 @@ class Filters extends React.Component {
         <Airports {...airports} onChange={this.onDataChange} />
         <TransferAirport {...transferAirport} onChange={this.onDataChange} />
         <Agencies data={agencies} onChange={this.onDataChange} />
-        <ResetFilters />
+        {/* <ResetFilters /> */}
       </FiltersStyled>
     );
   }
