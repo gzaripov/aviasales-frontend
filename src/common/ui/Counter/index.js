@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import minus from './img/minus.svg';
 import plus from './img/plus.svg';
@@ -67,7 +68,23 @@ const Count = styled.div`
 `;
 
 export default class Counter extends Component {
-  handleClick = delta => () => {
+  static defaultProps = {
+    min: 0,
+    max: 10,
+    disabled: false,
+    value: 0,
+    onChange: () => {},
+  };
+
+  static propTypes = {
+    min: PropTypes.number,
+    max: PropTypes.number,
+    disabled: PropTypes.bool,
+    value: PropTypes.number,
+    onChange: PropTypes.func,
+  };
+
+  updateCounter = delta => () => {
     const {
       min, max, value, onChange,
     } = this.props;
@@ -82,11 +99,19 @@ export default class Counter extends Component {
     } = this.props;
     return (
       <CounterStyled>
-        <Decrement disabled={disabled || value <= min} onClick={this.handleClick(-1)} type="button">
+        <Decrement
+          disabled={disabled || value <= min}
+          onClick={this.updateCounter(-1)}
+          type="button"
+        >
           <DecrementIcon src={minus} alt="minus icon" />
         </Decrement>
         <Count>{value}</Count>
-        <Increment disabled={disabled || value >= max} onClick={this.handleClick(1)} type="button">
+        <Increment
+          disabled={disabled || value >= max}
+          onClick={this.updateCounter(+1)}
+          type="button"
+        >
           <IncrementIcon src={plus} alt="plus icon" />
         </Increment>
       </CounterStyled>
