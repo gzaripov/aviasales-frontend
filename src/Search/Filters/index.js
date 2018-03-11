@@ -27,43 +27,47 @@ const FiltersStyled = styled.section`
 `;
 
 const data = {
-  transfers: [
-    {
-      id: 1,
-      label: 'Без пересадок',
-      price: 7712,
-      checked: true,
-    },
-    {
-      id: 2,
-      label: '1 пересадка',
-      price: 11712,
-    },
-    {
-      id: 3,
-      label: '2 пересадки',
-      price: 23712,
-    },
-    {
-      id: 4,
-      label: '3 пересадки',
-      price: 47712,
-    },
-  ],
-  baggage: [
-    {
-      id: 1,
-      label: 'Багаж и ручная кладь',
-      price: 7712,
-      checked: true,
-    },
-    {
-      id: 2,
-      label: 'Без багажа',
-      price: 11712,
-      checked: true,
-    },
-  ],
+  transfers: {
+    checks: [
+      {
+        id: 1,
+        label: 'Без пересадок',
+        price: 7712,
+        checked: true,
+      },
+      {
+        id: 2,
+        label: '1 пересадка',
+        price: 11712,
+      },
+      {
+        id: 3,
+        label: '2 пересадки',
+        price: 23712,
+      },
+      {
+        id: 4,
+        label: '3 пересадки',
+        price: 47712,
+      },
+    ],
+  },
+  baggage: {
+    checks: [
+      {
+        id: 1,
+        label: 'Багаж и ручная кладь',
+        price: 7712,
+        checked: true,
+      },
+      {
+        id: 2,
+        label: 'Без багажа',
+        price: 11712,
+        checked: true,
+      },
+    ],
+  },
   flightTime: {
     origin: {
       takeoff: {
@@ -390,56 +394,58 @@ const data = {
       ],
     },
   },
-  agencies: [
-    {
-      id: 1,
-      label: 'Aerobilet',
-      price: 12175,
-      checked: true,
-    },
-    {
-      id: 2,
-      label: 'Aeroflot',
-      price: 20235,
-      checked: true,
-    },
-    {
-      id: 3,
-      label: 'Aerotur.aero',
-      price: 16571,
-      checked: true,
-    },
-    {
-      id: 4,
-      label: 'Air Europa',
-      price: 28209,
-      checked: true,
-    },
-    {
-      id: 5,
-      label: 'Aviakassa',
-      price: 11175,
-      checked: true,
-    },
-    {
-      id: 6,
-      label: 'Belavia',
-      price: 20875,
-      checked: true,
-    },
-    {
-      id: 7,
-      label: 'Biletix',
-      price: 11120,
-      checked: true,
-    },
-    {
-      id: 8,
-      label: 'Clickavia',
-      price: 11845,
-      checked: true,
-    },
-  ],
+  agencies: {
+    checks: [
+      {
+        id: 1,
+        label: 'Aerobilet',
+        price: 12175,
+        checked: true,
+      },
+      {
+        id: 2,
+        label: 'Aeroflot',
+        price: 20235,
+        checked: true,
+      },
+      {
+        id: 3,
+        label: 'Aerotur.aero',
+        price: 16571,
+        checked: true,
+      },
+      {
+        id: 4,
+        label: 'Air Europa',
+        price: 28209,
+        checked: true,
+      },
+      {
+        id: 5,
+        label: 'Aviakassa',
+        price: 11175,
+        checked: true,
+      },
+      {
+        id: 6,
+        label: 'Belavia',
+        price: 20875,
+        checked: true,
+      },
+      {
+        id: 7,
+        label: 'Biletix',
+        price: 11120,
+        checked: true,
+      },
+      {
+        id: 8,
+        label: 'Clickavia',
+        price: 11845,
+        checked: true,
+      },
+    ],
+  },
 };
 
 class Filters extends React.Component {
@@ -463,15 +469,15 @@ class Filters extends React.Component {
     } = this.state;
     return (
       <FiltersStyled>
-        <Transfers data={transfers} onChange={this.onDataChange} />
+        <Transfers {...transfers} onChange={this.onDataChange} />
         <FlightTime {...flightTime} onChange={this.onDataChange} />
-        <Baggage data={baggage} onChange={this.onDataChange} />
+        <Baggage {...baggage} onChange={this.onDataChange} />
         <TranferDuration {...transferDuration} onChange={this.onDataChange} />
         <TravelTime {...travelTime} onChange={this.onDataChange} />
         <Airlines {...airlines} onChange={this.onDataChange} />
         <Airports {...airports} onChange={this.onDataChange} />
         <TransferAirport {...transferAirport} onChange={this.onDataChange} />
-        <Agencies data={agencies} onChange={this.onDataChange} />
+        <Agencies {...agencies} onChange={this.onDataChange} />
         {/* <ResetFilters /> */}
       </FiltersStyled>
     );

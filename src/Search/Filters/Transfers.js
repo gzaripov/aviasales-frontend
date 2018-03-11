@@ -10,12 +10,12 @@ const Transfers = styled(Filter)`
 
 export default class extends React.Component {
   static defaultProps = {
-    data: [],
+    checks: [],
     onChange: () => {},
   };
 
   static propTypes = {
-    data: PropTypes.arrayOf(PropTypes.shape({
+    checks: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
       label: PropTypes.string.isRequired,
       checked: PropTypes.bool,
@@ -25,14 +25,14 @@ export default class extends React.Component {
   };
 
   onChange = (checklist) => {
-    this.props.onChange('transfers', checklist);
+    this.props.onChange('transfers.checks', checklist);
   };
 
   render() {
-    const { data } = this.props;
+    const { checks } = this.props;
     return (
       <Transfers title="Пересадки" initialOpened>
-        <CheckGroup checklist={data} onChange={this.onChange} />
+        <CheckGroup checklist={checks} onChange={this.onChange} />
       </Transfers>
     );
   }
