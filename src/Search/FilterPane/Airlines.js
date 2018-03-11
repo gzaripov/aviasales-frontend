@@ -30,9 +30,9 @@ const AirlinesStyled = styled(Filter)`
 `;
 
 const Airlines = ({
-  severalAirlines, alliances, airlines, onChange,
+  severalAirlines, alliances, airlines, onChange, dirty, onClear,
 }) => (
-  <AirlinesStyled title="Авиакомпании" initialOpened>
+  <AirlinesStyled title="Авиакомпании" dirty={dirty} onClear={onClear} initialOpened>
     <Checkbox
       label="Несколько авиакомпаний"
       checked={severalAirlines}
@@ -52,7 +52,9 @@ Airlines.defaultProps = {
   severalAirlines: false,
   alliances: [],
   airlines: [],
+  dirty: false,
   onChange: () => {},
+  onClear: () => {},
 };
 
 Airlines.propTypes = {
@@ -69,7 +71,9 @@ Airlines.propTypes = {
     checked: PropTypes.bool,
     price: PropTypes.number,
   })),
+  dirty: PropTypes.bool,
   onChange: PropTypes.func,
+  onClear: PropTypes.func,
 };
 
 export default Airlines;

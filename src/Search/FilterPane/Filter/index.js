@@ -34,13 +34,13 @@ const FilterStyled = styled.div`
 `;
 
 const Clear = styled(Button)`
-  display: none;
-  position: absolute;
-  top: 12px;
-  right: 16px;
+  display: flex;
+  align-self: flex-start;
+  margin: 14px 16px 0 auto;
 `;
 
 const HeaderStyled = styled.h2`
+  display: flex;
   margin: 0;
 
   &:hover {
@@ -56,16 +56,16 @@ const Header = ({
   opened, title, amount, clearVisible, onClear,
 }) => (
   <HeaderStyled>
-    {clearVisible && (
-      <Clear onClick={onClear}>
-        <img src={clear} alt="Clear filter" />
-      </Clear>
-    )}
     <Title>
       <Arrow src={arrow} opened={opened} />
       {title}
       {amount !== 0 && <Amount>{amount}</Amount>}
     </Title>
+    {clearVisible && (
+      <Clear onClick={onClear}>
+        <img src={clear} alt="Clear filter" />
+      </Clear>
+    )}
   </HeaderStyled>
 );
 
@@ -90,7 +90,7 @@ class Filter extends React.Component {
     amount: 0,
     children: null,
     initialOpened: false,
-    clearVisible: false,
+    dirty: false,
     onClear: () => {},
   };
 
@@ -100,12 +100,17 @@ class Filter extends React.Component {
     amount: PropTypes.number,
     children: PropTypes.element,
     initialOpened: PropTypes.false,
-    clearVisible: PropTypes.bool,
+    dirty: PropTypes.bool,
     onClear: PropTypes.func,
   };
 
   state = {
     opened: this.props.initialOpened,
+  };
+
+  onClear = (e) => {
+    this.props.onClear();
+    e.stopPropagation();
   };
 
   toggle = () => {
@@ -116,7 +121,7 @@ class Filter extends React.Component {
 
   render() {
     const {
-      className, title, amount, children, clearVisible, onClear,
+      className, title, amount, children, dirty,
     } = this.props;
     const { opened } = this.state;
     return (
@@ -127,8 +132,8 @@ class Filter extends React.Component {
               opened={opened}
               title={title}
               amount={amount}
-              clearVisible={clearVisible}
-              onClear={onClear}
+              clearVisible={dirty}
+              onClear={this.onClear}
             />
           }
           showArrow={false}

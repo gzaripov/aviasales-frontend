@@ -11,7 +11,9 @@ const Transfers = styled(Filter)`
 export default class extends React.Component {
   static defaultProps = {
     checks: [],
+    dirty: false,
     onChange: () => {},
+    onClear: () => {},
   };
 
   static propTypes = {
@@ -21,7 +23,9 @@ export default class extends React.Component {
       checked: PropTypes.bool,
       price: PropTypes.number,
     })),
+    dirty: PropTypes.bool,
     onChange: PropTypes.func,
+    onClear: PropTypes.func,
   };
 
   onChange = (checklist) => {
@@ -29,9 +33,9 @@ export default class extends React.Component {
   };
 
   render() {
-    const { checks } = this.props;
+    const { checks, dirty, onClear } = this.props;
     return (
-      <Transfers title="Пересадки" initialOpened>
+      <Transfers title="Пересадки" dirty={dirty} onClear={onClear} initialOpened>
         <CheckGroup checklist={checks} onChange={this.onChange} />
       </Transfers>
     );

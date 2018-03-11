@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import set from 'lodash/fp/set';
+import isEqual from 'lodash/isEqual';
 import media from '../../common/media';
 import Transfers from './Transfers';
 import Baggage from './Baggage';
@@ -449,11 +450,15 @@ const data = {
   },
 };
 
-const Filters = ({ filterData, onChange, children }) => {
+const Filters = ({
+  filterData, onChange, onClear, diffs, children,
+}) => {
   const filters = React.Children.map(children, child =>
     React.cloneElement(child, {
       ...filterData[child.props.path],
       onChange: onChange(child.props.path),
+      onClear: onClear(child.props.path),
+      dirty: diffs[child.props.path],
     }));
   return <React.Fragment>{filters}</React.Fragment>;
 };
@@ -461,8 +466,22 @@ const Filters = ({ filterData, onChange, children }) => {
 Filters.propTypes = {
   filterData: PropTypes.shape({}).isRequired,
   onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired,
+  diffs: PropTypes.shape({}).isRequired,
   children: PropTypes.element.isRequired,
 };
+
+function countDiffWithMemento(object, memento) {
+  const filtersDiff = Object.keys(memento).reduce(
+    (acc, key) => set(key, !isEqual(memento[key], object[key]), acc),
+    {},
+  );
+  const dirty = Object.values(filtersDiff).reduce((acc, diff) => acc && diff, true);
+  return {
+    dirty,
+    filtersDiff,
+  };
+}
 
 function copy(object) {
   return JSON.parse(JSON.stringify(object));
@@ -483,7 +502,7 @@ class FilterPane extends React.Component {
     this.setState(set(path, value, this.state));
   };
 
-  onClear = (path) => {
+  onClear = path => () => {
     const oldValue = copy(this.state.memento[path]);
     this.setState(set(path, oldValue, this.state));
   };
@@ -497,9 +516,17 @@ class FilterPane extends React.Component {
   };
 
   render() {
+    const { memento, ...object } = this.state;
+    const diff = countDiffWithMemento(memento, object);
+    console.log(diff);
     return (
       <FilterPaneStyled>
-        <Filters filterData={this.state} onChange={this.onDataChange} onClear={this.onClear}>
+        <Filters
+          filterData={this.state}
+          onChange={this.onDataChange}
+          onClear={this.onClear}
+          diffs={diff.filtersDiff}
+        >
           <Transfers path="transfers" />
           <FlightTime path="flightTime" />
           <Baggage path="baggage" />
@@ -510,7 +537,7 @@ class FilterPane extends React.Component {
           <TransferAirport path="transferAirport" />
           <Agencies path="agencies" />
         </Filters>
-        <ResetFilters onReset={() => this.onClearAll()} />
+        <ResetFilters disabled={diff.dirty} onReset={() => this.onClearAll()} />
       </FilterPaneStyled>
     );
   }

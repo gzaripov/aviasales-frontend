@@ -24,7 +24,9 @@ const Text = styled.p`
 
 export default class extends React.Component {
   static defaultProps = {
+    dirty: false,
     onChange: () => {},
+    onClear: () => {},
   };
 
   static propTypes = {
@@ -48,7 +50,9 @@ export default class extends React.Component {
         boundaries: PropTypes.arrayOf(PropTypes.number),
       },
     }).isRequired,
+    dirty: PropTypes.bool,
     onChange: PropTypes.func,
+    onClear: PropTypes.func,
   };
 
   onChange = (path, range) => {
@@ -56,9 +60,11 @@ export default class extends React.Component {
   };
 
   render() {
-    const { origin, dest } = this.props;
+    const {
+      origin, dest, dirty, onClear,
+    } = this.props;
     return (
-      <Filter title="Время вылета и прибытия" initialOpened>
+      <Filter title="Время вылета и прибытия" dirty={dirty} onClear={onClear} initialOpened>
         <Flight>
           <Direction from="Москва" to="Барселона" />
           <Info>

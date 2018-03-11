@@ -36,7 +36,9 @@ const DirectionStyled = styled(Direction)`
 export default class extends React.Component {
   static defaultProps = {
     withoutAirportChange: false,
+    dirty: false,
     onChange: () => {},
+    onClear: () => {},
   };
 
   static propTypes = {
@@ -59,7 +61,9 @@ export default class extends React.Component {
         iata: PropTypes.string.isRequired,
       }))),
     }).isRequired,
+    dirty: PropTypes.bool,
     onChange: PropTypes.func,
+    onClear: PropTypes.func,
   };
 
   onChange = path => (value) => {
@@ -67,9 +71,11 @@ export default class extends React.Component {
   };
 
   render() {
-    const { withoutAirportChange, origin, dest } = this.props;
+    const {
+      withoutAirportChange, origin, dest, dirty, onClear,
+    } = this.props;
     return (
-      <TransferAirport title="Аэропорт пересадки">
+      <TransferAirport title="Аэропорт пересадки" dirty={dirty} onClear={onClear}>
         <Checkbox
           label="Несколько авиакомпаний"
           checked={withoutAirportChange}

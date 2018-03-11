@@ -16,7 +16,9 @@ const Travel = styled.div`
 
 export default class extends React.Component {
   static defaultProps = {
+    dirty: false,
     onChange: () => {},
+    onClear: () => {},
   };
 
   static propTypes = {
@@ -30,7 +32,9 @@ export default class extends React.Component {
       range: PropTypes.arrayOf(PropTypes.number),
       boundaries: PropTypes.arrayOf(PropTypes.number),
     }).isRequired,
+    dirty: PropTypes.bool,
     onChange: PropTypes.func,
+    onClear: PropTypes.func,
   };
 
   onChange = (path, range) => {
@@ -38,9 +42,11 @@ export default class extends React.Component {
   };
 
   render() {
-    const { origin, dest } = this.props;
+    const {
+      origin, dest, dirty, onClear,
+    } = this.props;
     return (
-      <Filter title="Время в пути" initialOpened>
+      <Filter title="Время в пути" dirty={dirty} onClear={onClear} initialOpened>
         <Travel>
           <Direction from={origin.city} to={dest.city} />
           <RangePicker

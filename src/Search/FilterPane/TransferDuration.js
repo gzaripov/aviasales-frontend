@@ -11,13 +11,17 @@ const RangePicker = styled(RangeTimePicker)`
 
 export default class extends React.Component {
   static defaultProps = {
+    dirty: false,
     onChange: () => {},
+    onClear: () => {},
   };
 
   static propTypes = {
     range: PropTypes.arrayOf(PropTypes.number).isRequired,
     boundaries: PropTypes.arrayOf(PropTypes.number).isRequired,
+    dirty: PropTypes.bool,
     onChange: PropTypes.func,
+    onClear: PropTypes.func,
   };
 
   onChange = (range) => {
@@ -25,9 +29,11 @@ export default class extends React.Component {
   };
 
   render() {
-    const { range, boundaries } = this.props;
+    const {
+      range, boundaries, dirty, onClear,
+    } = this.props;
     return (
-      <Filter title="Длительность пересадки">
+      <Filter title="Длительность пересадки" dirty={dirty} onClear={onClear}>
         <RangePicker range={range} boundaries={boundaries} onChange={this.onChange} />
       </Filter>
     );

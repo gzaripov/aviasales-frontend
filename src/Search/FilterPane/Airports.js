@@ -24,7 +24,9 @@ const CheckGroupStyled = styled(CheckGroup)`
 
 export default class extends React.Component {
   static defaultProps = {
+    dirty: false,
     onChange: () => {},
+    onClear: () => {},
   };
 
   static propTypes = {
@@ -56,7 +58,9 @@ export default class extends React.Component {
         price: PropTypes.number,
       })),
     }).isRequired,
+    dirty: PropTypes.bool,
     onChange: PropTypes.func,
+    onClear: PropTypes.func,
   };
 
   onChange = (path, value) => {
@@ -64,9 +68,11 @@ export default class extends React.Component {
   };
 
   render() {
-    const { origin, dest } = this.props;
+    const {
+      origin, dest, dirty, onClear,
+    } = this.props;
     return (
-      <Airlines title="Аэропорты" initialOpened>
+      <Airlines title="Аэропорты" dirty={dirty} onClear={onClear} initialOpened>
         <Title>Вылет из Москвы 14, мар</Title>
         <CheckGroupStyled
           checklist={origin.takeoff}
