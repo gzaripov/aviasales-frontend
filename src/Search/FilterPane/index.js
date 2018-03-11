@@ -12,7 +12,7 @@ import Airlines from './Airlines';
 import Airports from './Airports';
 import TransferAirport from './TransferAirport';
 import Agencies from './Agencies';
-// import ResetFilters from './ResetFilters';
+import ResetFilters from './ResetFilters';
 
 const FilterPaneStyled = styled.section`
   display: none;
@@ -464,18 +464,42 @@ Filters.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
+function copy(object) {
+  return JSON.parse(JSON.stringify(object));
+}
+
+function putMemento(object) {
+  return {
+    memento: copy(object),
+    ...object,
+  };
+}
+
 class FilterPane extends React.Component {
-  state = data;
+  state = putMemento(data);
 
   onDataChange = outerPath => (innerPath, value) => {
     const path = outerPath + (innerPath ? `.${innerPath}` : '');
     this.setState(set(path, value, this.state));
   };
 
+  onClear = (path) => {
+    const oldValue = copy(this.state.memento[path]);
+    this.setState(set(path, oldValue, this.state));
+  };
+
+  onClearAll = () => {
+    const { memento } = this.state;
+    this.setState({
+      memento,
+      ...copy(memento),
+    });
+  };
+
   render() {
     return (
       <FilterPaneStyled>
-        <Filters filterData={this.state} onChange={this.onDataChange}>
+        <Filters filterData={this.state} onChange={this.onDataChange} onClear={this.onClear}>
           <Transfers path="transfers" />
           <FlightTime path="flightTime" />
           <Baggage path="baggage" />
@@ -486,7 +510,7 @@ class FilterPane extends React.Component {
           <TransferAirport path="transferAirport" />
           <Agencies path="agencies" />
         </Filters>
-        {/* <ResetFilters /> */}
+        <ResetFilters onReset={() => this.onClearAll()} />
       </FilterPaneStyled>
     );
   }
