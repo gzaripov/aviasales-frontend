@@ -33,7 +33,7 @@ const FilterStyled = styled.div`
   padding: 0 16px;
 `;
 
-const ClearFilter = styled(Button)`
+const Clear = styled(Button)`
   display: none;
   position: absolute;
   top: 12px;
@@ -52,11 +52,15 @@ const StyledCollapse = styled(Collapse)`
   border-bottom: 1px solid #dddddd;
 `;
 
-const Header = ({ opened, title, amount }) => (
+const Header = ({
+  opened, title, amount, clearVisible, onClear,
+}) => (
   <HeaderStyled>
-    <ClearFilter>
-      <img src={clear} alt="Clear filter" />
-    </ClearFilter>
+    {clearVisible && (
+      <Clear onClick={onClear}>
+        <img src={clear} alt="Clear filter" />
+      </Clear>
+    )}
     <Title>
       <Arrow src={arrow} opened={opened} />
       {title}
@@ -68,12 +72,16 @@ const Header = ({ opened, title, amount }) => (
 Header.defaultProps = {
   opened: false,
   amount: 0,
+  clearVisible: false,
+  onClear: () => {},
 };
 
 Header.propTypes = {
   opened: PropTypes.bool,
   title: PropTypes.string.isRequired,
   amount: PropTypes.number,
+  clearVisible: PropTypes.bool,
+  onClear: PropTypes.func,
 };
 
 class Filter extends React.Component {
@@ -82,6 +90,8 @@ class Filter extends React.Component {
     amount: 0,
     children: null,
     initialOpened: false,
+    clearVisible: false,
+    onClear: () => {},
   };
 
   static propTypes = {
@@ -90,6 +100,8 @@ class Filter extends React.Component {
     amount: PropTypes.number,
     children: PropTypes.element,
     initialOpened: PropTypes.false,
+    clearVisible: PropTypes.bool,
+    onClear: PropTypes.func,
   };
 
   state = {
@@ -104,13 +116,21 @@ class Filter extends React.Component {
 
   render() {
     const {
-      className, title, amount, children,
+      className, title, amount, children, clearVisible, onClear,
     } = this.props;
     const { opened } = this.state;
     return (
       <StyledCollapse onChange={this.toggle} defaultActiveKey={opened ? '1' : ''}>
         <Panel
-          header={<Header opened={opened} title={title} amount={amount} />}
+          header={
+            <Header
+              opened={opened}
+              title={title}
+              amount={amount}
+              clearVisible={clearVisible}
+              onClear={onClear}
+            />
+          }
           showArrow={false}
           key="1"
         >

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import set from 'lodash/fp/set';
 import media from '../../common/media';
 import Transfers from './Transfers';
@@ -13,7 +14,7 @@ import TransferAirport from './TransferAirport';
 import Agencies from './Agencies';
 // import ResetFilters from './ResetFilters';
 
-const FiltersStyled = styled.section`
+const FilterPaneStyled = styled.section`
   display: none;
   background-color: white;
   margin-top: 16px;
@@ -448,7 +449,19 @@ const data = {
   },
 };
 
-class Filters extends React.Component {
+const Filters = ({ filterData, onChange, children }) => {
+  const filters = React.Children.map(children, child =>
+    React.cloneElement(child, { ...filterData[child.props.path], onChange }));
+  return <React.Fragment>{filters}</React.Fragment>;
+};
+
+Filters.propTypes = {
+  filterData: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.func.isRequired,
+  children: PropTypes.element.isRequired,
+};
+
+class FilterPane extends React.Component {
   state = data;
 
   onDataChange = (path, value) => {
@@ -456,32 +469,23 @@ class Filters extends React.Component {
   };
 
   render() {
-    const {
-      transfers,
-      baggage,
-      transferDuration,
-      flightTime,
-      travelTime,
-      airlines,
-      airports,
-      transferAirport,
-      agencies,
-    } = this.state;
     return (
-      <FiltersStyled>
-        <Transfers {...transfers} onChange={this.onDataChange} />
-        <FlightTime {...flightTime} onChange={this.onDataChange} />
-        <Baggage {...baggage} onChange={this.onDataChange} />
-        <TranferDuration {...transferDuration} onChange={this.onDataChange} />
-        <TravelTime {...travelTime} onChange={this.onDataChange} />
-        <Airlines {...airlines} onChange={this.onDataChange} />
-        <Airports {...airports} onChange={this.onDataChange} />
-        <TransferAirport {...transferAirport} onChange={this.onDataChange} />
-        <Agencies {...agencies} onChange={this.onDataChange} />
+      <FilterPaneStyled>
+        <Filters filterData={this.state} onChange={this.onDataChange}>
+          <Transfers path="transfers" />
+          <FlightTime path="flightTime" />
+          <Baggage path="baggage" />
+          <TranferDuration path="tranferDuration" />
+          <TravelTime path="travelTime" />
+          <Airlines path="airlines" />
+          <Airports path="airports" />
+          <TransferAirport path="transferAirport" />
+          <Agencies path="agencies" />
+        </Filters>
         {/* <ResetFilters /> */}
-      </FiltersStyled>
+      </FilterPaneStyled>
     );
   }
 }
 
-export default Filters;
+export default FilterPane;
