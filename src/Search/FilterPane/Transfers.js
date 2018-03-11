@@ -25,7 +25,7 @@ export default class extends React.Component {
   };
 
   onChange = (checklist) => {
-    this.props.onChange('transfers.checks', checklist);
+    this.props.onChange('checks', checklist);
   };
 
   render() {

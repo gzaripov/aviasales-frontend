@@ -21,7 +21,7 @@ export default class extends React.Component {
   };
 
   onChange = (range) => {
-    this.props.onChange('transferDuration.range', range);
+    this.props.onChange('range', range);
   };
 
   render() {

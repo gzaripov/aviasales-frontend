@@ -451,7 +451,10 @@ const data = {
 
 const Filters = ({ filterData, onChange, children }) => {
   const filters = React.Children.map(children, child =>
-    React.cloneElement(child, { ...filterData[child.props.path], onChange }));
+    React.cloneElement(child, {
+      ...filterData[child.props.path],
+      onChange: onChange(child.props.path),
+    }));
   return <React.Fragment>{filters}</React.Fragment>;
 };
 
@@ -464,7 +467,8 @@ Filters.propTypes = {
 class FilterPane extends React.Component {
   state = data;
 
-  onDataChange = (path, value) => {
+  onDataChange = outerPath => (innerPath, value) => {
+    const path = outerPath + (innerPath ? `.${innerPath}` : '');
     this.setState(set(path, value, this.state));
   };
 
@@ -475,7 +479,7 @@ class FilterPane extends React.Component {
           <Transfers path="transfers" />
           <FlightTime path="flightTime" />
           <Baggage path="baggage" />
-          <TranferDuration path="tranferDuration" />
+          <TranferDuration path="transferDuration" />
           <TravelTime path="travelTime" />
           <Airlines path="airlines" />
           <Airports path="airports" />

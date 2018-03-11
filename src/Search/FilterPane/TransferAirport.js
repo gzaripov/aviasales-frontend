@@ -63,7 +63,7 @@ export default class extends React.Component {
   };
 
   onChange = path => (value) => {
-    this.props.onChange(`transferAirport.${path}`, value);
+    this.props.onChange(path, value);
   };
 
   render() {

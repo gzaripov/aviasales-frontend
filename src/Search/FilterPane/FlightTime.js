@@ -52,7 +52,7 @@ export default class extends React.Component {
   };
 
   onChange = (path, range) => {
-    this.props.onChange(`flightTime.${path}.range`, range);
+    this.props.onChange(`${path}.range`, range);
   };
 
   render() {
