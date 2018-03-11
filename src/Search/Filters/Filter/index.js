@@ -109,7 +109,11 @@ class Filter extends React.Component {
     const { opened } = this.state;
     return (
       <StyledCollapse onChange={this.toggle} defaultActiveKey={opened ? '1' : ''}>
-        <Panel header={Header({ opened, title, amount })} showArrow={false} key="1">
+        <Panel
+          header={<Header opened={opened} title={title} amount={amount} />}
+          showArrow={false}
+          key="1"
+        >
           <FilterStyled className={className}>{children}</FilterStyled>
         </Panel>
       </StyledCollapse>
