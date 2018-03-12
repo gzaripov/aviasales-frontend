@@ -67,6 +67,14 @@ const Count = styled.div`
   border-bottom: 1px solid #dbdbdb;
 `;
 
+function checkCount(min, max, value) {
+  const { abs } = Math;
+  if (min <= value && value <= max) {
+    return value;
+  }
+  return abs(min - value) > abs(max - value) ? max : min;
+}
+
 export default class Counter extends Component {
   static defaultProps = {
     min: 0,
@@ -88,8 +96,9 @@ export default class Counter extends Component {
     const {
       min, max, value, onChange,
     } = this.props;
-    if (min <= value && value >= max) {
-      onChange(delta);
+    const newValue = checkCount(min, max, value + delta);
+    if (newValue !== value) {
+      onChange(newValue);
     }
   };
 
@@ -97,21 +106,14 @@ export default class Counter extends Component {
     const {
       value, disabled, min, max,
     } = this.props;
+    const val = checkCount(value);
     return (
       <CounterStyled>
-        <Decrement
-          disabled={disabled || value <= min}
-          onClick={this.updateCounter(-1)}
-          type="button"
-        >
+        <Decrement disabled={disabled || val <= min} onClick={this.updateCounter(-1)} type="button">
           <DecrementIcon src={minus} alt="minus icon" />
         </Decrement>
-        <Count>{value}</Count>
-        <Increment
-          disabled={disabled || value >= max}
-          onClick={this.updateCounter(+1)}
-          type="button"
-        >
+        <Count>{val}</Count>
+        <Increment disabled={disabled || val >= max} onClick={this.updateCounter(+1)} type="button">
           <IncrementIcon src={plus} alt="plus icon" />
         </Increment>
       </CounterStyled>

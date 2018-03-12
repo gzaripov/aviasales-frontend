@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import sum from 'lodash/sum';
+import set from 'lodash/fp/set';
 import { withClickOutside } from 'react-clickoutside';
 import media from '../../common/media';
 import PassengerAndClassPicker from './Picker';
@@ -66,8 +67,12 @@ function countPassengers(passengers) {
 export default class extends React.Component {
   state = { ...data, isPickerShown: false };
 
-  onChange = ({ passengerCount, isBusinessClass }) => {
-    this.setState({ passengerCount, isBusinessClass });
+  onPassengerChange = passengerType => (count) => {
+    this.setState(set(`passengerCount.${passengerType}`, count, this.state));
+  };
+
+  onClassChange = (isBusinessClass) => {
+    this.setState({ isBusinessClass });
   };
 
   showPicker = () => {
@@ -90,7 +95,8 @@ export default class extends React.Component {
             onClickOutside={this.hidePicker}
             passengerCount={passengerCount}
             isBusinessClass={isBusinessClass}
-            onChange={this.onChange}
+            onPassengerChange={this.onPassengerChange}
+            onClassChange={this.onClassChange}
           />
         )}
       </PassengerAndClass>

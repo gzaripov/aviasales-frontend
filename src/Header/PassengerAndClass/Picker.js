@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Counter from '../../common/ui/Counter/index';
+import Counter from '../../common/ui/Counter';
 import Checkbox from '../../common/ui/Checkbox';
 
 const PickerStyled = styled.div`
@@ -50,7 +50,12 @@ const Info = styled.div`
 `;
 
 const Picker = ({
-  passengerCount, isBusinessClass, onChangeCounter, className, disabled,
+  passengerCount,
+  isBusinessClass,
+  onPassengerChange,
+  onClassChange,
+  className,
+  disabled,
 }) => (
   <PickerStyled className={className}>
     <PassengerCounter>
@@ -58,7 +63,7 @@ const Picker = ({
       <Counter
         disabled={disabled}
         max={9}
-        onChangeCounter={onChangeCounter}
+        onChange={onPassengerChange('adults')}
         value={passengerCount.adults}
       />
     </PassengerCounter>
@@ -67,7 +72,7 @@ const Picker = ({
       <Counter
         disabled={disabled}
         max={9}
-        onChangeCounter={onChangeCounter}
+        onChange={onPassengerChange('kids')}
         value={passengerCount.kids}
       />
     </PassengerCounter>
@@ -78,12 +83,12 @@ const Picker = ({
       </Info>
       <Counter
         disabled={disabled}
-        max={1}
-        onChangeCounter={onChangeCounter}
+        max={passengerCount.adults}
+        onChange={onPassengerChange('babies')}
         value={passengerCount.babies}
       />
     </PassengerCounter>
-    <BusinessClassCheck label="Бизнес-класс" />
+    <BusinessClassCheck label="Бизнес-класс" onChange={onClassChange} />
   </PickerStyled>
 );
 export default Picker;

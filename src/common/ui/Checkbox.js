@@ -33,6 +33,7 @@ export default class extends React.Component {
     this.setState({
       checked: event.target.checked,
     });
+    this.props.onChange(event.target.checked);
   };
 
   onTextClick = () => {
