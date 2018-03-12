@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 const Input = styled.input`
   width: 100%;
+  margin-right: 12px;
+  text-overflow: ellipsis;
 `;
 
 const FieldStyled = styled.div`

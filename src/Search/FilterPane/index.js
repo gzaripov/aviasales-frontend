@@ -518,7 +518,6 @@ class FilterPane extends React.Component {
   render() {
     const { memento, ...object } = this.state;
     const diff = countDiffWithMemento(memento, object);
-    console.log(diff);
     return (
       <FilterPaneStyled>
         <Filters

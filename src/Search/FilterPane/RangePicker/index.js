@@ -5,7 +5,7 @@ import 'rc-slider/assets/index.css';
 import './index.css';
 
 function countStep(min, max) {
-  return (max - min) / 100;
+  return (max - min) / 1000;
 }
 
 const RangePicker = ({ range, boundaries, ...props }) => (

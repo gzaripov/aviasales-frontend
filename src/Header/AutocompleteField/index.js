@@ -29,25 +29,25 @@ const City = styled(Highlighter)`
 `;
 
 const Country = styled.span`
+  margin-right: 12px;
   font-size: 14px;
-  overflow: hidden;
   max-width: 105px;
   white-space: nowrap;
-  text-overflow: ellipsis;
   color: #a0b0b9;
   transition: color 0.3s;
 `;
 
 const Iata = styled.span`
   font-size: 12px;
-  text-align: right;
+  margin-left: auto;
   color: #a0b0b9;
   transition: color 0.3s;
 `;
 
-const Comma = styled(Country)`
+const Comma = styled.span`
   color: #4a4a4a;
-  before: ;
+  font-size: 14px;
+  transition: color 0.3s;
 `;
 
 const DropDownCity = styled.div`
@@ -94,8 +94,10 @@ const HighlighedText = styled.span`
 `;
 
 const Airport = styled.div`
+  flex: 1;
   display: flex;
   align-items: center;
+  overflow: hidden;
 `;
 
 const Autocomplete = styled.div`
@@ -151,8 +153,8 @@ const AutocompleteField = props => (
                       />
                       <Comma>,&nbsp;</Comma>
                       <Country>{airport.country}</Country>
+                      <Iata>{airport.iata}</Iata>
                     </Airport>
-                    <Iata>{airport.iata}</Iata>
                   </DropDownCity>
                 ))}
             </AirpotsDropdown>

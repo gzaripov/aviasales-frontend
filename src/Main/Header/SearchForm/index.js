@@ -4,7 +4,6 @@ import media from '../../../common/media';
 import { DepartureCity, ArrivalCity } from './City';
 import Dates from '../../../Header/Dates';
 import PassengerAndClass from './PassengerAndClass';
-import Field from '../../../Header/AutocompleteField';
 
 const Form = styled.form`
   margin: -2px;
