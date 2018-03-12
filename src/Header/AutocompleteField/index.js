@@ -21,6 +21,7 @@ const AirpotsDropdown = styled.div`
 const City = styled(Highlighter)`
   font-size: 14px;
   overflow: hidden;
+  line-height: 15px;
   max-width: 105px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -30,6 +31,7 @@ const City = styled(Highlighter)`
 
 const Country = styled.span`
   margin-right: 12px;
+  line-height: 15px;
   font-size: 14px;
   max-width: 105px;
   white-space: nowrap;
@@ -38,6 +40,7 @@ const Country = styled.span`
 `;
 
 const Iata = styled.span`
+  line-height: 14px;
   font-size: 12px;
   margin-left: auto;
   color: #a0b0b9;
@@ -53,7 +56,6 @@ const Comma = styled.span`
 const DropDownCity = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 15px 16px;  
   cursor: pointer;  
   background-color: white;
