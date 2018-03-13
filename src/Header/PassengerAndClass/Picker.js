@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Counter from '../../common/ui/Counter';
 import Checkbox from '../../common/ui/Checkbox';
 
@@ -88,7 +89,26 @@ const Picker = ({
         value={passengerCount.babies}
       />
     </PassengerCounter>
-    <BusinessClassCheck label="Бизнес-класс" onChange={onClassChange} />
+    <BusinessClassCheck label="Бизнес-класс" onChange={onClassChange} checked={isBusinessClass} />
   </PickerStyled>
 );
+
+Picker.defaultProps = {
+  passengerCount: 1,
+  isBusinessClass: false,
+  onPassengerChange: () => {},
+  onClassChange: () => {},
+  className: '',
+  disabled: false,
+};
+
+Picker.propTypes = {
+  passengerCount: PropTypes.number,
+  isBusinessClass: PropTypes.number,
+  onPassengerChange: PropTypes.func,
+  onClassChange: PropTypes.func,
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+};
+
 export default Picker;

@@ -22,32 +22,29 @@ const Checkbox = styled.div`
 export default class extends React.Component {
   propTypes = {
     label: PropTypes.string,
+    checked: PropTypes.bool,
     className: PropTypes.string,
+    onChange: PropTypes.func,
   };
 
-  state = {
-    checked: true,
+  defaultProps = {
+    label: '',
+    checked: false,
+    className: '',
+    onChange: () => {},
   };
 
-  onCheckedChange = (event) => {
-    this.setState({
-      checked: event.target.checked,
-    });
-    this.props.onChange(event.target.checked);
-  };
-
-  onTextClick = () => {
-    this.setState({
-      checked: !this.state.checked,
-    });
+  toggle = () => {
+    const { onChange, checked } = this.props;
+    onChange(!checked);
   };
 
   render() {
-    const { className, label } = this.props;
+    const { className, label, checked } = this.props;
     return (
       <Checkbox className={className}>
-        <Check type="checkbox" checked={this.state.checked} onChange={this.onCheckedChange} />
-        <Text onClick={this.onTextClick}>{label}</Text>
+        <Check type="checkbox" checked={checked} onChange={this.toggle} />
+        <Text onClick={this.toggle}>{label}</Text>
       </Checkbox>
     );
   }
