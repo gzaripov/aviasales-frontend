@@ -49,12 +49,14 @@ const Arrival = City.extend`
   `};
 `;
 
-const DepartureAirport = ({ data, onChange, onReverse }) => (
+const DepartureAirport = ({
+  data, onChange, handleSelect, onReverse,
+}) => (
   <Departure>
     <Field
       value={data.city}
-      onChange={city => onChange({ ...data, city })}
-      handleSelection={onChange}
+      onChange={onChange}
+      handleSelection={handleSelect}
       placeholder="Город вылета"
     >
       <Index>{data.iata}</Index>
@@ -65,12 +67,12 @@ const DepartureAirport = ({ data, onChange, onReverse }) => (
   </Departure>
 );
 
-const ArrivalAirport = ({ data, onChange }) => (
+const ArrivalAirport = ({ data, onChange, handleSelect }) => (
   <Arrival>
     <Field
       value={data.city}
-      onChange={city => onChange({ ...data, city })}
-      handleSelection={onChange}
+      onChange={onChange}
+      handleSelection={handleSelect}
       placeholder="Город прибытия"
     >
       <Index>{data.iata}</Index>
@@ -85,6 +87,7 @@ DepartureAirport.propTypes = {
     country: PropTypes.string,
   }).isRequired,
   onChange: PropTypes.func.isRequired,
+  handleSelect: PropTypes.func.isRequired,
   onReverse: PropTypes.func.isRequired,
 };
 
@@ -94,6 +97,7 @@ ArrivalAirport.propTypes = {
     iata: PropTypes.string,
     country: PropTypes.string,
   }).isRequired,
+  handleSelect: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import Downshift from 'downshift';
 import Highlighter from 'react-highlight-words';
+import { withClickOutside } from 'react-clickoutside';
 import Field from './Field';
 import airports from './airports.mock.json';
 
@@ -91,6 +92,8 @@ const DropDownCity = styled.div`
   `};
 `;
 
+const AirpotsDropdownWithOutside = withClickOutside()(AirpotsDropdown);
+
 const HighlighedText = styled.span`
   font-weight: bold;
 `;
@@ -109,79 +112,96 @@ const Autocomplete = styled.div`
 
 const filterContent = (city, searchWord) => city === searchWord || city.includes(searchWord);
 
-const AutocompleteField = props => (
-  <Downshift
-    onChange={selection => props.handleSelection(selection)}
-    itemToString={i => (i !== null ? i.city : '')}
-    render={({
-      getInputProps,
-      getItemProps,
-      isOpen,
-      inputValue,
-      highlightedIndex,
-      getRootProps,
-    }) => (
-      <Autocomplete {...getRootProps({ refKey: 'innerRef' })}>
-        <Field
-          placeholder={props.placeholder}
-          {...getInputProps({
-            onChange: event => props.onChange(event.target.value),
-            value: props.value,
-            className: props.className,
-            children: props.children,
-          })}
-        />
-        {isOpen &&
-          props.value !== '' && (
-            <AirpotsDropdown>
-              {airports
-                .filter(airport => filterContent(airport.city, inputValue))
-                .slice(0, 6)
-                .map((airport, index) => (
-                  <DropDownCity
-                    key={airport.iata}
-                    select={highlightedIndex === index}
-                    {...getItemProps({
-                      item: airport,
-                      index,
-                    })}
-                  >
-                    <Airport>
-                      <City
-                        searchWords={[props.value]}
-                        autoEscape
-                        textToHighlight={airport.city}
-                        highlightTag={HighlighedText}
-                      />
-                      <Comma>,&nbsp;</Comma>
-                      <Country>{airport.country}</Country>
-                      <Iata>{airport.iata}</Iata>
-                    </Airport>
-                  </DropDownCity>
-                ))}
-            </AirpotsDropdown>
-          )}
-      </Autocomplete>
-    )}
-  />
-);
+class AutocompleteField extends React.Component {
+  static defaultProps = {
+    value: '',
+    className: '',
+    placeholder: '',
+    children: null,
+    handleSelection: () => {},
+    onChange: () => {},
+  };
 
-AutocompleteField.propTypes = {
-  value: PropTypes.string,
-  className: PropTypes.string,
-  placeholder: PropTypes.string,
-  children: PropTypes.element,
-  handleSelection: PropTypes.func,
-  onChange: PropTypes.func,
-};
+  static propTypes = {
+    value: PropTypes.string,
+    className: PropTypes.string,
+    placeholder: PropTypes.string,
+    children: PropTypes.element,
+    handleSelection: PropTypes.func,
+    onChange: PropTypes.func,
+  };
 
-AutocompleteField.defaultProps = {
-  value: '',
-  className: '',
-  placeholder: '',
-  children: null,
-  handleSelection: () => {},
-  onChange: () => {},
-};
+  state = {
+    isOpen: false,
+  };
+
+  show = () => {
+    this.setState({ isOpen: true });
+  };
+
+  hide = () => {
+    this.setState({ isOpen: false });
+  };
+
+  render() {
+    const {
+      handleSelection, placeholder, onChange, value, className, children,
+    } = this.props;
+
+    const { isOpen } = this.state;
+
+    return (
+      <Downshift
+        onChange={selection => handleSelection(selection)}
+        itemToString={i => (i !== null ? i.city : '')}
+        render={({
+ getInputProps, getItemProps, inputValue, highlightedIndex, getRootProps,
+}) => (
+  <Autocomplete {...getRootProps({ refKey: 'innerRef' })}>
+    <Field
+      placeholder={placeholder}
+      onClick={this.show}
+      {...getInputProps({
+                onChange: event => onChange(event.target.value),
+                value,
+                className,
+                children,
+              })}
+    />
+    {isOpen && (
+    <AirpotsDropdownWithOutside onClickOutside={this.hide}>
+      {airports
+                  .filter(airport => filterContent(airport.city, inputValue))
+                  .slice(0, 6)
+                  .map((airport, index) => (
+                    <DropDownCity
+                      key={airport.iata}
+                      select={highlightedIndex === index}
+                      {...getItemProps({
+                        item: airport,
+                        index,
+                      })}
+                    >
+                      <Airport>
+                        <City
+                          searchWords={[value]}
+                          autoEscape
+                          textToHighlight={airport.city}
+                          highlightTag={HighlighedText}
+                        />
+                        <Comma>,&nbsp;</Comma>
+                        <Country>{airport.country}</Country>
+                        <Iata>{airport.iata}</Iata>
+                      </Airport>
+                    </DropDownCity>
+                  ))}
+    </AirpotsDropdownWithOutside>
+            )}
+  </Autocomplete>
+        )}
+      />
+    );
+  }
+}
 
 export default AutocompleteField;

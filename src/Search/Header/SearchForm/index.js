@@ -6,6 +6,7 @@ import { DepartureAirport, ArrivalAirport } from './Airports';
 import Dates from '../../../Header/Dates';
 import PassengerAndClass from '../../../Header/PassengerAndClass';
 import SearchButton from './SearchButton';
+import airports from '../../../Header/AutocompleteField/airports.mock.json';
 
 const Form = styled.form`
   display: none;
@@ -20,42 +21,55 @@ const Form = styled.form`
   `};
 `;
 
+function getAirportByIata(iata) {
+  return airports.find(airport => airport.iata === iata);
+}
+
 export default class extends React.Component {
   state = {
-    departureAirport: {
-      city: '',
-      country: '',
+    departure: {
+      value: '',
       iata: '',
     },
-    arrivalAirport: {
-      city: '',
-      country: '',
+    arrival: {
+      value: '',
       iata: '',
     },
-  };
-
-  onChange = path => (airport) => {
-    this.setState(set(path, airport, this.state));
   };
 
   onReverse = () => {
-    const { departureAirport, arrivalAirport } = this.state;
+    const { departure, arrival } = this.state;
     this.setState({
-      departureAirport: arrivalAirport,
-      arrivalAirport: departureAirport,
+      departure: arrival,
+      arrival: departure,
     });
   };
 
+  onChange = path => (airport) => {
+    this.setState(set(`${path}.value`, airport, this.state));
+  };
+
+  handleSelect = path => (airport) => {
+    this.setState(set(`${path}.iata`, airport.iata, this.state));
+  };
+
   render() {
-    const { departureAirport, arrivalAirport } = this.state;
+    const { departure, arrival } = this.state;
+    const departureAirport = getAirportByIata(departure.iata) || { city: departure.value };
+    const arrivalAirport = getAirportByIata(arrival.iata) || { city: arrival.value };
     return (
       <Form>
         <DepartureAirport
           data={departureAirport}
-          onChange={this.onChange('departureAirport')}
+          onChange={this.onChange('departure')}
+          handleSelect={this.handleSelect('departure')}
           onReverse={this.onReverse}
         />
-        <ArrivalAirport data={arrivalAirport} onChange={this.onChange('arrivalAirport')} />
+        <ArrivalAirport
+          data={arrivalAirport}
+          onChange={this.onChange('arrival')}
+          handleSelect={this.handleSelect('arrival')}
+        />
         <Dates />
         <PassengerAndClass />
         <SearchButton />

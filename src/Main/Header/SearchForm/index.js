@@ -5,6 +5,7 @@ import media from '../../../common/media';
 import { DepartureAirport, ArrivalAirport } from './Airports';
 import Dates from '../../../Header/Dates';
 import PassengerAndClass from './PassengerAndClass';
+import airports from '../../../Header/AutocompleteField/airports.mock.json';
 
 const Form = styled.form`
   margin: -2px;
@@ -27,42 +28,40 @@ const FlightDates = styled(Dates)`
   `};
 `;
 
+function getAirportByIata(iata) {
+  return airports.filter(airport => airport.iata === iata);
+}
+
 export default class extends React.Component {
   state = {
-    departureAirport: {
-      city: '',
-      country: '',
-      iata: '',
-    },
-    arrivalAirport: {
-      city: '',
-      country: '',
-      iata: '',
-    },
+    departureIata: '',
+    arrivalIata: '',
   };
 
   onChange = path => (airport) => {
-    this.setState(set(path, airport, this.state));
+    this.setState(set(path, airport.iata, this.state));
   };
 
   onReverse = () => {
-    const { departureAirport, arrivalAirport } = this.state;
+    const { departureIata, arrivalIata } = this.state;
     this.setState({
-      departureAirport: arrivalAirport,
-      arrivalAirport: departureAirport,
+      departureIata: arrivalIata,
+      arrivalIata: departureIata,
     });
   };
 
   render() {
-    const { departureAirport, arrivalAirport } = this.state;
+    const { departureIata, arrivalIata } = this.state;
+    const departureAirport = getAirportByIata(departureIata);
+    const arrivalAirport = getAirportByIata(arrivalIata);
     return (
       <Form>
         <DepartureAirport
           data={departureAirport}
-          onChange={this.onChange('departureAirport')}
+          onChange={this.onChange('departureIata')}
           onReverse={this.onReverse}
         />
-        <ArrivalAirport data={arrivalAirport} onChange={this.onChange('arrivalAirport')} />
+        <ArrivalAirport data={arrivalAirport} onChange={this.onChange('arrivalIata')} />
         <FlightDates />
         <PassengerAndClass />
       </Form>
