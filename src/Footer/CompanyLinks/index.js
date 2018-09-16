@@ -24,7 +24,8 @@ const Copyright = styled.p`
   `};
 
   ${media.lg`
-    margin-top: 10px;
+    margin-top: 24px;
+    text-align: end;
   `};
 `;
 

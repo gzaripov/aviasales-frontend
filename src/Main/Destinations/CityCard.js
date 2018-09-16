@@ -3,10 +3,36 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import media from '../../common/media';
 
+const Card = styled.div`
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 75, 93, 0.12);
+  margin-top: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  :hover {
+    box-shadow: 0 10px 20px 0 rgba(91, 137, 163, 0.2);
+    cursor: pointer;
+  }
+
+  ${media.lg`
+    margin-top: 32px;
+  `};
+`;
+
 const Image = styled.img`
   width: 100%;
   height: 126px;
   object-fit: cover;
+  transition: transform 6s ease;
+
+  ${Card}:hover & {
+    transform: scale(1.1);
+  }
+
+  ${media.sm`
+    height: 170px;
+  `};
 
   ${media.md`
     height: 212px;
@@ -37,6 +63,11 @@ const SearchPrice = styled.a`
   font-size: 14px;
   color: #00bae8;
   margin-bottom: 4px;
+  transition: color 0.3s ease;
+
+  ${Card}:hover & {
+    color: #ff8c00;
+  }
 
   ${media.md`
     font-size: 22px;
@@ -92,19 +123,8 @@ const SecondaryInfo = styled.div`
   align-items: center;
 `;
 
-const CardStyled = styled.div`
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 75, 93, 0.12);
-  margin-top: 12px;
-  overflow: hidden;
-
-  ${media.lg`
-    margin-top: 32px;
-  `};
-`;
-
-const Card = props => (
-  <CardStyled>
+const CityCard = props => (
+  <Card>
     <Image src={props.data.imageUrl} alt="City picture" />
     <FlagAndInfo>
       <Flag>
@@ -121,10 +141,10 @@ const Card = props => (
         </SecondaryInfo>
       </Info>
     </FlagAndInfo>
-  </CardStyled>
+  </Card>
 );
 
-Card.propTypes = {
+CityCard.propTypes = {
   data: PropTypes.shape({
     imageUrl: PropTypes.string,
     flag: PropTypes.string,
@@ -135,4 +155,4 @@ Card.propTypes = {
   }).isRequired,
 };
 
-export default Card;
+export default CityCard;

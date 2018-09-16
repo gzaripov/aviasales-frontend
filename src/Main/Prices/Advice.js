@@ -11,13 +11,15 @@ const Advice = styled.div`
   `};
 `;
 
-const AdviceText = styled.div`
+const AdviceText = styled.p`
+  margin: 0;
   padding-left: 10px;
   padding-right: 10px;
   line-height: 24px;
 `;
 
-const GrayText = styled.div`
+const GrayText = styled.p`
+  margin: 0;
   padding-top: 24px;
   font-size: 14px;
   color: #a0b0b9;

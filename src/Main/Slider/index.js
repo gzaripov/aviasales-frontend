@@ -82,7 +82,7 @@ const Indicator = styled.div`
   margin: 0 8px;
 `;
 
-const BottomNav = styled.div`
+const Indicators = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,11 +109,11 @@ export default () => (
                 <img src={arrowRight} alt="right arrow" />
               </RightButton>
             </Vendors>
-            <BottomNav>
+            <Indicators>
               <Indicator active />
               <Indicator />
               <Indicator />
-            </BottomNav>
+            </Indicators>
           </Slider>
         </div>
       </div>
