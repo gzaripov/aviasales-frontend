@@ -14,6 +14,10 @@ const Card = styled.div`
     box-shadow: 0 10px 20px 0 rgba(91, 137, 163, 0.2);
     cursor: pointer;
   }
+
+  ${media.lg`
+    margin-top: 32px;
+  `};
 `;
 
 const Image = styled.img`
@@ -119,19 +123,8 @@ const SecondaryInfo = styled.div`
   align-items: center;
 `;
 
-const CardStyled = styled.div`
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 75, 93, 0.12);
-  margin-top: 12px;
-  overflow: hidden;
-
-  ${media.lg`
-    margin-top: 32px;
-  `};
-`;
-
 const CityCard = props => (
-  <CardStyled>
+  <Card>
     <Image src={props.data.imageUrl} alt="City picture" />
     <FlagAndInfo>
       <Flag>
@@ -148,7 +141,7 @@ const CityCard = props => (
         </SecondaryInfo>
       </Info>
     </FlagAndInfo>
-  </CardStyled>
+  </Card>
 );
 
 CityCard.propTypes = {

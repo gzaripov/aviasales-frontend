@@ -20,7 +20,6 @@ const Text = styled.span`
   max-width: 70px;
   margin-top: 12px;
   line-height: 20px;
-  color: ${props => (props.active ? '#5C5C5C' : '#00ace2')};
   text-transform: uppercase;
   font-size: 12px;
 `;
@@ -30,19 +29,19 @@ const Icon = styled.img`
   border-radius: 50px;
   padding: 13px;
   transition: all 0.5s ease;
-`;
-
-const CategoryStyled = styled(Button)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 19px 16px;
-  width: 33%;
 
   ${CategoryButton}:hover & {
     transform: ${props => (CategoryButton.selected ? '' : 'translateY(-5px);')};
     box-shadow: 0 4px 4px rgba(74, 74, 74, 0.12);
   }
+`;
+
+const CategoryStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 19px 16px;
+  width: 33%;
 
   ${media.md`
     width: auto;  
@@ -51,7 +50,7 @@ const CategoryStyled = styled(Button)`
 `;
 
 const Underline = styled.hr`
-  display: ${props => (props.active ? 'block' : 'none')};
+  display: ${props => (props.selected ? 'block' : 'none')};
   padding: 0 30px;
   margin-top: 2px;
   border-top: 1px solid #00ace2;
