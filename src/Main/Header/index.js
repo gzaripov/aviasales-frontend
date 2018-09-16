@@ -1,10 +1,10 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import Heading from "./Heading";
-import Logo from "./Logo";
-import SearchForm from "./SearchForm";
-import SearchButton from "./SearchButton";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import Heading from './Heading';
+import Logo from './Logo';
+import SearchForm from './SearchForm';
+import SearchButton from './SearchButton';
 
 const Header = styled.header`
   background: linear-gradient(#00b0de, #196ebd);

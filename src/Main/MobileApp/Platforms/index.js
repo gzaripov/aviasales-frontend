@@ -1,11 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../../common/media";
-import androidIcon from "./android.svg";
-import appleIcon from "./apple.svg";
-import windows from "./windows.svg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import media from '../../../common/media';
+import androidIcon from './android.svg';
+import appleIcon from './apple.svg';
+import windows from './windows.svg';
 
-const Platforms = styled.div`
+const PlatformsStyled = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -57,8 +58,8 @@ const PlatformText = styled.a`
   `};
 `;
 
-export default props => (
-  <Platforms className={props.className}>
+const Platforms = props => (
+  <PlatformsStyled className={props.className}>
     <Platform>
       <PlatformIcon src={appleIcon} alt="Apple Icon" />
       <PlatformText>iPhone или iPad</PlatformText>
@@ -71,5 +72,15 @@ export default props => (
       <PlatformIcon src={windows} alt="Wf Icon" />
       <PlatformText>Windows Phone</PlatformText>
     </Platform>
-  </Platforms>
+  </PlatformsStyled>
 );
+
+Platforms.defaultProps = {
+  className: '',
+};
+
+Platforms.propTypes = {
+  className: PropTypes.string,
+};
+
+export default Platforms;

@@ -1,7 +1,7 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import calendar from "./calendar.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import calendar from './calendar.svg';
 
 const Calendar = styled.img`
   margin-bottom: 20px;

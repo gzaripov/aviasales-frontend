@@ -1,6 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import media from '../../common/media';
 
 const Image = styled.img`
   width: 100%;
@@ -91,7 +92,7 @@ const SecondaryInfo = styled.div`
   align-items: center;
 `;
 
-const Card = styled.div`
+const CardStyled = styled.div`
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 75, 93, 0.12);
   margin-top: 12px;
@@ -102,8 +103,8 @@ const Card = styled.div`
   `};
 `;
 
-export default props => (
-  <Card>
+const Card = props => (
+  <CardStyled>
     <Image src={props.data.imageUrl} alt="City picture" />
     <FlagAndInfo>
       <Flag>
@@ -120,5 +121,18 @@ export default props => (
         </SecondaryInfo>
       </Info>
     </FlagAndInfo>
-  </Card>
+  </CardStyled>
 );
+
+Card.propTypes = {
+  data: PropTypes.shape({
+    imageUrl: PropTypes.string,
+    flag: PropTypes.string,
+    city: PropTypes.string,
+    price: PropTypes.string,
+    country: PropTypes.string,
+    date: PropTypes.string,
+  }).isRequired,
+};
+
+export default Card;

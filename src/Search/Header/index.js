@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
-import Toolbar from "./Toolbar";
-import SearchForm from "./SearchForm";
-import Logo from "./Logo";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import Toolbar from './Toolbar';
+import SearchForm from './SearchForm';
+import Logo from './Logo';
 
 const Currency = styled.p`
   border: 1px solid #ffffff;

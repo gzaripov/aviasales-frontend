@@ -1,6 +1,7 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import media from '../../common/media';
 
 const Title = styled.h3`
   font-size: 13px;
@@ -14,7 +15,7 @@ const Heading = styled.div`
   align-items: center;
 `;
 
-const Article = styled.div`
+const ArticleStyled = styled.div`
   margin-bottom: 16px;
   text-align: left;
 `;
@@ -36,8 +37,8 @@ const Link = styled.a`
   margin-left: 8px;
 `;
 
-export default props => (
-  <Article>
+const Article = props => (
+  <ArticleStyled>
     <Heading>
       <div>
         <img src={props.data.icon} alt="Article icon" />
@@ -46,7 +47,17 @@ export default props => (
     </Heading>
     <Text>
       {props.data.text}
-      <Link>Подробнее</Link>
+      <Link href="/">Подробнее</Link>
     </Text>
-  </Article>
+  </ArticleStyled>
 );
+
+Article.propTypes = {
+  data: PropTypes.shape({
+    icon: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default Article;

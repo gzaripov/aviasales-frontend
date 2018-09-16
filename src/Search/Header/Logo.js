@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
-import icon from "./logo.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import icon from './logo.svg';
 
 const Text = styled.span`
   display: none;

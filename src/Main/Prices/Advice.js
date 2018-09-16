@@ -1,6 +1,6 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
 
 const Advice = styled.div`
   margin-top: 32px;
@@ -27,16 +27,12 @@ export default () => (
   <Advice>
     <AdviceText>
       <span>
-        Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран
-        мира. Поиск и сравнение цен на авиабилеты среди 100 агентств и 728
-        авиакомпаний.
+        Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран мира. Поиск и
+        сравнение цен на авиабилеты среди 100 агентств и 728 авиакомпаний.
       </span>
     </AdviceText>
     <GrayText>
-      <span>
-        Цены, найденные пользователями за последние 48 часов, не являются
-        офертой.
-      </span>
+      <span>Цены, найденные пользователями за последние 48 часов, не являются офертой.</span>
     </GrayText>
   </Advice>
 );

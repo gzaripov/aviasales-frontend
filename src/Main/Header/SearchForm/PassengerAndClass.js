@@ -1,7 +1,7 @@
-import React from "react";
-import media from "../../../common/media";
-import styled from "styled-components";
-import arrowDown from "./icons/arrow_down.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../../common/media';
+import arrowDown from './icons/arrow_down.svg';
 
 const Text = styled.span``;
 

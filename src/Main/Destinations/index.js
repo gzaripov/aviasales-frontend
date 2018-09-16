@@ -1,76 +1,82 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
-import Heading from "./Heading";
-import CityCard from "./CityCard";
-import Category from "./Category";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import Heading from './Heading';
+import CityCard from './CityCard';
+import Category from './Category';
 
-import compass from "./compass.svg";
-import krasnodar from "./cities/krasnodar.png";
-import sochi from "./cities/sochi.jpeg";
-import spb from "./cities/spb.jpeg";
-import mrv from "./cities/mrv.jpeg";
-import sip from "./cities/sip.jpeg";
-import barsa from "./cities/barsa.jpeg";
-import flagRu from "./flags/ru.png";
-import flagSp from "./flags/sp.png";
+import compass from './compass.svg';
+import krasnodar from './cities/krasnodar.png';
+import sochi from './cities/sochi.jpeg';
+import spb from './cities/spb.jpeg';
+import mrv from './cities/mrv.jpeg';
+import sip from './cities/sip.jpeg';
+import barsa from './cities/barsa.jpeg';
+import flagRu from './flags/ru.png';
+import flagSp from './flags/sp.png';
 
-import world from "./icons/world.svg";
-import sun from "./icons/sun.svg";
-import shopping from "./icons/shopping.svg";
-import culture from "./icons/culture.svg";
-import nightStyle from "./icons/night_style.svg";
-import rest from "./icons/rest_kids.svg";
+import world from './icons/world.svg';
+import sun from './icons/sun.svg';
+import shopping from './icons/shopping.svg';
+import culture from './icons/culture.svg';
+import nightStyle from './icons/night_style.svg';
+import rest from './icons/rest_kids.svg';
 
 const cardsData = [
   {
-    country: "Россия",
+    id: 0,
+    country: 'Россия',
     flag: flagRu,
-    city: "Краснодар",
-    price: "1 212",
-    date: "18 марта",
-    imageUrl: krasnodar
+    city: 'Краснодар',
+    price: '1 212',
+    date: '18 марта',
+    imageUrl: krasnodar,
   },
   {
-    country: "Россия",
+    id: 1,
+    country: 'Россия',
     flag: flagRu,
-    city: "Сочи (Адлер)",
-    price: "1 334",
-    date: "17 марта",
-    imageUrl: sochi
+    city: 'Сочи (Адлер)',
+    price: '1 334',
+    date: '17 марта',
+    imageUrl: sochi,
   },
   {
-    country: "Россия",
+    id: 2,
+    country: 'Россия',
     flag: flagRu,
-    city: "Санкт-Петербург",
-    price: "1 508",
-    date: "19 марта",
-    imageUrl: spb
+    city: 'Санкт-Петербург',
+    price: '1 508',
+    date: '19 марта',
+    imageUrl: spb,
   },
   {
-    country: "Россия",
+    id: 3,
+    country: 'Россия',
     flag: flagRu,
-    city: "Минеральные Воды",
-    price: "2 074",
-    date: "13 марта",
-    imageUrl: mrv
+    city: 'Минеральные Воды',
+    price: '2 074',
+    date: '13 марта',
+    imageUrl: mrv,
   },
   {
-    country: "Россия",
+    id: 4,
+    country: 'Россия',
     flag: flagRu,
-    city: "Симферополь",
-    price: "2 407",
-    date: "13 марта",
-    imageUrl: sip
+    city: 'Симферополь',
+    price: '2 407',
+    date: '13 марта',
+    imageUrl: sip,
   },
   {
-    country: "Испания",
+    id: 5,
+    country: 'Испания',
     flag: flagSp,
-    city: "Барселона",
-    price: "4 247",
-    date: "24 марта",
-    imageUrl: barsa
-  }
+    city: 'Барселона',
+    price: '4 247',
+    date: '24 марта',
+    imageUrl: barsa,
+  },
 ];
 
 const Categories = styled.div`
@@ -124,9 +130,9 @@ export default () => (
         </div>
       </div>
       <div className="row center-md">
-        {cardsData.map((cardData, index) => (
+        {cardsData.map(cardData => (
           <div className="col-xs-12 col-md-10 col-lg-6 col-xl-5">
-            <CityCard data={cardData} key={index} />
+            <CityCard data={cardData} key={cardData.id} />
           </div>
         ))}
       </div>

@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const FlightLinks = styled.div`
   padding-bottom: 12px;
@@ -15,18 +16,35 @@ const Title = styled.h4`
   text-align: left;
 `;
 
-const LiLink = props => (
+const LinkText = styled.a`
+  color: #4a4a4a;
+  text-decoration: none;
+`;
+
+const Link = props => (
   <li className={props.className}>
-    <a href={props.href}>{props.children}</a>
+    <LinkText href={props.href}>{props.children}</LinkText>
   </li>
 );
 
-const Link = styled(LiLink)`
+Link.defaultProps = {
+  className: '',
+  href: '',
+  children: null,
+};
+
+Link.propTypes = {
+  className: PropTypes.string,
+  href: PropTypes.string,
+  children: PropTypes.element,
+};
+
+const LinkStyled = styled(Link)`
   display: block;
   margin-bottom: 12px;
 `;
 
-const BoldLink = Link.extend`
+const BoldLink = LinkStyled.extend`
   font-weight: 500;
   padding-top: 4px;
   margin-bottom: 0px;
@@ -52,12 +70,12 @@ export default () => (
           <LinkColumn>
             <Title>Страны</Title>
             <LinkList>
-              <Link>Россия</Link>
-              <Link>Таиланд</Link>
-              <Link>Черногория</Link>
-              <Link>Кипр</Link>
-              <Link>Болгария</Link>
-              <Link>Грузия</Link>
+              <LinkStyled>Россия</LinkStyled>
+              <LinkStyled>Таиланд</LinkStyled>
+              <LinkStyled>Черногория</LinkStyled>
+              <LinkStyled>Кипр</LinkStyled>
+              <LinkStyled>Болгария</LinkStyled>
+              <LinkStyled>Грузия</LinkStyled>
               <BoldLink>Все страны →</BoldLink>
             </LinkList>
           </LinkColumn>
@@ -66,12 +84,12 @@ export default () => (
           <LinkColumn>
             <Title>Города</Title>
             <LinkList>
-              <Link>Москва</Link>
-              <Link>Санкт-Петербург</Link>
-              <Link>Симферополь</Link>
-              <Link>Адлер</Link>
-              <Link>Екатеринбург</Link>
-              <Link>Лондон</Link>
+              <LinkStyled>Москва</LinkStyled>
+              <LinkStyled>Санкт-Петербург</LinkStyled>
+              <LinkStyled>Симферополь</LinkStyled>
+              <LinkStyled>Адлер</LinkStyled>
+              <LinkStyled>Екатеринбург</LinkStyled>
+              <LinkStyled>Лондон</LinkStyled>
               <BoldLink>Все города →</BoldLink>
             </LinkList>
           </LinkColumn>
@@ -80,12 +98,12 @@ export default () => (
           <LinkColumn>
             <Title>Авиакомпании</Title>
             <LinkList>
-              <Link>Air Berlin</Link>
-              <Link>Air France</Link>
-              <Link>Alitalia</Link>
-              <Link>Ait Baltic</Link>
-              <Link>Emirates</Link>
-              <Link>KLM</Link>
+              <LinkStyled>Air Berlin</LinkStyled>
+              <LinkStyled>Air France</LinkStyled>
+              <LinkStyled>Alitalia</LinkStyled>
+              <LinkStyled>Ait Baltic</LinkStyled>
+              <LinkStyled>Emirates</LinkStyled>
+              <LinkStyled>KLM</LinkStyled>
               <BoldLink>Все страны →</BoldLink>
             </LinkList>
           </LinkColumn>
@@ -94,12 +112,12 @@ export default () => (
           <LinkColumn>
             <Title>Аэропорты</Title>
             <LinkList>
-              <Link>Шереметьево</Link>
-              <Link>Курумоч</Link>
-              <Link>Домодедство</Link>
-              <Link>Толмачево</Link>
-              <Link>Владивосток</Link>
-              <Link>Гамбург</Link>
+              <LinkStyled>Шереметьево</LinkStyled>
+              <LinkStyled>Курумоч</LinkStyled>
+              <LinkStyled>Домодедство</LinkStyled>
+              <LinkStyled>Толмачево</LinkStyled>
+              <LinkStyled>Владивосток</LinkStyled>
+              <LinkStyled>Гамбург</LinkStyled>
               <BoldLink>Все аэропорты →</BoldLink>
             </LinkList>
           </LinkColumn>
@@ -108,12 +126,12 @@ export default () => (
           <LinkColumn>
             <Title>Направления</Title>
             <LinkList>
-              <Link>MOW – SIP </Link>
-              <Link>MOW – AER</Link>
-              <Link>MOW – TIV</Link>
-              <Link>MOW – MRV</Link>
-              <Link>LED – MOW</Link>
-              <Link>MOW – BKK</Link>
+              <LinkStyled>MOW – SIP </LinkStyled>
+              <LinkStyled>MOW – AER</LinkStyled>
+              <LinkStyled>MOW – TIV</LinkStyled>
+              <LinkStyled>MOW – MRV</LinkStyled>
+              <LinkStyled>LED – MOW</LinkStyled>
+              <LinkStyled>MOW – BKK</LinkStyled>
             </LinkList>
           </LinkColumn>
         </div>
@@ -121,13 +139,13 @@ export default () => (
           <LinkColumn>
             <Title>Сервисы</Title>
             <LinkList>
-              <Link>Горящие авиабилеты</Link>
-              <Link>Календарь низких цен</Link>
-              <Link>Карта низких цен</Link>
-              <Link>Спецпредложения</Link>
-              <Link>Таблица цен</Link>
-              <Link>Блог</Link>
-              <Link>Помощь</Link>
+              <LinkStyled>Горящие авиабилеты</LinkStyled>
+              <LinkStyled>Календарь низких цен</LinkStyled>
+              <LinkStyled>Карта низких цен</LinkStyled>
+              <LinkStyled>Спецпредложения</LinkStyled>
+              <LinkStyled>Таблица цен</LinkStyled>
+              <LinkStyled>Блог</LinkStyled>
+              <LinkStyled>Помощь</LinkStyled>
             </LinkList>
           </LinkColumn>
         </div>

@@ -1,14 +1,14 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import Button from "../../common/Button";
-import aeroflot from "./img/aeroflot.png";
-import s7airlines from "./img/s7airlines.png";
-import one2trip from "./img/one2trip.png";
-import koreanAir from "./img/korean-air.png";
-import elevalen from "./img/elevalen.png";
-import arrowLeft from "./img/arrow_left.svg";
-import arrowRight from "./img/arrow_right.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import Button from '../../common/ui/Button';
+import aeroflot from './img/aeroflot.png';
+import s7airlines from './img/s7airlines.png';
+import one2trip from './img/one2trip.png';
+import koreanAir from './img/korean-air.png';
+import elevalen from './img/elevalen.png';
+import arrowLeft from './img/arrow_left.svg';
+import arrowRight from './img/arrow_right.svg';
 
 const Slider = styled.div`
   padding: 28px 20px;
@@ -76,7 +76,7 @@ const RightButton = styled(Button)`
 const Indicator = styled.div`
   width: 10px;
   height: 10px;
-  background: ${props => (props.active ? " #818181" : "rgba(0, 0, 0, 0)")};
+  background: ${props => (props.active ? ' #818181' : 'rgba(0, 0, 0, 0)')};
   border: 1px solid #818181;
   border-radius: 20px;
   margin: 0 8px;
@@ -95,9 +95,7 @@ export default () => (
       <div className="row">
         <div className="col-md-12 col-lg-8 col-lg-offset-2 col-xl-10 col-xl-offset-1 hidden-xs hidden-sm">
           <Slider>
-            <Title>
-              Дешевые авиабилеты от крупнейших авиакомпаний и агентств
-            </Title>
+            <Title>Дешевые авиабилеты от крупнейших авиакомпаний и агентств</Title>
             <Vendors>
               <Vendor src={aeroflot} />
               <Vendor src={s7airlines} />

@@ -1,17 +1,18 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../../common/media";
-import Button from "../../../common/Button";
-import Logos from "../Logos";
-import arrowDown from "./img/arrowDown.svg";
-import share from "./img/share.svg";
-import handbagIcon from "./img/handbag.svg";
-import unknownHandbag from "./img/unknown-handbag.svg";
-import suitcaseIcon from "./img/suitcase.svg";
-import noSuitcaseIcon from "./img/no-suitcase.svg";
-import unknownSuitcaseIcon from "./img/unknown-suitcase.svg";
-import { FormattedNumber } from "react-intl";
-import Flight from "./Flight";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { FormattedNumber } from 'react-intl';
+import media from '../../../common/media';
+import Button from '../../../common/ui/Button';
+import Logos from '../Logos';
+import arrowDown from './img/arrowDown.svg';
+import share from './img/share.svg';
+import handbagIcon from './img/handbag.svg';
+import unknownHandbag from './img/unknown-handbag.svg';
+import suitcaseIcon from './img/suitcase.svg';
+import noSuitcaseIcon from './img/no-suitcase.svg';
+import unknownSuitcaseIcon from './img/unknown-suitcase.svg';
+import Flight from './Flight';
 
 const Agency = styled.p`
   line-height: 18px;
@@ -171,8 +172,8 @@ const BaggageIcons = styled.div`
 const BaggageTab = styled(Button)`
   flex: 1;
   padding-top: 12px;
-  background-color: ${props => (props.active ? "#fff" : "#F8FBFB")};
-  border: ${props => (props.active ? "none" : "1px solid #dddddd")};
+  background-color: ${props => (props.active ? '#fff' : '#F8FBFB')};
+  border: ${props => (props.active ? 'none' : '1px solid #dddddd')};
   border-top: none;
 `;
 
@@ -192,7 +193,9 @@ const Verdict = styled.p`
   padding: 6px 0;
 `;
 
-function renderBaggage({ handbag, suitcase, verdict, noBaggage }) {
+function renderBaggage({
+  handbag, suitcase, verdict, noBaggage,
+}) {
   return (
     <Baggage>
       <BaggageIcons>
@@ -231,6 +234,20 @@ function renderBaggage({ handbag, suitcase, verdict, noBaggage }) {
   );
 }
 
+renderBaggage.defaultProps = {
+  handbag: 0,
+  suitcase: 0,
+  verdict: '',
+  noBaggage: false,
+};
+
+renderBaggage.propTypes = {
+  handbag: PropTypes.number,
+  suitcase: PropTypes.number,
+  verdict: PropTypes.string,
+  noBaggage: PropTypes.bool,
+};
+
 const TicketsLeft = styled.p`
   line-height: 18px;
   font-size: 12px;
@@ -238,14 +255,12 @@ const TicketsLeft = styled.p`
   color: #ff654e;
 `;
 
-export default props => (
+const TabletTicket = props => (
   <Content>
     <Purchase>
       <Baggages>
         {props.data.baggage.primary && (
-          <PrimaryBaggageTab active>
-            {renderBaggage(props.data.baggage.primary)}
-          </PrimaryBaggageTab>
+          <PrimaryBaggageTab active>{renderBaggage(props.data.baggage.primary)}</PrimaryBaggageTab>
         )}
         {props.data.baggage.alternative && (
           <AlternativeBaggageTab>
@@ -259,14 +274,14 @@ export default props => (
       <BuyButton>
         <BuyButtonText>Купить</BuyButtonText>
         <BuyButtonPrice>
-          за{" "}
+          за{' '}
           <FormattedNumber
             value={props.data.price}
-            style={`currency`}
+            style={['currency']}
             currency="RUB"
             minimumFractionDigits={0}
             maximumFractionDigits={0}
-          />{" "}
+          />{' '}
           ₽
         </BuyButtonPrice>
       </BuyButton>
@@ -274,8 +289,8 @@ export default props => (
       {props.data.suggestions &&
         props.data.suggestions.length > 0 && (
           <Suggestions>
-            {props.data.suggestions.slice(0, 2).map((suggestion, index) => (
-              <Suggestion key={index}>
+            {props.data.suggestions.slice(0, 2).map(suggestion => (
+              <Suggestion key={suggestion.id}>
                 <SuggestionAgency>{suggestion.agency}</SuggestionAgency>
                 <SuggestionPrice>{suggestion.price}</SuggestionPrice>
               </Suggestion>
@@ -303,3 +318,51 @@ export default props => (
     </TicketOpener>
   </Content>
 );
+
+TabletTicket.propTypes = {
+  data: PropTypes.shape({
+    logos: PropTypes.arrayOf(PropTypes.shape({})),
+    isCharter: PropTypes.bool,
+    price: PropTypes.number,
+    agency: PropTypes.string,
+    ticketsLeft: PropTypes.number,
+    suggestions: PropTypes.arrayOf(PropTypes.shape({})),
+    baggage: PropTypes.shape({
+      primary: PropTypes.shape({}),
+      alternative: PropTypes.shape({}),
+    }),
+    flight: PropTypes.shape({
+      depart: PropTypes.shape({
+        origin: PropTypes.shape({
+          timestamp: PropTypes.number,
+          city: PropTypes.string,
+          iata: PropTypes.string,
+        }),
+        dest: PropTypes.shape({
+          timestamp: PropTypes.number,
+          city: PropTypes.string,
+          iata: PropTypes.string,
+        }),
+        duration: PropTypes.number,
+        type: PropTypes.string,
+      }),
+      return: PropTypes.shape({
+        origin: PropTypes.shape({
+          timestamp: PropTypes.number,
+          city: PropTypes.string,
+          iata: PropTypes.string,
+        }),
+        dest: PropTypes.shape({
+          timestamp: PropTypes.number,
+          city: PropTypes.string,
+          iata: PropTypes.string,
+        }),
+        duration: PropTypes.number,
+        type: PropTypes.string,
+      }),
+    }).isRequired,
+    duration: PropTypes.number,
+  }).isRequired,
+};
+
+export default TabletTicket;

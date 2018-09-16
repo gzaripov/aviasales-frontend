@@ -1,6 +1,6 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
 
 const OfferFooter = styled.div`
   margin-top: 24px;

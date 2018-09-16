@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Logo = styled.img`
   padding: 4px;
@@ -18,15 +19,25 @@ const Logo = styled.img`
   }
 `;
 
-const Logos = styled.div`
+const LogosStyled = styled.div`
   display: flex;
   margin-left: auto;
 `;
 
-export default props => (
-  <Logos className={props.className}>
-    {props.logos.map((logo, index) => (
-      <Logo src={logo} key={index} alt="Aircompany Logo" />
-    ))}
-  </Logos>
+const Logos = props => (
+  <LogosStyled className={props.className}>
+    {props.logos.map(logo => <Logo src={logo.img} key={logo.id} alt="Aircompany Logo" />)}
+  </LogosStyled>
 );
+
+Logos.defaultProps = {
+  className: '',
+  logos: [],
+};
+
+Logos.propTypes = {
+  className: PropTypes.string,
+  logos: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+export default Logos;

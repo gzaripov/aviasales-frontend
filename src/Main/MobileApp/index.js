@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import media from "../../common/media";
-import phone from "./phone.png";
-import RatingBar from "./RatingBar/index";
-import Platforms from "./Platforms/index";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import phone from './phone.png';
+import RatingBar from './RatingBar/index';
+import Platforms from './Platforms/index';
 
 const MobileApp = styled.section`
   background: linear-gradient(137.4deg, #00b0de 4.18%, #196ebd 104.18%);

@@ -1,11 +1,11 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import facebook from "./icons/facebook.svg";
-import instagram from "./icons/instagram.svg";
-import twitter from "./icons/twitter.svg";
-import viber from "./icons/viber.svg";
-import vk from "./icons/vk.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import facebook from './icons/facebook.svg';
+import instagram from './icons/instagram.svg';
+import twitter from './icons/twitter.svg';
+import viber from './icons/viber.svg';
+import vk from './icons/vk.svg';
 
 const SocialLinks = styled.div`
   display: flex;

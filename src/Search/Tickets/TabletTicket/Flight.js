@@ -1,12 +1,13 @@
-import React from "react";
-import media from "../../../common/media";
-import styled from "styled-components";
-import planeTakeoff from "./img/plane-takeoff.svg";
-import planeLanfing from "./img/plane-landing.svg";
-import Duration from "../../../common/Duration";
-import pin from "./img/pin.svg";
-import { format } from "date-fns";
-import ru from "date-fns/locale/ru";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { format } from 'date-fns';
+import ru from 'date-fns/locale/ru';
+import media from '../../../common/media';
+import Duration from '../../../common/ui/Duration';
+import planeTakeoff from './img/plane-takeoff.svg';
+import planeLanfing from './img/plane-landing.svg';
+import pin from './img/pin.svg';
 
 const Origin = styled.div`
   display: flex;
@@ -106,25 +107,25 @@ const Iata = styled.span`
   text-transform: uppercase;
 `;
 
-const Flight = styled.div`
+const FlightStyled = styled.div`
   display: flex;
   padding: 12px 0;
 `;
 
 function formatTime(timestamp) {
-  return format(timestamp * 1000, "HH:mm", {
-    locale: ru
+  return format(timestamp * 1000, 'HH:mm', {
+    locale: ru,
   });
 }
 
 function formatDate(timestamp) {
-  return format(timestamp * 1000, "D MMM YYYY, dd", {
-    locale: ru
+  return format(timestamp * 1000, 'D MMM YYYY, dd', {
+    locale: ru,
   });
 }
 
-export default props => (
-  <Flight>
+const Flight = props => (
+  <FlightStyled>
     <Origin>
       <Time>
         <TimeIcon src={pin} alt="Pin icon" />
@@ -156,5 +157,23 @@ export default props => (
       <City>{props.data.dest.city}</City>
       <FlightDate>{formatDate(props.data.dest.timestamp)}</FlightDate>
     </Destination>
-  </Flight>
+  </FlightStyled>
 );
+
+Flight.propTypes = {
+  data: PropTypes.shape({
+    origin: PropTypes.shape({
+      timestamp: PropTypes.number,
+      city: PropTypes.string,
+      iata: PropTypes.string,
+    }),
+    dest: PropTypes.shape({
+      timestamp: PropTypes.number,
+      city: PropTypes.string,
+      iata: PropTypes.string,
+    }),
+    duration: PropTypes.number,
+  }).isRequired,
+};
+
+export default Flight;

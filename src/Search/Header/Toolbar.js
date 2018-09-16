@@ -1,7 +1,7 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import arrow from "./arrow.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import arrow from './arrow.svg';
 
 const BackArrow = styled.img`
   cursor: pointer;

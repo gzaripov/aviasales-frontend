@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { FormattedNumber } from "react-intl";
-import media from "../../../common/media";
-import Logos from "../Logos";
-import Flight from "./Flight";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
+import media from '../../../common/media';
+import Logos from '../Logos';
+import Flight from './Flight';
 
 const Status = styled.h4`
   margin: 0;
@@ -52,12 +53,10 @@ const flightStatuses = {
         ️😍
       </span>
     </Best>
-  )
+  ),
 };
 
-const FlightStatus = props => {
-  return flightStatuses[props.status] || null;
-};
+const FlightStatus = props => flightStatuses[props.status] || null;
 
 const PriceAndLogos = styled.div`
   display: flex;
@@ -82,7 +81,7 @@ const Container = styled.div`
   `};
 `;
 
-export default props => (
+const MobileTicket = props => (
   <Container className={props.className}>
     <FlightStatus status={props.data.status} />
     <TripInfo>
@@ -90,7 +89,7 @@ export default props => (
         <Price>
           <FormattedNumber
             value={props.data.price}
-            style={`currency`}
+            style={['currency']}
             currency="RUB"
             minimumFractionDigits={0}
             maximumFractionDigits={0}
@@ -103,3 +102,22 @@ export default props => (
     </TripInfo>
   </Container>
 );
+
+MobileTicket.defaultProps = {
+  className: '',
+};
+
+MobileTicket.propTypes = {
+  data: PropTypes.shape({
+    price: PropTypes.string,
+    logos: PropTypes.arrayOf(PropTypes.shape({})),
+    status: PropTypes.string,
+    flight: PropTypes.shape({
+      depart: PropTypes.number,
+      return: PropTypes.number,
+    }),
+  }).isRequired,
+  className: PropTypes.string,
+};
+
+export default MobileTicket;

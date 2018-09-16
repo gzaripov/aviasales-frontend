@@ -1,7 +1,7 @@
-import React from "react";
-import media from "../../../common/media";
-import styled from "styled-components";
-import rating from "./rating.svg";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../../common/media';
+import rating from './rating.svg';
 
 const RatingBarText = styled.span`
   color: white;

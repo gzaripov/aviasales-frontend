@@ -1,6 +1,7 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import media from '../../common/media';
 
 const Heading = styled.div`
   display: flex;
@@ -81,7 +82,7 @@ const Underside = styled.div`
   margin-right: 8px;
 `;
 
-const OfferCard = styled.div`
+const OfferCardStyled = styled.div`
   background-color: white;
   margin-bottom: 12px;
 
@@ -101,18 +102,15 @@ const AviaCompanyLogo = styled.img`
   height: 25px;
 `;
 
-export default props => (
-  <OfferCard>
+const OfferCard = props => (
+  <OfferCardStyled>
     <Heading>
       <Title>{props.offer.title}</Title>
       <HeaderIcon src={props.offer.icon} />
     </Heading>
     <Information>
       <div>
-        <AviaCompanyLogo
-          src={props.offer.aviaCompanyPic}
-          alt="Avia company pic"
-        />
+        <AviaCompanyLogo src={props.offer.aviaCompanyPic} alt="Avia company pic" />
       </div>
       <PriceAndDaysLeft>
         <Price>
@@ -127,5 +125,19 @@ export default props => (
     <Underside>
       <LearnMoreButton>Узнать подробности</LearnMoreButton>
     </Underside>
-  </OfferCard>
+  </OfferCardStyled>
 );
+
+OfferCard.propTypes = {
+  offer: PropTypes.shape({
+    title: PropTypes.string,
+    icon: PropTypes.string,
+    aviaCompanyPic: PropTypes.string,
+    price: PropTypes.string,
+    daysLeft: PropTypes.string,
+    text: PropTypes.string,
+    from: PropTypes.string,
+  }).isRequired,
+};
+
+export default OfferCard;

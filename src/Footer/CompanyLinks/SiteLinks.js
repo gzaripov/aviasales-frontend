@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const SiteLinks = styled.div`
   display: flex;
@@ -13,16 +13,17 @@ const Link = styled.a`
   color: #5b5b5c;
   margin-right: 8px;
   margin-bottom: 8px;
+  text-decoration: none;
 `;
 
 export default () => (
   <SiteLinks>
-    <Link>О компании</Link>
-    <Link>Партнёрская программа</Link>
-    <Link>Реклама</Link>
-    <Link>Вакансии</Link>
-    <Link>Помощь</Link>
-    <Link>Правила</Link>
-    <Link>White Label авиабилеты</Link>
+    <Link href="/">О компании</Link>
+    <Link href="/">Партнёрская программа</Link>
+    <Link href="/">Реклама</Link>
+    <Link href="/">Вакансии</Link>
+    <Link href="/">Помощь</Link>
+    <Link href="/">Правила</Link>
+    <Link href="/">White Label авиабилеты</Link>
   </SiteLinks>
 );
