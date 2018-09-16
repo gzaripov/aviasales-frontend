@@ -6,7 +6,7 @@ import ru from 'date-fns/locale/ru';
 import aircraftLeft from './img/aircraft-left.svg';
 import aircraftRight from './img/aircraft-right.svg';
 import clock from './img/clock.svg';
-import Duration from '../../../common/Duration';
+import Duration from '../../../common/ui/Duration';
 
 const FlightStyled = styled.div`
   display: flex;

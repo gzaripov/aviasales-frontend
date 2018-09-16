@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { format } from 'date-fns';
 import ru from 'date-fns/locale/ru';
 import media from '../../../common/media';
-import Duration from '../../../common/Duration';
+import Duration from '../../../common/ui/Duration';
 import planeTakeoff from './img/plane-takeoff.svg';
 import planeLanfing from './img/plane-landing.svg';
 import pin from './img/pin.svg';

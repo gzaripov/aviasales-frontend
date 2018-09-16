@@ -1,0 +1,38 @@
+.rc-slider {
+  height: 2px;
+  padding: 0;
+}
+
+.rc-slider .rc-slider-handle {
+  margin-top: 1px;
+  transform: translateY(-50%) scale(1.14);
+  border: 1px solid #d6d9da;
+  transition: border 0.15s ease, transform 0.15s ease-in-out,
+    -o-transform 0.15s ease-in-out;
+  box-shadow: none;
+  z-index: 1;
+}
+
+.rc-slider .rc-slider-handle:hover {
+  border-color: #00acde;
+  transform: translateY(-50%) scale(1.37);
+  z-index: 2;
+}
+
+.rc-slider .rc-slider-handle:active {
+  border-color: #00acde;
+  transform: translateY(-50%) scale(1.6);
+  z-index: 3;
+}
+
+.rc-slider .rc-slider-rail {
+  height: 100%;
+  background: #fafafa;
+  box-shadow: inset 0 1px 1px #f0f0f0;
+  border-radius: 2px;
+}
+
+.rc-slider .rc-slider-track {
+  height: 100%;
+  background: #00acde;
+}

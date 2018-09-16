@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import media from '../common/media';
 import Header from './Header';
 import Tickets from './Tickets';
-import Button from '../common/Button';
-import Filters from './Filters';
+import Button from '../common/ui/Button';
+import FilterPane from './FilterPane';
 import filter from './filter.svg';
 
 const scroll = Scroll.animateScroll;
@@ -113,13 +113,12 @@ class ScrollToTop extends Component {
 const LoadMoreTickets = styled(Button)`
   width: 100%;
   text-align: center;
-  display: hidden;
+  display: none;
   background: #00acde;
   border-radius: 4px;
   font-weight: 500;
   line-height: 18px;
   font-size: 14px;
-  text-align: center;
   color: #ffffff;
   padding: 18px 0;
   margin-bottom: 40px;
@@ -144,7 +143,7 @@ export default () => (
       </div>
       <div className="row">
         <div className="col-lg-4 col-xl-3">
-          <Filters />
+          <FilterPane />
         </div>
         <div className="col-xs-12 col-lg-8 col-xl-7">
           <Tickets />

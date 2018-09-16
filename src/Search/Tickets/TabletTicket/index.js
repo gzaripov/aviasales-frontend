@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 import media from '../../../common/media';
-import Button from '../../../common/Button';
+import Button from '../../../common/ui/Button';
 import Logos from '../Logos';
 import arrowDown from './img/arrowDown.svg';
 import share from './img/share.svg';
