@@ -1,0 +1,31 @@
+<svg width="12" height="12" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>tickets_time</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-6746 -202)">
+<rect x="6746" y="202" width="12" height="12" fill="#FFFFFF"/>
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 6605 0L 6925 0L 6925 2332L 6605 2332L 6605 0Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="Search / Mobile" clip-path="url(#clip-0)">
+<path d="M 6605 0L 6925 0L 6925 2332L 6605 2332L 6605 0Z" fill="#FFFFFF"/>
+<g id="bg">
+<use xlink:href="#path0_fill" transform="translate(6605 0)" fill="#EAEAEA"/>
+</g>
+<g id="Group 2">
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="translate(6605 140)" fill="#FFFFFF"/>
+</g>
+<g id="tickets_time">
+<g id="Shape">
+<use xlink:href="#path2_fill" transform="translate(6746 202.154)" fill="#2196F3"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 0L 320 0L 320 1146L 0 1146L 0 0Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 0 0L 320 0L 320 118L 0 118L 0 0Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 6 0C 2.69189 0 0 2.623 0 5.84599C 0 9.069 2.69189 11.692 6 11.692C 9.30811 11.692 12 9.069 12 5.84599C 12 2.623 9.30811 0 6 0ZM 6 0.923004C 8.7959 0.923004 11.0527 3.12201 11.0527 5.84601C 11.0527 8.57001 8.7959 10.769 6 10.769C 3.20361 10.769 0.946777 8.57001 0.946777 5.84601C 0.946777 3.12201 3.20361 0.923004 6 0.923004ZM 5.52588 2.153C 5.53027 1.89529 5.74219 1.68965 6 1.69299C 6.12402 1.6904 6.24365 1.73817 6.33252 1.82481C 6.42139 1.91145 6.47217 2.02988 6.47412 2.15399L 6.47412 5.582L 9.24707 7.13899C 9.35498 7.1982 9.43408 7.29872 9.4668 7.4175C 9.49902 7.53629 9.48193 7.66315 9.41895 7.769C 9.28418 7.99005 8.99805 8.06438 8.77295 7.937L 5.7627 6.245C 5.62207 6.166 5.52588 6.01599 5.52588 5.84599L 5.52588 2.153Z"/>
+</defs>
+</svg>

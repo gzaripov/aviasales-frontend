@@ -1,9 +1,9 @@
-import React from "react";
-import media from "../../common/media";
-import styled from "styled-components";
-import SiteLinks from "./SiteLinks";
-import SocialLinks from "./SocialLinks";
-import AppBanners from "./AppBanners";
+import React from 'react';
+import styled from 'styled-components';
+import media from '../../common/media';
+import SiteLinks from './SiteLinks';
+import SocialLinks from './SocialLinks';
+import AppBanners from './AppBanners';
 
 const SearchHotels = styled.p`
   font-size: 12px;
