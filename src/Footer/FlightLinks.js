@@ -17,7 +17,7 @@ const Title = styled.h4`
 `;
 
 const LinkText = styled.a`
-  color: #4a4a4a;
+  color: inherit;
   text-decoration: none;
 `;
 
@@ -42,6 +42,11 @@ Link.propTypes = {
 const LinkStyled = styled(Link)`
   display: block;
   margin-bottom: 12px;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #ff8b00;
+  }
 `;
 
 const BoldLink = LinkStyled.extend`
