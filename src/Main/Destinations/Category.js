@@ -31,7 +31,7 @@ const Icon = styled.img`
   transition: all 0.5s ease;
 
   ${CategoryButton}:hover & {
-    transform: ${props => (CategoryButton.selected ? '' : 'translateY(-5px);')};
+    transform: ${() => (CategoryButton.selected ? '' : 'translateY(-5px);')};
     box-shadow: 0 4px 4px rgba(74, 74, 74, 0.12);
   }
 `;
@@ -67,12 +67,14 @@ const Category = props => (
 );
 
 Category.defaultProps = {
-  active: false,
+  selected: false,
+  className: '',
 };
 
 Category.propTypes = {
   imageUrl: PropTypes.string.isRequired,
-  active: PropTypes.bool,
+  selected: PropTypes.bool,
+  className: PropTypes.string,
   text: PropTypes.string.isRequired,
 };
 

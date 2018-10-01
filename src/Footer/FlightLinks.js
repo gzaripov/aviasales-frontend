@@ -36,7 +36,7 @@ Link.defaultProps = {
 Link.propTypes = {
   className: PropTypes.string,
   href: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.node,
 };
 
 const LinkStyled = styled(Link)`

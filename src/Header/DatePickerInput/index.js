@@ -117,15 +117,13 @@ export default class DatePicker extends Component {
   static defaultProps = {
     edge: 'left',
     isShown: false,
-    hide: () => {},
-    show: () => {},
-    onDateSelected: () => {},
-  };
-
-  static defaultProps = {
     placeholder: '',
     children: '',
     period: { from: '', to: '' },
+    disabled: false,
+    hide: () => {},
+    show: () => {},
+    onDateSelected: () => {},
   };
 
   static propTypes = {
@@ -135,12 +133,12 @@ export default class DatePicker extends Component {
     onDateSelected: PropTypes.func,
     isShown: PropTypes.bool,
     period: PropTypes.shape({
-      from: PropTypes.instanceOf(Date).isRequired,
-      to: PropTypes.instanceOf(Date).isRequired,
+      from: PropTypes.isRequired,
+      to: PropTypes.isRequired,
     }),
-    disabled: PropTypes.isRequired,
+    disabled: PropTypes.bool,
     placeholder: PropTypes.string,
-    children: PropTypes.element,
+    children: PropTypes.node,
   };
 
   state = {

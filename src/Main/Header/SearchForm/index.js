@@ -29,7 +29,7 @@ const FlightDates = styled(Dates)`
 `;
 
 function getAirportByIata(iata) {
-  return airports.filter(airport => airport.iata === iata);
+  return airports.find(airport => airport.iata === iata);
 }
 
 export default class extends React.Component {

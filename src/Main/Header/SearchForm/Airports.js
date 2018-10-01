@@ -62,10 +62,12 @@ const DepartureAirport = ({ data, onChange, onReverse }) => (
       handleSelection={onChange}
       placeholder="Город вылета"
     >
-      <Index>{data.iata}</Index>
-      <SwapButton onClick={onReverse}>
-        <img src={arrow} alt="Swap cities button" />
-      </SwapButton>
+      <div>
+        <Index>{data.iata}</Index>
+        <SwapButton onClick={onReverse}>
+          <img src={arrow} alt="Swap cities button" />
+        </SwapButton>
+      </div>
     </Field>
   </Departure>
 );
@@ -88,9 +90,17 @@ DepartureAirport.propTypes = {
     city: PropTypes.string,
     iata: PropTypes.string,
     country: PropTypes.string,
-  }).isRequired,
+  }),
   onChange: PropTypes.func.isRequired,
   onReverse: PropTypes.func.isRequired,
+};
+
+DepartureAirport.defaultProps = {
+  data: {
+    city: '',
+    iata: '',
+    country: '',
+  },
 };
 
 ArrivalAirport.propTypes = {
@@ -98,8 +108,16 @@ ArrivalAirport.propTypes = {
     city: PropTypes.string,
     iata: PropTypes.string,
     country: PropTypes.string,
-  }).isRequired,
+  }),
   onChange: PropTypes.func.isRequired,
+};
+
+ArrivalAirport.defaultProps = {
+  data: {
+    city: '',
+    iata: '',
+    country: '',
+  },
 };
 
 export { DepartureAirport, ArrivalAirport };

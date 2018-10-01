@@ -131,7 +131,7 @@ export default () => (
       </div>
       <div className="row center-md">
         {cardsData.map(cardData => (
-          <div className="col-xs-12 col-md-10 col-lg-6 col-xl-5">
+          <div key={cardData.id} className="col-xs-12 col-md-10 col-lg-6 col-xl-5">
             <CityCard data={cardData} key={cardData.id} />
           </div>
         ))}
