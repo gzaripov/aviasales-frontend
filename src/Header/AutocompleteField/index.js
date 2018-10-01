@@ -108,6 +108,8 @@ const Airport = styled.div`
 const Autocomplete = styled.div`
   position: relative;
   border-radius: inherit;
+  display: flex;
+  flex-grow: 1;
 `;
 
 const filterContent = (city, searchWord) => city === searchWord || city.includes(searchWord);
