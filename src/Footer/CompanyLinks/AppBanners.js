@@ -13,11 +13,20 @@ const AppBanners = styled.div`
   ${media.sm`
     flex-direction: row;
   `};
+
+  ${media.xl`
+    justify-content: flex-end;
+  `};
 `;
 
 const Banner = styled.img`
   margin-right: 10px;
   margin-bottom: 8px;
+
+  ${media.xl`
+    margin-left: 10px;
+    margin-right: 0px;
+  `};
 `;
 
 export default () => (
