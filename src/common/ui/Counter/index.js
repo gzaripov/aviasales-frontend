@@ -39,7 +39,7 @@ const Increment = styled.button`
     `};
 `;
 
-const Decrement = Increment.extend`
+const Decrement = styled(Increment)`
   border-radius: 4px 0 0 4px;
 `;
 

@@ -21,7 +21,7 @@ const ToggleContainer = styled.div`
   padding: 18px 26px;
 `;
 
-const Departure = FlightDate.extend`
+const Departure = styled(FlightDate)`
   margin-right: 2px;
   border-radius: 0;
 

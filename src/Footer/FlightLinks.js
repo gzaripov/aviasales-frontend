@@ -49,7 +49,7 @@ const LinkStyled = styled(Link)`
   }
 `;
 
-const BoldLink = LinkStyled.extend`
+const BoldLink = styled(LinkStyled)`
   font-weight: 500;
   padding-top: 4px;
   margin-bottom: 0px;

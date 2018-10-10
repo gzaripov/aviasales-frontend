@@ -17,15 +17,15 @@ const Status = styled.h4`
   text-align: left;
 `;
 
-const Cheapest = Status.extend`
+const Cheapest = styled(Status)`
   background: #83d40b;
 `;
 
-const Fastest = Status.extend`
+const Fastest = styled(Status)`
   background: #af7542;
 `;
 
-const Best = Status.extend`
+const Best = styled(Status)`
   background: #c279d1;
 `;
 

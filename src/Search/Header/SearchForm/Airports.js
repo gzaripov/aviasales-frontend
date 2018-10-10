@@ -33,7 +33,7 @@ const City = styled.div`
   `};
 `;
 
-const Departure = City.extend`
+const Departure = styled(City)`
   border-radius: 4px 0 0;
 
   ${media.xl`
@@ -41,7 +41,7 @@ const Departure = City.extend`
   `};
 `;
 
-const Arrival = City.extend`
+const Arrival = styled(City)`
   border-radius: 0 4px 0 0;
 
   ${media.xl`
