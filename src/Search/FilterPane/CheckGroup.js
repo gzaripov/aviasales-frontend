@@ -52,7 +52,7 @@ class CheckGroup extends React.Component {
           <Checkbox label="Все" onChange={this.onCheckAll} checked={areAllChecked(checklist)} />
         )}
         {checklist.map(check => (
-          <Checkbox {...check} onChange={() => this.onCheckChanged(check.id)} />
+          <Checkbox {...check} key={check.id} onChange={() => this.onCheckChanged(check.id)} />
         ))}
       </div>
     );

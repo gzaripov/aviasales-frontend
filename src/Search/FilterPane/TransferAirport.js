@@ -1,3 +1,4 @@
+import seqid from 'seqid';
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -5,6 +6,8 @@ import Filter from './Filter';
 import Direction from './Direction';
 import CheckGroup from './CheckGroup';
 import Checkbox from './Checkbox';
+
+const key = seqid(0);
 
 const Transfer = styled.h4`
   margin: 10px 0;
@@ -39,28 +42,54 @@ export default class extends React.Component {
     dirty: false,
     onChange: () => {},
     onClear: () => {},
+    origin: {
+      city: '',
+      transfers: [
+        [
+          {
+            id: 0,
+            label: '',
+            checked: false,
+            iata: '',
+          },
+        ],
+      ],
+    },
+    dest: {
+      city: '',
+      transfers: [
+        [
+          {
+            id: 0,
+            label: '',
+            checked: false,
+            iata: '',
+          },
+        ],
+      ],
+    },
   };
 
   static propTypes = {
     withoutAirportChange: PropTypes.bool,
     origin: PropTypes.shape({
-      city: PropTypes.string.isRequired,
+      city: PropTypes.string,
       transfers: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        label: PropTypes.string.isRequired,
+        id: PropTypes.number,
+        label: PropTypes.string,
         checked: PropTypes.bool,
-        iata: PropTypes.string.isRequired,
+        iata: PropTypes.string,
       }))),
-    }).isRequired,
+    }),
     dest: PropTypes.shape({
-      city: PropTypes.string.isRequired,
+      city: PropTypes.string,
       transfers: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        label: PropTypes.string.isRequired,
+        id: PropTypes.number,
+        label: PropTypes.string,
         checked: PropTypes.bool,
-        iata: PropTypes.string.isRequired,
+        iata: PropTypes.string,
       }))),
-    }).isRequired,
+    }),
     dirty: PropTypes.bool,
     onChange: PropTypes.func,
     onClear: PropTypes.func,
@@ -84,7 +113,7 @@ export default class extends React.Component {
 
         <DirectionStyled from={origin.city} to={dest.city} />
         {origin.transfers.map((transfer, index) => (
-          <div>
+          <div key={key.next()}>
             <Transfer>{tranferLiterals[index]}</Transfer>
             <CheckGroup
               checklist={transfer}
@@ -95,7 +124,7 @@ export default class extends React.Component {
 
         <DirectionStyled from={dest.city} to={origin.city} />
         {dest.transfers.map((transfer, index) => (
-          <div>
+          <div key={key.next()}>
             <Transfer>{tranferLiterals[index]}</Transfer>
             <CheckGroup
               checklist={transfer}

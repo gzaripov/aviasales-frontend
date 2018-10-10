@@ -277,7 +277,8 @@ const TabletTicket = props => (
           за{' '}
           <FormattedNumber
             value={props.data.price}
-            style={['currency']}
+            // eslint-disable-next-line
+            style="currency"
             currency="RUB"
             minimumFractionDigits={0}
             maximumFractionDigits={0}

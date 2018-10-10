@@ -27,29 +27,49 @@ export default class extends React.Component {
     dirty: false,
     onChange: () => {},
     onClear: () => {},
+    origin: {
+      takeoff: {
+        range: [0, 0],
+        boundaries: [0, 0],
+      },
+      landing: {
+        range: [0, 0],
+        boundaries: [0, 0],
+      },
+    },
+    dest: {
+      takeoff: {
+        range: [0, 0],
+        boundaries: [0, 0],
+      },
+      landing: {
+        range: [0, 0],
+        boundaries: [0, 0],
+      },
+    },
   };
 
   static propTypes = {
     origin: PropTypes.shape({
-      takeoff: {
+      takeoff: PropTypes.shape({
         range: PropTypes.arrayOf(PropTypes.number),
         boundaries: PropTypes.arrayOf(PropTypes.number),
-      },
-      landing: {
+      }),
+      landing: PropTypes.shape({
         range: PropTypes.arrayOf(PropTypes.number),
         boundaries: PropTypes.arrayOf(PropTypes.number),
-      },
-    }).isRequired,
+      }),
+    }),
     dest: PropTypes.shape({
-      takeoff: {
+      takeoff: PropTypes.shape({
         range: PropTypes.arrayOf(PropTypes.number),
         boundaries: PropTypes.arrayOf(PropTypes.number),
-      },
-      landing: {
+      }),
+      landing: PropTypes.shape({
         range: PropTypes.arrayOf(PropTypes.number),
         boundaries: PropTypes.arrayOf(PropTypes.number),
-      },
-    }).isRequired,
+      }),
+    }),
     dirty: PropTypes.bool,
     onChange: PropTypes.func,
     onClear: PropTypes.func,

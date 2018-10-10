@@ -98,8 +98,8 @@ class Filter extends React.Component {
     className: PropTypes.string,
     title: PropTypes.string.isRequired,
     amount: PropTypes.number,
-    children: PropTypes.element,
-    initialOpened: PropTypes.false,
+    children: PropTypes.node,
+    initialOpened: PropTypes.bool,
     dirty: PropTypes.bool,
     onClear: PropTypes.func,
   };

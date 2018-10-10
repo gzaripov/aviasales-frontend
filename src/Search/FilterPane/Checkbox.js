@@ -39,13 +39,14 @@ const Price = styled.p`
 
 export default class extends React.Component {
   static defaultProps = {
-    price: '',
+    id: 0,
+    price: 0,
     checked: false,
     onChange: () => {},
   };
 
   static propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.number,
     label: PropTypes.string.isRequired,
     checked: PropTypes.bool,
     price: PropTypes.number,
@@ -63,13 +64,14 @@ export default class extends React.Component {
     } = this.props;
     return (
       <Checkbox key={id} onClick={this.onCheckedChange}>
-        <Check type="checkbox" checked={checked} />
+        <Check type="checkbox" checked={checked} readOnly />
         <Text>{label}</Text>
         {price && (
           <Price>
             <FormattedNumber
               value={price}
-              style={['currency']}
+              // eslint-disable-next-line
+              style="currency"
               currency="RUB"
               minimumFractionDigits={0}
               maximumFractionDigits={0}

@@ -468,7 +468,7 @@ Filters.propTypes = {
   onChange: PropTypes.func.isRequired,
   onClear: PropTypes.func.isRequired,
   diffs: PropTypes.shape({}).isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 function countDiffWithMemento(object, memento) {

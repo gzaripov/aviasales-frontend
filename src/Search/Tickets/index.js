@@ -349,8 +349,8 @@ const data = [
     agency: 'Clickavia',
     suggestions: [],
     logos: [
-      { id: 0, img: '/img/avia/russia-logo.png' },
-      { id: 0, img: '/img/avia/blueairlines-logo.png' },
+      { id: 8, img: '/img/avia/russia-logo.png' },
+      { id: 9, img: '/img/avia/blueairlines-logo.png' },
     ],
     isCharter: true,
     ticketsLeft: null,

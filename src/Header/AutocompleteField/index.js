@@ -15,7 +15,8 @@ const AirpotsDropdown = styled.div`
   max-height: 400px;
   overflow-y: auto;
   width: 100%;
-  box-shadow: 0px 0px 8px rgba(74, 74, 74, 0.2), 0px 2px 4px rgba(74, 74, 74, 0.2);
+  box-shadow: 0px 0px 8px rgba(74, 74, 74, 0.2),
+    0px 2px 4px rgba(74, 74, 74, 0.2);
   border-radius: 2px;
 `;
 
@@ -112,7 +113,8 @@ const Autocomplete = styled.div`
   flex-grow: 1;
 `;
 
-const filterContent = (city, searchWord) => city === searchWord || city.includes(searchWord);
+const filterContent = (city, searchWord) =>
+  city === searchWord || city.includes(searchWord);
 
 class AutocompleteField extends React.Component {
   static defaultProps = {
@@ -128,7 +130,7 @@ class AutocompleteField extends React.Component {
     value: PropTypes.string,
     className: PropTypes.string,
     placeholder: PropTypes.string,
-    children: PropTypes.element,
+    children: PropTypes.node,
     handleSelection: PropTypes.func,
     onChange: PropTypes.func,
   };
@@ -147,7 +149,12 @@ class AutocompleteField extends React.Component {
 
   render() {
     const {
-      handleSelection, placeholder, onChange, value, className, children,
+      handleSelection,
+      placeholder,
+      onChange,
+      value,
+      className,
+      children,
     } = this.props;
 
     const { isOpen } = this.state;
@@ -157,22 +164,26 @@ class AutocompleteField extends React.Component {
         onChange={selection => handleSelection(selection)}
         itemToString={i => (i !== null ? i.city : '')}
         render={({
- getInputProps, getItemProps, inputValue, highlightedIndex, getRootProps,
-}) => (
-  <Autocomplete {...getRootProps({ refKey: 'innerRef' })}>
-    <Field
-      placeholder={placeholder}
-      onClick={this.show}
-      {...getInputProps({
+          getInputProps,
+          getItemProps,
+          inputValue,
+          highlightedIndex,
+          getRootProps,
+        }) => (
+          <Autocomplete {...getRootProps({ refKey: 'innerRef' })}>
+            <Field
+              placeholder={placeholder}
+              onClick={this.show}
+              {...getInputProps({
                 onChange: event => onChange(event.target.value),
                 value,
                 className,
                 children,
               })}
-    />
-    {isOpen && (
-    <AirpotsDropdownWithOutside onClickOutside={this.hide}>
-      {airports
+            />
+            {isOpen && (
+              <AirpotsDropdownWithOutside onClickOutside={this.hide}>
+                {airports
                   .filter(airport => filterContent(airport.city, inputValue))
                   .slice(0, 6)
                   .map((airport, index) => (
@@ -197,9 +208,9 @@ class AutocompleteField extends React.Component {
                       </Airport>
                     </DropDownCity>
                   ))}
-    </AirpotsDropdownWithOutside>
+              </AirpotsDropdownWithOutside>
             )}
-  </Autocomplete>
+          </Autocomplete>
         )}
       />
     );

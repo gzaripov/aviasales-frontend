@@ -14,11 +14,13 @@ export default class extends React.Component {
     dirty: false,
     onChange: () => {},
     onClear: () => {},
+    range: [0, 0],
+    boundaries: [0, 0],
   };
 
   static propTypes = {
-    range: PropTypes.arrayOf(PropTypes.number).isRequired,
-    boundaries: PropTypes.arrayOf(PropTypes.number).isRequired,
+    range: PropTypes.arrayOf(PropTypes.number),
+    boundaries: PropTypes.arrayOf(PropTypes.number),
     dirty: PropTypes.bool,
     onChange: PropTypes.func,
     onClear: PropTypes.func,

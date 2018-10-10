@@ -6,6 +6,7 @@
   },
   "rules": {
     "react/jsx-filename-extension": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "react/style-prop-object": "off"
   }
 }

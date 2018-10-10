@@ -27,6 +27,42 @@ export default class extends React.Component {
     dirty: false,
     onChange: () => {},
     onClear: () => {},
+    origin: {
+      takeoff: [
+        {
+          id: 0,
+          label: '',
+          checked: false,
+          price: 0,
+        },
+      ],
+      landing: [
+        {
+          id: 0,
+          label: '',
+          checked: false,
+          price: 0,
+        },
+      ],
+    },
+    dest: {
+      takeoff: [
+        {
+          id: 0,
+          label: '',
+          checked: false,
+          price: 0,
+        },
+      ],
+      landing: [
+        {
+          id: 0,
+          label: '',
+          checked: false,
+          price: 0,
+        },
+      ],
+    },
   };
 
   static propTypes = {
@@ -43,7 +79,7 @@ export default class extends React.Component {
         checked: PropTypes.bool,
         price: PropTypes.number,
       })),
-    }).isRequired,
+    }),
     dest: PropTypes.shape({
       takeoff: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number.isRequired,
@@ -57,7 +93,7 @@ export default class extends React.Component {
         checked: PropTypes.bool,
         price: PropTypes.number,
       })),
-    }).isRequired,
+    }),
     dirty: PropTypes.bool,
     onChange: PropTypes.func,
     onClear: PropTypes.func,

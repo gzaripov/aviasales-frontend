@@ -89,7 +89,8 @@ const MobileTicket = props => (
         <Price>
           <FormattedNumber
             value={props.data.price}
-            style={['currency']}
+            // eslint-disable-next-line
+            style="currency"
             currency="RUB"
             minimumFractionDigits={0}
             maximumFractionDigits={0}
@@ -109,12 +110,12 @@ MobileTicket.defaultProps = {
 
 MobileTicket.propTypes = {
   data: PropTypes.shape({
-    price: PropTypes.string,
+    price: PropTypes.number,
     logos: PropTypes.arrayOf(PropTypes.shape({})),
     status: PropTypes.string,
     flight: PropTypes.shape({
-      depart: PropTypes.number,
-      return: PropTypes.number,
+      depart: PropTypes.shape({}),
+      return: PropTypes.shape({}),
     }),
   }).isRequired,
   className: PropTypes.string,

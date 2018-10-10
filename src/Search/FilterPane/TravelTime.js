@@ -19,6 +19,16 @@ export default class extends React.Component {
     dirty: false,
     onChange: () => {},
     onClear: () => {},
+    origin: {
+      city: '',
+      range: [0, 0],
+      boundaries: [0, 0],
+    },
+    dest: {
+      city: '',
+      range: [0, 0],
+      boundaries: [0, 0],
+    },
   };
 
   static propTypes = {
@@ -26,12 +36,12 @@ export default class extends React.Component {
       city: PropTypes.string,
       range: PropTypes.arrayOf(PropTypes.number),
       boundaries: PropTypes.arrayOf(PropTypes.number),
-    }).isRequired,
+    }),
     dest: PropTypes.shape({
       city: PropTypes.string,
       range: PropTypes.arrayOf(PropTypes.number),
       boundaries: PropTypes.arrayOf(PropTypes.number),
-    }).isRequired,
+    }),
     dirty: PropTypes.bool,
     onChange: PropTypes.func,
     onClear: PropTypes.func,

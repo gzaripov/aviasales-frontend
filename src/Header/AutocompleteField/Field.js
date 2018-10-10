@@ -29,7 +29,7 @@ const Field = ({
 Field.propTypes = {
   value: PropTypes.string,
   placeholder: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.node,
   className: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
